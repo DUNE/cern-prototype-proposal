@@ -175,7 +175,7 @@ As an example, we have had good experience working with the Open Science Grid Co
 
 
 \subsubsection{Scale of the Processed Data}
-According to our estimates, the volume of raw data will be in the petabyte range. The offline data can be classified as follows:
+As discussed above, we estimat the volume of raw data to be in the petabyte range. We also must address the offline data, which can be classified as follows:
 \begin{itemize}
 \item Monte Carlo data, which will contain multiple event samples to cover various event types and other conditions during the measurements with the prototype detector
 \item Data derived from Monte Carlo events, and produced with a variety of tracking and pattern recognition algorithms in order to create a basis for the detector characterization
@@ -208,11 +208,9 @@ A concrete technical feature of storage at FNAL is that there is a dCache networ
 for the needs of the CERN prototype analysis. This dCache instance is equipped with a XRootD ``door'' which makes it accessible to outside world, subject
 to proper configuration, authentication and authorization.
 
-As already mentioned, we plan to host copies of a significant portion of raw and derived data at Brookhaven National Laboratory, where substantial expertise
-exists in the field of data handling and processing at scale, due to the principal role this Laboratory plays in both RHIC (e.g. STAR) and ATLAS experiments.
-Initial simple tests of XRootD federation to access data residing at FNAL, from a XRootD instance located at BNL have been successful. At this point in time we
-are formulating the hardware requirements that need to be fulfilled in order for BNL to play the role of an additional data center as described here.
-
+As already mentioned, we plan to host copies of a significant portion of raw and derived data at NERSC and also at Brookhaven National Laboratory.
+These two institutions have substantial expertise  in the field of data handling and processing at scale and will serves as ``hubs'' for data archival and
+distribution.
 
 
 
