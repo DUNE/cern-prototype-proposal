@@ -68,7 +68,7 @@ Minimum inner dimensions (flat plate to flat plate).   &  7.3 m (W) x 9.5 m (L) 
 Depth of LAr   &  7.5 m (0.9 m ullage, same as LBNF) \\ \hline
 Primary membrane   &   1.2 mm thick SS 304L corrugated stainless steel\\ \hline
 Secondary barrier system   &  GTT design; 0.07 mm thick aluminum between fiberglass cloth. Overall thickness 1 mm located between insulation layers.  \\ \hline
- Insulation  &  Polyurethane foam (0.8 m thick from preliminary calculations) \\ \hline
+ Insulation  &  Polyurethane foam (0.9 m thick from preliminary calculations) \\ \hline
 Maximum static heat leak   &  10 W/m2 \\ \hline
 LAr temperature   & 88 +/- 1K  \\ \hline
 Operating gas pressure   &  Positive pressure. Nominally 70 mbarg ($\sim$1 psig) \\ \hline
@@ -88,18 +88,17 @@ Beam window   & Precise location TBD. Figure~\ref{fig:cryostat-views} shows the 
 
 The membrane cryostat requires insulation applied to all internal surfaces of the outer support structure 
 and roof in order to control the heat ingress and hence required refrigeration heat load. 
-To avoid bubbling of the liquid Argon inside the tank, the maximum required static heat leak is $10 W/m^2$ for the floor and the sides and $15 W/m^2$ for the roof, higher to account for the penetrations that increase the heat budget. Preliminary calculations show that these values it can be obtained using 0.8 m thick insulation panels of polyurethane foam.
-Preliminary calculations show that it can be obtained using 0.8 m thick insulation panels. 
+To avoid bubbling of the liquid Argon inside the tank, the maximum static heat leak is $10 W/m^2$ for the floor and the sides and $15 W/m^2$ for the roof, higher to account for the penetrations that increase the heat budget. Preliminary calculations show that these values it can be obtained using 0.9 m thick insulation panels of polyurethane foam.
 Given an 
 average thermal conductivity coefficient for the insulation material of 0.0283 W/(m·K), the heat input 
-from the surrounding steel is expected to be about 3.7 kW total. It assumes that the hatches are foam 
+from the surrounding steel is expected to be about 3.4~kW total. It assumes that the hatches are foam 
 insulated as well. This is shown in Table~\ref{tbl:heat-load-calc}.
 
 The insulation material is a solid reinforced polyurethane foam manufactured as composite panels. The 
 panels get laid out in a grid with 3 cm gaps between them (that will be filled with fiberglass) and fixed 
 onto anchor bolts anchored to the support structure. The composite panels contain the two layers of 
 insulation with the secondary barrier in between. After positioning adjacent composite panels and filling 
-the 3 cm gap, the secondary membrane is spliced together by epoxying an additional overlapping layer 
+the 3-cm gap, the secondary membrane is spliced together by epoxying an additional overlapping layer 
 of secondary membrane over the joint. All seams are covered so that the secondary membrane is a 
 continuous liner.
 
@@ -114,19 +113,19 @@ leakage through the inner (primary) membrane will escape to the insulation volum
 GAr at the rate of one volume exchange per day.
 
 \begin{table}[htpb]
-\caption{Heat load calculation for the membrane cryostat (insulation thickness = 0.8 m). (note to self: has right values)}
+\caption{Heat load calculation for the membrane cryostat (insulation thickness = 0.9 m). (note to self: has right values)}
 \label{tbl:heat-load-calc}
 \centering
 \begin{tabular}{|p{.15\textwidth}|p{.15\textwidth}|p{.15\textwidth}|p{.15\textwidth}|p{.15\textwidth}|}
 \hline
  \textbf{Element} & \textbf{Area ($m^2$)}  &  \textbf{K ($W/mK$)} & \textbf{$\Delta$ T ($K$)}
  & \textbf{Heat Input ($W$)}\\ \hline
-Base   & 83  & 0.0283   &205   & 605 \\ \hline
-End walls  &  190 & 0.0283  &  205 &  1,374\\ \hline
-Side walls   & 149  & 0.0283  &  205 & 1,081 \\ \hline
-Roof  &  83 & 0.0283  & 205  &  605\\ \hline
+Base   & 83  & 0.0283   &205   & 550 \\ \hline
+End walls  &  190 & 0.0283  &  205 &  1,247\\ \hline
+Side walls   & 149  & 0.0283  &  205 & 983 \\ \hline
+Roof  &  83 & 0.0283  & 205  &  550\\ \hline
    &   &   &   &  \\ \hline
-Total   &   &   &   & 3,665 \\ \hline
+Total   &   &   &   & 3,330 \\ \hline
 \end{tabular}
 \end{table}
 
@@ -136,7 +135,7 @@ With the intent to minimize the contamination in the gas region, the ullage will
 
 \textbf{Outer Support Structure}
 
-The reference design is a steel support structure with a metal liner on the inside to isolate the insulation region and keep the moisture out. This choice allows natural and forced ventilation to maintain the temperature of the steel within its limit, without the need of heating elements and temperature sensors. It reduces the time needed for the construction: the structure will be prefabricated in pieces of dimensions appropriate for transportation, shipped to the destination and only assembled in place. Fabrication will take place at the vendor’s facility for the most part. This shortens the construction of the outer structure on the detector site, leaving more time for completion of the building infrastructure. If properly designed, a steel structure may allow the cryostat to be moved, should that be desired in the future.
+The proposed design is a steel support structure with a metal liner on the inside to isolate the insulation region and keep the moisture out. This choice allows natural and forced ventilation to maintain the temperature of the steel within its limit, without the need of heating elements and temperature sensors. It reduces the time needed for the construction: the structure will be prefabricated in pieces of dimensions appropriate for transportation, shipped to the destination and only assembled in place. Fabrication will take place at the vendor’s facility for the most part. This shortens the construction of the outer structure on the detector site, leaving more time for completion of the building infrastructure. If properly designed, a steel structure may allow the cryostat to be moved, should that be desired in the future.
 
 \textbf{Main body of the membrane cryostat}
 
@@ -155,7 +154,7 @@ hatches have been closed.
 
 The truss structure rests on the top of the supporting structure where a positive structural connection 
 between the two is made to resist the upward force caused by the slightly pressurized argon in the ullage 
-else within the cryostat (TPC planes, electronics, sensors, cryogenic and gas plumbing connections) is 
+space. The hydrostatic load of the LAr in the cryostat is carried by the floor and the sidewalls. Everything else within the cryostat (TPC planes, electronics, sensors, cryogenic and gas plumbing connections) is 
 supported by the steel plates under the truss structure. All piping and electrical penetration into the 
 interior of the cryostat are made through this top plate, primarily in the region of the penetrations to 
 minimize the potential for leaks. Studs are welded to the underside of the top plate to bolt the insulation 
@@ -172,7 +171,7 @@ Table~\ref{tbl:cryostat-top-parameters} presents the list of the design paramete
 \begin{tabular}{|p{.4\textwidth}|p{.5\textwidth}|}
 \hline
  \textbf{Design Parameter} & \textbf{Value} \\ \hline
- Configuration &  Removable metal plate reinforced with trusses anchored to the membrane cryostat support structure. Contains multiple penetrations of various sizes and a manhole. Number, location and size of the penetrations TBD. Provisions shall be made to allow for removal and re-welding six (6) times.\\ \hline
+ Configuration &  Removable metal plate reinforced with trusses/I-beams anchored to the membrane cryostat support structure. Contains multiple penetrations of various sizes and a manhole. Number, location and size of the penetrations TBD. Provisions shall be made to allow for removal and re-welding six (6) times.\\ \hline
 Plate/Trusses non-wet material  &  Steel if room temperature.
 SS 304/304 or equivalent if at cryogenic temperature
 \\ \hline
@@ -184,7 +183,7 @@ Design pressure  & 350 mbarg (~5 psig) \\ \hline
 Design temperature  & 77 K (liquid nitrogen temperature for flexibility) \\ \hline
 Inner dimensions  & To match the cryostat \\ \hline
 Maximum allowable roof deflection  & 0.028 m (span/360 from LBNF) \\ \hline
-Maximum static heat leak  & \textless 20 W/m2  \\ \hline
+Maximum static heat leak  & \textless 15 W/m2  \\ \hline
  Temperatures of all surfaces in the ullage during operation & \textless 100 K \\ \hline
 Additional design loads  &  -	Top self-weight \\
 & -	TPC (~3,000 kg on each anchor)\\
@@ -300,7 +299,7 @@ detector as well. The experiment will rely on LN2 tankers for regular deliveries
 which will be sized to provide several days of cooling capacity in the event of a delivery interruption. 
 From the dewar storage the LN2 is then transferred to a distribution facility located in the experimental 
 hall. It includes a small buffer volume and an LN2 pumping station that transfers the LN2 to the argon 
-condenser and other services as needed. The low estimated heat leak of the vessel ($\sim$3.7 kW) and the 
+condenser and other services as needed. The low estimated heat leak of the vessel ($\sim$3.4~kW) and the 
 location inside an above ground building allow for use of an open loop system typical of other 
 installations operated at Fermilab (LAPD, LBNE 35 ton prototype, MicroBooNE) and at CERN (???). 
 Main goal of the LN2 system is to provide cooling power for the argon condenser, the initial cool down of 
@@ -339,7 +338,7 @@ entering the vessel.
 \hline
  \textbf{ Parameter} & \textbf{Value} \\ \hline
  Location & Preferably not in front of the cryostat (on the beam) \\ \hline
- Cooling Power & TBD based on the heat leak of the cryostat (estimated 3.7 kW), the cryo-piping and all other contributions (cryogenic pumps, etc.) \\ \hline
+ Cooling Power & TBD based on the heat leak of the cryostat (estimated 3.4~kW), the cryo-piping and all other contributions (cryogenic pumps, etc.) \\ \hline
  Liquid argon purity in cryostat & 10 ms electron lifetime (30 ppt O2 equivalent) \\  \hline
  Gaseous argon piston purge rate of rise & 1.2 m/hr \\ \hline
  Membrane cool-down rate & From manufacturer \\  \hline
