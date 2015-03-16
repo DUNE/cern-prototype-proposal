@@ -139,13 +139,39 @@ Plans for running beam for the the ELBNF include both neutrino and anti-neutrino
 \end{figure}
 
 \clearpage
-\subsubsection{Particle rates}
-\label{detbeam_rates}
-Estimation of  beam particles rates  necessary to collect high enough statistics in a reasonable time to obtain goals of of the measurements.
+%\subsubsection{Particle rates}
+%\label{detbeam_rates}
+%Estimation of  beam particles rates  necessary to collect high enough statistics in a reasonable time to obtain goals of of the measurements.
+% THis should be discussed in the beam section
 \subsubsection {Run plan}
-Based of the rates from the beam and required rates from the physics considerations.
 
+Table~\ref{tab:runplan} summarizes the required exposures to beam particles.
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|l|}
+\hline
+Particle & Momenta (GeV) & Exposure & Purpose \\ \hline
+charged $\pi$       & 0.1, 0.2, 0.3, 0.4, 0.5, 1, 2, 3, 5, 10     &  10K  & hadronic shower \\ \hline
+charged $\pi$ &  1  &  10K  & vary angle, reconstruction \\ \hline
+electron       &    0.1, 0.2, 0.3, 0.4, 0.5, 1, 2, 3, 5, 10        &    10K   & EM shower/e-$\gamma$ PID     \\ \hline
+electron &  1  &  10K  & vary angle, reconstruction \\ \hline
+muon &   0.1, 0.3, 0.5, 1, 2, 5, 10  &  10K & $E_\mu$ calibration, MCS \\ \hline
+muon &  1  &  10K  & vary angle, reconstruction \\ \hline
+proton & 0.1, 0.2, 0.3, 0.5, 1, 2   &  10K & response, PID \\ \hline
+proton &  1  &  10K & vary angle, reconstruction \\ \hline
+kaon  & 0.1, 0.2, 0.3, 0.5, 1 & ?   &   response, PID  \\ \hline
+\end{tabular}
+\caption{Run plan requirements.}
+\label{tab:runplan}
+\end{table}
 
+NUMBERS ARE UPDATED GUESSES - STUDIES NEEDED HERE \\
+Charged pion samples will be used to characterize hadronic shower response and to measure
+absorption cross section parameters on argon. Muon samples will be used for calibration and 
+reconstruction tests. Electron samples will be used to measure EM shower response  
+and to tune PID angorithms. Proton response will be studied for reconstruction and to tune PID 
+algorithms. Kaon data will be needed to tune proton decay backgrounds .
+Special runs at various angles with $\pi$, $\mu$, p and electrons will be performed to study reconstruction and tune PID algorithms. 
 
 \subsection{Detector performance tests}
 
@@ -161,7 +187,7 @@ The charge  particle identification efficiencies  has been mapped for only limit
 
 \subsubsection{e/$\gamma$ separation}
 
-The separation of the electrons from photons is the most important feature of the LAr TPC detectors for the search of the CP violation phase where we look for appearance of the $\nu_e$ in the $\nu_\mu$ beam.  Showers from electrons are part of the signal whilst the single photons might contribute to the background sample. The photons can undergo two process: pair production and Compton scattering. The dominant process for photons with energies of several hundreds MeV  is the e$^+$ e$^-$ pair production, but Compton scattering also occur at this energies. For pair production the e/$\gamma$ separation is achieved by looking at the beginning of the electromagnetic shower, where for election we see energy deposition typical for single MIP and for photon we see energy deposition consisted with two MIP. The separation of e/$\gamma$ has been measured in the ArgoNEUT experiment using neutrino scattering data with low statistics. Currently the separation efficiency is estimated to be at the level of of 94 \% (? cite and check the number). In case of the Compton scattering the off atomic electron the signal is much more difficult to distinguish from the electron from the CC $\nu_e$ scattering.
+The separation of the electrons from photons is the most important feature of the LAr TPC detectors for the search of the CP violation phase where we look for appearance of the $\nu_e$ in the $\nu_\mu$ beam.  Showers from electrons are part of the signal whilst the single photons might contribute to the background sample. The photons can undergo two process: pair production and Compton scattering. The dominant process for photons with energies of several hundreds MeV  is the e$^+$ e$^-$ pair production, but Compton scattering also occur at this energies. For pair production the e/$\gamma$ separation is achieved by looking at the beginning of the electromagnetic shower, where for election we see energy deposition typical for single MIP and for photon we see energy deposition consisted with two MIP. The separation of e/$\gamma$ has been measured in the ArgoNEUT experiment using neutrino scattering data with low statistics. Currently the separation efficiency is estimated to be at the level of of 94 \% (? cite and check the number). In case of Compton scattering off of atomic electrons the signal is much more difficult to distinguish from the CC $\nu_e$ scattering signal.
 
 The separation of  the e/$\gamma$ measured by ArgoNEUT is not sufficient for the ELBNF experiment. Here we propose a measurement of the separation efficiency  as the function of energy and angle.  {\bf we need someone to look into this}
 
@@ -171,9 +197,8 @@ The separation of  the e/$\gamma$ measured by ArgoNEUT is not sufficient for the
 \label{detbeam_pid}
 
 The reconstruction of events in the LAr TPC is still a challenge but rapid progress has been achieved in recent years (cite pandora and other reconstruction algorithms). Despite the progress reconstruction algorithms have to rely Monte Carlo predictions which don't simulate liquid argon detectors responses correctly. Reconstruction algorithms will benefit greatly from test beam data particularly from the full scale prototype. The reconstruction algorithms will be trained to correctly reconstruct track, electromagnetic and hadronic showers.
-
-The data of tracks and showers can be used to create a library which can be used for matching with he neutrino data, similar to the  LEM (library event matching).
-
+The data of tracks and showers can be used to create a library of reference events with which to tune algorithms.
+%which can be used for matching with he neutrino data, similar to the  LEM (library event matching).
 
 Main issues for the reconstruction algorithms:
 \begin{itemize}
@@ -196,7 +221,9 @@ There is not currently a satisfactory theory describing absorption. The Valencia
  is not well understood. 
  
 \subsubsection{Charge sign determination}
-It is not possible to determine charge of the particle on the event by event basis with non-magnetised LAr TPC detectors. However, the statistical analyst will be possible. We will fit the muon's half time which is different for muons and antimony due to different muon capture cross sections. For the $\mu^+$ for argon we expect about xx\% to be captured and for $\mu^-$ about yy\%. 
+It is not possible to determine charge of the particle on the event by event basis with non-magnetised LAr TPC detectors. A statistical separation will be studied which will make use of differences in muon versus antimuon capture cross sections and lifetime.
+%However, the statistical analyst will be possible. We will fit the muon's half time which is different for muons and antimony due to different muon capture cross sections. 
+For the $\mu^+$ for argon we expect about xx\% to be captured and for $\mu^-$ about yy\%. 
 
 \subsubsection{Single track calibration}
 
