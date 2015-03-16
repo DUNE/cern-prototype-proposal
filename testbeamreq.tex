@@ -1,6 +1,20 @@
 
 \subsection{Particle Beam Requirements}
-The requested beam parameters are driven by the requirement that the results from the CERN test beam should be directly applicable to the future large underground single-phase LAr detector with minimal extrapolation. The CERN test beam data will be used to evaluate the detector performance, to understand the various physics systematic effects, and to provide ``neutrino-like'' data for event reconstruction studies. The chosen beam parameters span a broad range of particle spectrum that are expected in the future neutrino experiment. The particle beam composition should consist of electrons, muons, and hadron beams that are charge-selected. The particle momentum of interest ranges from 0.2 GeV/c to 10 GeV/c. The maximum electron drift time in the TPC is about 3 ms. To minimize pile-up in the TPC, the desired beam rate should be around 200 Hz with the maximum rate below 300 Hz. The single-phase TPC consists of two drift volumes. It is desirable to aim the particle beam so that hadronic showers are mostly contained in the same drift volume.  However, we also plan to take some data with hadronic shower crossing the midplane of the TPC from one drift volume to another.  The two beam entry angles and positions with respect to the LAr cryostat are illustrated is Figure [XYZ.] The summary of the beam requirements are shown in Table~\ref{table:beamspecs}.
+The requested beam parameters are driven by the requirement that the results from the CERN test beam should be directly applicable to the future large underground single-phase LAr detector with minimal extrapolation. The CERN test beam data will be used to evaluate the detector performance, to understand the various physics systematic effects, and to provide ``neutrino-like'' data for event reconstruction studies. To satisfy the requirement, the beam parameters must span a broad range of particle spectrum that are expected in the future neutrino experiment. The particle beam composition should consist of electrons, muons, and hadron beams that are charge-selected. The expected momentum distributions for secondary particles from neutrino interactions are shown earlier in Figure~\ref{fig:particle_momenta}. There is a large spread in the momentum distribution with most particles peaked near 200 MeV/c. To cover the momentum range of interest, the momentum of the test beam should step from 0.1 GeV/c to 10 GeV/c. The maximum electron drift time in the TPC is about 3 ms. To minimize pile-up in the TPC, the desired beam rate should be around 200 Hz with the maximum rate below 300 Hz. The single-phase TPC consists of two drift volumes. It is desirable to aim the particle beam so that the hadronic showers are mostly contained in the same drift volume.  However, we also plan to take some data with hadronic shower crossing the midplane of the TPC from one drift volume to another.  The two beam entry angles and positions with respect to the LAr cryostat are shown in Figures \ref{fig:BP_SideView} and \ref{fig:BP_TopView}. The beam nominally enters the cryostat slightly downward at an angle of about 6 degrees. Along the horizontal plane, the beam enters the cryostat with an angle of 10 degrees.  Another possible orientation (not shown in the Figures) to study APA crossers is to reverse the angle of the beam instead of shifting the beam parallel to the primary orientation. The summary of the beam requirements are shown in Table~\ref{table:beamspecs}.
+
+\begin{figure}[h]
+  \centering
+\includegraphics[scale=0.6]{figures/BeamPos_SideView.pdf}
+  \caption{Side view: beam enters the cryostat slightly downward with a dip angle of 6 degrees.  }
+  \label{fig:BP_SideView}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+\includegraphics[scale=0.6]{figures/BeamPos_TopView.pdf}
+  \caption{Top view: beam enters the cryostat with an entry angle of about 10 degrees along the horizontal plane. The primary orientation sends the particle beam into one TPC drift volume. The secondary oritentation sends the particle beam across the APA. }
+  \label{fig:BP_TopView}
+\end{figure}
 
 \begin{table}[h]
 \centering
@@ -10,13 +24,15 @@ The requested beam parameters are driven by the requirement that the results fro
 \hline
 \textbf{Parameter } & \textbf{Requirements} & \textbf{Notes}  \\ \hline
   Particle Types        & $e^\pm,\mu^\pm,\pi^\pm$          &                   \\ \hline
-  Momentum Range   & 0.2 - 10 GeV/$c$  &   \\ \hline
+  Momentum Range   & 0.1 - 10 GeV/$c$  &   \\ \hline
   Momentum Spread   & $\Delta p/p  < $5 \%  &   \\ \hline
   Transverse Beam Size   & RMS(x,y) $<$ 2.5 cm &  At the entrance face of the \\ 
                                               &                                        & LAr cryostat \\ \hline
   Beam Divergence &   &   \\ \hline
-  Beam Angle &  $\approx20^{\circ}$  &   \\ \hline
-  Beam Dip Angle &  -6$^\circ$ (nominal); $\pm5^\circ$ range &   \\ \hline
+  Beam Angle &  $\approx10^{\circ}$  &   \\
+  (horizontal plane) & & \\ \hline
+  Beam Dip Angle &  -6$^\circ$ (nominal); $\pm5^\circ$ range &   \\ 
+  (vertical plane) & & \\ \hline
   Beam Entrance Position &   &   \\ \hline
   Rates & 200 Hz (average); 300 Hz (maximum)  &   \\ \hline
 \end{tabular}
@@ -28,7 +44,7 @@ The H4ext is an extension of the existing H4 beamline in Experimental Hall North
 \begin{figure}[h]
   \centering
 \includegraphics[scale=0.7]{figures/EHN1Ext_Prelim.jpg}
-  \caption{Preliminary layout of the H4ext beamline  }
+  \caption{A conceptual layout of the H4ext beamline  }
   \label{fig:H4extPrelim}
 \end{figure}
 
@@ -39,9 +55,13 @@ The H4ext is an extension of the existing H4 beamline in Experimental Hall North
 [Waiting for inputs from Ilias]
 
 \subsection{Beam Instrumentation}
+Beam instrumentation provides important information about the characteristics of the beam. It is expected that a series of detectors will be installed along the beam line to measure the particle momentum, identify particle type, and track the particle trajectory.
+
 \subsubsection{Beam Position Detector}
-\subsubsection{Time-of-Flight Detector}
-\subsubsection{Threshold Cherenkov Counter}
+The beam position detector measures the positions of the particle as it traverses the detector. Two detector technologies are under considerations: wire chambers and scintillating fiber trackers. For the nominal setup, one beam position detector is installed upstream and another one downstream of the last bending magnet. This pair provides additional momentum information about the particiles as well as the first set of position measurements. A third detector is placed right in front of the beam window on the cryostat wall to provide the last position information before the beam enters the cryostat.
+
+\subsubsection{Particle Identification}
+In order to have good particle identification over large momentum range, two indepent particle identfication systems are needed in the beamline. The Time-of-Flight system will be used to cover lower momentum range while a Threshold Cherenkov detector will be tuned for higher momentum particles.
 
 \subsection{Muon Beam Halo Counters}
 The halo counter is a set of plastic scintillator paddles surrounding the beamline. The main purpose is to tag particles (primarily muons from the upstream production target) that are outside of the beam axis, but may potentially enter the TPC volume. The counter information is used to either veto or simply flag these class of events.
