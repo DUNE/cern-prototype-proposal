@@ -19,6 +19,10 @@
 \usepackage{amsmath}
 \usepackage{color}
 
+\usepackage[firstpage]{draftwatermark}
+\usepackage{lipsum}
+\usepackage{tikz}
+
 %\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{authblk}
@@ -33,6 +37,7 @@
 
 \setcounter{tocdepth}{2}
 
+
 \begin{document}
 \linenumbers
 
@@ -44,10 +49,18 @@
 \maketitle
 
 
+\SetWatermarkText{DRAFT}
+\SetWatermarkLightness{0.8}
+\SetWatermarkScale{5}
+
 
 \begin{abstract}
 
-insert abstract here
+After a short introduction to the ELBNF physics program we motivate the proposed single phase liquid argon detector and charged particle beam measurement program. 
+We describe the required beam line and beam monitoring instrumentation for the project.
+The proposed single phase liquid argon detector presently described corresponds to the LBNE detector design. Discussions about alternate designs are in progress and this proposal will be updated according to a developing consensus on the detector design. The detector will be placed inside a membrane cryostat which will be connected to a cryogenics systems for which we provide engineering details. The proposal concludes with a description of data handling and analysis plans, as well as a schedule and an overview of the organizational structure put in place to execute the plan.
+
+
 
 \end{abstract}
 
@@ -85,7 +98,7 @@ insert abstract here
 	\input{nuplatform}
 	
 	
-\section{Organization, schedule and cost estimate [$\sim$5 pages; {\color{red} Thomas/Greg}]}
+\section{Schedule, organization and cost estimate [$\sim$5 pages; {\color{red} Thomas/Greg}]}
 	\input{organ}
 
 \section{Summary [$\sim$2 pages; {\color{red} Thomas/Greg}]}
