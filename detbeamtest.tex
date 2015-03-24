@@ -183,7 +183,7 @@ Special runs at various angles with $\pi$, $\mu$, p and electrons will be perfor
 
 \subsubsection{Bethe-Bloch parametrisation of charged particles}
 
-The SPCP will allow to study the detector response to charge particles from the test beam and will serve as a calibration detector. The measured energy deposition for various particles and its dependence on the direction of the particle will feed into our Monte Carlo generator and allow more precise reconstruction of neutrino energy and interactions topologies with good particle identifications.
+The prototype detector will allow to study the detector response to charge particles from the test beam and will serve as a calibration detector. The measured energy deposition for various particles and its dependence on the direction of the particle will feed into our Monte Carlo generator and allow more precise reconstruction of neutrino energy and interactions topologies with good particle identifications.
  
 {\bf How we compare with Lariat?} 
 {\bf Multiple scattering}  
@@ -191,6 +191,24 @@ The SPCP will allow to study the detector response to charge particles from the 
 The set of single-phase prototype detector helped to understand the detector response to cosmic muons. But there is still lots to learn with additional studies. 
 The charge  particle identification efficiencies  has been mapped for only limited range of the particle energies.  
 
+%\begin{table}[h]
+%\centering
+%\begin{tabular}{|c|c|c|}
+%\hline
+%Particle     & Momenta (GeV)                                                                                       & Exposure/bin (total)  \\ \hline
+%$\pi ^+ $   & 0.2-1.0 (50MeV bins), 1.0-3.0 ( 100MeV bins), 3.0-10 ( 200MeV bins)    &  200 (16.6k)     \\ \hline
+%$\pi ^- $    & 0.2-1.0 (50MeV bins), 1.0-3.0 ( 100MeV bins), 3.0-10 ( 200MeV bins)    &  200 (16.6k)     \\ \hline
+%$e^+$       & 0.2-10  (200MeV bins)                                                                              &  200 (9.8k)        \\ \hline
+%$e^- $       & 0.2-10  (200MeV bins)                                                                              &  200 (9.8k)        \\ \hline
+%$\mu^+$   & 0.2-1.0 (50MeV bins), 1.0-3.0 ( 100MeV bins), 3.0-10 ( 200MeV bins)    &  200 (16.6k)    \\ \hline
+%$\mu^-$    & 0.2-1.0 (50MeV bins), 1.0-3.0 ( 100MeV bins), 3.0-10 ( 200MeV bins)    &  200 (16.6k)     \\ \hline
+%$p$          &  0.2-1.5 (50MeV bins), 1.5-3.0 ( 100MeV bins), 3.0-10 ( 200MeV bins)    &  200 (17.2k)     \\ \hline
+%$\bar p$   &  0.2-1.5 (50MeV bins), 1.5-3.0 ( 100MeV bins), 3.0-10 ( 200MeV bins)    &  200 (17.2k)    \\ \hline
+%$K^+$      &  0.2-1.5 (50MeV bins), 1.5-3.0 ( 100MeV bins), 3.0-10 ( 200MeV bins)    &  200 (17.2k)      \\ \hline
+%$K^- $      &  0.2-1.5 (50MeV bins), 1.5-3.0 ( 100MeV bins), 3.0-10 ( 200MeV bins)    &  200 (17.2k)    \\ \hline
+%\end{tabular}\caption{Data sample requirements for the $dE/dx$ Bethe-Bloch parametrisation. The lower range starts with the nominal 200 MeV which is not achievable for p and difficult for K. The rough estimate is that we need about 200 particles per bin assuming that about half of them will be actually measured it gives  10\% statistical error for each bin but lower for the fit to the Bethe-Bloch formula. About half of the data sample is in the high momenta region, which can be reduce by decreasing number of particles per bin. }
+%\end{table}
+%
 \subsubsection{e/$\gamma$ separation}
 
 The search for a CP violation phase using $\nu_e$ appearance 
@@ -233,9 +251,26 @@ Main issues for the reconstruction algorithms:
 \item The reconstruction algorithms try to use all three planes on the signal readout. if the orientation of the track/shower is such that it is aligned with wires on one of the plans it significantly reduces quality of reconstructed objects. 
 \item Calorimetry with collection and induction planes. In the ICARUS experiment the deposited energy was reconstructed from the signal on the collection plane. The induction planes bipolar signal wasn't "stable" enough to use it for calorimetric measurement. In the ELBNF design there is additional shielding  wire plane which will improve the quality of the bipolar signal and the  test beam experiment will help with its calibration.
 \item   Vertexing.
-\item Reconstruction efficiency for low energy particles. The reconstruction algorithm suffer from the lose of fefficiency for low energy particle or particles which leave less than 200-300 hits. Training the algorithms on a low energy particles from the test beam will improve the quality and efficiency of the reconstructed objects.
+\item Reconstruction efficiency for low energy particles. The reconstruction algorithm suffer from the lose of efficiency for low energy particle or particles which leave less than 200-300 hits. Training the algorithms on a low energy particles from the test beam will improve the quality and efficiency of the reconstructed objects.
 \end{itemize}
-
+%
+%\begin{table}[h]
+%\centering
+%\begin{tabular}{|c|c|c|}
+%\hline
+%Particle     & Momenta (GeV)                                                                                       & Exposure/bin (total)  \\ \hline
+%$\pi ^+ $   & 0.2-1.0 (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  500 (26.5k)     \\ \hline
+%$\pi ^- $    & 0.2-1.0 (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  500 (26.5k)     \\ \hline
+%$e^+$       & 0.2-10  (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  500 (26.5k)       \\ \hline
+%$e^- $       & 0.2-10  (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  500 (26.5k)       \\ \hline
+%$\mu^+$   & 0.2-1.0 (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  500 (26.5k)     \\ \hline
+%$\mu^-$    & 0.2-1.0 (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  500 (26.5k)     \\ \hline
+%$p$          &  0.2-1.5 (100MeV bins), 1.5-10.0 ( 200MeV bins)    &  500 (27.8k)     \\ \hline
+%$\bar p$   &  0.2-1.5 (100MeV bins), 1.5-10.0 ( 200MeV bins)    &  500 (27.8k)     \\ \hline
+%$K^+$      &  0.2-1.5 (100MeV bins), 1.5-10.0 ( 200MeV bins)    &  500 (27.8k)     \\ \hline
+%$K^- $      &  0.2-1.5 (100MeV bins), 1.5-10.0 ( 200MeV bins)    &  500 (27.8k)     \\ \hline
+%\end{tabular}\caption{Data sample requirements for the development of the reconstruction algorithms. The most important are  the low momenta particles where the showers are more likely to have different topologies. }
+%\end{table}
 
 
 \subsubsection{Cross section measurements}
@@ -262,11 +297,51 @@ Reconstruction of neutrino energy depends of a quality of reconstruction of both
 - {\bf features of Hadronic shower in LAr TPC}
 - {\bf features of electromagnetic shower in LAr TPC}
 - Missing energy from neutral (Neutrons scattering)
- 
+% 
+%\begin{table}[h]
+%\centering
+%\begin{tabular}{|c|c|c|}
+%\hline
+%Particle     & Momenta (GeV)                                                                                       & Exposure/bin (total)  \\ \hline
+%$\pi ^+ $   & 0.2-1.0 (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  1000 (48k)     \\ \hline
+%$\pi ^- $    & 0.2-1.0 (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  1000 (48k)     \\ \hline
+%$e^+$       & 0.2-10  (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  1000 (48k)       \\ \hline
+%$e^- $       & 0.2-10  (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  1000 (48k)       \\ \hline
+%$\mu^+$   & 0.2-1.0 (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  1000 (48k)     \\ \hline
+%$\mu^-$    & 0.2-1.0 (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  1000 (48k)     \\ \hline
+%$p$          &  0.2-1.5 (100MeV bins), 1.5-10.0 ( 200MeV bins)    &  1000 (56k)     \\ \hline
+%$\bar p$   &  0.2-1.5 (100MeV bins), 1.5-10.0 ( 200MeV bins)    &  1000 (56k)     \\ \hline
+%$K^+$      &  0.2-1.5 (100MeV bins), 1.5-10.0 ( 200MeV bins)    &  1000 (56k)     \\ \hline
+%$K^- $      &  0.2-1.5 (100MeV bins), 1.5-10.0 ( 200MeV bins)    &  1000 (56k)     \\ \hline
+%\end{tabular}\caption{Data sample requirements for shower calibrations.  Currently about 1k particles is assumed per bin to include variations in the shower topologies. Details MC analysis is necessary. }
+%\end{table}
+%
 
 \subsection{Other measurements} 
 \subsubsection{Anti-proton annihilation }
 \subsubsection{Proton decay background (cosmogenic $K^{0} \to K^+$)}
 
 
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Particle     & Momenta (GeV)                                                                                       & Exposure/bin (total)  \\ \hline
+$K^+$   & 0.5-0.8 MeV (50 MeV bins)   &  1000 (6k)     \\ \hline
+$K^-$   & 0.5-0.8 MeV (50 MeV bins)   &  1000 (6k)     \\ \hline
+\end{tabular}\caption{Data sample requirements for calibrate absiolute energy scale. }
+\end{table}
 
+
+\subsubsection{Supernova}
+The energies of the electrons coming from CC $\nu_e$ interactions from Supernova will be in the orider of few MeV. The beam test cannot offer such low energy electron, but one can use the Michel electrons form $'mu$ decay to cover these energies. The SK used the Michel spectrum to calibrate the absolute energy scale. 
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Particle     & Momenta (GeV)                                                                                       & Exposure/bin (total)  \\ \hline
+$\mu^+$   & any, but need to stop    &  2000 (2k)     \\ \hline
+\end{tabular}\caption{Data sample requirements for calibrate absiolute energy scale. }
+\end{table}
