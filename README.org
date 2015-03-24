@@ -9,7 +9,7 @@ Here is a quick start guide to using this repository.  It presents just one way 
 The first steps is to "=clone=" the GitHub repository
 
 #+BEGIN_EXAMPLE
-  $ git clone https://github.com/LBNE/cern-prototype-proposal.git
+  $ git clone https://github.com/DUNE/cern-prototype-proposal.git
   $ cd cern-prototype-proposal/
   (edit files)
   $ git add yourfile.tex
@@ -43,6 +43,9 @@ The "=pull=" is needed to first incorporate into your repository any changes tha
 If you get annoyed at using passwords all the time it is recommended that you [[https://help.github.com/articles/generating-ssh-keys/][use ssh keys]] but you can also [[https://help.github.com/articles/caching-your-github-password-in-git/][cache your password]].
 ** Autobuilder
 
-A PDF of the documented is generated through the services of [[https://www.sharelatex.com][ShareLaTeX]]:
+A PDF of the documented is generated after recent commits and is available for download at:
 
-  https://www.sharelatex.com/github/repos/LBNE/cern-prototype-proposal
+  https://dune.bnl.gov/tmp/CERNproto.pdf
+
+
+
