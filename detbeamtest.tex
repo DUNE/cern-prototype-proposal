@@ -151,39 +151,42 @@ Table~\ref{tab:runplan} summarizes the required exposures to beam particles.
 \begin{tabular}{|c|c|c|l|}
 \hline
 Particle & Momenta (GeV) & Exposure & Purpose \\ \hline
-$\pi^+$       & 0.2, 0.3, 0.4, 0.5, 1, 2, 3, 5, 7     &  10K  & hadronic cal, $\pi^0$ content \\ \hline
-$\pi^-$       &  0.2, 0.3, 0.4, 0.5, 1, 2     &  10K  & hadronic cal, $\pi^0$ content \\ \hline
-$\pi^+$ &   1 \& 2  &  10K  & vary angle ($\times$5), reco \\ \hline
+$\pi^+$       & 0.2, 0.3, 0.4, 0.5, 0.7, 1, 2, 3, 5, 7     &  10K  & hadronic cal, $\pi^0$ content \\ \hline
+$\pi^+$   &  1  &  2M & $\pi^o$/$\gamma$ sample \\ \hline
+$\pi^-$       &  0.2, 0.3, 0.4, 0.5, 0.7, 1     &  10K  & hadronic cal, $\pi^0$ content \\ \hline
+%$\pi^+$ &   1 \& 2  &  10K  & vary angle ($\times$5), reco \\ \hline
 e$^+$ or e$^-$       &    0.2, 0.3, 0.4, 0.5, 1, 2, 3, 5, 7        &    10K   & e-$\gamma$ separation/EM shower     \\ \hline
- e$^+$ or e$^-$  &  1 \& 2  &  10K  & vary angle($\times$5), reco \\ \hline
+% e$^+$ or e$^-$  &  1 \& 2  &  10K  & vary angle($\times$5), reco \\ \hline
 %e$^+$ or e$^-$   (w/rad) &  3  &  20K  & tagged photons \\ \hline
-$\mu^-$  &   0.2, 0.5, 1, 2  &  10K & $E_\mu$, Michel el., charge sign \\ \hline
-$\mu^+$ &   0.2, 0.5, 1, 2   &  10K & $E_\mu$, Michel el.,charge sign  \\ \hline
+$\mu^-$  &   (0.2), 0.5, 1, 2  &  10K & $E_\mu$, Michel el., charge sign \\ \hline
+$\mu^+$ &   (0.2), 0.5, 1, 2   &  10K & $E_\mu$, Michel el.,charge sign  \\ \hline
 $\mu^-$ or $\mu^+$ &   0.5, 1, 2, 5, 7  &  5K & $E_\mu$ MCS \\ \hline
-$\mu^-$ or $\mu^+$  &  1 \& 2  &  5K  & vary angle ($\times$5), reco \\ \hline
-proton & 0.2, 0.3, 0.5, 1, 2   &  10K & response, PID \\ \hline
-proton &  3  &  100K & $\pi^o$/$\gamma$ sample \\ \hline
-proton &  1 \& 2 &  10K & vary angle ($\times$5), reco \\ \hline
-antiproton &  low-energy tune  &  100 & antiproton stars \\ \hline
-K$^+$  &  0.5, 0.7, 1 & 5k   &   response, PID, pdk  \\ \hline
+%$\mu^-$ or $\mu^+$  &  1 \& 2  &  5K  & vary angle ($\times$5), reco \\ \hline
+proton & 0.2, 0.3, 0.5, 0.7, 1, 2, 3   &  10K & response, PID \\ \hline
+proton &  1   &  (2M) & mis-ID pdk \\ \hline
+%proton &  1 \& 2 &  10K & vary angle ($\times$5), reco \\ \hline
+antiproton &  low-energy tune  &  (100) & antiproton stars \\ \hline
+K$^+$  & 1 & (13k)   &   response, PID, pdk  \\ \hline
+K$^+$  & 0.5, 0.7 & (5k)   &   response, PID, pdk  \\ \hline
 \end{tabular}
-\caption{Requirements summary.}
-\label{tab:runplan}
+\caption{Requirements summary for nominal beam direction. Items in parenthesis indicate somewhat lower priority (see text).
+}
+\label{tab:summaryphysics}
 \end{table}
 
-NUMBERS ARE UPDATED GUESSES - STUDIES NEEDED HERE \\
-Charged pion samples will be used to characterize hadronic shower response and to measure
-absorption cross section parameters on argon. NEED STUDY of HADRONIC SHOWER RESOLUTION
-(for now pion statistics give better than $\sim$1\% measurement of mean for upper limit from 50\%/$\sqrt{E}$ in sampling calorimeters
-for all energies except 0.1 GeV point). 
-Muon samples will be used for calibration and 
-reconstruction tests. Electron samples will be used to measure EM shower response  
-and to tune PID algorithms (statistics shown will far exceed 1\% uncertainty on the mean for 
-EM showers with resolution on the order of 1\% as measured in DOCDB 9434 and 8835. 100k Electron event samples will allow
-high statistics studies of e-gamma separation).  
-Proton response will be studied for reconstruction and to tune PID 
-algorithms. Kaon data will be needed to tune proton decay backgrounds .
-Special runs at various angles with $\pi$, $\mu$, p and electrons will be performed to study reconstruction and tune PID algorithms. 
+
+
+%Charged pion samples will be used to characterize hadronic shower response and to measure
+%absorption cross section parameters on argon.
+%for all energies except 0.1 GeV point). 
+%Muon samples will be used for calibration and 
+%reconstruction tests. Electron samples will be used to measure EM shower response  
+%and to tune PID algorithms (statistics shown will far exceed 1\% uncertainty on the mean for 
+%EM showers with resolution on the order of 1\% as measured in DOCDB 9434 and 8835. 100k Electron event samples will allow
+%high statistics studies of e-gamma separation).  
+%Proton response will be studied for reconstruction and to tune PID 
+%algorithms. Kaon data will be needed to tune proton decay backgrounds .
+%Special runs at various angles with $\pi$, $\mu$, p and electrons will be performed to study reconstruction and tune PID algorithms. 
 
 \subsection{Detector performance tests}
 
