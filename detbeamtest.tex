@@ -4,30 +4,16 @@
 \begin{description}
 \item[Sensitivity plots.] 	
  Create plots for the CPV and HM sensitivities for 40kton detector and 1.2 MW beam. Plots should include various combinations of the assumed uncertainties: with current best measurements,  with best guesses about uncertainties we can archive and with  uncertainties which will be obtain using beam test experiment at CERN.
-\item[E-m shower calibration energy scale.] 
-Estimate statistics of particles to optimise the measurement of EM showers.  Provide the necessary statistics  as a function of energy. Optimise the energy bins widths, where we expect coarser bins for higher energies than for lower energies.    
-
-\item[Hadronic shower calibration] 
-Estimate statistics of particles to optimise the measurement of hadronic showers.  Provide the necessary statistics as a function of energy. Optimise the energy bins widths, were we expect coarser bins for higher energies than for lower energies.    \\
-Estimate pi0 production from the proton scattering in the TPC. 
-\item[Reconstruction issues.] 
-Obtain values for the uncertainties due to finding vertex position of neutrino interactions. \\
-Estimate statistics necessary to improve low energy electrons acceptance due to reconstruction algorithms limitations. 
-\item[e/gamma separation] 
-Estimate statistics necessary  for improvement of the e/gamma separation.  Assume three values for wire pitch: 3mm,  4mm and 5mm.
-\item[Pion cross sections: absorption, charge exchange in Ar] 
-Get statistics for pions to measure their cross sections. Estimate energy bin widths.
-\item[Kaon cross section in Ar] 
-Get statistics for kaons to measure their cross sections. Estimate energy bin widths.
-\item[Muon capture] 
-Estimate statistics for antimuons for capture on argon to be used for the statistical determination of the wrong sign neutrino contribution on the beam. 
 \end{description}
 
 }
 
 \subsection{Requirements for the detector, beam and commissioning}
 \label{detbeam_main}
-The Single-Phase Cern Prototype detector is intended to provide necessary information to reduce systematic uncertainties for the oscillation measurements in the US-based long base-line neutrino experiment.   The LAr TPC technology is not new but wasn't extensively used in the 1-10 GeV neutrino energy range.  The main source of uncertainties due to detector with the current values are shown in table \ref{table:deterr}
+The Single-Phase Cern Prototype detector is intended to provide input necessary to reduce systematic uncertainties for oscillation measurements 
+and additional measurements that support the physics program in DUNE. 
+The LAr TPC technology is not new but wasn't extensively used in the 1-10 GeV neutrino energy range.  
+The main source of uncertainties due to detector with the current values are shown in table \ref{table:deterr}
 
 
 \begin{table}[h]
@@ -107,32 +93,35 @@ Plans for running beam for the the ELBNF include both neutrino and anti-neutrino
   \label{fig:containment}
   
   \begin{tabular}{ccc}
-    \includegraphics[scale=0.15]{figures/electrons_density_overlay}&
-    \includegraphics[scale=0.15]{figures/electrons_lcont_overlay}&
-    \includegraphics[scale=0.15]{figures/electrons_wcont_overlay}\\
+%    \includegraphics[scale=0.15]{figures/electrons_density_overlay}&
+%    \includegraphics[scale=0.15]{figures/electrons_lcont_overlay}&
+%    \includegraphics[scale=0.15]{figures/electrons_wcont_overlay}\\
+%  
+%    \includegraphics[scale=0.15]{figures/photons_density_overlay}&
+%    \includegraphics[scale=0.15]{figures/photons_lcont_overlay}&
+%    \includegraphics[scale=0.15]{figures/photons_wcont_overlay}\\
+%%
+   \includegraphics[width=0.31\textwidth,height=3.5cm]{figures/protons_density_overlay}&
+   \includegraphics[width=0.31\textwidth,height=3.5cm]{figures/protons_lcont_overlay}&
+   \includegraphics[width=0.31\textwidth,height=3.5cm]{figures/protons_wcont_overlay}\\
+%    \includegraphics[scale=0.15]{figures/protons_lcont_overlay}&
+%    \includegraphics[scale=0.15]{figures/protons_wcont_overlay}\\
+% 
+%    \includegraphics[scale=0.15]{figures/pions_density_overlay}&
+%    \includegraphics[scale=0.15]{figures/pions_lcont_overlay}&
+%    \includegraphics[scale=0.15]{figures/pions_wcont_overlay}\\
  
+   \includegraphics[width=0.31\textwidth,height=3.5cm]{figures/pions_density_overlay}&
+   \includegraphics[width=0.31\textwidth,height=3.5cm]{figures/pions_lcont_overlay}&
+   \includegraphics[width=0.31\textwidth,height=3.5cm]{figures/pions_wcont_overlay}\\
+%    \includegraphics[scale=0.15]{figures/pions_density_overlay}&
+%    \includegraphics[scale=0.15]{figures/pions_lcont_overlay}&
+%    \includegraphics[scale=0.15]{figures/pions_wcont_overlay}\\
  
-    \includegraphics[scale=0.15]{figures/photons_density_overlay}&
-    \includegraphics[scale=0.15]{figures/photons_lcont_overlay}&
-    \includegraphics[scale=0.15]{figures/photons_wcont_overlay}\\
- 
-
-    \includegraphics[scale=0.15]{figures/protons_density_overlay}&
-    \includegraphics[scale=0.15]{figures/protons_lcont_overlay}&
-    \includegraphics[scale=0.15]{figures/protons_wcont_overlay}\\
- 
-    \includegraphics[scale=0.15]{figures/pions_density_overlay}&
-    \includegraphics[scale=0.15]{figures/pions_lcont_overlay}&
-    \includegraphics[scale=0.15]{figures/pions_wcont_overlay}\\
- 
-    \includegraphics[scale=0.15]{figures/pions_density_overlay}&
-    \includegraphics[scale=0.15]{figures/pions_lcont_overlay}&
-    \includegraphics[scale=0.15]{figures/pions_wcont_overlay}\\
- 
- 
-    \includegraphics[scale=0.15]{figures/kaons_density_overlay}&
-    \includegraphics[scale=0.15]{figures/kaons_lcont_overlay}&
-    \includegraphics[scale=0.15]{figures/kaons_wcont_overlay}\\
+% 
+%    \includegraphics[scale=0.15]{figures/kaons_density_overlay}&
+%    \includegraphics[scale=0.15]{figures/kaons_lcont_overlay}&
+%    \includegraphics[scale=0.15]{figures/kaons_wcont_overlay}\\
  
   \end{tabular}
   \caption{Particle containment plots.}
@@ -150,26 +139,27 @@ Table~\ref{tab:runplan} summarizes the required exposures to beam particles.
 \centering
 \begin{tabular}{|c|c|c|l|}
 \hline
-Particle & Momenta (GeV) & Exposure & Purpose \\ \hline
+Particle & Momenta (GeV/c) & Exposure & Purpose \\ \hline
 $\pi^+$       & 0.2, 0.3, 0.4, 0.5, 0.7, 1, 2, 3, 5, 7     &  10K  & hadronic cal, $\pi^0$ content \\ \hline
-$\pi^+$   &  1  &  2M & $\pi^o$/$\gamma$ sample \\ \hline
 $\pi^-$       &  0.2, 0.3, 0.4, 0.5, 0.7, 1     &  10K  & hadronic cal, $\pi^0$ content \\ \hline
+$\pi^+$   &  2  &  600K & $\pi^o$/$\gamma$ sample \\ \hline
 %$\pi^+$ &   1 \& 2  &  10K  & vary angle ($\times$5), reco \\ \hline
 e$^+$ or e$^-$       &    0.2, 0.3, 0.4, 0.5, 1, 2, 3, 5, 7        &    10K   & e-$\gamma$ separation/EM shower     \\ \hline
 % e$^+$ or e$^-$  &  1 \& 2  &  10K  & vary angle($\times$5), reco \\ \hline
 %e$^+$ or e$^-$   (w/rad) &  3  &  20K  & tagged photons \\ \hline
 $\mu^-$  &   (0.2), 0.5, 1, 2  &  10K & $E_\mu$, Michel el., charge sign \\ \hline
 $\mu^+$ &   (0.2), 0.5, 1, 2   &  10K & $E_\mu$, Michel el.,charge sign  \\ \hline
-$\mu^-$ or $\mu^+$ &   0.5, 1, 2, 5, 7  &  5K & $E_\mu$ MCS \\ \hline
+$\mu^-$ or $\mu^+$ &   3, 5, 7  &  5K & $E_\mu$ MCS \\ \hline
 %$\mu^-$ or $\mu^+$  &  1 \& 2  &  5K  & vary angle ($\times$5), reco \\ \hline
-proton & 0.2, 0.3, 0.5, 0.7, 1, 2, 3   &  10K & response, PID \\ \hline
-proton &  1   &  (2M) & mis-ID pdk \\ \hline
+proton &  0.7, 1, 2, 3   &  10K & response, PID \\ \hline
+proton &  1   &  1M & mis-ID pdk, recombination \\ \hline
 %proton &  1 \& 2 &  10K & vary angle ($\times$5), reco \\ \hline
 antiproton &  low-energy tune  &  (100) & antiproton stars \\ \hline
-K$^+$  & 1 & (13k)   &   response, PID, pdk  \\ \hline
-K$^+$  & 0.5, 0.7 & (5k)   &   response, PID, pdk  \\ \hline
+K$^+$  & 1 & (13K)   &   response, PID, PDK  \\ \hline
+K$^+$  & 0.5, 0.7 & (5K)   &   response, PID, PDK  \\ \hline \hline
+$\mu$, e, proton  & 1 (vary angle $\times$5 & 10K  & reconstruction  \\ \hline
 \end{tabular}
-\caption{Requirements summary for nominal beam direction. Items in parenthesis indicate somewhat lower priority (see text).
+\caption{Requirements summary for particle types and momenta. Items in parenthesis indicate lower priority (see text).
 }
 \label{tab:summaryphysics}
 \end{table}
@@ -328,29 +318,57 @@ Reconstruction of neutrino energy depends of a quality of reconstruction of both
 
 \subsection{Other measurements} 
 \subsubsection{Anti-proton annihilation }
-\subsubsection{Proton decay background (cosmogenic $K^{0} \to K^+$)}
+
+A sample of antiproton would be useful to calibrate the $p$-$\overline{p}$ annihilation process. 
+This would provide input to exotic B-violating process neutron oscillation (reference) modeling of 
+subsequent  $n$-$\overline{n}$ annihilation. These events would be taggged in the mixed-mode beam.
+Events should be at the lowest energies achievable in this beamline.
+
+
+\subsubsection{Proton decay sensitivity and background samples}
+
+
+The DUNE experiment in the deep underground location will improve sensitivity to detection of several modes of proton decay.
+In particular, a first ever LAr detector of this scale underground will primarily improve sensitivity to 
+proton decays with final state kaons such as  $p \rightarrow K^+ \overline{\nu}$. 
+Sensitivity to this process is studied in \cite{bueno}. $K^+$ detector efficiencies are estimated to be $>$97\% in the
+appropiate momentum range (500-800 MeV/c). The kaon samples requested in Table~\ref{pdktable} are needed to directly measure 
+$K^+$ PID and detection efficiencies. Obtaining low energy kaons will likely be difficult in this beamline.
+A sample of 13K beam kaons with 1~GeV/c momentum are requested to provide 2K stopping $K^+$ track samples for PID studies.
+(only 15\% of $K^+$ at 1 GeV stop at 1~GeV/c).
 
 
 \begin{table}[h]
 \centering
 \begin{tabular}{|c|c|c|}
 \hline
-Particle     & Momenta (GeV)                                                                                       & Exposure/bin (total)  \\ \hline
-$K^+$   & 0.5-0.8 MeV (50 MeV bins)   &  1000 (6k)     \\ \hline
-$K^-$   & 0.5-0.8 MeV (50 MeV bins)   &  1000 (6k)     \\ \hline
-\end{tabular}\caption{Data sample requirements for calibrate absiolute energy scale. }
+Particle     & Momenta (GeV/c) & Exposure/bin  \\ \hline
+\hline
+K$^+$  &  1 & (13k)    \\ \hline
+K$^+$  & 0.5, 0.7 & (5k)   \\ \hline
+proton &  1  &  (1M)  \\ \hline
+\end{tabular}\caption{Samples related to proton decay physics requirements.}
+\label{pdktable}
 \end{table}
+
+A sizable sample of protons ($\sim 10^6$)
+are requested to study the possible background contributions to  $p \rightarrow K^+ \overline{\nu}$.
+This sample of  protons are needed to quantify the possibility that an interacting {\bf p} 
+is  {\em mis-IDed as stopping K}. A proton interaction which produces neutrals and one charged pion 
+(which is mis-IDed or subsequently decays to $\mu$) can fake the final state kaon signal.
 
 
 \subsubsection{Supernova}
-The energies of the electrons coming from CC $\nu_e$ interactions from Supernova will be in the orider of few MeV. The beam test cannot offer such low energy electron, but one can use the Michel electrons form $'mu$ decay to cover these energies. The SK used the Michel spectrum to calibrate the absolute energy scale. 
+The energies of the electrons coming from CC $\nu_e$ interactions from Supernova will be in the order of 10s of MeV. 
+The beam test cannot offer such low energy electron, but one can use the Michel electrons form $'mu$ decay to cover these energies. The SK used the Michel spectrum to calibrate the absolute energy scale. 
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{|c|c|c|}
-\hline
-Particle     & Momenta (GeV)                                                                                       & Exposure/bin (total)  \\ \hline
-$\mu^+$   & any, but need to stop    &  2000 (2k)     \\ \hline
-\end{tabular}\caption{Data sample requirements for calibrate absiolute energy scale. }
-\end{table}
+%\begin{table}[h]
+%\centering
+%\begin{tabular}{|c|c|c|}
+%\hline
+%Particle     & Momenta (GeV/c)    & Exposure/bin  \\ \hline
+%$\mu^+$   & (0.2), 0.5, 1      &  10K    \\ \hline
+%\end{tabular}\caption{Stopping . }
+%\end{table}
+
