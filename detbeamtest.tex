@@ -1,10 +1,71 @@
-The Single-Phase Cern Prototype detector is intended to provide input necessary to reduce systematic uncertainties for oscillation measurements 
-and additional measurements that support the physics program in DUNE. 
-The LAr TPC technology is not new but wasn't extensively used in the 1-10 GeV neutrino energy range.  
+The main goal of the Single-Phase Prototype test beam program is to perform measurements 
+that are needed to control and understand systematic uncertainties in DUNE oscillation measurements.
+The program also includes measurements to support other important DUNE physics measurements as described below.
+%detector is intended to provide input necessary to reduce systematic uncertainties for oscillation measurements 
+%
+
+Work to evaluate effect of all systematic uncertaintes in DUNE sensitivities is still in progress. 
+Current assumptions on detector related systematic uncertainties in DUNE to achieve
+projected sensitivities~\cite{DuneCDR} are shown in
+%Assumptions on current level of uncertainties are shown in 
+Table \ref{table:deterr}. These are compared with teh levels achieved in MINOS and T2K
+appearance measurements.
+\begin{table}[h]
+\centering
+\caption{Current estimated detector related  sources of uncertainty for oscillation 
+measurements.}
+\label{table:deterr}
+\begin{tabular}{|l|c|c|c|l|}
+\hline
+\textbf{Source of uncertainty } & \textbf{MINOS} & \textbf{T2K} & \textbf{DUNE} & \textbf{Comments}  \\ \hline
+$\nu_e$ energy scale  & 2.7\% & 2.5\% & 2\% & comment \\ \hline
+%  e/$\gamma$ separation        &           &                   \\ \hline
+%  e-m shower calibration        &           &            \\ \hline
+%   hadronic shower calibration       &           &        \\ \hline
+%low energy acceptance electron identification &   &  \\ \hline
+% .....   &   &   \\ \hline
+\end{tabular}
+\end{table}
+% THIS IS FROM TABLE 3.8 of CDR
+
+
+As an example of the importance of controlling detector related uncertainties,
+Fig.~\ref{fig:global_escale_sens} from Ref.~\cite{DUNECDR}
+shows the effect of various levels of neutrino energy on 
+sensitivities. The nominal sensitivity assumes a 230-kt-MW-year 
+exposure with equal neutrino and antineutrino mode running. 
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.49\textwidth,height=6.7cm]{figures/mh_230ktmwyear_varyesyst}
+\includegraphics[width=0.49\textwidth,height=6.7cm]{figures/cpv_890ktmwyear_varyesyst}
+%\includegraphics[width=0.49\textwidth,height=6.7cm]{figures/mh_escale_sens}
+%\includegraphics[width=0.49\textwidth,height=6.7cm]{figures/deltacp_escale_sens}
+\label{fig:global_escale_sens}
+  \caption{DUNE projected sensitivity dependence of mass hierarchy (left) and $\delta_{CP}$ 
+(right) to neutrino energy scale uncertainties. Assumptions are described in the text. 
+If energy scale uncertainties can be controlled at the appropriate levels, DUNE can achieve 
+at least 5$\sigma$ sensitivity on mass hierarchy determination for 100\% of $\delta_{CP}$ values and
+for 3$\sigma$ sensitivity to  $\delta_{CP}$ for 75\% coverage of phase space.}
+\end{figure}
 
 
 \subsection{Summary of Detector and Beam Requirements }
 \label{detbeam_main}
+
+LAr TPC technology was first proposed for use in neutrino experiments by C. Rubbia in 1977
+\cite{Rubbia} but extensive use in neutrino experiments is only now being realized. 
+%CERN-EP-INT-77-8
+%Title 	The liquid-argon time projection chamber : a new concept for neutrino detectors
+%operating in the CNGS beamline  (with mean beam energy $\sim$17 GeV)~\cite{ICARUSmain}. 
+The ICARUS T600 detector~\cite{ICARUSrefs} pioneered the first large-scale detector operating in the CNGS 
+neutrino beam at mean energy $\sim$17 GeV. ArgoNEUT~\cite{argoneut} recently studied 
+neutrino interactions in the NuMI beam down to sub-GeV energies with a small-scale (??-ton) detector. 
+While these samples are proving useful, they do now allow fully isolating 
+the low energy neutrino interaction processes
+and final states from reconstruction and detector effects. 
+The use of this technology in future precision neutrino experiments will require dedicated 
+information on particle response
+in the few-GeV to sub-GeV range provided charged-particle test beams. 
 
 %%%
 %\subsubsection{Particles energy and direction}
@@ -34,8 +95,8 @@ The detector is designed to mimic the current DUNE Far detector design but must 
 longitudinal and transverse dimensions to contain showering particles up to the energy range of interest ($\sim$7~GeV).
 Fig.~\ref{fig:containment} shows the simulated longitudinal and transverse containment for proton showers up to 10~GeV/c momentum.
 For 10 GeV showers, more than 95\% of the energy is contained in a detector of longitudinal size of 550~cm and 
-radius of 200~cm.
-
+radius of 200~cm. Shower from pions, kaons, and electrons have also been studied and better containment
+is achieved in those cases. 
 \begin{figure}[htp]
   \centering
   \label{fig:containment}  
@@ -48,9 +109,9 @@ radius of 200~cm.
 %    \includegraphics[scale=0.15]{figures/photons_lcont_overlay}&
 %    \includegraphics[scale=0.15]{figures/photons_wcont_overlay}\\
 %%
-   \includegraphics[width=0.31\textwidth,height=3.5cm]{figures/protons_density_overlay}&
-   \includegraphics[width=0.31\textwidth,height=3.5cm]{figures/protons_lcont_overlay}&
-   \includegraphics[width=0.31\textwidth,height=3.5cm]{figures/protons_wcont_overlay}\\
+   \includegraphics[width=0.31\textwidth,height=3.9cm]{figures/protons_density_overlay}&
+   \includegraphics[width=0.31\textwidth,height=3.9cm]{figures/protons_lcont_overlay}&
+   \includegraphics[width=0.31\textwidth,height=3.9cm]{figures/protons_wcont_overlay}\\
 %    \includegraphics[scale=0.15]{figures/protons_lcont_overlay}&
 %    \includegraphics[scale=0.15]{figures/protons_wcont_overlay}\\
 % 
@@ -129,6 +190,8 @@ $\mu$, e, proton  & 1 (vary angle $\times$5 & 10K  & reconstruction  \\ \hline
 %Special runs at various angles with $\pi$, $\mu$, p and electrons will be performed to study reconstruction and tune PID algorithms. 
 
 \subsection{Detector performance tests}
+
+
 
 \subsubsection{Bethe-Bloch parametrisation of charged particles}
 
