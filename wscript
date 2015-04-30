@@ -16,6 +16,7 @@ def build(bld):
         source = 'CERNproto.tex',
         outs = 'pdf',
     )
+    bld.install_files('${PREFIX}','CERNproto.pdf')
     return
 
 
