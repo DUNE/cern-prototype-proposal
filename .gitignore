@@ -110,3 +110,6 @@ sympy-plots-for-*.tex/
 *~
 .DS_Store
 CERNproto.pdf
+.lock-waf*
+.waf-*
+build
