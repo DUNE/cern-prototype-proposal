@@ -1,5 +1,5 @@
 The main goal of the Single-Phase Prototype test beam program is to perform measurements 
-that are needed to control and understand systematic uncertainties in DUNE oscillation measurements.
+needed to control and understand systematic uncertainties in DUNE oscillation measurements.
 The program also includes measurements to support other important DUNE physics measurements as described below.
 %detector is intended to provide input necessary to reduce systematic uncertainties for oscillation measurements 
 %
@@ -25,24 +25,24 @@ The program also includes measurements to support other important DUNE physics m
 
 As an example of the importance of controlling detector related uncertainties,
 Fig.~\ref{fig:spectraleffect} shows the effect of a lepton energy scale 
-uncertainty of 10\% shift of lepton enerfy scale on the measured 
-appearance signal for $\delta_{CP}=0$ 
-and backgrounds in DUNE. The curve shows the expected signal shape for 
-$\delta_{CP}=?$. Energy scale uncertainties can mimic a non-zero
+uncertainty of 10\% on the measured 
+appearance signal (for $\delta_{CP}=0$, etc.). 
+and backgrounds in DUNE. The dashed curve (ADD CURVE) shows the expected signal shape
+ for $\delta_{CP}=?$. Energy scale uncertainties can mimic a non-zero
 $\delta_{CP}$ phase. 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.7\textwidth,height=7.7cm]{figures/lepbias10}
 \label{fig:spectraleffect}
   \caption{DUNE $\nu_e$ appearance signal and background spectra assuming 
-??? for $\delta_{CP}=0$. 
+$\delta_{CP}=0$. 
 Solid curves shows the effect of 10\% lepton energy scale shift on the 
 measured appearance signal 
 and backgrounds. The dashed-curve (NEEDS TO BE ADDED) shows the 
 expected signal shape for 
 $\delta_{CP}=?$.
 {\color{red} 
-Need to check details of assumptions
+Need to add details of plot assumptions
 }
 }
 \end{figure}
@@ -62,7 +62,7 @@ a best-case scenario.
 %\includegraphics[width=0.49\textwidth,height=6.7cm]{figures/deltacp_escale_sens}
 \label{fig:global_escale_sens}
   \caption{DUNE projected sensitivity dependence of mass hierarchy (left) and $\delta_{CP}$ 
-(right) to neutrino energy scale uncertainties. Assumptions are described in the text. 
+(right) to neutrino energy scale uncertainties. 
 If energy scale uncertainties can be controlled at the appropriate levels, DUNE can achieve 
 at least 5$\sigma$ sensitivity on mass hierarchy determination for 100\% of $\delta_{CP}$ values and
 for 3$\sigma$ sensitivity to  $\delta_{CP}$ for 75\% coverage of phase space.
@@ -72,8 +72,8 @@ Need to check details of assumptions
 }
 \end{figure}
 
-Work to evaluate effect of all systematic uncertaintes in DUNE sensitivities is still in progress. Current levels of sensitivity in ~\cite{DuneCDR} assumes
-$\nu_e$ energy scale uncertainties at the level of 2\%. 
+Work to evaluate effect of all systematic uncertainties in DUNE sensitivities is still in progress. Current levels of sensitivity in ~\cite{DuneCDR} assumes
+$\nu_e$ energy scale is known at the level of 2\%. 
 More here...
 %will require a dedicated test beam
 
@@ -240,8 +240,7 @@ Monte Carlo simulations and allow more precise reconstruction of neutrino energy
 
 \subsubsection{Shower calibration}
 
-Reconstruction of neutrino energy depends of a quality of reconstruction of both electromagnetic and hadronic showers. Accurate
-reconstruction of hadron energy 
+Accurate measurement of neutrino energy will require reconstruction of both electromagnetic and hadronic showers. Reconstruction of hadron energy 
 in this energy range will require knowledge of the initiating hadron's 
 ($\pi^{+/-}$, $p$, or $K^{+/-}$)
 fate (interact, decay, or stop). For the case of  interacting hadrons 
@@ -250,8 +249,8 @@ deposit energy electromagnetically ($\pi^o$, $\gamma$), as well as
 secondary hadrons,
 %and their energy responses 
 will need to be determined to characterize the response. 
-A test beam with know incoming particle type and energy is the ideal case
-for performing this task. 
+The test beam with know incoming particle type and momentum will be used
+to characterize interacting hadrons in this energy range.
 %quantify responses to initiating hadrons
 %($\pi^{+/-}$, $p$, or $K^{+/-}$)
 %Hadronic showers initiated by protons in this energy range require
@@ -260,7 +259,7 @@ Fig.~\ref{fig:hadronshwr} shows the fraction of true energy deposited by interac
 3~GeV/c (right) incident momenta simulated using FLUKA~\cite{fluka}. 65\% of protons with 1~GeV/c will interact while the remaining 
 35\% will range out (see Sec.~\ref{dedx}). The resulting energy deposition in the two cases cannot be 
 accurately characterize by an average shower calibration factor. Monte Carlo simulations of 
-outgoing particles, especially at low energies) must be checked and benchmarked against calibration data to avoid
+outgoing particles, especially at low energies) must be checked and bench marked against calibration data to avoid
 large uncertainties from shower modeling. 
 \begin{figure}[h!]
   \centering
@@ -277,9 +276,9 @@ Place holders cut from March workshop talk R\&D - Need better versions.
 
 Pion showers at low energies will also be important both for determining the interacted neutrino energy as well
 as for modeling neutral current backgrounds resulting from $\pi^o$ content in showers. Differences in energy deposited
-by $\pi^+$ versus $\pi^-$ initiated interactions are different up to energy on the order of 1~GeV due to different
+by $\pi^+$ versus $\pi^-$ initiated interactions are present up to momenta on the order of 1~GeV/c due to different
 final state particles and interaction cross sections. This is illustrated in 
-Fig.~\ref{pionshwr} which shows the differences in mean energy deposited (left) and width (right) 
+Fig.~\ref{fig:pionshwr} which shows the differences in mean energy deposited (left) and width (right) 
 for interacting pions ranging from 0.2~GeV/c up to 7~GeV/c momenta simulated using FLUKA(?).
 There is a strong case~\ref{lariat,T2K} for improving 
 knowledge of exclusive final states and interaction cross section at low energies. Test beam samples
@@ -367,11 +366,16 @@ There is not currently a satisfactory theory describing absorption. The Valencia
 %which can be used for matching with he neutrino data, similar to the  LEM (library event matching).
 
 Information on range and charge deposition for stopping charged-particles can be used to 
-accurately identify particle type as well as measure their kinetic energy. 
-Fig.~\ref{fig:resrange} shows track energy loss per unit length (dE/dx) as a function of residual 
-track range for muons, pions, protons and kaons. ALSO include the plot of probabilities from Robert here.
-The tail is used to calibration the MIP response, the region near the end of the track is used
-to give PID information. (WIP)
+accurately identify particle type as well as measure kinetic energy. 
+Fig.~\ref{fig:resrange}  (left) shows track energy loss per unit length (dE/dx) as a function of residual 
+track range for muons, pions, protons and kaons. 
+%ALSO include the plot of probabilities from Robert here.
+Probability functions for each particle hypothesis are also shown. 
+%The tail is used to calibration the MIP response, the region near the end of the track is used
+%to give PID information. (WIP)
+Test beam measurements of stopping particles of each type will be used
+to calibrate the energy deposition functions and to determine particle 
+mis-ID probabilities. 
 \begin{figure}[h!]
   \centering
 %\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pid}
@@ -471,7 +475,7 @@ The beam test cannot offer such low energy electron, but one can use the Michel 
 
 
 \subsubsection{Charge sign determination}
-It is not possible to determine charge of the particle on the event by event basis with non-magnetised LAr TPC detectors. A statistical separation will be studied which will make use of differences in muon versus antimuon capture cross sections and lifetime.
+It is not possible to determine charge of the particle on the event by event basis with non-magnetized LAr TPC detectors. A statistical separation will be studied which will make use of differences in muon versus antimuon capture cross sections and lifetime.
 %However, the statistical analyst will be possible. We will fit the muon's half time which is different for muons and antimony due to different muon capture cross sections. 
 For the $\mu^+$ for argon we expect about xx\% to be captured and for $\mu^-$ about yy\%. 
 
@@ -485,7 +489,7 @@ The DUNE experiment in the deep underground location will improve sensitivity to
 In particular, a first ever LAr detector of this scale underground will primarily improve sensitivity to 
 proton decays with final state kaons such as  $p \rightarrow K^+ \overline{\nu}$. 
 Sensitivity to this process is studied in \cite{bueno}. $K^+$ detector efficiencies are estimated to be $>$97\% in the
-appropiate momentum range (500-800 MeV/c). The kaon samples requested in Table~\ref{pdktable} are needed to directly measure 
+appropriate momentum range (500-800 MeV/c). The kaon samples requested in Table~\ref{pdktable} are needed to directly measure 
 $K^+$ PID and detection efficiencies. Obtaining low energy kaons will likely be difficult in this beamline.
 A sample of 13K beam kaons with 1~GeV/c momentum are requested to provide 2K stopping $K^+$ track samples for PID studies.
 (only 15\% of $K^+$ at 1 GeV stop at 1~GeV/c).
@@ -515,7 +519,7 @@ is  {\em mis-IDed as stopping K}. A proton interaction which produces neutrals a
 
 A sample of antiproton would be useful to calibrate the $p$-$\overline{p}$ annihilation process. 
 This would provide input to exotic B-violating process neutron oscillation (reference) modeling of 
-subsequent  $n$-$\overline{n}$ annihilation. These events would be taggged in the mixed-mode beam.
+subsequent  $n$-$\overline{n}$ annihilation. These events would be tagged in the mixed-mode beam.
 Events should be at the lowest energies achievable in this beamline.
 
 
