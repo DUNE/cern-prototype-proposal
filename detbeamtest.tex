@@ -392,8 +392,29 @@ Need better versions
 
 \subsubsection{Angular Dependence Effects}
 
-Angular dependence of Recombination plots 
 
+Ionization charge deposited by charged-particles in the LAr TPC must be calibrated to
+account for recombination effects. Jaffe columnar recombination model~\cite{jaffe,eqref} predicts 
+angular dependence given by 
+$$Q \approx \frac{Q_o}{1+k_c (dE/dx) / {\cal E} \sin\phi}, $$ 
+where
+%Recombination modeling 
+$Q_o$ and $Q$ are the ionization charge and the collected charge respectively, 
+%$dE/dx$ is range based stopping power.
+$k_c$ is a constant that depends on LAr diffusion and mobility coefficients, $\cal E$ 
+is the electric field strength, and $\phi$ is the angle relative to the drift direction.
+%
+The Modified Box model~\cite{box} (current default for ICARUS and LArSoft) does not have an
+explicit angular dependence however it is assumed that one can be incorporated  
+%into Birk's law 
+by replacing ${\cal E}$  with ${\cal E} \sin\phi$.
+Recent results from ArgoNEUT~\cite{argoneut_rec} measure small angular dependent effects using 
+stopping protons from neutrino interactions in the range 50-300 MeV with angles from 40-90$^o$.
+
+Test beam data will be used to study angular dependence using 
+samples of secondary stopping protons produced in showers at steep angles with
+respect to the field direction.
+??? give sample sizes - maybe include plot?
 
 \subsubsection{Reconstruction Effects}
 
@@ -401,11 +422,17 @@ Angular dependence of Recombination plots
 
 Main issues for the reconstruction algorithms:
 \begin{itemize}
-\item The reconstruction algorithms try to use all three planes on the signal readout. if the orientation of the track/shower is such that it is aligned with wires on one of the plans it significantly reduces quality of reconstructed objects. 
+\item Reconstruction algorithms use all three signal planes for 3D track and event reconstruction. 
+If the orientation of the track/shower is such that it is aligned with wires on one of the planes, it significantly reduces quality of reconstructed objects. 
 \item Calorimetry with collection and induction planes. In the ICARUS experiment the deposited energy was reconstructed from the signal on the collection plane. The induction planes bipolar signal wasn't "stable" enough to use it for calorimetric measurement. In the ELBNF design there is additional shielding  wire plane which will improve the quality of the bipolar signal and the  test beam experiment will help with its calibration.
 \item   Vertexing.
 \item Reconstruction efficiency for low energy particles. The reconstruction algorithm suffer from the lose of efficiency for low energy particle or particles which leave less than 200-300 hits. Training the algorithms on a low energy particles from the test beam will improve the quality and efficiency of the reconstructed objects.
 \end{itemize}
+
+Any reconstruction algorithm will depend on the particular choices in the TPC design. 
+Therefore bench marking our reconstruction algorithms with as close to realistic design prototype will
+be invaluable to understanding performance of reconstruction.
+
 %
 %\begin{table}[h]
 %\centering
@@ -445,15 +472,24 @@ with two MIPs. In case of Compton scattering off of atomic electrons the
 signal is much more difficult to distinguish from the CC $\nu_e$ scattering signal.
 
 Electron-photon separation has been studied in LAr TPCs
-(Icarus and Argoneut) as shown in Fig.~\ref{fig:egam1}.
-Currently the 
-separation efficiency is estimated to be at the level of of 94 \% (? cite and 
-check the number). 
-This may depend on particular features of the geometry including wire pitch, etc.
+(Icarus and Argoneut) and typically better than 90\% background rejection can be 
+achieved with efficiencies up to $>$70\%.
+% numbers come from Dorotas plot docdb 10660 
+%as shown in Fig.~\ref{fig:egam1}.
+%Currently the 
+%separation efficiency is estimated to be at the level of of 95 \% (?) 
+
+Fig.~\ref{fig:egamma_wire} shows...
+Is there a good figure for this section ? (version of 10660 p. 5 but be clear on 
+the assumptions). 
+Our studies indicate that rejection and efficiency depend 
+on particular features of the geometry including wire pitch and plane 
+orientation which affect the reconstruction. 
 Therefore, it is critically important 
 to study e/$\gamma$ separation in a prototype LAr TPC detector.
-{\bf we need someone to look into this}
 
+
+More discussion of specific samples to be used here.
 
 
 \subsection{Other measurements} 
