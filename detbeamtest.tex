@@ -1,73 +1,108 @@
+The main goal of the Single-Phase Prototype test beam program is to perform measurements 
+that are needed to control and understand systematic uncertainties in DUNE oscillation measurements.
+The program also includes measurements to support other important DUNE physics measurements as described below.
+%detector is intended to provide input necessary to reduce systematic uncertainties for oscillation measurements 
+%
 
-\subsection*{TODO list}
-{\color{red}
-\begin{description}
-\item[Sensitivity plots.] 	
- Create plots for the CPV and HM sensitivities for 40kton detector and 1.2 MW beam. Plots should include various combinations of the assumed uncertainties: with current best measurements,  with best guesses about uncertainties we can archive and with  uncertainties which will be obtain using beam test experiment at CERN.
-\end{description}
-
-}
-
-\subsection{Requirements for the detector, beam and commissioning}
-\label{detbeam_main}
-The Single-Phase Cern Prototype detector is intended to provide input necessary to reduce systematic uncertainties for oscillation measurements 
-and additional measurements that support the physics program in DUNE. 
-The LAr TPC technology is not new but wasn't extensively used in the 1-10 GeV neutrino energy range.  
-The main source of uncertainties due to detector with the current values are shown in table \ref{table:deterr}
-
-
-\begin{table}[h]
-\centering
-\caption{Current known sources of detector uncertainties for liquid argon or TPC.}
-\label{table:deterr}
-\begin{tabular}{|c|c|c|}
-\hline
-\textbf{source of uncertainty } & \textbf{value} & \textbf{reference}  \\ \hline
-  e/$\gamma$ separation        &           &                   \\ \hline
-  e-m shower calibration        &           &            \\ \hline
-   hadronic shower calibration       &           &        \\ \hline
-low energy acceptance electron identification &   &  \\ \hline
- .....   &   &   \\ \hline
-\end{tabular}
-\end{table}
+%Current assumptions on detector related systematic uncertainties in DUNE to achieve
+%projected sensitivities~\cite{DuneCDR} are shown in
+%%Assumptions on current level of uncertainties are shown in 
+%Table \ref{table:deterr}. These are compared with teh levels achieved in MINOS and T2K
+%appearance measurements.
+%\begin{table}[h]
+%\centering
+%\caption{Current estimated detector related  sources of uncertainty for oscillation 
+%measurements.}
+%\label{table:deterr}
+%\begin{tabular}{|l|c|c|c|l|}
+%\hline
+%\textbf{Source of uncertainty } & \textbf{MINOS} & \textbf{T2K} & \textbf{DUNE} & \textbf{Comments}  \\ \hline
+%$\nu_e$ energy scale  & 2.7\% & 2.5\% & 2\% & comment \\ \hline
+%\end{tabular}
+%\end{table}
+%% THIS IS FROM TABLE 3.8 of CDR
 
 
-
-\begin{table}[h]
-\centering
-\caption{Current known sources of  uncertainties due to interaction of charged particle with argon.}
-\label{table:physicserr}
-\begin{tabular}{|c|c|c|}
-\hline
-\textbf{source of uncertainty } & \textbf{value} & \textbf{reference}  \\ \hline
- pion(Kaon) absorbtion       &           &                   \\ \hline
- pion(Kaon) charge exchange       &           &            \\ \hline
-pion (Kaon) production in secondary interactions  &   &  \\ \hline
- muon capture       &           &  Phys. Rev. C 35, 2212      \\ \hline
-energy scale  &   &   \\ \hline
-Michel electron tagging  &  &  \\ \hline
-
- .....   &   &   \\ \hline
-\end{tabular}
-\end{table}
-
-
-
-With current detector uncertainties from table \ref{table:deterr} the sensitivities for the CP violation phase measurement is shown in Fig. \ref{fig:cpsensitivity}  {\bf Task: make this plot} . The  proposed test beam detector will reduce uncertainties to XX\%  and improve our sensitivity to $\delta_{CP}$ as shown in Fig. \ref{fig:cpsensitivity} {\bf Task: make this plot.}
-
-
-
+As an example of the importance of controlling detector related uncertainties,
+Fig.~\ref{fig:spectraleffect} shows the effect of a lepton energy scale 
+uncertainty of 10\% shift of lepton enerfy scale on the measured 
+appearance signal for $\delta_{CP}=0$ 
+and backgrounds in DUNE. The curve shows the expected signal shape for 
+$\delta_{CP}=?$. Energy scale uncertainties can mimic a non-zero
+$\delta_{CP}$ phase. 
 \begin{figure}[h!]
-  \centering
-%\includegraphics[scale=0.4]{}
-\label{fig:cpsensitivity}
-  \caption{Sensitivites for the $\delta_{CP}$ measurement  for using current knowledge of the single-phase LAr-TPC detector technology and for reduced detector uncertainties from SPCP beamtest data.  The plots prepared for 40 kton fiducial mass and $xx\times 10^{21}$POT.}
+\centering
+\includegraphics[width=0.7\textwidth,height=7.7cm]{figures/lepbias10}
+\label{fig:spectraleffect}
+  \caption{DUNE $\nu_e$ appearance signal and background spectra assuming 
+??? for $\delta_{CP}=0$. 
+Solid curves shows the effect of 10\% lepton energy scale shift on the 
+measured appearance signal 
+and backgrounds. The dashed-curve (NEEDS TO BE ADDED) shows the 
+expected signal shape for 
+$\delta_{CP}=?$.
+{\color{red} 
+Need to check details of assumptions
+}
+}
+\end{figure}
+Effects on sensitivity to mass hierarchy and $\delta_{CP}$ as a function of 
+$\delta_{CP}$ are shown in Fig.~\ref{fig:global_escale_sens} from Ref.~\cite{DUNECDR}. 
+%shows the effect of various levels of neutrino energy on sensitivities. 
+The nominal sensitivity assumes a 230-kt-MW-year 
+exposure with equal neutrino and antineutrino mode running. 
+This does not account for correlated uncertainties in neutrino and 
+antineutrino running or effects on backgrounds and is therefore likely
+a best-case scenario. 
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.49\textwidth,height=6.7cm]{figures/mh_230ktmwyear_varyesyst}
+\includegraphics[width=0.49\textwidth,height=6.7cm]{figures/cpv_890ktmwyear_varyesyst}
+%\includegraphics[width=0.49\textwidth,height=6.7cm]{figures/mh_escale_sens}
+%\includegraphics[width=0.49\textwidth,height=6.7cm]{figures/deltacp_escale_sens}
+\label{fig:global_escale_sens}
+  \caption{DUNE projected sensitivity dependence of mass hierarchy (left) and $\delta_{CP}$ 
+(right) to neutrino energy scale uncertainties. Assumptions are described in the text. 
+If energy scale uncertainties can be controlled at the appropriate levels, DUNE can achieve 
+at least 5$\sigma$ sensitivity on mass hierarchy determination for 100\% of $\delta_{CP}$ values and
+for 3$\sigma$ sensitivity to  $\delta_{CP}$ for 75\% coverage of phase space.
+{\color{red} 
+Need to check details of assumptions
+}
+}
 \end{figure}
 
-\newpage
+Work to evaluate effect of all systematic uncertaintes in DUNE sensitivities is still in progress. Current levels of sensitivity in ~\cite{DuneCDR} assumes
+$\nu_e$ energy scale uncertainties at the level of 2\%. 
+More here...
+%will require a dedicated test beam
 
-\subsubsection{Particles energy and direction}
-\label{detbeam_particles}
+
+%$\nu_e$ energy scale  & 2.7\% & 2.5\% & 2\% & comment \\ \hline
+%\end{tabular}
+
+
+\subsection{Summary of Detector and Beam Requirements }
+\label{detbeam_main}
+
+LAr TPC technology was first proposed for use in neutrino experiments by C. Rubbia in 1977
+\cite{Rubbia} but extensive use in neutrino experiments is only now being realized. 
+%CERN-EP-INT-77-8
+%Title 	The liquid-argon time projection chamber : a new concept for neutrino detectors
+%operating in the CNGS beamline  (with mean beam energy $\sim$17 GeV)~\cite{ICARUSmain}. 
+The ICARUS T600 detector~\cite{ICARUSrefs} pioneered the first large-scale detector operating in the CNGS 
+neutrino beam at mean energy $\sim$17 GeV. ArgoNEUT~\cite{argoneut} recently studied 
+neutrino interactions in the NuMI beam down to sub-GeV energies with a small-scale (170~$l$ fiducial volume) detector. 
+While these samples are proving useful, they do now allow full isolation of
+the low energy neutrino interaction processes
+and final states from reconstruction and detector effects. 
+The use of this technology in future precision neutrino experiments will require dedicated 
+information on particle response
+in the few-GeV to sub-GeV range provided charged-particle test beams. 
+
+%%%
+%\subsubsection{Particles energy and direction}
+%\label{detbeam_particles}
 The DUNE experiment will run beam in both neutrino and anti-neutrino 
 configurations. These beams will be composed  mainly of muon neutrinos (anti-neutrinos) as well as electron neutrinos (anti-neutrinos). In Fig. \ref{fig:particle_momenta} the distributions of momenta and angles of particles created in neutrino interactions from simulated beam fluxes are shown. 
 \begin{figure}[h!]
@@ -76,7 +111,11 @@ configurations. These beams will be composed  mainly of muon neutrinos (anti-neu
 \includegraphics[width=0.49\textwidth,height=5.0cm]{figures/True_theta_per_Particle}
 \label{fig:particle_momenta}
   \caption{Particle momenta (left) and angular (right) distributions for particles produced in neutrino interactions 
-from $\nu_e$, $\nu_\mu$, $\bar \nu_e$ and $\bar \nu_\mu$ at the far detector location.}
+from $\nu_e$, $\nu_\mu$, $\bar \nu_e$ and $\bar \nu_\mu$ at the far detector location.
+{\color{red}
+Want y-log scale version - combine e+e-, fix mu, improve information content (y-axis, change colors, etc )
+}
+}
 \end{figure}
 
 
@@ -89,10 +128,13 @@ from $\nu_e$, $\nu_\mu$, $\bar \nu_e$ and $\bar \nu_\mu$ at the far detector loc
 
 %\newpage
 
-Fig.~\ref{fig:containment} shows the simulated longitudinal and transverse containment for proton showers up to 10~GeV/c momentum.
+The detector is designed to mimic the current DUNE Far detector design but must be sufficiently large in both
+longitudinal and transverse dimensions to contain showering particles up to the energy range of interest ($\sim$7~GeV).
+Fig.~\ref{fig:containment} shows the simulated longitudinal and transverse 
+energy containment for proton showers up to 10~GeV/c momentum.
 For 10 GeV showers, more than 95\% of the energy is contained in a detector of longitudinal size of 550~cm and 
-radius of 200~cm.
-
+radius of 200~cm. Shower from pions, kaons, and electrons have also been studied and better containment
+is achieved in those cases. 
 \begin{figure}[htp]
   \centering
   \label{fig:containment}  
@@ -105,9 +147,9 @@ radius of 200~cm.
 %    \includegraphics[scale=0.15]{figures/photons_lcont_overlay}&
 %    \includegraphics[scale=0.15]{figures/photons_wcont_overlay}\\
 %%
-   \includegraphics[width=0.31\textwidth,height=3.5cm]{figures/protons_density_overlay}&
-   \includegraphics[width=0.31\textwidth,height=3.5cm]{figures/protons_lcont_overlay}&
-   \includegraphics[width=0.31\textwidth,height=3.5cm]{figures/protons_wcont_overlay}\\
+%   \includegraphics[width=0.31\textwidth,height=3.9cm]{figures/protons_density_overlay}&
+   \includegraphics[width=0.49\textwidth,height=4.9cm]{figures/protons_lcont_overlay}&
+   \includegraphics[width=0.49\textwidth,height=4.9cm]{figures/protons_wcont_overlay}\\
 %    \includegraphics[scale=0.15]{figures/protons_lcont_overlay}&
 %    \includegraphics[scale=0.15]{figures/protons_wcont_overlay}\\
 % 
@@ -128,12 +170,17 @@ radius of 200~cm.
 %    \includegraphics[scale=0.15]{figures/kaons_wcont_overlay}\\
  
   \end{tabular}
-  \caption{Simulated longitudinal and transverse containment for proton showers of 4 and 10~GeV/c momenta.}
+  \caption{Simulated longitudinal and transverse containment for proton showers of 4 and 10~GeV/c momenta.
+%{\color{red}
+%Improve or perhaps remove far left plot (binning too fine).
+%Add info on simulation details and containment defn (T. Junk).
+%}
+}
 %For 10 GeV showers, more than 95\% of the energy is contained in a detector of longitudinal size of 550~cm and 
 %radius of 200~cm.}
 \end{figure}
 
-\clearpage
+%\clearpage
 %\subsubsection{Particle rates}
 %\label{detbeam_rates}
 %Estimation of  beam particles rates  necessary to collect high enough statistics in a reasonable time to obtain goals of of the measurements.
@@ -187,15 +234,111 @@ $\mu$, e, proton  & 1 (vary angle $\times$5 & 10K  & reconstruction  \\ \hline
 
 \subsection{Detector performance tests}
 
-\subsubsection{Bethe-Bloch parametrisation of charged particles}
+The prototype detector will allow to study the detector response to charge particles from the test beam. The measured energy deposition for various particles and its dependence on the direction of the particle will be used to tune
+Monte Carlo simulations and allow more precise reconstruction of neutrino energy and interactions topologies with good particle identification.
 
-The prototype detector will allow to study the detector response to charge particles from the test beam and will serve as a calibration detector. The measured energy deposition for various particles and its dependence on the direction of the particle will feed into our Monte Carlo generator and allow more precise reconstruction of neutrino energy and interactions topologies with good particle identifications.
+
+\subsubsection{Shower calibration}
+
+Reconstruction of neutrino energy depends of a quality of reconstruction of both electromagnetic and hadronic showers. Accurate
+reconstruction of hadron energy 
+in this energy range will require knowledge of the initiating hadron's 
+($\pi^{+/-}$, $p$, or $K^{+/-}$)
+fate (interact, decay, or stop). For the case of  interacting hadrons 
+the composition of secondaries, which will include neutrals, particles which 
+deposit energy electromagnetically ($\pi^o$, $\gamma$), as well as 
+secondary hadrons,
+%and their energy responses 
+will need to be determined to characterize the response. 
+A test beam with know incoming particle type and energy is the ideal case
+for performing this task. 
+%quantify responses to initiating hadrons
+%($\pi^{+/-}$, $p$, or $K^{+/-}$)
+%Hadronic showers initiated by protons in this energy range require
+
+Fig.~\ref{fig:hadronshwr} shows the fraction of true energy deposited by interacting protons with 1~GeV/c (left) and
+3~GeV/c (right) incident momenta simulated using FLUKA~\cite{fluka}. 65\% of protons with 1~GeV/c will interact while the remaining 
+35\% will range out (see Sec.~\ref{dedx}). The resulting energy deposition in the two cases cannot be 
+accurately characterize by an average shower calibration factor. Monte Carlo simulations of 
+outgoing particles, especially at low energies) must be checked and benchmarked against calibration data to avoid
+large uncertainties from shower modeling. 
+\begin{figure}[h!]
+  \centering
+\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/protons_1gev_v0}
+\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/protons_3gev_v0}
+\label{fig:hadronshwr}
+  \caption{Fraction of true energy deposited by interacting protons of 1~GeV/c (left) and
+3~GeV/c (right) momenta simulated using FLUKA~\cite{fluka}.
+{\color{red}
+Place holders cut from March workshop talk R\&D - Need better versions.
+}
+}
+\end{figure}
+
+Pion showers at low energies will also be important both for determining the interacted neutrino energy as well
+as for modeling neutral current backgrounds resulting from $\pi^o$ content in showers. Differences in energy deposited
+by $\pi^+$ versus $\pi^-$ initiated interactions are different up to energy on the order of 1~GeV due to different
+final state particles and interaction cross sections. This is illustrated in 
+Fig.~\ref{pionshwr} which shows the differences in mean energy deposited (left) and width (right) 
+for interacting pions ranging from 0.2~GeV/c up to 7~GeV/c momenta simulated using FLUKA(?).
+There is a strong case~\ref{lariat,T2K} for improving 
+knowledge of exclusive final states and interaction cross section at low energies. Test beam samples
+will be used both to study exclusive interaciton cross sections and to characterize energy deposition 
+patterns for interacting  $\pi^+$ and $\pi^-$.
+\begin{figure}[h!]
+  \centering
+%\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pi+pi-_means}
+%\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pi+pi-_sig}
+\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pi+pi-_means}
+\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pi+pi-_sig}
+\label{fig:pionshwr}
+  \caption{Differences in mean energy deposited (left) and width (right) 
+for interacting pions ranging from 0.2~GeV/c up to 7~GeV/c momenta simulated using FLUKA(?).
+{\color{red}
+Place holders cut from DOCDB 10659  - Need better versions.
+}
+}
+\end{figure}
+
+
+% 
+%\begin{table}[h]
+%\centering
+%\begin{tabular}{|c|c|c|}
+%\hline
+%Particle     & Momenta (GeV)                                                                                       & Exposure/bin (total)  \\ \hline
+%$\pi ^+ $   & 0.2-1.0 (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  1000 (48k)     \\ \hline
+%$\pi ^- $    & 0.2-1.0 (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  1000 (48k)     \\ \hline
+%$e^+$       & 0.2-10  (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  1000 (48k)       \\ \hline
+%$e^- $       & 0.2-10  (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  1000 (48k)       \\ \hline
+%$\mu^+$   & 0.2-1.0 (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  1000 (48k)     \\ \hline
+%$\mu^-$    & 0.2-1.0 (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  1000 (48k)     \\ \hline
+%$p$          &  0.2-1.5 (100MeV bins), 1.5-10.0 ( 200MeV bins)    &  1000 (56k)     \\ \hline
+%$\bar p$   &  0.2-1.5 (100MeV bins), 1.5-10.0 ( 200MeV bins)    &  1000 (56k)     \\ \hline
+%$K^+$      &  0.2-1.5 (100MeV bins), 1.5-10.0 ( 200MeV bins)    &  1000 (56k)     \\ \hline
+%$K^- $      &  0.2-1.5 (100MeV bins), 1.5-10.0 ( 200MeV bins)    &  1000 (56k)     \\ \hline
+%\end{tabular}\caption{Data sample requirements for shower calibrations.  Currently about 1k particles is assumed per bin to include variations in the shower topologies. Details MC analysis is necessary. }
+%\end{table}
+%
+
+
+\subsubsection{Cross section measurements}
+WIP from Jarek\\
+
+Precise measurement of the  absorption and charge exchange of pions and kaons. Pion absorption is a large part of the pion nucleon cross section from 50 MeV to 500MeV with no data above about 1GeV pion kinetic energy. 
+{\bf Add plots and values for known cross sections wit errors} 
+\begin{itemize}
+\item pion absorption on argon - Kotlinski, EPJ 9, 537 (2000)
+\item pion cross section as a function of A - Gianelli PRC 61, 054615 (2000)
+\end{itemize}
+There is not currently a satisfactory theory describing absorption. The Valencia group (Vicente-Vacus NPA 568, 855 (1994)) developed model of    the pion-nucleus reaction with fairly good agreement, although not in detail. The actual  mechanism of multi-nucleon absorption
+ is not well understood. 
  
-{\bf How we compare with Lariat?} 
-{\bf Multiple scattering}  
 
-The set of single-phase prototype detector helped to understand the detector response to cosmic muons. But there is still lots to learn with additional studies. 
-The charge  particle identification efficiencies  has been mapped for only limited range of the particle energies.  
+
+\subsubsection{Bethe-Bloch parametrization of charged particles and PID}
+
+
 
 %\begin{table}[h]
 %\centering
@@ -215,6 +358,70 @@ The charge  particle identification efficiencies  has been mapped for only limit
 %\end{tabular}\caption{Data sample requirements for the $dE/dx$ Bethe-Bloch parametrisation. The lower range starts with the nominal 200 MeV which is not achievable for p and difficult for K. The rough estimate is that we need about 200 particles per bin assuming that about half of them will be actually measured it gives  10\% statistical error for each bin but lower for the fit to the Bethe-Bloch formula. About half of the data sample is in the high momenta region, which can be reduce by decreasing number of particles per bin. }
 %\end{table}
 %
+
+
+\label{detbeam_pid}
+
+%The reconstruction of events in the LAr TPC is still a challenge but rapid progress has been achieved in recent years (cite pandora and other reconstruction algorithms). Despite the progress reconstruction algorithms have to rely Monte Carlo predictions which don't simulate liquid argon detectors responses correctly. Reconstruction algorithms will benefit greatly from test beam data particularly from the full scale prototype. The reconstruction algorithms will be trained to correctly reconstruct track, electromagnetic and hadronic showers.
+%The data of tracks and showers can be used to create a library of reference events with which to tune algorithms.
+%which can be used for matching with he neutrino data, similar to the  LEM (library event matching).
+
+Information on range and charge deposition for stopping charged-particles can be used to 
+accurately identify particle type as well as measure their kinetic energy. 
+Fig.~\ref{fig:resrange} shows track energy loss per unit length (dE/dx) as a function of residual 
+track range for muons, pions, protons and kaons. ALSO include the plot of probabilities from Robert here.
+The tail is used to calibration the MIP response, the region near the end of the track is used
+to give PID information. (WIP)
+\begin{figure}[h!]
+  \centering
+%\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pid}
+%\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pid_probabilities}
+\includegraphics[width=\textwidth,height=5.0cm]{figures/pid_curves}
+\label{fig:resrange}
+  \caption{PID curves - residual range.
+{\color{red}
+Need better versions
+}
+}
+\end{figure}
+
+
+\subsubsection{Angular Dependence Effects}
+
+Angular dependence of Recombination plots 
+
+
+\subsubsection{Reconstruction Effects}
+
+
+
+Main issues for the reconstruction algorithms:
+\begin{itemize}
+\item The reconstruction algorithms try to use all three planes on the signal readout. if the orientation of the track/shower is such that it is aligned with wires on one of the plans it significantly reduces quality of reconstructed objects. 
+\item Calorimetry with collection and induction planes. In the ICARUS experiment the deposited energy was reconstructed from the signal on the collection plane. The induction planes bipolar signal wasn't "stable" enough to use it for calorimetric measurement. In the ELBNF design there is additional shielding  wire plane which will improve the quality of the bipolar signal and the  test beam experiment will help with its calibration.
+\item   Vertexing.
+\item Reconstruction efficiency for low energy particles. The reconstruction algorithm suffer from the lose of efficiency for low energy particle or particles which leave less than 200-300 hits. Training the algorithms on a low energy particles from the test beam will improve the quality and efficiency of the reconstructed objects.
+\end{itemize}
+%
+%\begin{table}[h]
+%\centering
+%\begin{tabular}{|c|c|c|}
+%\hline
+%Particle     & Momenta (GeV)                                                                                       & Exposure/bin (total)  \\ \hline
+%$\pi ^+ $   & 0.2-1.0 (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  500 (26.5k)     \\ \hline
+%$\pi ^- $    & 0.2-1.0 (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  500 (26.5k)     \\ \hline
+%$e^+$       & 0.2-10  (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  500 (26.5k)       \\ \hline
+%$e^- $       & 0.2-10  (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  500 (26.5k)       \\ \hline
+%$\mu^+$   & 0.2-1.0 (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  500 (26.5k)     \\ \hline
+%$\mu^-$    & 0.2-1.0 (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  500 (26.5k)     \\ \hline
+%$p$          &  0.2-1.5 (100MeV bins), 1.5-10.0 ( 200MeV bins)    &  500 (27.8k)     \\ \hline
+%$\bar p$   &  0.2-1.5 (100MeV bins), 1.5-10.0 ( 200MeV bins)    &  500 (27.8k)     \\ \hline
+%$K^+$      &  0.2-1.5 (100MeV bins), 1.5-10.0 ( 200MeV bins)    &  500 (27.8k)     \\ \hline
+%$K^- $      &  0.2-1.5 (100MeV bins), 1.5-10.0 ( 200MeV bins)    &  500 (27.8k)     \\ \hline
+%\end{tabular}\caption{Data sample requirements for the development of the reconstruction algorithms. The most important are  the low momenta particles where the showers are more likely to have different topologies. }
+%\end{table}
+
+
 \subsubsection{e/$\gamma$ separation}
 
 The search for a CP violation phase using $\nu_e$ appearance 
@@ -245,91 +452,30 @@ to study e/$\gamma$ separation in a prototype LAr TPC detector.
 
 
 
-\subsubsection{Reconstruction efficiencies and particle identification}
-\label{detbeam_pid}
+\subsection{Other measurements} 
 
-The reconstruction of events in the LAr TPC is still a challenge but rapid progress has been achieved in recent years (cite pandora and other reconstruction algorithms). Despite the progress reconstruction algorithms have to rely Monte Carlo predictions which don't simulate liquid argon detectors responses correctly. Reconstruction algorithms will benefit greatly from test beam data particularly from the full scale prototype. The reconstruction algorithms will be trained to correctly reconstruct track, electromagnetic and hadronic showers.
-The data of tracks and showers can be used to create a library of reference events with which to tune algorithms.
-%which can be used for matching with he neutrino data, similar to the  LEM (library event matching).
 
-Main issues for the reconstruction algorithms:
-\begin{itemize}
-\item The reconstruction algorithms try to use all three planes on the signal readout. if the orientation of the track/shower is such that it is aligned with wires on one of the plans it significantly reduces quality of reconstructed objects. 
-\item Calorimetry with collection and induction planes. In the ICARUS experiment the deposited energy was reconstructed from the signal on the collection plane. The induction planes bipolar signal wasn't "stable" enough to use it for calorimetric measurement. In the ELBNF design there is additional shielding  wire plane which will improve the quality of the bipolar signal and the  test beam experiment will help with its calibration.
-\item   Vertexing.
-\item Reconstruction efficiency for low energy particles. The reconstruction algorithm suffer from the lose of efficiency for low energy particle or particles which leave less than 200-300 hits. Training the algorithms on a low energy particles from the test beam will improve the quality and efficiency of the reconstructed objects.
-\end{itemize}
-%
+\subsubsection{Supernova and Michel electrons}
+The energies of the electrons coming from CC $\nu_e$ interactions from Supernova will be in the order of 10s of MeV. 
+The beam test cannot offer such low energy electron, but one can use the Michel electrons form $'mu$ decay to cover these energies. The SK used the Michel spectrum to calibrate the absolute energy scale. 
+
+
 %\begin{table}[h]
 %\centering
 %\begin{tabular}{|c|c|c|}
 %\hline
-%Particle     & Momenta (GeV)                                                                                       & Exposure/bin (total)  \\ \hline
-%$\pi ^+ $   & 0.2-1.0 (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  500 (26.5k)     \\ \hline
-%$\pi ^- $    & 0.2-1.0 (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  500 (26.5k)     \\ \hline
-%$e^+$       & 0.2-10  (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  500 (26.5k)       \\ \hline
-%$e^- $       & 0.2-10  (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  500 (26.5k)       \\ \hline
-%$\mu^+$   & 0.2-1.0 (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  500 (26.5k)     \\ \hline
-%$\mu^-$    & 0.2-1.0 (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  500 (26.5k)     \\ \hline
-%$p$          &  0.2-1.5 (100MeV bins), 1.5-10.0 ( 200MeV bins)    &  500 (27.8k)     \\ \hline
-%$\bar p$   &  0.2-1.5 (100MeV bins), 1.5-10.0 ( 200MeV bins)    &  500 (27.8k)     \\ \hline
-%$K^+$      &  0.2-1.5 (100MeV bins), 1.5-10.0 ( 200MeV bins)    &  500 (27.8k)     \\ \hline
-%$K^- $      &  0.2-1.5 (100MeV bins), 1.5-10.0 ( 200MeV bins)    &  500 (27.8k)     \\ \hline
-%\end{tabular}\caption{Data sample requirements for the development of the reconstruction algorithms. The most important are  the low momenta particles where the showers are more likely to have different topologies. }
+%Particle     & Momenta (GeV/c)    & Exposure/bin  \\ \hline
+%$\mu^+$   & (0.2), 0.5, 1      &  10K    \\ \hline
+%\end{tabular}\caption{Stopping . }
 %\end{table}
 
 
-\subsubsection{Cross section measurements}
-Precise measurement of the  absorption and charge exchange of pions and kaons. Pion absorption is a large part of the pion nucleon cross section from 50 MeV to 500MeV with no data above about 1GeV pion kinetic energy. 
-{\bf Add plots and values for known cross sections wit errors} 
-\begin{itemize}
-\item pion absorption on argon - Kotlinski, EPJ 9, 537 (2000)
-\item pion cross section as a function of A - Gianelli PRC 61, 054615 (2000)
-\end{itemize}
-There is not currently a satisfactory theory describing absorption. The Valencia group (Vicente-Vacus NPA 568, 855 (1994)) developed model of    the pion-nucleus reaction with fairly good agreement, although not in detail. The actual  mechanism of multi-nucleon absorption
- is not well understood. 
- 
 \subsubsection{Charge sign determination}
 It is not possible to determine charge of the particle on the event by event basis with non-magnetised LAr TPC detectors. A statistical separation will be studied which will make use of differences in muon versus antimuon capture cross sections and lifetime.
 %However, the statistical analyst will be possible. We will fit the muon's half time which is different for muons and antimony due to different muon capture cross sections. 
 For the $\mu^+$ for argon we expect about xx\% to be captured and for $\mu^-$ about yy\%. 
 
-\subsubsection{Single track calibration}
 
-\subsubsection{Shower calibration}
-
-Reconstruction of neutrino energy depends of a quality of reconstruction of both electromagnetic and hadronic showers. 
-
-- {\bf features of Hadronic shower in LAr TPC}
-- {\bf features of electromagnetic shower in LAr TPC}
-- Missing energy from neutral (Neutrons scattering)
-% 
-%\begin{table}[h]
-%\centering
-%\begin{tabular}{|c|c|c|}
-%\hline
-%Particle     & Momenta (GeV)                                                                                       & Exposure/bin (total)  \\ \hline
-%$\pi ^+ $   & 0.2-1.0 (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  1000 (48k)     \\ \hline
-%$\pi ^- $    & 0.2-1.0 (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  1000 (48k)     \\ \hline
-%$e^+$       & 0.2-10  (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  1000 (48k)       \\ \hline
-%$e^- $       & 0.2-10  (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  1000 (48k)       \\ \hline
-%$\mu^+$   & 0.2-1.0 (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  1000 (48k)     \\ \hline
-%$\mu^-$    & 0.2-1.0 (100MeV bins), 1.0-10.0 ( 200MeV bins)    &  1000 (48k)     \\ \hline
-%$p$          &  0.2-1.5 (100MeV bins), 1.5-10.0 ( 200MeV bins)    &  1000 (56k)     \\ \hline
-%$\bar p$   &  0.2-1.5 (100MeV bins), 1.5-10.0 ( 200MeV bins)    &  1000 (56k)     \\ \hline
-%$K^+$      &  0.2-1.5 (100MeV bins), 1.5-10.0 ( 200MeV bins)    &  1000 (56k)     \\ \hline
-%$K^- $      &  0.2-1.5 (100MeV bins), 1.5-10.0 ( 200MeV bins)    &  1000 (56k)     \\ \hline
-%\end{tabular}\caption{Data sample requirements for shower calibrations.  Currently about 1k particles is assumed per bin to include variations in the shower topologies. Details MC analysis is necessary. }
-%\end{table}
-%
-
-\subsection{Other measurements} 
-\subsubsection{Anti-proton annihilation }
-
-A sample of antiproton would be useful to calibrate the $p$-$\overline{p}$ annihilation process. 
-This would provide input to exotic B-violating process neutron oscillation (reference) modeling of 
-subsequent  $n$-$\overline{n}$ annihilation. These events would be taggged in the mixed-mode beam.
-Events should be at the lowest energies achievable in this beamline.
 
 
 \subsubsection{Proton decay sensitivity and background samples}
@@ -365,17 +511,12 @@ is  {\em mis-IDed as stopping K}. A proton interaction which produces neutrals a
 (which is mis-IDed or subsequently decays to $\mu$) can fake the final state kaon signal.
 
 
-\subsubsection{Supernova}
-The energies of the electrons coming from CC $\nu_e$ interactions from Supernova will be in the order of 10s of MeV. 
-The beam test cannot offer such low energy electron, but one can use the Michel electrons form $'mu$ decay to cover these energies. The SK used the Michel spectrum to calibrate the absolute energy scale. 
+\subsubsection{Anti-proton annihilation }
+
+A sample of antiproton would be useful to calibrate the $p$-$\overline{p}$ annihilation process. 
+This would provide input to exotic B-violating process neutron oscillation (reference) modeling of 
+subsequent  $n$-$\overline{n}$ annihilation. These events would be taggged in the mixed-mode beam.
+Events should be at the lowest energies achievable in this beamline.
 
 
-%\begin{table}[h]
-%\centering
-%\begin{tabular}{|c|c|c|}
-%\hline
-%Particle     & Momenta (GeV/c)    & Exposure/bin  \\ \hline
-%$\mu^+$   & (0.2), 0.5, 1      &  10K    \\ \hline
-%\end{tabular}\caption{Stopping . }
-%\end{table}
 
