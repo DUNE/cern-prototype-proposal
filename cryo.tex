@@ -50,7 +50,6 @@ This design includes technical solutions that may be of interested for the futur
 The design parameters for the TPC Test at CERN cryostat are listed in Table~\ref{tbl:cryogenics-design-parameters}.
 
 \begin{table}[htpb]
-\caption{Design requirements for the membrane cryostat}
 \label{tbl:cryogenics-design-parameters}
 \centering
 \begin{tabular}{|p{.4\textwidth}|p{.5\textwidth}|}
@@ -82,6 +81,7 @@ Beam window   & Precise location TBD. Figure~\ref{fig:cryostat-views} shows the 
  Accessibility after operations  & Capability to empty the cryostat in 30 days and access it in 60 days after the end of operations. \\ \hline
   Lifetime / Thermal cycles &  Consistent with liquid argon program. TBD. \\ \hline
  \end{tabular}
+\caption{Design requirements for the membrane cryostat}
 \end{table}
 
 \textbf{Insulation system and secondary membrane}
@@ -113,7 +113,6 @@ leakage through the inner (primary) membrane will escape to the insulation volum
 GAr at the rate of one volume exchange per day.
 
 \begin{table}[htpb]
-\caption{Heat load calculation for the membrane cryostat (insulation thickness = 0.9 m). (note to self: has right values)}
 \label{tbl:heat-load-calc}
 \centering
 \begin{tabular}{|p{.15\textwidth}|p{.15\textwidth}|p{.15\textwidth}|p{.15\textwidth}|p{.15\textwidth}|}
@@ -127,6 +126,7 @@ Roof  &  83 & 0.0283  & 205  &  550\\ \hline
    &   &   &   &  \\ \hline
 Total   &   &   &   & 3,162 \\ \hline
 \end{tabular}
+\caption{Heat load calculation for the membrane cryostat (insulation thickness = 0.9 m). (note to self: has right values)}
 \end{table}
 
 \textbf{Cryostat Configuration}
@@ -166,7 +166,6 @@ membrane panels are first tack-welded then fully welded to complete the inner cr
 Table~\ref{tbl:cryostat-top-parameters} presents the list of the design parameters for the top of the cryostat.
 
 \begin{table}[htpb]
-\caption{Design parameters for the top of the cryostat}
 \label{tbl:cryostat-top-parameters}
 \centering
 \begin{tabular}{|p{.3\textwidth}|p{.7\textwidth}|} % AH {|p{.4\textwidth}|p{.5\textwidth}|}
@@ -209,6 +208,7 @@ Penetrations  &  1 LAr In, 1 Purge GAr In, 1 Vent GAr In \\
 & Calibration dc\\ \hline
 Lifetime / Thermal cycles  & Consistent with the liquid argon program TBD. \\ \hline
 \end{tabular}
+\caption{Design parameters for the top of the cryostat}
 \end{table}
 
 \textbf{Cryostat grounding and isolation requirements}
@@ -331,8 +331,7 @@ During operation, an external LAr pump circulates the bulk of the cryogen throug
 system. The boil off gas is first recondensed and then is sent to the LAr purification system before re-
 entering the vessel.
 
-\begin{table}[htpb]
-\caption{Design requirements for the cryogenic system}
+\begin{table}[htbp]
 \label{tbl:cryo-design-parameters}
 \centering
 \begin{tabular}{|p{.45\textwidth}|p{.45\textwidth}|}
@@ -351,6 +350,7 @@ Nominal LAr purification flow rate (filling/ops) & 5.5 day/volume exchange \\ \h
  Gaseous argon purge within insulation & 1 volume change /day of the open space between insulation panels. \\ \hline
  Lifetime of the cryogenic system & Consistent with the LAr program. TBD. \\ \hline
 \end{tabular}
+\caption{Design requirements for the cryogenic system}
 \end{table}
 
 \begin{figure}[htb]
