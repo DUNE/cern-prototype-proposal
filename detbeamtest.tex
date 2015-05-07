@@ -90,8 +90,8 @@ LAr TPC technology was first proposed for use in neutrino experiments by C. Rubb
 %CERN-EP-INT-77-8
 %Title 	The liquid-argon time projection chamber : a new concept for neutrino detectors
 %operating in the CNGS beamline  (with mean beam energy $\sim$17 GeV)~\cite{ICARUSmain}. 
-The ICARUS T600 detector~\cite{ICARUSrefs} pioneered the first large-scale detector operating in the CNGS 
-neutrino beam at mean energy $\sim$17 GeV. ArgoNEUT~\cite{argoneut} recently studied 
+The ICARUS T600 detector~\cite{ICARUS1,ICARUS2} pioneered the first large-scale detector operating in the CNGS 
+neutrino beam at mean energy $\sim$17 GeV. ArgoNeuT~\cite{argoneut1,argoneut2} recently studied 
 neutrino interactions in the NuMI beam down to sub-GeV energies with a small-scale (170~$l$ fiducial volume) detector. 
 While these samples are proving useful, they do now allow full isolation of
 the low energy neutrino interaction processes
@@ -256,8 +256,11 @@ to characterize interacting hadrons in this energy range.
 %Hadronic showers initiated by protons in this energy range require
 
 Fig.~\ref{fig:hadronshwr} shows the fraction of true energy deposited by interacting protons with 1~GeV/c (left) and
-3~GeV/c (right) incident momenta simulated using FLUKA~\cite{fluka}. 65\% of protons with 1~GeV/c will interact while the remaining 
-35\% will range out (see Sec.~\ref{dedx}). The resulting energy deposition in the two cases cannot be 
+3~GeV/c (right) incident momenta simulated using FLUKA particle transport code~\cite{fluka05}. Shower reconstruction 
+is performed with ICARUS spatial and calorimetric reconstruction algorithm~\cite{icarus_reco}.
+65\% of protons with 1~GeV/c will interact while the remaining 
+35\% will range out and be used to study particle identification algorithms (PID) (see Sec.~\ref{detbeam_pid}). 
+The resulting energy deposition in the two cases cannot be 
 accurately characterize by an average shower calibration factor. Monte Carlo simulations of 
 outgoing particles, especially at low energies) must be checked and bench marked against calibration data to avoid
 large uncertainties from shower modeling. 
@@ -267,7 +270,7 @@ large uncertainties from shower modeling.
 \includegraphics[width=0.49\textwidth,height=5.0cm]{figures/protons_3gev_v0}
 \label{fig:hadronshwr}
   \caption{Fraction of true energy deposited by interacting protons of 1~GeV/c (left) and
-3~GeV/c (right) momenta simulated using FLUKA~\cite{fluka}.
+3~GeV/c (right) momenta simulated using FLUKA~\cite{fluka05}.
 {\color{red}
 Place holders cut from March workshop talk R\&D - Need better versions.
 }
@@ -279,7 +282,7 @@ as for modeling neutral current backgrounds resulting from $\pi^o$ content in sh
 by $\pi^+$ versus $\pi^-$ initiated interactions are present up to momenta on the order of 1~GeV/c due to different
 final state particles and interaction cross sections. This is illustrated in 
 Fig.~\ref{fig:pionshwr} which shows the differences in mean energy deposited (left) and width (right) 
-for interacting pions ranging from 0.2~GeV/c up to 7~GeV/c momenta simulated using FLUKA(?).
+for interacting pions ranging from 0.2~GeV/c up to 7~GeV/c momenta simulated using FLUKA~\cite{fluka05}.
 There is a strong case~\ref{lariat,T2K} for improving 
 knowledge of exclusive final states and interaction cross section at low energies. Test beam samples
 will be used both to study exclusive interaciton cross sections and to characterize energy deposition 
@@ -334,6 +337,40 @@ There is not currently a satisfactory theory describing absorption. The Valencia
  is not well understood. 
  
 
+\subsubsection{Angular Dependence}
+
+
+
+%Ionization charge deposited by charged-particles in the LAr TPC must be calibrated to
+%account for recombination effects. 
+
+A track angular dependent correction must be
+%Track angle must be accounted for and a correction
+applied to deposited charge to accurately calibrate
+dE/dx needed for track momentum and particle ID (see Sec.~\ref{debeam_pid}). 
+Furthermore, recombination could introduce a component to the correction that
+is currently not modeled. 
+Jaffe columnar recombination model~\cite{jaffe,eqref} predicts 
+angular dependence given by 
+$$Q \approx \frac{Q_o}{1+k_c (dE/dx) / {\cal E} \sin\phi}, $$ 
+where
+%Recombination modeling 
+$Q_o$ and $Q$ are the ionization charge and the collected charge respectively, 
+%$dE/dx$ is range based stopping power.
+$k_c$ is a constant that depends on LAr diffusion and mobility coefficients, $\cal E$ 
+is the electric field strength, and $\phi$ is the angle relative to the drift direction.
+%
+The Modified Box model~\cite{box} (current default for ICARUS and LArSoft) does not include an
+explicit angular dependence however it is assumed that one can be incorporated  
+%into Birk's law 
+by replacing ${\cal E}$  with ${\cal E} \sin\phi$.
+Recent results from ArgoNeuT~\cite{argoneut_rec} measure small angular dependent effects using 
+stopping protons from neutrino interactions in the range 50-300 MeV with angles from 40-90$^o$.
+
+Test beam data will be used to study angular dependence using 
+samples of secondary stopping protons produced in showers at steep angles with
+respect to the field direction.
+
 
 \subsubsection{Bethe-Bloch parametrization of charged particles and PID}
 
@@ -357,8 +394,6 @@ There is not currently a satisfactory theory describing absorption. The Valencia
 %\end{tabular}\caption{Data sample requirements for the $dE/dx$ Bethe-Bloch parametrisation. The lower range starts with the nominal 200 MeV which is not achievable for p and difficult for K. The rough estimate is that we need about 200 particles per bin assuming that about half of them will be actually measured it gives  10\% statistical error for each bin but lower for the fit to the Bethe-Bloch formula. About half of the data sample is in the high momenta region, which can be reduce by decreasing number of particles per bin. }
 %\end{table}
 %
-
-
 \label{detbeam_pid}
 
 %The reconstruction of events in the LAr TPC is still a challenge but rapid progress has been achieved in recent years (cite pandora and other reconstruction algorithms). Despite the progress reconstruction algorithms have to rely Monte Carlo predictions which don't simulate liquid argon detectors responses correctly. Reconstruction algorithms will benefit greatly from test beam data particularly from the full scale prototype. The reconstruction algorithms will be trained to correctly reconstruct track, electromagnetic and hadronic showers.
@@ -368,21 +403,33 @@ There is not currently a satisfactory theory describing absorption. The Valencia
 Information on range and charge deposition for stopping charged-particles can be used to 
 accurately identify particle type as well as measure kinetic energy. 
 Fig.~\ref{fig:resrange}  (left) shows track energy loss per unit length (dE/dx) as a function of residual 
-track range for muons, pions, protons and kaons. 
-%ALSO include the plot of probabilities from Robert here.
-Probability functions for each particle hypothesis are also shown. 
+track range for muons, pions, protons and kaons for particles simulated using ICARUS MC ???.
+A neutral-net-based algorithm~\cite{nn_pid,rd_pid}
+was used to determine particle probability 
+functions for each particle hypothesis. Fig.~\ref{fig:resrange}  shows the result for a cross section of events 
+in the residual range bin centerd at 6~cm.
+PID algorithm depends on the detector effects, configuration, and geometry and 
+reconstruction algorithm. (Fig.~\ref{fig:resrange} uses ICARUS geometry with 3~mm pitch, APA configuration may give significantly
+different results, especially for pion/muon separation). 
+Plots were made for 3mm pitch, we don't have such simulation for APA configuration, it may differ a bit (which does not change much for proton/kaon, but can be significant for pion/muon).
+It is therefore important to test PID on real prototype
+detector data in presence of all detector effects.
+
+
 %The tail is used to calibration the MIP response, the region near the end of the track is used
 %to give PID information. (WIP)
-Test beam measurements of stopping particles of each type will be used
-to calibrate the energy deposition functions and to determine particle 
-mis-ID probabilities. 
+%Test beam measurements of stopping particles of each type will be used
+%to calibrate the energy deposition functions and to determine particle 
+%mis-ID probabilities. 
 \begin{figure}[h!]
   \centering
 %\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pid}
 %\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pid_probabilities}
 \includegraphics[width=\textwidth,height=5.0cm]{figures/pid_curves}
 \label{fig:resrange}
-  \caption{PID curves - residual range.
+  \caption{de/dx vs. residual range. PID algorithm. 
+ICARUS geometry with 3~mm pitch is used here, APA configuration may give significantly
+different results, especially for pion/muon separation
 {\color{red}
 Need better versions
 }
@@ -390,35 +437,11 @@ Need better versions
 \end{figure}
 
 
-\subsubsection{Angular Dependence Effects}
 
-
-Ionization charge deposited by charged-particles in the LAr TPC must be calibrated to
-account for recombination effects. Jaffe columnar recombination model~\cite{jaffe,eqref} predicts 
-angular dependence given by 
-$$Q \approx \frac{Q_o}{1+k_c (dE/dx) / {\cal E} \sin\phi}, $$ 
-where
-%Recombination modeling 
-$Q_o$ and $Q$ are the ionization charge and the collected charge respectively, 
-%$dE/dx$ is range based stopping power.
-$k_c$ is a constant that depends on LAr diffusion and mobility coefficients, $\cal E$ 
-is the electric field strength, and $\phi$ is the angle relative to the drift direction.
-%
-The Modified Box model~\cite{box} (current default for ICARUS and LArSoft) does not have an
-explicit angular dependence however it is assumed that one can be incorporated  
-%into Birk's law 
-by replacing ${\cal E}$  with ${\cal E} \sin\phi$.
-Recent results from ArgoNEUT~\cite{argoneut_rec} measure small angular dependent effects using 
-stopping protons from neutrino interactions in the range 50-300 MeV with angles from 40-90$^o$.
-
-Test beam data will be used to study angular dependence using 
-samples of secondary stopping protons produced in showers at steep angles with
-respect to the field direction.
-??? give sample sizes - maybe include plot?
+%collected particle charge, track angle, as well as 
+%which depends strongly 
 
 \subsubsection{Reconstruction Effects}
-
-
 
 Main issues for the reconstruction algorithms:
 \begin{itemize}
@@ -471,25 +494,41 @@ deposition typical for single MIP and for photon we see energy deposition consis
 with two MIPs. In case of Compton scattering off of atomic electrons the 
 signal is much more difficult to distinguish from the CC $\nu_e$ scattering signal.
 
+
+\begin{figure}[h!]
+  \centering
+%\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pid}
+%\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pid_probabilities}
+\includegraphics[width=\textwidth,height=10.0cm]{figures/eff-bgdrej-diffen}
+\label{fig:egam}
+  \caption{Background rejection versus signal efficiency for various energies.
+{\color{red}
+}
+}
+\end{figure}
 Electron-photon separation has been studied in LAr TPCs
-(Icarus and Argoneut) and typically better than 90\% background rejection can be 
-achieved with efficiencies up to $>$70\%.
+(ICARUS~\cite{icarus_eg} and ArgoNeuT~\cite{argoneut_eg}).
 % numbers come from Dorotas plot docdb 10660 
 %as shown in Fig.~\ref{fig:egam1}.
 %Currently the 
 %separation efficiency is estimated to be at the level of of 95 \% (?) 
-
-Fig.~\ref{fig:egamma_wire} shows...
-Is there a good figure for this section ? (version of 10660 p. 5 but be clear on 
-the assumptions). 
+Fig.~\ref{fig:egam} shows results of the separation algorithm applied to Monte Carlo event
+samples from ??? (more needed in text on the assumptions). 
+Background rejection as a function of signal
+selection efficiency depends mildly
+on incoming particle energies in the range of interest. 
+Greater than 90\% background rejection can be 
+achieved with $>$70\% efficiency for energies above 300~MeV. (Above 1~GeV 
+rejection is even greater at high efficiency).
 Our studies indicate that rejection and efficiency depend 
 on particular features of the geometry including wire pitch and plane 
 orientation which affect the reconstruction. 
 Therefore, it is critically important 
 to study e/$\gamma$ separation in a prototype LAr TPC detector.
 
+%More discussion of specific samples to be used here.
+% move to table section.
 
-More discussion of specific samples to be used here.
 
 
 \subsection{Other measurements} 
@@ -531,18 +570,18 @@ A sample of 13K beam kaons with 1~GeV/c momentum are requested to provide 2K sto
 (only 15\% of $K^+$ at 1 GeV stop at 1~GeV/c).
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{|c|c|c|}
-\hline
-Particle     & Momenta (GeV/c) & Exposure/bin  \\ \hline
-\hline
-K$^+$  &  1 & (13k)    \\ \hline
-K$^+$  & 0.5, 0.7 & (5k)   \\ \hline
-proton &  1  &  (1M)  \\ \hline
-\end{tabular}\caption{Samples related to proton decay physics requirements.}
-\label{pdktable}
-\end{table}
+%\begin{table}[h]
+%\centering
+%\begin{tabular}{|c|c|c|}
+%\hline
+%Particle     & Momenta (GeV/c) & Exposure/bin  \\ \hline
+%\hline
+%K$^+$  &  1 & (13k)    \\ \hline
+%K$^+$  & 0.5, 0.7 & (5k)   \\ \hline
+%proton &  1  &  (1M)  \\ \hline
+%\end{tabular}\caption{Samples related to proton decay physics requirements.}
+%\label{pdktable}
+%\end{table}
 
 A sizable sample of protons ($\sim 10^6$)
 are requested to study the possible background contributions to  $p \rightarrow K^+ \overline{\nu}$.
