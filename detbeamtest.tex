@@ -90,8 +90,8 @@ LAr TPC technology was first proposed for use in neutrino experiments by C. Rubb
 %CERN-EP-INT-77-8
 %Title 	The liquid-argon time projection chamber : a new concept for neutrino detectors
 %operating in the CNGS beamline  (with mean beam energy $\sim$17 GeV)~\cite{ICARUSmain}. 
-The ICARUS T600 detector~\cite{icarusmainref} pioneered the first large-scale detector operating in the CNGS 
-neutrino beam at mean energy $\sim$17 GeV. ArgoNeuT~\cite{argoneut1,argoneut2} recently studied 
+The ICARUS T600 detector~\cite{icarus_mainref} pioneered the first large-scale detector operating in the CNGS 
+neutrino beam at mean energy $\sim$17 GeV. ArgoNeuT~\cite{argoneut1}\cite{argoneut2} recently studied 
 neutrino interactions in the NuMI beam down to sub-GeV energies with a small-scale (170~$l$ fiducial volume) detector. 
 While these samples are proving useful, they do now allow full isolation of
 the low energy neutrino interaction processes
@@ -198,6 +198,8 @@ $\pi^+$       & 0.2, 0.3, 0.4, 0.5, 0.7, 1, 2, 3, 5, 7     &  10K  & hadronic ca
 $\pi^-$       &  0.2, 0.3, 0.4, 0.5, 0.7, 1     &  10K  & hadronic cal, $\pi^0$ content \\ \hline
 $\pi^+$   &  2  &  600K & $\pi^o$/$\gamma$ sample \\ \hline
 %$\pi^+$ &   1 \& 2  &  10K  & vary angle ($\times$5), reco \\ \hline
+proton &  0.7, 1, 2, 3   &  10K & response, PID \\ \hline
+proton &  1   &  1M & mis-ID pdk, recombination \\ \hline
 e$^+$ or e$^-$       &    0.2, 0.3, 0.4, 0.5, 1, 2, 3, 5, 7        &    10K   & e-$\gamma$ separation/EM shower     \\ \hline
 % e$^+$ or e$^-$  &  1 \& 2  &  10K  & vary angle($\times$5), reco \\ \hline
 %e$^+$ or e$^-$   (w/rad) &  3  &  20K  & tagged photons \\ \hline
@@ -205,8 +207,6 @@ $\mu^-$  &   (0.2), 0.5, 1, 2  &  10K & $E_\mu$, Michel el., charge sign \\ \hli
 $\mu^+$ &   (0.2), 0.5, 1, 2   &  10K & $E_\mu$, Michel el.,charge sign  \\ \hline
 $\mu^-$ or $\mu^+$ &   3, 5, 7  &  5K & $E_\mu$ MCS \\ \hline
 %$\mu^-$ or $\mu^+$  &  1 \& 2  &  5K  & vary angle ($\times$5), reco \\ \hline
-proton &  0.7, 1, 2, 3   &  10K & response, PID \\ \hline
-proton &  1   &  1M & mis-ID pdk, recombination \\ \hline
 %proton &  1 \& 2 &  10K & vary angle ($\times$5), reco \\ \hline
 antiproton &  low-energy tune  &  (100) & antiproton stars \\ \hline
 K$^+$  & 1 & (13K)   &   response, PID, PDK  \\ \hline
@@ -219,6 +219,22 @@ $\mu$, e, proton  & 1 (vary angle $\times$5 & 10K  & reconstruction  \\ \hline
 \end{table}
 
 
+Pions and protons spanning the energy range expected in DUNE beam neutrino interactions will be used 
+primarily to study hadronic showering reconstruction and calibration as described in Sec.~\ref{sec:showers} as well
+as particle identification algorithms discussed in Sec.~\ref{detbeam_pid}). Larger samples of 2~GeV $\pi^+$ and
+1 GeV protons will be used to study  secondary $\pi^o$ and protons, respectively, over a large angular range 
+to tune and calibration electron/photon separation algorithms (see Sec.~\ref{sec_egam}) and angular
+dependent effects on charge collection as described in Sec.~\ref{sec_angle}.
+Electrons will be used to benchmark and tune  electron/photon separation algorithms and to calibrate 
+electromagnetic showers as discussed in \ref{sec_egam}.
+Muon (and antimuon) samples are needed to study reconstruction and PID calibration as well as to obtain 
+Michel electron events for calibration  
+algorithms for charge-sign determination (see Secs.\ref{sec_reco},\ref{sec_other}).
+
+Charged-kaon samples will be useful to characterize kaon PID efficiency for proton decay sensitivity but
+are a somewhat lower priority need. The requested antiproton sample
+will be helpful for exotic physics sensitivity studies. Both of these lower priority requests are discussed
+in Sec.~\ref{sec_other}.
 
 %Charged pion samples will be used to characterize hadronic shower response and to measure
 %absorption cross section parameters on argon.
@@ -239,6 +255,7 @@ Monte Carlo simulations and allow more precise reconstruction of neutrino energy
 
 
 \subsubsection{Shower calibration}
+\label{sec:showers}
 
 Accurate measurement of neutrino energy will require reconstruction of both electromagnetic and hadronic showers. Reconstruction of hadron energy 
 in this energy range will require knowledge of the initiating hadron's 
@@ -350,7 +367,7 @@ no data above about 1GeV pion kinetic energy.
 
 \subsubsection{Angular Dependence}
 
-
+\label{sec_angle}
 
 %Ionization charge deposited by charged-particles in the LAr TPC must be calibrated to
 %account for recombination effects. 
@@ -453,6 +470,7 @@ Need better versions
 %which depends strongly 
 
 \subsubsection{Reconstruction Effects}
+\label{sec_reco}
 
 Main issues for the reconstruction algorithms:
 \begin{itemize}
@@ -488,6 +506,7 @@ be invaluable to understanding performance of reconstruction.
 
 
 \subsubsection{e/$\gamma$ separation}
+\label{sec_egam}
 
 The search for a CP violation phase using $\nu_e$ appearance 
 in a $\nu_\mu$ beam requires good electron/photon separation.
@@ -543,7 +562,7 @@ to study e/$\gamma$ separation in a prototype LAr TPC detector.
 
 
 \subsection{Other measurements} 
-
+\label{sec_other}
 
 \subsubsection{Supernova and Michel electrons}
 The energies of the electrons coming from CC $\nu_e$ interactions from Supernova will be in the order of 10s of MeV. 
