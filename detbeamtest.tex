@@ -47,7 +47,7 @@ Need to add details of plot assumptions
 }
 \end{figure}
 Effects on sensitivity to mass hierarchy and $\delta_{CP}$ as a function of 
-$\delta_{CP}$ are shown in Fig.~\ref{fig:global_escale_sens} from Ref.~\cite{DUNECDR}. 
+$\delta_{CP}$ are shown in Fig.~\ref{fig:global_escale_sens} from Ref.~\cite{dunecdr}. 
 %shows the effect of various levels of neutrino energy on sensitivities. 
 The nominal sensitivity assumes a 230-kt-MW-year 
 exposure with equal neutrino and antineutrino mode running. 
@@ -72,7 +72,7 @@ Need to check details of assumptions
 }
 \end{figure}
 
-Work to evaluate effect of all systematic uncertainties in DUNE sensitivities is still in progress. Current levels of sensitivity in ~\cite{DuneCDR} assumes
+Work to evaluate effect of all systematic uncertainties in DUNE sensitivities is still in progress. Current levels of sensitivity in ~\cite{dunecdr} assumes
 $\nu_e$ energy scale is known at the level of 2\%. 
 More here...
 %will require a dedicated test beam
@@ -90,7 +90,7 @@ LAr TPC technology was first proposed for use in neutrino experiments by C. Rubb
 %CERN-EP-INT-77-8
 %Title 	The liquid-argon time projection chamber : a new concept for neutrino detectors
 %operating in the CNGS beamline  (with mean beam energy $\sim$17 GeV)~\cite{ICARUSmain}. 
-The ICARUS T600 detector~\cite{ICARUS1,ICARUS2} pioneered the first large-scale detector operating in the CNGS 
+The ICARUS T600 detector~\cite{icarusmainref} pioneered the first large-scale detector operating in the CNGS 
 neutrino beam at mean energy $\sim$17 GeV. ArgoNeuT~\cite{argoneut1,argoneut2} recently studied 
 neutrino interactions in the NuMI beam down to sub-GeV energies with a small-scale (170~$l$ fiducial volume) detector. 
 While these samples are proving useful, they do now allow full isolation of
@@ -256,13 +256,16 @@ to characterize interacting hadrons in this energy range.
 %Hadronic showers initiated by protons in this energy range require
 
 Fig.~\ref{fig:hadronshwr} shows the fraction of true energy deposited by interacting protons with 1~GeV/c (left) and
-3~GeV/c (right) incident momenta simulated using FLUKA particle transport code~\cite{fluka05}. Shower reconstruction 
-is performed with ICARUS spatial and calorimetric reconstruction algorithm~\cite{icarus_reco}.
-65\% of protons with 1~GeV/c will interact while the remaining 
-35\% will range out and be used to study particle identification algorithms (PID) (see Sec.~\ref{detbeam_pid}). 
+3~GeV/c (right) incident momenta simulated using FLUKA particle transport code~\cite{fluka05}. 
+Interacting protons (65\% of  sample 1~GeV/c) are selected.
+% The remaining 
+%35\% which range out are be used to study particle identification algorithms (PID) (see Sec.~\ref{detbeam_pid}). 
+Reconstruction is performed with ICARUS spatial and calorimetric reconstruction algorithm~\cite{icarus_reco}.
+For this study, visible energy is summed using hit information with corrections applied for electron lifetime.
+(No attempt is made to correct for electromagnetic shower fractions). 
 The resulting energy deposition in the two cases cannot be 
 accurately characterize by an average shower calibration factor. Monte Carlo simulations of 
-outgoing particles, especially at low energies) must be checked and bench marked against calibration data to avoid
+outgoing particles, especially at low energies, must be checked and bench marked against calibration data to avoid
 large uncertainties from shower modeling. 
 \begin{figure}[h!]
   \centering
@@ -282,11 +285,9 @@ as for modeling neutral current backgrounds resulting from $\pi^o$ content in sh
 by $\pi^+$ versus $\pi^-$ initiated interactions are present up to momenta on the order of 1~GeV/c due to different
 final state particles and interaction cross sections. This is illustrated in 
 Fig.~\ref{fig:pionshwr} which shows the differences in mean energy deposited (left) and width (right) 
-for interacting pions ranging from 0.2~GeV/c up to 7~GeV/c momenta simulated using FLUKA~\cite{fluka05}.
-There is a strong case~\ref{lariat,T2K} for improving 
-knowledge of exclusive final states and interaction cross section at low energies. Test beam samples
-will be used both to study exclusive interaciton cross sections and to characterize energy deposition 
-patterns for interacting  $\pi^+$ and $\pi^-$.
+for interacting pions ranging from 0.2~GeV/c up to 5~GeV/c momenta simulated using FLUKA~\cite{fluka05}.
+Resulting shower calibrations and reconstruction will differ and therefore each charge must be separately
+studies. 
 \begin{figure}[h!]
   \centering
 %\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pi+pi-_means}
@@ -294,10 +295,10 @@ patterns for interacting  $\pi^+$ and $\pi^-$.
 \includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pi+pi-_means}
 \includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pi+pi-_sig}
 \label{fig:pionshwr}
-  \caption{Differences in mean energy deposited (left) and width (right) 
-for interacting pions ranging from 0.2~GeV/c up to 7~GeV/c momenta simulated using FLUKA(?).
+  \caption{Differences in mean energy deposited (left) and width of visible energy (right) 
+for interacting $\pi^+$ versus $\pi^-$ ranging from 0.2~GeV/c up to 5~GeV/c. 
 {\color{red}
-Place holders cut from DOCDB 10659  - Need better versions.
+Awaiting improved figure
 }
 }
 \end{figure}
@@ -325,17 +326,27 @@ Place holders cut from DOCDB 10659  - Need better versions.
 
 
 \subsubsection{Cross section measurements}
-WIP from Jarek\\
 
-Precise measurement of the  absorption and charge exchange of pions and kaons. Pion absorption is a large part of the pion nucleon cross section from 50 MeV to 500MeV with no data above about 1GeV pion kinetic energy. 
-{\bf Add plots and values for known cross sections wit errors} 
-\begin{itemize}
-\item pion absorption on argon - Kotlinski, EPJ 9, 537 (2000)
-\item pion cross section as a function of A - Gianelli PRC 61, 054615 (2000)
-\end{itemize}
-There is not currently a satisfactory theory describing absorption. The Valencia group (Vicente-Vacus NPA 568, 855 (1994)) developed model of    the pion-nucleus reaction with fairly good agreement, although not in detail. The actual  mechanism of multi-nucleon absorption
- is not well understood. 
+
+Final state pions are produce copiously in neutrino interactions in this energy range 
+and contribute substantially to total visible energy in the interaction.
+In neutrino interactions, these particles can reinteract or be absorbed in the nuclear medium
+and substantially change the visible energy deposited in the event. 
+Therefore, energy dependent cross sections for these processes must be
+accurately known to model the effect on reconstructed neutrino energy. 
+
+Current ranges and level of uncertainties.
+Precise measurement of the  absorption and charge exchange of pions and kaons. 
+
+Pion absorption is a large part of the pion nucleon cross section from 50 MeV to 500MeV with 
+no data above about 1GeV pion kinetic energy. 
+%\item pion absorption on argon - Kotlinski, EPJ 9, 537 (2000)
+%\item pion cross section as a function of A - Gianelli PRC 61, 054615 (2000)
+
+%There is not currently a satisfactory theory describing absorption. The Valencia group (Vicente-Vacus NPA 568, 855 (1994)) developed model of    the pion-nucleus reaction with fairly good agreement, although not in detail. The actual  mechanism of multi-nucleon absorption
+% is not well understood. 
  
+
 
 \subsubsection{Angular Dependence}
 
@@ -348,9 +359,10 @@ A track angular dependent correction must be
 %Track angle must be accounted for and a correction
 applied to deposited charge to accurately calibrate
 dE/dx needed for track momentum and particle ID (see Sec.~\ref{debeam_pid}). 
-Furthermore, recombination could introduce a component to the correction that
+Charge recombination effects could be angular dependent and
+introduce a component that
 is currently not modeled. 
-Jaffe columnar recombination model~\cite{jaffe,eqref} predicts 
+For example, Jaffe columnar recombination model~\cite{jaffe,eqref} predicts 
 angular dependence given by 
 $$Q \approx \frac{Q_o}{1+k_c (dE/dx) / {\cal E} \sin\phi}, $$ 
 where
@@ -360,17 +372,16 @@ $Q_o$ and $Q$ are the ionization charge and the collected charge respectively,
 $k_c$ is a constant that depends on LAr diffusion and mobility coefficients, $\cal E$ 
 is the electric field strength, and $\phi$ is the angle relative to the drift direction.
 %
-The Modified Box model~\cite{box} (current default for ICARUS and LArSoft) does not include an
-explicit angular dependence however it is assumed that one can be incorporated  
-%into Birk's law 
-by replacing ${\cal E}$  with ${\cal E} \sin\phi$.
-Recent results from ArgoNeuT~\cite{argoneut_rec} measure small angular dependent effects using 
+Simulations performed by ICARUS and LArSoft do no currently incorporate 
+an angular dependent effect. (ArgoNeuT~\cite{arogneut_angle} suggests a 
+modified Box model with explicit angular dependence can be incorporated 
+into Birk's law  by replacing ${\cal E}$  with ${\cal E} \sin\phi$).
+Recent results from ArgoNeuT~\cite{argoneut_angle} measure small angular dependent effects using 
 stopping protons from neutrino interactions in the range 50-300 MeV with angles from 40-90$^o$.
 
 Test beam data will be used to study angular dependence using 
 samples of secondary stopping protons produced in showers at steep angles with
 respect to the field direction.
-
 
 \subsubsection{Bethe-Bloch parametrization of charged particles and PID}
 
@@ -403,7 +414,7 @@ respect to the field direction.
 Information on range and charge deposition for stopping charged-particles can be used to 
 accurately identify particle type as well as measure kinetic energy. 
 Fig.~\ref{fig:resrange}  (left) shows track energy loss per unit length (dE/dx) as a function of residual 
-track range for muons, pions, protons and kaons for particles simulated using ICARUS MC ???.
+track range for muons, pions, protons and kaons for particles simulated using ICARUS MC (ref).
 A neutral-net-based algorithm~\cite{nn_pid,rd_pid}
 was used to determine particle probability 
 functions for each particle hypothesis. Fig.~\ref{fig:resrange}  shows the result for a cross section of events 
@@ -427,11 +438,11 @@ detector data in presence of all detector effects.
 %\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pid_probabilities}
 \includegraphics[width=\textwidth,height=5.0cm]{figures/pid_curves}
 \label{fig:resrange}
-  \caption{de/dx vs. residual range. PID algorithm. 
+  \caption{de/dx vs. residual range.
 ICARUS geometry with 3~mm pitch is used here, APA configuration may give significantly
 different results, especially for pion/muon separation
 {\color{red}
-Need better versions
+Need better versions 
 }
 }
 \end{figure}
