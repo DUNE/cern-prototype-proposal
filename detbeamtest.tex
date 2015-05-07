@@ -472,14 +472,27 @@ Need better versions
 \subsubsection{Reconstruction Effects}
 \label{sec_reco}
 
-Main issues for the reconstruction algorithms:
+Reconstruction algorithms use all three signal planes for 3D track and event reconstruction. The quality of reconstruction is affected by the two main factors which can be quantified with test beam data:
 \begin{itemize}
-\item Reconstruction algorithms use all three signal planes for 3D track and event reconstruction. 
-If the orientation of the track/shower is such that it is aligned with wires on one of the planes, it significantly reduces quality of reconstructed objects. 
-\item Calorimetry with collection and induction planes. In the ICARUS experiment the deposited energy was reconstructed from the signal on the collection plane. The induction planes bipolar signal wasn't "stable" enough to use it for calorimetric measurement. In the ELBNF design there is additional shielding  wire plane which will improve the quality of the bipolar signal and the  test beam experiment will help with its calibration.
-\item   Vertexing.
-\item Reconstruction efficiency for low energy particles. The reconstruction algorithm suffer from the lose of efficiency for low energy particle or particles which leave less than 200-300 hits. Training the algorithms on a low energy particles from the test beam will improve the quality and efficiency of the reconstructed objects.
+\item The complexity of the event topology, that includes the number of objects overlapping in 2D projections and the number of possible object associations between 2D projections. The topology complexity depends on the energy of incident particle. Hadronic showers collected with the test beam can provide data sample to assess the reconstruction algorithm performance and test its dependence on the incident particle energy.
+\item Orientation of the reconstructed object w.r.t. the readout wires and electron drift direction:
+\begin{itemize}
+\item Tracks and cascades in the plane parallel or almost parallel to the signal planes have strongly limited variation of the hit drift time, required for the 3D reconstruction; various reconstruction algorithms can show different performance in the real detector conditions for such inclined objects, especially in the presence of the noise affecting hit time reconstruction.
+\item 2D projection of objects aligned with the wires of one of the planes is strongly shortened, which limits the amount of information available to the reconstruction algorithm; the two other signal planes can be used for the spatial reconstruction, however, the validation of the correctness of reconstruction, calculated from the 3D object projected to the third plane, is less efficient.
+
+The most important aspect of this issue is the usage of all planes for the charge measurement. If the reconstructed object is aligned with Collection wires then the calorimetric measurement has to be carried out with the signal of Induction planes. Additional shielding wire plane of ELBNF design will improve the quality of the bipolar signal of Induction planes and the test beam experiment will help with its calibration.
+\item Objects aligned with the drift field are projected to a low number of wires and have a large span of drift time. Wire signals of such objects are significantly different than those of objects at higher angles w.r.t. the drift field, requiring a dedicated signal processing for the hit reconstruction. In such orientation also the correction of eventual angular dependence of the recombination effect should be included in the calorimetric reconstruction and calibrated with real data.
 \end{itemize}
+\end{itemize}
+
+%Main issues for the reconstruction algorithms:
+%\begin{itemize}
+%\item Reconstruction algorithms use all three signal planes for 3D track and event reconstruction. 
+%If the orientation of the track/shower is such that it is aligned with wires on one of the planes, it significantly reduces quality of reconstructed objects. 
+%\item Calorimetry with collection and induction planes. In the ICARUS experiment the deposited energy was reconstructed from the signal on the collection plane. The induction planes bipolar signal wasn't "stable" enough to use it for calorimetric measurement. In the ELBNF design there is additional shielding  wire plane which will improve the quality of the bipolar signal and the  test beam experiment will help with its calibration.
+%\item   Vertexing.
+%\item Reconstruction efficiency for low energy particles. The reconstruction algorithm suffer from the lose of efficiency for low energy particle or particles which leave less than 200-300 hits. Training the algorithms on a low energy particles from the test beam will improve the quality and efficiency of the reconstructed objects.
+%\end{itemize}
 
 Any reconstruction algorithm will depend on the particular choices in the TPC design. 
 Therefore bench marking our reconstruction algorithms with as close to realistic design prototype will
