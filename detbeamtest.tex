@@ -1,5 +1,5 @@
 \label{detbeamtest}
-One of the main goals of the Single-Phase Prototype test beam program is to perform measurements 
+One of the main goals of the Single-Phase prototype test beam program is to perform measurements 
 needed to control and understand systematic uncertainties in DUNE oscillation measurements.
 The program also includes measurements to support other important DUNE physics measurements as described below.
 %detector is intended to provide input necessary to reduce systematic uncertainties for oscillation measurements 
@@ -26,32 +26,37 @@ The program also includes measurements to support other important DUNE physics m
 
 As an example of the importance of controlling detector related uncertainties,
 Fig.~\ref{fig:spectraleffect} shows the effect of a lepton energy scale 
-uncertainty of -5\% on the measured 
-appearance signal (for $\delta_{CP}=0$) and backgrounds in DUNE. 
-The crosses shows the expected signal shape for $\delta_{CP}=+\pi/2$ and -$\pi/2$. 
-Energy scale uncertainties can mimic a non-zero
-$\delta_{CP}$ phase. 
+shift of -5\% on the measured 
+appearance signal %(for $\delta_{CP}=0$)
+ and backgrounds in DUNE. 
+The crosses shows 
+The expected signal shape is shown for several values of $\delta_{CP}$
+(solid curve: $\delta_{CP}=0$, crosses: $\delta_{CP}=+\pi/2$ and -$\pi/2$). 
+Energy scale uncertainties will distort and shift the $\nu_e$ appearance specta and
+can mimic a non-zero
+$\delta_{CP}$ phase.
 \begin{figure}[h!]
 \centering
 %\includegraphics[width=0.7\textwidth,height=7.7cm]{figures/lepbias10}
 \includegraphics[width=0.7\textwidth,height=7.7cm]{figures/CSPP_LeptonBias_nue_app_FHC}
 \label{fig:spectraleffect}
-  \caption{DUNE $\nu_e$ appearance signal and background spectra assuming 
-$\delta_{CP}=0$. 
-Solid curves shows the effect of -5\% lepton energy scale shift on the 
-measured appearance signal 
-and backgrounds. 
-The crosses shows the expected signal shape for $\delta_{CP}=+\pi/2$ and -$\pi/2$. 
+  \caption{DUNE $\nu_e$ appearance signal and background spectra. 
+Solid curves show the effect of -5\% lepton energy scale shift on the 
+measured appearance $\nu_e$ and $\overline{\nu}_e$ signals assuming $\delta_{CP}=0$.
+The crosses show the expected signal shape for $\delta_{CP}=+\pi/2$ and -$\pi/2$. 
 Ratios show the distortion on the $\nu_e$ and $\overline{\nu}_e$ spectra due to the 
 5\% energy scale shift. 
 }
 \end{figure}
-Effects on sensitivity to mass hierarchy and $\delta_{CP}$ as a function of 
-$\delta_{CP}$ are shown in Fig.~\ref{fig:global_escale_sens} from Ref.~\cite{dunecdr}. 
-%shows the effect of various levels of neutrino energy on sensitivities. 
+
+
+ Fig.~\ref{fig:global_escale_sens} from Ref.~\cite{dunecdr} shows the effect of 
+three values of neutrino energy scale uncertainty on the DUNE 
+mass hierarchy and $\delta_{CP}$ sensitivities.
 The nominal sensitivity assumes a 230-kt-MW-year 
-exposure with equal neutrino and antineutrino mode running. 
-This does not account for correlated uncertainties in neutrino and 
+exposure with equal neutrino and antineutrino running. 
+Work to evaluate effect of all systematic uncertainties in DUNE sensitivities is still in progress. 
+The size of effects shown here do not account for correlated uncertainties in neutrino and 
 antineutrino running or effects on backgrounds and is therefore likely
 a best-case scenario. 
 \begin{figure}[h!]
@@ -66,15 +71,12 @@ a best-case scenario.
 If energy scale uncertainties can be controlled at the appropriate levels, DUNE can achieve 
 at least 5$\sigma$ sensitivity on mass hierarchy determination for 100\% of $\delta_{CP}$ values and
 for 3$\sigma$ sensitivity to  $\delta_{CP}$ for 75\% coverage of phase space.
-{\color{red} 
-Need to check details of assumptions
-}
 }
 \end{figure}
 
-Work to evaluate effect of all systematic uncertainties in DUNE sensitivities is still in progress. Current levels of sensitivity in ~\cite{dunecdr} assumes
-$\nu_e$ energy scale is known at the level of 2\%. 
-More here...
+%Current levels of sensitivity in ~\cite{dunecdr} assumes
+%$\nu_e$ energy scale is known at the level of 2\%. 
+%More here...
 %will require a dedicated test beam
 
 
@@ -86,7 +88,7 @@ More here...
 \label{detbeam_main}
 
 LAr TPC technology was first proposed for use in neutrino experiments by C. Rubbia in 1977
-\cite{Rubbia} but extensive use in neutrino experiments is only now being realized. 
+\cite{CRubbia} but extensive use in neutrino experiments is only now being realized. 
 %CERN-EP-INT-77-8
 %Title 	The liquid-argon time projection chamber : a new concept for neutrino detectors
 %operating in the CNGS beamline  (with mean beam energy $\sim$17 GeV)~\cite{ICARUSmain}. 
@@ -220,16 +222,18 @@ $\mu$, e, proton  & 1 (vary angle $\times$5 & 10K  & reconstruction  \\ \hline
 
 
 Pions and protons spanning the energy range expected in DUNE beam neutrino interactions will be used 
-primarily to study hadronic showering reconstruction and calibration as described in Sec.~\ref{sec:showers} as well
-as particle identification algorithms discussed in Sec.~\ref{detbeam_pid}). Larger samples of 2~GeV $\pi^+$ and
-1 GeV protons will be used to study  secondary $\pi^o$ and protons, respectively, over a large angular range 
-to tune and calibration electron/photon separation algorithms (see Sec.~\ref{sec_egam}) and angular
-dependent effects on charge collection as described in Sec.~\ref{sec_angle}.
+primarily to study hadronic showering reconstruction and calibration as described in Sec.~\ref{sec:showers}
+ as well as particle identification (PID) algorithms discussed in Sec.~\ref{detbeam_pid}. A sample 600K
+ 2~GeV $\pi^+$ will be used to study  secondary $\pi^o$ over a large angular range 
+to tune and calibration electron/photon separation algorithms (see Sec.~\ref{sec_egam}).
+A large sample (10$^{6}$) 1 GeV protons will produce a sample of low energy stopping protons over a 
+wide angular range needed to study angular
+dependent effects on collected charge as described in Sec.~\ref{sec_angle}.
 Electrons will be used to benchmark and tune  electron/photon separation algorithms and to calibrate 
 electromagnetic showers as discussed in \ref{sec_egam}.
 Muon (and antimuon) samples are needed to study reconstruction and PID calibration as well as to obtain 
 Michel electron events for calibration  
-algorithms for charge-sign determination (see Secs.\ref{sec_reco},\ref{sec_other}).
+algorithms for charge-sign determination (see Secs.\ref{sec_reco} and \ref{sec_other}).
 
 Charged-kaon samples will be useful to characterize kaon PID efficiency for proton decay sensitivity but
 are a somewhat lower priority need. The requested antiproton sample
@@ -304,13 +308,13 @@ final state particles and interaction cross sections. This is illustrated in
 Fig.~\ref{fig:pionshwr} which shows the differences in mean energy deposited (left) and width (right) 
 for interacting pions ranging from 0.2~GeV/c up to 5~GeV/c momenta simulated using FLUKA~\cite{fluka05}.
 Resulting shower calibrations and reconstruction will differ and therefore each charge must be separately
-studies. 
+studied. 
 \begin{figure}[h!]
   \centering
 %\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pi+pi-_means}
 %\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pi+pi-_sig}
-\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pipimean}
-\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pipisigma}
+\includegraphics[width=0.49\textwidth,height=6.0cm]{figures/pipimean}
+\includegraphics[width=0.49\textwidth,height=6.0cm]{figures/pipisigma}
   \caption{Differences in mean energy deposited (left) and width of visible energy (right) 
 for interacting $\pi^+$ versus $\pi^-$ ranging from 0.2~GeV/c up to 5~GeV/c. 
 }
@@ -346,14 +350,16 @@ Final state pions are produce copiously in neutrino interactions in this energy 
 and contribute substantially to total visible energy in the interaction.
 In neutrino interactions, these particles can reinteract or be absorbed in the nuclear medium
 and substantially change the visible energy deposited in the event. 
-Therefore, energy dependent cross sections for these processes must be
-accurately known to model the effect on reconstructed neutrino energy. 
+Effects of modeling final state pion interactions on reconstructed neutrino energy have 
+been recently demonstrated in the NuMI and Booster beam ranges~\cite{miniboonefsi, minervafsi}. 
 
-Current ranges and level of uncertainties.
-Precise measurement of the  absorption and charge exchange of pions and kaons. 
+Existing data used to tune the models
+cover limited energies ($<$200~MeV) and are primarily on lighter target nuclei~\cite{fsirev}.
+% need to check this reference from R. Ransom talk.
+The requested $\pi^+$ and $\pi^-$ samples will allow new data samples for measuring
+exclusive final state processes over the full relevant energy range and specifically on argon nuclei. 
 
-Pion absorption is a large part of the pion nucleon cross section from 50 MeV to 500MeV with 
-no data above about 1GeV pion kinetic energy. 
+
 %\item pion absorption on argon - Kotlinski, EPJ 9, 537 (2000)
 %\item pion cross section as a function of A - Gianelli PRC 61, 054615 (2000)
 
@@ -372,7 +378,7 @@ no data above about 1GeV pion kinetic energy.
 A track angular dependent correction must be
 %Track angle must be accounted for and a correction
 applied to deposited charge to accurately calibrate
-dE/dx needed for track momentum and particle ID (see Sec.~\ref{debeam_pid}). 
+dE/dx needed for track momentum and particle ID (see Sec.~\ref{detbeam_pid}). 
 Charge recombination effects could be angular dependent and
 introduce a component that
 is currently not modeled. 
@@ -386,38 +392,20 @@ $Q_o$ and $Q$ are the ionization charge and the collected charge respectively,
 $k_c$ is a constant that depends on LAr diffusion and mobility coefficients, $\cal E$ 
 is the electric field strength, and $\phi$ is the angle relative to the drift direction.
 %
-Simulations performed by ICARUS and LArSoft do no currently incorporate 
-an angular dependent effect. (ArgoNeuT~\cite{arogneut_angle} suggests a 
-modified Box model with explicit angular dependence can be incorporated 
-into Birk's law  by replacing ${\cal E}$  with ${\cal E} \sin\phi$).
+ICARUS and LArSoft default recombination models do no currently incorporate 
+an angular dependent effect. 
+%(ArgoNeuT~\cite{arogneut_angle} suggests a 
+%modified Box model with explicit angular dependence can be incorporated 
+%into Birk's law  by replacing ${\cal E}$  with ${\cal E} \sin\phi$).
 Recent results from ArgoNeuT~\cite{argoneut_angle} measure small angular dependent effects using 
-stopping protons from neutrino interactions in the range 50-300 MeV with angles from 40-90$^o$.
+stopping protons from neutrino interactions in the range 50-300 MeV with angles from 40-90$^{\circ}$.
 
 Test beam data will be used to study angular dependence using 
-samples of secondary stopping protons produced in showers at small angles with
+samples of secondary stopping protons produced in showers at a range of angles with
 respect to the field direction.
 
 \subsubsection{Bethe-Bloch parametrization of charged particles and PID}
 
-
-
-%\begin{table}[h]
-%\centering
-%\begin{tabular}{|c|c|c|}
-%\hline
-%Particle     & Momenta (GeV)                                                                                       & Exposure/bin (total)  \\ \hline
-%$\pi ^+ $   & 0.2-1.0 (50MeV bins), 1.0-3.0 ( 100MeV bins), 3.0-10 ( 200MeV bins)    &  200 (16.6k)     \\ \hline
-%$\pi ^- $    & 0.2-1.0 (50MeV bins), 1.0-3.0 ( 100MeV bins), 3.0-10 ( 200MeV bins)    &  200 (16.6k)     \\ \hline
-%$e^+$       & 0.2-10  (200MeV bins)                                                                              &  200 (9.8k)        \\ \hline
-%$e^- $       & 0.2-10  (200MeV bins)                                                                              &  200 (9.8k)        \\ \hline
-%$\mu^+$   & 0.2-1.0 (50MeV bins), 1.0-3.0 ( 100MeV bins), 3.0-10 ( 200MeV bins)    &  200 (16.6k)    \\ \hline
-%$\mu^-$    & 0.2-1.0 (50MeV bins), 1.0-3.0 ( 100MeV bins), 3.0-10 ( 200MeV bins)    &  200 (16.6k)     \\ \hline
-%$p$          &  0.2-1.5 (50MeV bins), 1.5-3.0 ( 100MeV bins), 3.0-10 ( 200MeV bins)    &  200 (17.2k)     \\ \hline
-%$\bar p$   &  0.2-1.5 (50MeV bins), 1.5-3.0 ( 100MeV bins), 3.0-10 ( 200MeV bins)    &  200 (17.2k)    \\ \hline
-%$K^+$      &  0.2-1.5 (50MeV bins), 1.5-3.0 ( 100MeV bins), 3.0-10 ( 200MeV bins)    &  200 (17.2k)      \\ \hline
-%$K^- $      &  0.2-1.5 (50MeV bins), 1.5-3.0 ( 100MeV bins), 3.0-10 ( 200MeV bins)    &  200 (17.2k)    \\ \hline
-%\end{tabular}\caption{Data sample requirements for the $dE/dx$ Bethe-Bloch parametrisation. The lower range starts with the nominal 200 MeV which is not achievable for p and difficult for K. The rough estimate is that we need about 200 particles per bin assuming that about half of them will be actually measured it gives  10\% statistical error for each bin but lower for the fit to the Bethe-Bloch formula. About half of the data sample is in the high momenta region, which can be reduce by decreasing number of particles per bin. }
-%\end{table}
 %
 \label{detbeam_pid}
 
