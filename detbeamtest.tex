@@ -32,7 +32,7 @@ appearance signal %(for $\delta_{CP}=0$)
 The crosses shows 
 The expected signal shape is shown for several values of $\delta_{CP}$
 (solid curve: $\delta_{CP}=0$, crosses: $\delta_{CP}=+\pi/2$ and -$\pi/2$). 
-Energy scale uncertainties will distort and shift the $\nu_e$ appearance specta and
+Energy scale uncertainties will distort and shift the $\nu_e$ appearance spectra and
 can mimic a non-zero
 $\delta_{CP}$ phase.
 \begin{figure}[h!]
@@ -106,15 +106,15 @@ in the few-GeV to sub-GeV range provided by charged-particle test beams.
 %\subsubsection{Particles energy and direction}
 %\label{detbeam_particles}
 The DUNE experiment will run beam in both neutrino and anti-neutrino 
-configurations. These beams will be composed  mainly of muon neutrinos (anti-neutrinos) as well as electron neutrinos (anti-neutrinos). In Fig. \ref{fig:particle_momenta} the distributions of momenta and angles of particles created in neutrino interactions from simulated beam fluxes are shown. The rate on the particles are calculated for the 34kton far detector and  are combined from both neutrino and anti-neutrino beams. In addition the electron rates from charged current interactions for muon neutrinos oscillated to electron neutrinos are shown. 
+configurations. These beams will be composed  mainly of muon neutrinos (anti-neutrinos) as well as electron neutrinos (anti-neutrinos). In Fig.~\ref{fig:particle_momenta} the distributions of momenta and angles of particles created in neutrino interactions from simulated beam fluxes are shown. The rate on the particles are calculated for the 34kton far detector and  are combined from both neutrino and anti-neutrino beams. In addition the electron rates from charged current interactions for muon neutrinos oscillated to electron neutrinos are shown. 
 \begin{figure}[h!]
   \centering
 \includegraphics[width=0.49\textwidth,height=5.0cm]{figures/True_Momenta_per_Particle_9_2_1_0_log}
 \includegraphics[width=0.49\textwidth,height=5.0cm]{figures/True_theta_per_Particle_9_2_1_0_lin}
   \caption{Particle momenta (left) and angular (right) distributions for particles produced in neutrino interactions 
 from $\nu_e$, $\nu_\mu$, $\bar \nu_e$ and $\bar \nu_\mu$ at the far detector location.
-{\color{red}  combine e+e-, improve information content (y-axis, change colors, etc )
-}
+%{\color{red}  combine e+e-, improve information content (y-axis, change colors, etc )
+%}
 }
 \label{fig:particle_momenta}
 \end{figure}
@@ -306,7 +306,8 @@ as for modeling neutral current backgrounds resulting from $\pi^o$ content in sh
 by $\pi^+$ versus $\pi^-$ initiated interactions are present up to momenta on the order of 1~GeV/c due to different
 final state particles and interaction cross sections. This is illustrated in 
 Fig.~\ref{fig:pionshwr} which shows the differences in mean energy deposited (left) and width (right) 
-for interacting pions ranging from 0.2~GeV/c up to 5~GeV/c momenta simulated using FLUKA~\cite{fluka05}.
+for interacting pions ranging from 0.2~GeV/c up to 5~GeV/c momenta.
+% simulated using FLUKA~\cite{fluka05}.
 Resulting shower calibrations and reconstruction will differ and therefore each charge must be separately
 studied. 
 \begin{figure}[h!]
@@ -348,10 +349,10 @@ for interacting $\pi^+$ versus $\pi^-$ ranging from 0.2~GeV/c up to 5~GeV/c.
 
 Final state pions are produce copiously in neutrino interactions in this energy range 
 and contribute substantially to total visible energy in the interaction.
-In neutrino interactions, these particles can reinteract or be absorbed in the nuclear medium
+These particles can re-interact or be absorbed in the nuclear medium
 and substantially change the visible energy deposited in the event. 
 Effects of modeling final state pion interactions on reconstructed neutrino energy have 
-been recently demonstrated in the NuMI and Booster beam ranges~\cite{miniboonefsi, minervafsi}. 
+been recently demonstrated in the NuMI and Booster beam energy ranges~\cite{miniboonefsi, minervafsi}. 
 
 Existing data used to tune the models
 cover limited energies ($<$200~MeV) and are primarily on lighter target nuclei~\cite{fsirev}.
@@ -378,11 +379,13 @@ exclusive final state processes over the full relevant energy range and specific
 A track angular dependent correction must be
 %Track angle must be accounted for and a correction
 applied to deposited charge to accurately calibrate
-dE/dx needed for track momentum and particle ID (see Sec.~\ref{detbeam_pid}). 
-Charge recombination effects could be angular dependent and
-introduce a component that
-is currently not modeled. 
-For example, Jaffe columnar recombination model~\cite{jaffe,eqref} predicts 
+dE/dx that is used for track momentum and particle ID (see Sec.~\ref{detbeam_pid}). 
+An additional angular dependent effect could be present 
+due to charge recombination. 
+% effects could also be angular dependent. 
+%It this is the case
+%this will introduce a component that is currently not modeled. 
+For example, Jaffe columnar recombination model~\cite{jaffe,argoneut_angle} predicts 
 angular dependence given by 
 $$Q \approx \frac{Q_o}{1+k_c (dE/dx) / {\cal E} \sin\phi}, $$ 
 where
@@ -392,15 +395,16 @@ $Q_o$ and $Q$ are the ionization charge and the collected charge respectively,
 $k_c$ is a constant that depends on LAr diffusion and mobility coefficients, $\cal E$ 
 is the electric field strength, and $\phi$ is the angle relative to the drift direction.
 %
-ICARUS and LArSoft default recombination models do no currently incorporate 
-an angular dependent effect. 
+ICARUS~\cite{icarus_recombination} and LArSoft default recombination models do no currently incorporate angular dependence. 
 %(ArgoNeuT~\cite{arogneut_angle} suggests a 
 %modified Box model with explicit angular dependence can be incorporated 
 %into Birk's law  by replacing ${\cal E}$  with ${\cal E} \sin\phi$).
-Recent results from ArgoNeuT~\cite{argoneut_angle} measure small angular dependent effects using 
-stopping protons from neutrino interactions in the range 50-300 MeV with angles from 40-90$^{\circ}$.
+Recent results from ArgoNeuT~\cite{argoneut_angle} find a small unmodeled
+angular dependence in a data same obtained using stopping protons from 
+neutrino interactions in the range 50-300 MeV with angles from 40-90$^{\circ}$.
 
-Test beam data will be used to study angular dependence using 
+Additional data covering a large angular range would be useful to further investigate this possibility.
+The large sample of 1~GeV protons requested will also be used to study angular dependence using 
 samples of secondary stopping protons produced in showers at a range of angles with
 respect to the field direction.
 
@@ -416,17 +420,25 @@ respect to the field direction.
 Information on range and charge deposition for stopping charged-particles can be used to 
 accurately identify particle type as well as measure kinetic energy. 
 Fig.~\ref{fig:resrange}  (left) shows track energy loss per unit length (dE/dx) as a function of residual 
-track range for muons, pions, protons and kaons for particles simulated using ICARUS MC (ref).
+track range for simulated muon, pion, proton and kaon particle tracks.  Simulation is performed with
+FLUKA~\cite{fluka05} and ICARUS geometry (3mm wire pitch) and Reconstruction code~\cite{icarus_reco}.
+Stopping particles were selected using truth information.
 A neutral-net-based algorithm~\cite{nn_pid,rd_pid}
-was used to determine particle probability 
-functions for each particle hypothesis. Fig.~\ref{fig:resrange}  shows the result for a cross section of events 
-in the residual range bin centerd at 6~cm.
-PID algorithm depends on the detector effects, configuration, and geometry and 
-reconstruction algorithm. (Fig.~\ref{fig:resrange} uses ICARUS geometry with 3~mm pitch, APA configuration may give significantly
-different results, especially for pion/muon separation). 
-Plots were made for 3mm pitch, we don't have such simulation for APA configuration, it may differ a bit (which does not change much for proton/kaon, but can be significant for pion/muon).
-It is therefore important to test PID on real prototype
-detector data in presence of all detector effects.
+was used to determine probability functions for each particle hypothesis.
+% at a bin centered at 6$\pm$1~cm.
+%  for each particle hypothesis.
+%functions for each particle hypothesis. 
+Fig.~\ref{fig:resrange} (right) shows the result for events in the residual range bin centered at 6($\pm$1)~cm.
+The PID efficiency and purity will  depend on the detector configuration, geometry and 
+reconstruction algorithm. The DUNE APA configuration and reconstruction algorithms
+%Fig.~\ref{fig:resrange} uses ICARUS geometry with 3~mm pitch, APA configuration 
+may give significantly different results, especially for pion/muon separation. 
+%Plots were made for 3mm pitch, we don't have such simulation for APA configuration, it may differ a bit (which does not change much for proton/kaon, but can be significant for pion/muon).
+It is therefore important to test PID a realistic prototype detector
+data in the presence of all detector effects.
+Event samples which include an adequate number of stopping particles for each species
+(muon, pions, protons and kaons) are included in the particle summary request in order to 
+perform tests of PID and dE/dx calibration measurements.
 
 
 %The tail is used to calibration the MIP response, the region near the end of the track is used
@@ -439,15 +451,13 @@ detector data in presence of all detector effects.
 %\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pid}
 %\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pid_probabilities}
 \includegraphics[width=\textwidth,height=5.0cm]{figures/pid_curves}
-  \caption{de/dx vs. residual range.
-ICARUS geometry with 3~mm pitch is used here, APA configuration may give significantly
-different results, especially for pion/muon separation
-{\color{red}
-Need better versions 
-}
+  \caption{ICARUS simulated track energy loss per unit length as a function of residual 
+range for muons, pions, protons and kaons.  Neutral-net-based probability functions for
+each particle type for a bin at residual range  6($\pm$1)~cm.
 }
 \label{fig:resrange}
 \end{figure}
+
 
 
 
@@ -512,15 +522,17 @@ Backgrounds originating from photons produced primarily from
 final state $\pi^0$'s must be identified and removed from the signal
 electron sample. 
 
-
-The photons can undergo two process: pair production and Compton scattering. 
-The dominant process for photons with energies of several hundreds MeV  is 
-the e$^+$ e$^-$ pair production, but Compton scattering also occur at this 
-energies. For pair production the e/$\gamma$ separation is achieved by looking 
-at the beginning of the electromagnetic shower, where for election we see energy 
-deposition typical for single MIP and for photon we see energy deposition consisted 
-with two MIPs. In case of Compton scattering off of atomic electrons the 
-signal is much more difficult to distinguish from the CC $\nu_e$ scattering signal.
+Photons can undergo two process: pair production and Compton scattering. 
+The dominant process for photons with energies of several hundreds MeV is 
+e$^+$ e$^-$ pair production.
+%energies. 
+%For pair production the 
+e/$\gamma$ discrimination
+for this process can be achieved using the beginning of the electromagnetic shower, where 
+a single MIP is characteristic of electron energy deposition while two MIPs is consistent 
+with a photon hypothesis.
+In case where the photon Compton scatters, the two particles cannot easily be distinguished
+from the energy deposition pattern.
 
 
 \begin{figure}[h!]
@@ -541,33 +553,56 @@ Electron-photon separation has been studied in LAr TPCs
 %as shown in Fig.~\ref{fig:egam1}.
 %Currently the 
 %separation efficiency is estimated to be at the level of of 95 \% (?) 
-Fig.~\ref{fig:egam} shows results of the separation algorithm applied to Monte Carlo event
-samples from ??? (more needed in text on the assumptions). 
+Fig.~\ref{fig:egam} (from ~\cite{DUNECDR})
+ shows estimated background rejection versus efficiency using 
+simulated isotropic electron and photon event samples  with the 
+APA geometry configuration.
+% and propagated thorough the 
+%event reconstruction chain 
 Background rejection as a function of signal
 selection efficiency depends mildly
-on incoming particle energies in the range of interest. 
+on incoming particle energy in the range of interest. 
 Greater than 90\% background rejection can be 
 achieved with $>$70\% efficiency for energies above 300~MeV. (Above 1~GeV 
 rejection is even greater at high efficiency).
 Our studies indicate that rejection and efficiency depend 
 on particular features of the geometry including wire pitch and plane 
 orientation which affect the reconstruction. 
-Therefore, it is critically important 
-to study e/$\gamma$ separation in a prototype LAr TPC detector.
+For example, Fig.~\ref{fig:egam} (right) shows a comparison of background
+rejection versus signal efficiency for simulated
+DUNE APA configuration compared with with ICARUS T600 geometry
+integrated over the energy range 0.2-1.0 GeV. 
+Pure samples of electrons and photons in the sub-GeV energy range will be
+needed to tune the separation algorithms and to measure 
+detector-dependent electron-photon separation efficiency and purity.
+
+%Therefore, it is critically important 
+%to study e/$\gamma$ separation in a prototype LAr TPC detector.
 
 %More discussion of specific samples to be used here.
 % move to table section.
 
 
 
+
+
 \subsection{Other measurements} 
 \label{sec_other}
 
-\subsubsection{Supernova and Michel electrons}
-The energies of the electrons coming from CC $\nu_e$ interactions from Supernova will be in the order of 10s of MeV. 
-The beam test cannot offer such low energy electron, but one can use the Michel electrons form $\mu$ decay to cover these energies. 
- We plan to use the Michel spectrum to calibrate the absolute energy scale. 
+The DUNE experiment will be capable of addressing other new physics possibilities with its one-of-a-kind
+massive underground LAr TPC. Event samples discussed here include those that support DUNE
+rich array of other physics goals. 
 
+
+\subsubsection{Supernova and Michel electrons}
+
+Neutrinos produced in supernova explosions since the first stars formed in the universe constitute the
+diffuse relic supernova neutrino background. The DUNE Far detector could have unique sensitivity to these
+few-to-30-MeV range $\nu_e$'s. 
+The test beam cannot offer a sample of  such low energy electrons, but Michel electrons  produced by 
+decaying stopped muons is ideal to calibrate electron response in the appropriate 10-50~MeV energy range. 
+The requested sample of low energy muons will supply the 1400 Michel electrons required for a 1\% 
+calibration of electrons in this energy range. 
 
 %\begin{table}[h]
 %\centering
@@ -578,13 +613,13 @@ The beam test cannot offer such low energy electron, but one can use the Michel 
 %\end{tabular}\caption{Stopping . }
 %\end{table}
 
-
 \subsubsection{Charge sign determination}
+
 It is not possible to determine the charge of the particle on an event by event basis with non-magnetized LAr TPC detectors. A statistical separation will be studied which will make use of differences in muon versus antimuon capture cross sections and lifetime.
 %However, the statistical analyst will be possible. We will fit the muon's half time which is different for muons and antimony due to different muon capture cross sections. 
 For the $\mu^+$ for argon we expect about xx\% to be captured and for $\mu^-$ about yy\%. 
-
-
+Charge-sign tagged $\mu_\mu$ samples may be useful to constrain exotic possibilities such as
+non-standard neutrino interactions which predict particle-antiparticle survival probability differences. 
 
 
 \subsubsection{Proton decay sensitivity and background samples}
@@ -593,11 +628,13 @@ For the $\mu^+$ for argon we expect about xx\% to be captured and for $\mu^-$ ab
 The DUNE experiment in the deep underground location will seek to detect several modes of proton decay.
 In particular, a first ever LAr detector of this scale underground will primarily improve sensitivity to 
 proton decays with final state kaons such as  $p \rightarrow K^+ \overline{\nu}$. 
-Sensitivity to this process is studied in \cite{bueno}. $K^+$ detector efficiencies are estimated to be $>$97\% in the
-appropriate momentum range (500-800 MeV/c). The kaon samples requested in Table~\ref{pdktable} are needed to directly measure 
-$K^+$ PID and detection efficiencies. Obtaining low energy kaons will likely be difficult in this beamline.
+Sensitivity to this process is studied in \cite{bueno}. $K^+$ detection efficiency is estimated to be $>$97\% in the
+appropriate momentum range (500-800 MeV/c). The kaon samples requested in Table~\ref{tab:runsum} are needed to directly measure 
+$K^+$ PID and detection efficiency. 
+
+Obtaining low energy kaons will likely be difficult in this beamline.
 A sample of 13K beam kaons with 1~GeV/c momentum are requested to provide 2K stopping $K^+$ track samples for PID studies.
-(only 15\% of $K^+$ at 1 GeV stop at 1~GeV/c).
+(only 15\% of $K^+$ stop at 1~GeV/c).
 
 
 %\begin{table}[h]
@@ -623,9 +660,14 @@ is  {\em mis-IDed as stopping K}. A proton interaction which produces neutrals a
 \subsubsection{Anti-proton annihilation }
 
 A sample of antiproton would be useful to calibrate the $p$-$\overline{p}$ annihilation process. 
-This would provide input to exotic B-violating process neutron oscillation (reference) modeling of 
-subsequent  $n$-$\overline{n}$ annihilation. These events would be tagged in the mixed-mode beam.
-Events should be at the lowest energies achievable in this beamline.
+This would provide input to exotic B-violating process in which neutron-antineutron oscillation
+occurs and results in a
+% (reference) modeling of 
+subsequent  $n$-$\overline{n}$ annihilation. The modeling of $p\overline{p}$ annihilation could be
+studied and tuned on a low-energy $\overline{p}$ beam sample and used to constrain the related modes 
+expected for  $n$-$\overline{n}$ annihilation. These events would be tagged in the 
+mixed-mode beam. Events in the sub-GeV range would be the most useful for this purpose.
+
 
 
 
