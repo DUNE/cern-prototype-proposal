@@ -1,4 +1,5 @@
-The main goal of the Single-Phase Prototype test beam program is to perform measurements 
+\label{detbeamtest}
+One of the main goals of the Single-Phase Prototype test beam program is to perform measurements 
 needed to control and understand systematic uncertainties in DUNE oscillation measurements.
 The program also includes measurements to support other important DUNE physics measurements as described below.
 %detector is intended to provide input necessary to reduce systematic uncertainties for oscillation measurements 
@@ -97,23 +98,23 @@ the low energy neutrino interaction processes
 and final states from reconstruction and detector effects. 
 The use of this technology in future precision neutrino experiments will require dedicated 
 information on particle response
-in the few-GeV to sub-GeV range provided charged-particle test beams. 
+in the few-GeV to sub-GeV range provided by charged-particle test beams. 
 
 %%%
 %\subsubsection{Particles energy and direction}
 %\label{detbeam_particles}
 The DUNE experiment will run beam in both neutrino and anti-neutrino 
-configurations. These beams will be composed  mainly of muon neutrinos (anti-neutrinos) as well as electron neutrinos (anti-neutrinos). In Fig. \ref{fig:particle_momenta} the distributions of momenta and angles of particles created in neutrino interactions from simulated beam fluxes are shown. The rate on the particles are calculated for the 34kton far detector and  are combine from both neutriono and anti-neutrino beams. In addition the electron rates from charged current interactions for muon neutrinos oscillated to electron neutrinos are showed. 
+configurations. These beams will be composed  mainly of muon neutrinos (anti-neutrinos) as well as electron neutrinos (anti-neutrinos). In Fig. \ref{fig:particle_momenta} the distributions of momenta and angles of particles created in neutrino interactions from simulated beam fluxes are shown. The rate on the particles are calculated for the 34kton far detector and  are combined from both neutrino and anti-neutrino beams. In addition the electron rates from charged current interactions for muon neutrinos oscillated to electron neutrinos are shown. 
 \begin{figure}[h!]
   \centering
 \includegraphics[width=0.49\textwidth,height=5.0cm]{figures/True_Momenta_per_Particle_9_2_1_0_log}
 \includegraphics[width=0.49\textwidth,height=5.0cm]{figures/True_theta_per_Particle_9_2_1_0_lin}
-\label{fig:particle_momenta}
   \caption{Particle momenta (left) and angular (right) distributions for particles produced in neutrino interactions 
 from $\nu_e$, $\nu_\mu$, $\bar \nu_e$ and $\bar \nu_\mu$ at the far detector location.
 {\color{red}  combine e+e-, improve information content (y-axis, change colors, etc )
 }
 }
+\label{fig:particle_momenta}
 \end{figure}
 
 
@@ -126,7 +127,7 @@ from $\nu_e$, $\nu_\mu$, $\bar \nu_e$ and $\bar \nu_\mu$ at the far detector loc
 
 %\newpage
 
-The detector is designed from components that match exactly the current DUNE Far detector design components. 
+The detector is designed from components that match exactly the current DUNE far detector design components. 
 The test beam detector must be sufficiently large in both
 longitudinal and transverse dimensions to contain showering particles up to the energy range of interest ($\sim$10~GeV).
 Fig.~\ref{fig:containment} shows the simulated longitudinal and transverse 
@@ -136,7 +137,6 @@ radius of 2.5~m. Shower from pions, kaons, and electrons have also been studied 
 is achieved in those cases. 
 \begin{figure}[htp]
   \centering
-  \label{fig:containment}  
   \begin{tabular}{ccc}
 %    \includegraphics[scale=0.15]{figures/electrons_density_overlay}&
 %    \includegraphics[scale=0.15]{figures/electrons_lcont_overlay}&
@@ -175,6 +175,7 @@ is achieved in those cases.
 %Add info on simulation details and containment defn (T. Junk).
 %}
 }
+  \label{fig:containment}  
 %For 10 GeV showers, more than 95\% of the energy is contained in a detector of longitudinal size of 550~cm and 
 %radius of 200~cm.}
 \end{figure}
@@ -257,7 +258,7 @@ Monte Carlo simulations and allow more precise reconstruction of neutrino energy
 \label{sec:showers}
 
 Accurate measurement of neutrino energy will require reconstruction of both electromagnetic and hadronic showers. Reconstruction of hadron energy 
-in this energy range will require knowledge of the initiating hadron's 
+in these energy range will require knowledge of the initiating hadron's 
 ($\pi^{+/-}$, $p$, or $K^{+/-}$)
 fate (interact, decay, or stop). For the case of  interacting hadrons 
 the composition of secondaries, which will include neutrals, particles which 
@@ -265,7 +266,7 @@ deposit energy electromagnetically ($\pi^o$, $\gamma$), as well as
 secondary hadrons,
 %and their energy responses 
 will need to be determined to characterize the response. 
-The test beam with know incoming particle type and momentum will be used
+The test beam with known incoming particle type and momentum will be used
 to characterize interacting hadrons in this energy range.
 %quantify responses to initiating hadrons
 %($\pi^{+/-}$, $p$, or $K^{+/-}$)
@@ -280,20 +281,20 @@ Reconstruction is performed with ICARUS spatial and calorimetric reconstruction 
 For this study, visible energy is summed using hit information with corrections applied for electron lifetime.
 (No attempt is made to correct for electromagnetic shower fractions). 
 The resulting energy deposition in the two cases cannot be 
-accurately characterize by an average shower calibration factor. Monte Carlo simulations of 
-outgoing particles, especially at low energies, must be checked and bench marked against calibration data to avoid
+accurately characterized by an average shower calibration factor. Monte Carlo simulations of 
+outgoing particles, especially at low energies, must be checked and bench-marked against calibration data to avoid
 large uncertainties from shower modeling. 
 \begin{figure}[h!]
   \centering
 \includegraphics[width=0.49\textwidth,height=5.0cm]{figures/protons_1gev_v0}
 \includegraphics[width=0.49\textwidth,height=5.0cm]{figures/protons_3gev_v0}
-\label{fig:hadronshwr}
   \caption{Fraction of true energy deposited by interacting protons of 1~GeV/c (left) and
 3~GeV/c (right) momenta simulated using FLUKA~\cite{fluka05}.
 {\color{red}
 Place holders cut from March workshop talk R\&D - Need better versions.
 }
 }
+\label{fig:hadronshwr}
 \end{figure}
 
 Pion showers at low energies will also be important both for determining the interacted neutrino energy as well
@@ -310,13 +311,13 @@ studies.
 %\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pi+pi-_sig}
 \includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pi+pi-_means}
 \includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pi+pi-_sig}
-\label{fig:pionshwr}
   \caption{Differences in mean energy deposited (left) and width of visible energy (right) 
 for interacting $\pi^+$ versus $\pi^-$ ranging from 0.2~GeV/c up to 5~GeV/c. 
 {\color{red}
 Awaiting improved figure
 }
 }
+\label{fig:pionshwr}
 \end{figure}
 
 
@@ -396,7 +397,7 @@ Recent results from ArgoNeuT~\cite{argoneut_angle} measure small angular depende
 stopping protons from neutrino interactions in the range 50-300 MeV with angles from 40-90$^o$.
 
 Test beam data will be used to study angular dependence using 
-samples of secondary stopping protons produced in showers at steep angles with
+samples of secondary stopping protons produced in showers at small angles with
 respect to the field direction.
 
 \subsubsection{Bethe-Bloch parametrization of charged particles and PID}
@@ -453,7 +454,6 @@ detector data in presence of all detector effects.
 %\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pid}
 %\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pid_probabilities}
 \includegraphics[width=\textwidth,height=5.0cm]{figures/pid_curves}
-\label{fig:resrange}
   \caption{de/dx vs. residual range.
 ICARUS geometry with 3~mm pitch is used here, APA configuration may give significantly
 different results, especially for pion/muon separation
@@ -461,6 +461,7 @@ different results, especially for pion/muon separation
 Need better versions 
 }
 }
+\label{fig:resrange}
 \end{figure}
 
 
@@ -479,7 +480,7 @@ Reconstruction algorithms use all three signal planes for 3D track and event rec
 \item Tracks and cascades in the plane parallel or almost parallel to the signal planes have strongly limited variation of the hit drift time, required for the 3D reconstruction; various reconstruction algorithms can show different performance in the real detector conditions for such inclined objects, especially in the presence of the noise affecting hit time reconstruction.
 \item 2D projection of objects aligned with the wires of one of the planes is strongly shortened, which limits the amount of information available to the reconstruction algorithm; the two other signal planes can be used for the spatial reconstruction, however, the validation of the correctness of reconstruction, calculated from the 3D object projected to the third plane, is less efficient.
 
-The most important aspect of this issue is the usage of all planes for the charge measurement. If the reconstructed object is aligned with Collection wires then the calorimetric measurement has to be carried out with the signal of Induction planes. Additional shielding wire plane of ELBNF design will improve the quality of the bipolar signal of Induction planes and the test beam experiment will help with its calibration.
+The most important aspect of this issue is the usage of all planes for the charge measurement. If the reconstructed object is aligned with Collection wires then the calorimetric measurement has to be carried out with the signal of Induction planes. Additional shielding wire plane of the DUNE design will improve the quality of the bipolar signal of Induction planes and the test beam experiment will help with its calibration.
 \item Objects aligned with the drift field are projected to a low number of wires and have a large span of drift time. Wire signals of such objects are significantly different than those of objects at higher angles w.r.t. the drift field, requiring a dedicated signal processing for the hit reconstruction. In such orientation also the correction of eventual angular dependence of the recombination effect should be included in the calorimetric reconstruction and calibrated with real data.
 \end{itemize}
 \end{itemize}
@@ -494,8 +495,8 @@ The most important aspect of this issue is the usage of all planes for the charg
 %\end{itemize}
 
 Any reconstruction algorithm will depend on the particular choices in the TPC design. 
-Therefore bench marking our reconstruction algorithms with as close to realistic design prototype will
-be invaluable to understanding performance of reconstruction.
+Therefore bench-marking our reconstruction algorithms with a prototype of the final design will
+be invaluable to understand the performance of reconstruction.
 
 %
 %\begin{table}[h]
@@ -578,7 +579,8 @@ to study e/$\gamma$ separation in a prototype LAr TPC detector.
 
 \subsubsection{Supernova and Michel electrons}
 The energies of the electrons coming from CC $\nu_e$ interactions from Supernova will be in the order of 10s of MeV. 
-The beam test cannot offer such low energy electron, but one can use the Michel electrons form $'mu$ decay to cover these energies. The SK used the Michel spectrum to calibrate the absolute energy scale. 
+The beam test cannot offer such low energy electron, but one can use the Michel electrons form $\mu$ decay to cover these energies. 
+ We plan to use the Michel spectrum to calibrate the absolute energy scale. 
 
 
 %\begin{table}[h]
@@ -592,7 +594,7 @@ The beam test cannot offer such low energy electron, but one can use the Michel 
 
 
 \subsubsection{Charge sign determination}
-It is not possible to determine charge of the particle on the event by event basis with non-magnetized LAr TPC detectors. A statistical separation will be studied which will make use of differences in muon versus antimuon capture cross sections and lifetime.
+It is not possible to determine the charge of the particle on an event by event basis with non-magnetized LAr TPC detectors. A statistical separation will be studied which will make use of differences in muon versus antimuon capture cross sections and lifetime.
 %However, the statistical analyst will be possible. We will fit the muon's half time which is different for muons and antimony due to different muon capture cross sections. 
 For the $\mu^+$ for argon we expect about xx\% to be captured and for $\mu^-$ about yy\%. 
 
@@ -602,7 +604,7 @@ For the $\mu^+$ for argon we expect about xx\% to be captured and for $\mu^-$ ab
 \subsubsection{Proton decay sensitivity and background samples}
 
 
-The DUNE experiment in the deep underground location will improve sensitivity to detection of several modes of proton decay.
+The DUNE experiment in the deep underground location will seek to detect several modes of proton decay.
 In particular, a first ever LAr detector of this scale underground will primarily improve sensitivity to 
 proton decays with final state kaons such as  $p \rightarrow K^+ \overline{\nu}$. 
 Sensitivity to this process is studied in \cite{bueno}. $K^+$ detector efficiencies are estimated to be $>$97\% in the
