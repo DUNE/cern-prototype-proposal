@@ -424,7 +424,7 @@ track range for simulated muon, pion, proton and kaon particle tracks.  Simulati
 FLUKA~\cite{fluka05} and ICARUS geometry (3mm wire pitch) and Reconstruction code~\cite{icarus_reco}.
 Stopping particles were selected using truth information.
 A neutral-net-based algorithm~\cite{nn_pid,rd_pid}
-was used to determine probability functions for each particle hypothesis.
+was used to determine PID functions for each particle hypothesis.
 % at a bin centered at 6$\pm$1~cm.
 %  for each particle hypothesis.
 %functions for each particle hypothesis. 
@@ -448,12 +448,13 @@ perform tests of PID and dE/dx calibration measurements.
 %mis-ID probabilities. 
 \begin{figure}[h!]
   \centering
-%\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pid}
-%\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pid_probabilities}
-\includegraphics[width=\textwidth,height=5.0cm]{figures/pid_curves}
-  \caption{ICARUS simulated track energy loss per unit length as a function of residual 
-range for muons, pions, protons and kaons.  Neutral-net-based probability functions for
-each particle type for a bin at residual range  6($\pm$1)~cm.
+\includegraphics[width=0.30\textwidth,height=5.0cm]{figures/pids}
+\includegraphics[width=0.69\textwidth,height=5.0cm]{figures/prkpimu}
+%\includegraphics[width=\textwidth,height=5.0cm]{figures/pid_curves}
+  \caption{(right) ICARUS simulated track energy loss per unit length as a function of residual 
+range for muons, pions, protons and kaons.  (right) Particle hypothesis curves obtained using a
+neutral-net-based PID for
+each particle type for a bin with residual range  6($\pm$1)~cm.
 }
 \label{fig:resrange}
 \end{figure}
