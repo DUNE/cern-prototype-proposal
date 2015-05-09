@@ -68,7 +68,7 @@ The data event size can be calculated as
   Event size = (\#channels) \times (clock\, rate) \times (readout \, time) \times (sample \, size)
 \end{equation}
 where the $\# channels$ equals 15,360 channels, corresponding to the proposed TPC which consists of 6 APAs with 2560 channels each, 
-the $clock \, rate$ is 2~MHz, the $readout \, time$ is assumed to be 3 $ \times $ 2.25 ms = 6.75 ms corresponding to three drift times (see below) and the $sample \, size$ is 2~bytes.
+the $clock \, rate$ is 2~MHz, the $readout \, time$ is assumed to be 3 $ \times $ 2.25 ms = 6.75 ms corresponding to three drift times and the $sample \, size$ is 2~bytes.
 
 {\color{red} This results in an event size of $\sim$ 400~Mbyte.\\
 HOW WERE THE 2.5 MB CALCULATED ??! EMAIL FROM BRETT IN RESPONSE TO QIUGUANG AND DATED MAY 5TH INDICATED THAT 2 BYTES PER CHANNEL WERE ASSUMED ?!\\
@@ -104,8 +104,8 @@ this leads to the estimate of YYY~PB of nominal data volume to be collected in t
 In summary, we expect that tape storage of $O(PB)$ size will be required
 and a somewhat more modest disk space for raw data staging at CERN, for replication purposes. 
 We envisage storing the primary copy of raw data at CERN, with replicas at additional locations. 
-
-Processed and Monte Carlo data placement will require additional resources that are addressed in section \ref{data process}.
+%
+Processed and Monte Carlo data placement will require additional resources that are addressed in section \ref{dataprocess}.
 
 
 \subsubsection{Data Transmission and Distribution}
