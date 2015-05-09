@@ -1,6 +1,6 @@
-{\color{red} Need a better introductory paragraph giving a quick high level overview before describing details; should include channel count, how many channels are grouped, how many channels read through the same cables, etc.}
+{\color{red} Need a better introductory paragraph for TPC electronics giving a quick high level overview before describing details; should include channel count, how many channels are grouped, how many channels read through the same cables, etc.}
 
-The TPC electronics is designed to operate at liquid argon temperature and is placed as close to the sense wires as possible,
+The {\bf TPC electronics} is designed to operate at liquid argon temperature and is placed as close to the sense wires as possible,
 thus minimizing the capacitance and the preamplifier noise.
 The present design has a maximum wire length of 7.3~m (induction planes)
 with a corresponding capacitance of 164~pF and an expected intrinsic noise of 400 electrons.
@@ -88,5 +88,28 @@ CXP connectors on the RTM.
 
 With the assumption that each cold FE board multiplexes it's 128 wire channels to 4 outputs at 1-Gbps each,
 the non-zero suppressed data for 1 APA can be fed into a single COB (containing 8 RCEs).
-Each RCE would receive data from 2 FE boards, perform zero-suppression, and send the result to the back-end.  
+Each RCE would receive data from 2 FE boards, perform zero-suppression, and send the result to the back-end.  \\
+
+
+The {\bf PDS front-end electronics} resides outside of the cryostat in
+instrumentation racks. A custom module for receiving SiPM signals has
+been designed and built. The module also performs signal processing in
+the front-end as preprocessing for trigger and DAQ.  The module is
+called the SiPM Signal Processor (SSP) and consists of 12 readout
+channels packaged in a self-contained 1U module.  Each channel
+contains a fully-differential voltage amplifier and a 14-bit, 150-MSPS
+analog-to-digital converter (ADC) that digitizes the waveforms
+received from the SiPMs. There is no shaping of the signal, since the
+SiPM response is slow enough relative to the speed of the digitization
+to obtain several digitized samples of the leading edge of the pulse
+for the determination of signal timing. Digitized data is processed by
+a Xilinx Artix-7 Field-Programmable Gate Array (FPGA).  The use of the
+FPGA processing allows for a significant amount of customization of
+the SSP operation. \\
+
+%The data streams from the TPC and the PDS will be merged and the concepts are being implemented and tested at the 35t detector.
+
+
+
+
 
