@@ -1,9 +1,17 @@
+\label{singlephasedet}
 
-\subsection{ELBNF detector}
+\subsection{DUNE detector plans}
 
-The far detector for the DUNE collaboration will be a series of four liquid argon time projection chambers (TPC), each in a cryostat that holds a fiducial/active/total LAr mass of 10.0/13.3/16.9 kt. The TPCs will be instrumented with photon detection. It is planned that the first 10 kt detector will be ready for installation in the 2021 timeframe. One option for the TPC design is a wire plane based TPC with cold electronics readout. Designs of this style are are referred to as single-phase detectors as the charge generation, drift, and detection all occurs in the argon liquid phase. This style TPC has the advantage that there is no charge amplification before collection making a very precise charge measurement possible. To achieve DUNE's goals, a detector much larger than ICARUS, the largest LAr TPC detector built to date, is needed. The LBNE experiment was developing a scalable far detector design shown in Figure \ref{fig:fardet-overview} that would scale-up LAr TPC technology by roughly a factor of 40 compared to the ICARUS T600 detector. To achieve this scale-up, a number of novel design elements need to be employed. A membrane cryostat typical for the liquefied natural gas industry will be used instead of a conventional evacuated cryostat. The wire planes or anode plane assemblies (APAs) will be factory-built as planar modules that are then installed into the cryostat. The modular nature of the APAs allow the size of the detector to be scaled up to at least 40 kt fiducial mass. Both the analog and digital electronics will be mounted on the wire planes inside the cryostat in order to reduce the electronic noise, to avoid transporting analog signals large distances, and to reduce the number of cables that penetrate the cryostat. The scintillation photon detectors will employ light collection paddles to reduce the required photo-cathode area. Many of the aspects of the design will be tested in a small scale prototype at Fermilab but given the very large scale of the detector elements a full-scale test is highly desirable. As the new DUNE collaboration forms and organized a combined detector design team will emerge. Ideas from this new collaboration will modify the design presented here but this design provides a concrete example of a possible future detector. 
-
-
+The far detector for the DUNE collaboration will be a series of four liquid argon time projection chambers (TPC), each in a cryostat that holds a fiducial/active/total LAr mass of 10.0/13.3/16.9 kt. The TPCs will be instrumented with photon detection. It is planned that the first 10 kt detector will be ready for installation in the 2021 timeframe. 
+The design for the first 10~kt detector is a wire plane based TPC with cold electronics readout. Designs of this style are are referred to as single-phase detectors as the charge generation, drift, and detection all occurs in the liquid argon phase. 
+This style TPC features no charge amplification before collection, thereby making a very precise charge measurement possible. 
+To achieve DUNE's goals, a detector much larger than ICARUS, the largest LAr TPC detector built to date, is needed. The former long baseline neutrino experiment (LBNE) was developing a scalable far detector design shown in Figure \ref{fig:fardet-overview} that would scale-up LAr TPC technology by roughly a factor of 40 compared to the ICARUS T600 detector. To achieve this scale-up, a number of novel design elements need to be employed. A membrane cryostat typical for the liquefied natural gas industry will be used instead of a conventional evacuated cryostat. The wire planes or anode plane assemblies (APAs) will be factory-built as planar modules that are then installed into the cryostat. The modular nature of the APAs allow the size of the detector to be scaled up to at least 40 kt fiducial mass. Both the analog and digital electronics will be mounted on the wire planes inside the cryostat in order to reduce the electronic noise, to avoid transporting analog signals large distances, and to reduce the number of cables that penetrate the cryostat. The scintillation photon detectors will employ light collection paddles to reduce the required photo-cathode area and thereby cost. 
+Many of the aspects of the design are being tested in a small scale prototype at Fermilab but given the very large scale of the detector elements a full-scale test is critical. 
+Since the recent formation of the new DUNE collaboration a combined detector design team is emerging. 
+Ideas from this new collaboration have the potential to modify the detector design for the additional three far detector modules
+which are foreseen for DUNE.
+The detector design described here is the LBNE detector design chosen by the DUNE collaboration for the first 10~kt 
+detector module and also adopted as the basis for the CERN prototype detector.
 
 \begin{figure}[!htb]
 \centering
@@ -13,108 +21,103 @@ The far detector for the DUNE collaboration will be a series of four liquid argo
 %\includegraphics[width=0.7\textwidth]{EndView-sketch.png}
 \end{center}
 \end{minipage}
-\caption{\small 3D model of one design of the DUNE single-phase detector. Shown is 5kt fiducial volume detector which would need to be lengthened for the 10 kt design. The present DUNE plan calls for the construction of 4 10 kt detectors of similar design. }
+\caption{\small 3D model of the design for the first DUNE single-phase detector. Shown is a 5~kt fiducial volume detector which would need to be lengthened for the 10~kt design. The present DUNE plan calls for the construction of four 10~kt detectors. }
 \label{fig:fardet-overview} 
 \end{figure}
 
-The goals of the DUNE detector test can be broken into four categories: argon contamination mitigation verification, TPC mechanical verification, TPC electrical verification, and photon detection light yield verification. Research at Fermilab utilizing the Materials Test Stand has shown that electronegative contamination to the ultra-pure argon from all materials tested is negligible if the material is under the liquid argon. This implies that the dominant source of contamination originates from the gas ullage region and in the room temperature connections to the detector. Careful design of the ullage region to insure that all surfaces and feedthroughs are cold is expected to greatly reduce the sources of contamination over what exists in present detectors. Other concepts attempt to eliminate the gas ullage completely. The goals related to mechanical testing are to test the integrity of the detector. In the current design, each APA measures 2.3 m by 6.0 m and includes 2560 wires and associated readout channels. Given the complexity of these assemblies, a test where the detector can be thermally cycled and tested under operating conditions is highly advised prior to mass production. The mechanical support of the APAs can be tested to verify that the mechanical design is reliable and will accommodate any necessary motion between the large wire planes. The impact of vibration isolation between the cryostat roof and the detector can also be tested. Finally a potential improvement in the cryostat design is the possibility to move the pumps external to the main cryostat. This will reduce any mechanical coupling to the detector and also greatly improve both reliability and ease of repair. The electrical testing goals are to insure that the high voltage design is robust and that the required low electronic noise level can be achieved. As the detector scale increases so does the capacitance and the stored energy in the device. The design of the field cage and high voltage cathode planes needs to be such that HV discharge is unlikely and that if the event occurs no damage to the detector or cryostat results. The grounding and shielding of large detectors is also critical for low noise operation. By testing the full scale elements one insures that the grounding plan is fully developed and effective. Large scale tests of the resulting design will verify the electrical model of the detector. 
+The engineering goals of the DUNE detector test can be broken into five broad categories: 
+\begin{enumerate}
+	\item TPC performance, mechanical and electrical verification, 
+	\item photon detection light yield verification,
+	\item calibration strategy verification,
+	\item argon contamination mitigation verification, 
+	\item production and installation procedure verification
+\end{enumerate}
 
+	 The goals related to mechanical testing are to test the integrity of the detector. In the current design, each APA measures 2.3 m by 6.0 m and includes 2560 wires and associated readout channels. Given the complexity of these assemblies, a test where the detector can be thermally cycled and tested under operating conditions is highly advised prior to mass production. The mechanical support of the APAs can be tested to verify that the mechanical design is reliable and will accommodate any necessary motion between the large wire planes. The impact of vibration isolation between the cryostat roof and the detector can also be tested. Finally a potential improvement in the cryostat design is the possibility to move the pumps external to the main cryostat. This will reduce any mechanical coupling to the detector and also greatly improve both reliability and ease of repair. \\
 
+	 
+	 The electrical testing goals are to insure that the high voltage design is robust and that the required low electronic noise level can be achieved. As the detector scale increases so does the capacitance and the stored energy in the device. The design of the field cage and high voltage cathode planes needs to be such that HV discharge is unlikely and that if the event occurs no damage to the detector or cryostat results. The grounding and shielding of large detectors is also critical for low noise operation. By testing the full scale elements one insures that the grounding plan is fully developed and effective. Large scale tests of the resulting design will verify the electrical model of the detector. \\
+
+	 Research at Fermilab utilizing the Materials Test Stand has shown that electronegative contamination to the ultra-pure argon from all materials tested is negligible if the material is under the liquid argon. This implies that the dominant source of contamination originates from the gas ullage region and in the room temperature connections to the detector. Careful design of the ullage region to insure that all surfaces and feedthroughs are cold is expected to greatly reduce the sources of contamination over what exists in present detectors. 
+	 
 \subsection{CERN prototype detector}
 
-\subsubsection{Overview of the CERN Single-Phase test Detector}
+%\subsubsection{Overview of the CERN Single-Phase test Detector}
+
+
+This section presents the design details of a single-phase prototype detector which is based on the development of the LBNE collaboration. 
+The DUNE detector design is very modular and the CERN prototype detector will be constructed from modular components of exactly the same design.
+
 \begin{figure}[htb]
 \centering
 \begin{minipage}[b]{1.0\textwidth}
 \begin{center}
-\includegraphics[width=.75\textwidth]{figures/TPC-3D-section.jpg}
+\includegraphics[width=0.40\textwidth]{figures/CERN_single_TPC}
+\includegraphics[width=.59\textwidth]{figures/TPC-3D-section.jpg}
 \end{center}
 \end{minipage}
-\caption{\small 3D model of the single-phase detector prototype is shown inside the test cryostat.}
+\caption{\small 3D model of the CERN single-phase detector TPC (left) and inserted in the cryostat (right).}
 \label{fig:CERNdet-overview}
 \end{figure}
 
-This sections presents the design details of a single-phase detector based on the development of the LBNE collaboration. As DUNE moves forward, the TPC working group will evaluate this and any modifications or alternate proposals. For the purpose of this proposal this represents one alternate, and it is expected to evolve as the new collaboration is organized and more work is done. 
+The TPC consists of alternating anode plane assemblies (APAs) and cathode plane assemblies (CPAs), with field-cage panels enclosing the four open sides between the anode and cathode planes.  Figure  \ref{fig:CERNdet-overview} shows a sectioned view for the planned TPC inside the cryostat at CERN.  A uniform electric field is created in the volume between the anode and cathode planes. A charged particle traversing this volume leaves a trail of ionization. The electrons drift toward the anode plane, which is constructed from multiple layers of sense wires, inducing electric current signals in the front-end electronic circuits connected to the wires.
 
-This TPC consists of alternating anode plane assemblies (APAs) and cathode plane assemblies (CPAs), with field-cage panels enclosing the four open sides between the anode and cathode planes.  Figure  \ref{fig:CERNdet-overview} shows a sectioned view for the planned TPC inside the cryostat at CERN.  A uniform electric field is created in the volume between the anode and cathode planes. A charged particle traversing this volume leaves a trail of ionization. The electrons drift toward the anode plane, which is constructed from multiple layers of sense wires, inducing electric current signals in the front-end electronic circuits connected to the wires.
+The TPC will be assembled from elements that are of the same size and materials as those planned for the first DUNE far detector module.  
 
-To the extent possible the TPC will be assembled from elements that are of the same size as those planned for the single phase far detector.  The primary exception to this is the length of the field cage panels which are 2.5m in this design, compared to 3.6m in the far detector. This is because the drift distance between the APA and CPA is reduced to lessen the impact of space charge on the prototype necessitated by the surface operation. We are currently considering a test that will initially have a drift distance of 3.6m to prove the mechanics of the far detector design.  The cryostat will then be emptied and the planes shifted to the surface design of 2.5m.  The overall size of the TPC will be derived by the size and number of anode planes (APA).  It has been determined in order to perform the required physics, the TPC will have a 3-APA wide active volume.  The APAs will have an active (total) area 2.29 m (2.32 m) wide and 6.0 m (6.2 m) high. The combination of the three APAs determines the overall TPC length to be 7.3m. There will be a cathode plane (CPA) in the center between the two rows of APAs.  The overall width of the TPC will be determined by a combination of the drift distances along with the thickness of the APA, which is constructed of 76.2 x 101.6 mm stainless steel (SS) structural tubing.  The overall width of the TPC is 7.4m.  Like the length of the TPC, the overall height will be determined by the height of the APA which is 6.4m.  In summary the external TPC dimensions will be 7.3m long x 7.4m wide x 6.4m high. Along with the APAs and CPAs, the TPC will include a field cage that surrounds the entire assembly.  This is a series of pultruded fiberglass I-beams for the structural elements.  These I-beams will be tiled with large copper sided FR4 panels to create the field cage.  Each panel will be connected with a series of resistors.  The field cage will be connected to the CPAs through a capacitor assembly.
+The overall size of the TPC has been determined based on the desired particle containment in order to address the required physics measurements (see section \ref{detbeamtest}). The TPC will have a 3-APA wide active volume and consist of two drift volume with a drift length of 3.6~m each (see figure \ref{fig:CERNdet-overview}).  
+The APAs have an active (total) area measuring 2.29 m (2.32 m) wide and 6.0 m (6.2 m) high. The combination of the three APAs determines the overall TPC length to be 7.3m. There will be a cathode plane (CPA) in the center between the two rows of APAs.  
+The overall width of the TPC will be determined by a combination of the drift distances along with the thickness of the APAs
+and amounts to 7.4~m.  
+The overall height of the TPC is determined by the height of the APA which is 6.4m.  The TPC dimensions are summarized in 
+table~\ref{table:TPC-dim}.
+%
+The minimum internal size of the cryostat is also indicated in table \ref{table:TPC-dim} and was determined by adding the necessary mechanical and electrical clearances to the computed size of the TPC.  
+ 
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\textbf{ Component } & dimensions [m]  \\ \hline \hline
+APA  (active) &  $2.29 (wide) \times 6.0 (high)$ \\ \hline
+APA  (external) &  $2.32 (wide) \times 6.2 (high)$ \\ \hline
+TPC (external)       & $7.3 (long) \times 7.4 (wide) \times 6.4 (high)$  \\ \hline
+cryostat (internal) &  $8.9 (long) \times 7.8 (wide) \times 8.1 (high)$  \\ \hline
+\end{tabular}
+\caption{Dimensions of the single phase prototype detector.}
+\label{table:TPC-dim}
+\end{table}
+ 
+Along with the APAs and CPAs, the TPC will include a field cage that surrounds the entire assembly to ensure a uniform drift field in the TPC's active volume. 
 
-All of this will be supported by rows of I-beams supported from a mechanical structure above the cryostat.  The hangers for these I-beams will pass through the insulated top cap.  There will be a series of feed thru flanges in the top cap of the cryostat to bring in and take out services for the TPC.  There will be a HV feed thru for each of the CPA rows and one signal feed thru for each of the APAs.
+%This is a series of fiberglass I-beams for the structural elements.  These I-beams will be tiled with large copper sided FR4 panels to create the field cage.  Each panel will be connected with a series of resistors.  The field cage will also be connected to the CPAs through a capacitor assembly.
+
+All of this will be supported by rows of I-beams supported from a mechanical structure above the cryostat.  The hangers for these I-beams will pass through the insulated top cap.  There will be a series of feed-through flanges in the top cap of the cryostat to bring in and take out services for the TPC.  One HV feed-through is foreseen for the CPA row and one signal feed-through for each of the APAs.
+
+The design also foresees the option to have the two APA rows mounted at 2.5~m from the central CPA each.
+A reduced drift distance between the APA and CPA represents a deviation from DUNE far detector design but is potentially very
+useful in order to lessen the impact of space charge. Due to the operation of the prototype detector on the surface space charge 
+ effects are expected to be larger than for underground operation at SURF.
+ Depending on the measurement results with a detector which has 3.6~m drift length 
+ we are currently considering the possibility for a second test with reduced drift length.
+ The cryostat would have to be emptied and the planes shifted to the 2.5~m drift distance.
 
 
-The minimum internal size of the cryostat is 8.9m long, 7.8m wide and 8.1m high.  This is determined by adding the necessary mechanical and electrical clearances to the computed size of the TPC.  
-The current plan is to have the CPA located in the center of the cryostat with a APAs on each side near the walls of the cryostat membrane.  The above dimensions preserve the ability to reverse the order of the TPC rows by placing the CPAs next to the walls of the cryostat and the APAs in the center.  However, this can only be done with the shorter 2.5m drift distance.  This reversed configuration, at the 3.6m drift planned for the far detector, will place the CPAs too close to the membrane to avoid high voltage discharge and possible damage of the membrane.  
+
+%The plan is to have the CPA located in the center of the cryostat with APAs on each side near the walls of the cryostat membrane.  The above dimensions preserve the ability to reverse the order of the TPC rows by placing the CPA next to the wall of the cryostat and the APAs in the center.  However, this can only be done with the shorter 2.5m drift distance.  This reversed configuration at the 3.6m drift distance would place the CPAs too close to the membrane and risk high voltage discharge and and thereby possible damage to the membrane.  
 
 
 % File from Bo Yu on the TPC component design
 \input{APA-CP-FieldCage}
 
-
-\subsubsection{TPC Readout}
-\input{readout}
-
-
 \subsubsection{Photon Detection System}
 \input{photondetector}
 
+\subsubsection{TPC and PDS Readout}
+\input{readout}
+
 \subsubsection{DAQ, Slow control and monitoring}
 \input{daq}
-
-\subsubsection{Installation}
-
-The interior of the cryostat will be prepared prior to the installation of the TPC.  A series of I-beam support rails will be suspended below the top surface of the cryostat membrane by a series of hangers.  These hangers will be structurally supported by an independant structure above the cryostat.  Decoupling the TPC support from the cryostat structure eliminates the movement of the TPC with the flexure of the cryostat structure from the filling and internal pressure changes of the Argon inside.  The hangers will pass through the top of the cryostat to the independant structure inside a bellows type feed thru.  These feed thrus need to be designed to minimize the heat gain into the cryogenic volume.  For the CPAs, the support rails and hangers need to be electrically isolated due to high voltage concerns.  To preserve the ability to reverse the order of the TPC components, all of the support points will be designed to the maximum set of requirements regarding loads and clearances.  
-
-There will be a series of feed thru flanges located along each of the support rails.  These will be cryogenic flanges where the services for the TPC components can pass through the top of the cryostat.  It is foreseen that each CPA row will require one feed thru for the high voltage probe to bring in the drift voltage.  The drift voltage is 500 V/cm.  For a drift distance of 2.5m and 3.6m, the probe voltages will be 125kV and 180kV respectively.  There will be one service feed thru for each of the APAs.  These feed thrus will include high speed data, bias voltages for the wire planes, control and power for the cold electronics.  
-
-The main TPC components will be installed through large hatches in the top of the cryostat.  This is 
-similar to the installation method intended for the detector at the far site.  These hatches will have an 
-aperture approximately 2.0 m wide and 3.5 m long.  Each APA and CPA panel will be carefully tested after transport into the clean area and before installation into one of the cryostats. Immediately after a panel is installed it will be rechecked. The serial installation of the APAs along the rails means that removing and replacing one of the early panels in the row after others are installed would be very costly in effort and time. Therefore, to minimize the risk of damage, as much work around already installed panels as possible will be completed before proceeding with further panels.
-The installation sequence is planned to proceed as follows:
-
-\begin{enumerate}
-\item Install the monorail or crane in the staging area outside the cryostat, near the equipment hatch.
-\item Install the relay racks on the top of the cryostat and load with the DAQ and power supply crates.
-\item Dress cables from the DAQ on the top of the cryostat to remote racks.
-\item Construct the clean-room enclosure outside the cryostat hatch.
-\item Install the raised-panel floor inside the cryostat. 
-\item Insert and assemble the stair tower and scaffolding in the cryostat.
-\item Install the staging platform at the hatch entrance into the cryostat.
-\item Install protection on (or remove) existing cryogenics instrumentation in the cryostat.
-\item Install the cryostat feedthroughs and dress cables inside the cryostat along the support beams.
-\item Install TPC panels:
-   \begin{enumerate}
-   \item Install the CPA panels supported from the center support rail.  These will be installed from the floor of the cryostat.  Access to the top edge will be required by scaffolding.  
-   \item Install and connect HV probe for the CPAs.
-   \item Perform electrical tests on the connectivity of the probe to the CPAs.
-   \item Install first end wall of vertical field cage at the non-access end of the cryostat.  These will be installed from the floor of the cryostat.  Scaffolding will be needed to install the supporting structure and then attach the panels to the structure.  
-   \item Test the inner connections of the field cage panels.
-   \item Install the first APA and connect to the far end field cage support.
-   \item Connect power and signal cables.  This will require scaffolding to access the top edge of the APA.
-   \item Test each APA wire for expected electronics noise. Spot-check electronics noise while cryogenics equipment is operating.
-   \item Install the upper field cage panels for the first APA between the APA and CPAs  This will require scaffolding to access the upper edge of the APA, CPA and field cage structure.
-   \item Perform electrical tests on upper field cage panels.
-   \item Repeat steps (f) through (j) for the next five APAs.
-   \item Install the lower field cage panels between the APAs and CPAs.  Start at the far end away from the access hatch and work towards the hatch. 
-   \item Perform electrical test on lower field cage panels and the entire loop around the TPC.
-   \item Remove temporary floor sections as the TPC installation progresses.
-   \item Install sections of argon-distribution piping as the TPC installation progresses.
-   \item Install the final end wall of vertical field cage at the access end of the cryostat.  These will be installed from the floor of the cryostat.  Scaffolding will be needed to install the supporting structure and then attach the panels to the structure.
-   \end{enumerate}
-\item Remove movable scaffold and stair towers.
-\item Temporarily seal the cryostat and test all channels for expected electronics noise.
-\item Seal the access hatch.
-\item Perform final test of all channels for expected electronics noise.
-\end{enumerate}
- 
-In general, APA panels will be installed in order starting with the panel furthest from the hatch side of the cryostat and progressing back towards the hatch. The upper field cage will be installed in stages as the installation of APAs and CPA progresses.  After the APAs are attached to the support rods the electrical connections will be made to electrical cables that were already dressed to the support beams and electrical testing will begin. Periodic electrical testing will continue to assure that nothing gets  damaged during the additional work around the installed APAs.  
-
-The TPC installation will be performed in three stages, each in a separate location; the locations, or 
-zones. First, in the clean room vestibule, a crew will move the APA and CPA panels from storage racks, rotate to the vertical position and move them into the cryostat. Secondly, in the panel-staging area immediately below the equipment hatch of the cryostat, 
-% CHECK THIS! I TRIED TO INTERPRET RUSS'S COMMENTS. -- ANNE
-a second crew will transfer the panels from the crane to the staging platform, where the crew inside the cryostat will connect the to the rails within the cryostat. A third crew will reposition the movable scaffolding and use the scaffold to make the mechanical and electrical connections at the top for each APA and CPA as they are moved into position.  
-
-The requirements for alignment and survey of the TPC are under development. Since there are many cosmic rays in the surface detector and beam events, significant corrections can be made for any misalignment of the TPC. The current plan includes using a laser guide or optical transit and the adjustment features of the support rods for the TPC to align the top edges of the APAs in the TPC to be straight, level and parallel within a few mm. The alignment of the TPC in other dimensions will depend on the internal connecting features of the TPC.  The timing of the survey will depend on understanding when during the installation process the hanging TPC elements are in a dimensionally stable state. The required accuracy of the survey is not expected to be more precise than a few mm.  
 
 
 

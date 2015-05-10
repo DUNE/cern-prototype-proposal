@@ -1,3 +1,35 @@
+{\color{red} Need a better introductory paragraph for TPC electronics giving a quick high level overview before describing details; should include channel count, how many channels are grouped, how many channels read through the same cables, etc.}
+
+The {\bf TPC electronics} is designed to operate at liquid argon temperature and is placed as close to the sense wires as possible,
+thus minimizing the capacitance and the preamplifier noise.
+The present design has a maximum wire length of 7.3~m (induction planes)
+with a corresponding capacitance of 164~pF and an expected intrinsic noise of 400 electrons.
+The preamplifiers include shaping circuits, and are implemented in 16 channel front-end (FE) ASICs,
+which couple directly to 16 channel, 12 bit ADC ASICs operating at 2~MS/s, which include a 1:8 multiplexing stage.
+The ADCs are read out by a commercial FPGA, which provides an additional factor of 4 in multiplexing.
+This level of multiplexing is low enough for transmitting the entire raw data stream,
+while also being high enough that the number of signal lines is actually smaller than the number of the various
+power and control lines, and therefore easily manageble by a small number of feedthroughs.
+Neither zero suppression nor data compression is implemented at the level of the cold readout electronics.
+Not only does this greatly simplify the cold electronics design,
+but it also automatically satisfies the requirement that the system be capable of such raw readout.
+The FPGAs transmit the data via high-speed (1~Gbps) serial links to the DAQ system.
+For the final detector it is expected that a dedicated digital control and data transmission ASIC (COLDATA) will be developed which
+replaces the commercial FPGA.
+While the COLDATA is well under way, it is not expected to be available in time for the CERN test,
+which will instead make use of the proven FPGA technology.
+While serious doubts regarding the longevity of commercially-available FPGAs at LAr temperatures strongly argues against
+their use in the Far Detector, where reliability over 15-20 years is required,
+this is not a concern for the CERN test, where the proven FPGA lifetime of at least a year is adequate.
+
+The front end electronics is organized as a stack of three boards comprising the Cold Mother Board assembly (CMB),
+which mounts directly on the APA.
+First is the Analog Mother Board, on which are mounted the FE and ADC ASICs.
+Second and third are the FPGA and SERDES Mezzanine Boards, themselves mounted on the Analog Mother Board.
+Each CMB has eight sets of FE and ADC ASICs and instruments 128 wires.
+A Faraday cage (FC) covers the end of the APAs to shield the electronics from ambient noise.
+The FC also serves to prevent any Ar gas-bubbles from LAr boiled by the electronics' heat from entering the active TPC volume.
+Figure \ref{fig:coldelec} shows a schematic of the cold electronics. 
 
 \begin{figure}[htb]
 \centering
@@ -10,37 +42,6 @@
 \label{fig:coldelec}
 \end{figure}
 
-The TPC electronics is designed to operate at liquid argon temperature and is placed as close to the sense wires as possible,
-thus minimizing the capacitance and the preamplifier noise.
-The present design has a maximum wire length of 7.3~m (induction planes)
-with a corresponding capacitance of 164~pF and an expected intrinsic noise of 400 electrons.
-The preamplifiers include shaping circuits, and are implemented in 16 channel front-end (FE) ASICs,
-which couple directly to 16 channel, 12 bit ADC ASICs operating at 2~MS/s, which include a 1:8 multiplexing stage.
-The ADCs are read out by a commercial FPGA, which provide an additional factor of 4 in multiplexing.
-This level of multiplexing is low enough for transmitting the entire raw data stream,
-while also being high enough that the number of signal lines is actually smaller than the number of the various
-power and control lines, and therefore easily manageble by a small number of feedthroughs.
-Neither zero suppression nor data compression is implemented at the level of the cold readout electronics.
-Not only does this greatly simplify the cold electronics design,
-but it also automatically satisfies the requirement that the system be capable of such raw readout,
-and further eliminates an entire class of failure-modes.
-The FPGAs transmit the data via high-speed (1~Gbps) serial links to the DAQ system.
-For the final detector it is expected that a dedicated digital control and data transmission ASIC (COLDATA) will be developed which
-replaces the commercial FPGA.
-While the COLDATA is well under way, it is not expected to be available in time for the CERN test,
-which will instead make use of the proven FPGA technology.
-While serious doubts regarding the longevity of commercially-available FPGAs at LAr temperatures strongly argues against
-their use in the Far Detector, where reliability over 15-20 years is required,
-this is not a concern for the CERN test, where the proven FPGA lifetime of at least a year is more than adequate.
-
-The front end electronics is organized as a stack of three boards comprising the Cold Mother Board assembly (CMB),
-which mounts directly on the APA.
-First is the Analog Mother Board, on which are mounted the FE and ADC ASICs.
-Second and third are the FPGA and SERDES Mezzanine Boards, themselves mounted on the Analog Mother Board.
-Each CMB has eight sets of FE and ADC ASICs and instruments 128 wires.
-A Faraday cage (FC) covers the end of the APAs to shield the electronics from ambient noise.
-The FC also serves to prevent any Ar gas-bubbles from LAr boiled by the electronics' heat from entering the active TPC volume.
-Figure \ref{fig:coldelec} shows a schematic of the cold electronics. 
 
 Besides the high-speed signal cable, which is a twin-axial cable bundle manufactured by GORE,
 there are cable bundles for low-voltage power, wire-bias voltages, and various slow controls and monitoring.
@@ -66,7 +67,7 @@ and packetizes and transmits the resulting sparsified data to a back-end data fa
 Additionally, the RCE system transmits timing and control signals to the FE as well as forwarding configuration data
 to them at start-up.     
 
-The RCE system consists the following components:
+The RCE system consists of the following components:
 a commercial ATCA shelf (2-, 6-, or 14-slot), a Cluster-On-Board (COB) which is the "front board" in ATCA terms,
 and a Rear-Transition-Module (RTM) which is the "rear board".
 A schematic of the system is shown in Figure \ref{fig:rce}.
@@ -87,5 +88,28 @@ CXP connectors on the RTM.
 
 With the assumption that each cold FE board multiplexes it's 128 wire channels to 4 outputs at 1-Gbps each,
 the non-zero suppressed data for 1 APA can be fed into a single COB (containing 8 RCEs).
-Each RCE would receive data from 2 FE boards, perform zero-suppression, and send the result to the back-end.  
+Each RCE would receive data from 2 FE boards, perform zero-suppression, and send the result to the back-end.  \\
+
+
+The {\bf PDS front-end electronics} resides outside of the cryostat in
+instrumentation racks. A custom module for receiving SiPM signals has
+been designed and built. The module also performs signal processing in
+the front-end as preprocessing for trigger and DAQ.  The module is
+called the SiPM Signal Processor (SSP) and consists of 12 readout
+channels packaged in a self-contained 1U module.  Each channel
+contains a fully-differential voltage amplifier and a 14-bit, 150-MSPS
+analog-to-digital converter (ADC) that digitizes the waveforms
+received from the SiPMs. There is no shaping of the signal, since the
+SiPM response is slow enough relative to the speed of the digitization
+to obtain several digitized samples of the leading edge of the pulse
+for the determination of signal timing. Digitized data is processed by
+a Xilinx Artix-7 Field-Programmable Gate Array (FPGA).  The use of the
+FPGA processing allows for a significant amount of customization of
+the SSP operation. \\
+
+%The data streams from the TPC and the PDS will be merged and the concepts are being implemented and tested at the 35t detector.
+
+
+
+
 
