@@ -109,8 +109,8 @@ The DUNE experiment will run beam in both neutrino and anti-neutrino
 configurations. These beams will be composed  mainly of muon neutrinos (anti-neutrinos) as well as electron neutrinos (anti-neutrinos). In Fig.~\ref{fig:particle_momenta} the distributions of momenta and angles of particles created in neutrino interactions from simulated beam fluxes are shown. The rate on the particles are calculated for the 34kton far detector and  are combined from both neutrino and anti-neutrino beams. In addition the electron rates from charged current interactions for muon neutrinos oscillated to electron neutrinos are shown. 
 \begin{figure}[h!]
   \centering
-\includegraphics[width=0.79\textwidth,height=8.0cm]{figures/True_Momenta_per_Particle_9_2_1_0_log} \\
-\includegraphics[width=0.79\textwidth,height=8.0cm]{figures/True_theta_per_Particle_9_2_1_0_lin}
+\includegraphics[width=0.49\textwidth,height=6.0cm]{figures/True_Momenta_per_Particle_9_2_1_0_log} 
+\includegraphics[width=0.49\textwidth,height=6.0cm]{figures/True_theta_per_Particle_9_2_1_0_lin}
   \caption{Particle momenta (left) and angular (right) distributions for particles produced in neutrino interactions 
 from $\nu_e$, $\nu_\mu$, $\bar \nu_e$ and $\bar \nu_\mu$ at the far detector location.
 %{\color{red}  combine e+e-, improve information content (y-axis, change colors, etc )
@@ -281,7 +281,7 @@ Fig.~\ref{fig:hadronshwr} shows the fraction of true energy deposited by interac
 Interacting protons (65\% of  sample 1~GeV/c) are selected.
 % The remaining 
 %35\% which range out are be used to study particle identification algorithms (PID) (see Sec.~\ref{detbeam_pid}). 
-Reconstruction is performed with ICARUS spatial and calorimetric reconstruction algorithm~\cite{icarus_reco}.
+%Reconstruction is performed with ICARUS spatial and calorimetric reconstruction algorithm~\cite{icarus_reco}.
 For this study, visible energy is summed using hit information with corrections applied for electron lifetime.
 (No attempt is made to correct for electromagnetic shower fractions). 
 The resulting energy deposition in the two cases cannot be 
@@ -419,16 +419,21 @@ respect to the field direction.
 
 Information on range and charge deposition for stopping charged-particles can be used to 
 accurately identify particle type as well as measure kinetic energy. 
-Fig.~\ref{fig:resrange}  (left) shows track energy loss per unit length (dE/dx) as a function of residual 
-track range for simulated muon, pion, proton and kaon particle tracks.  Simulation is performed with
-FLUKA~\cite{fluka05} and ICARUS geometry (3mm wire pitch) and Reconstruction code~\cite{icarus_reco}.
-Stopping particles were selected using truth information.
+Fig.~\ref{fig:resrange}  (left) shows track energy loss per unit length\footnote{Signal attenuation due to recombination effect is not corrected for the PID purpose since it is a deterministic transformation which does not add measurement information.}
+(dQ/dx) as a function of residual 
+track range for simulated muon, pion, proton and kaon particle tracks. 
 A neutral-net-based algorithm~\cite{nn_pid,rd_pid}
 was used to determine PID functions for each particle hypothesis.
 % at a bin centered at 6$\pm$1~cm.
 %  for each particle hypothesis.
 %functions for each particle hypothesis. 
-Fig.~\ref{fig:resrange} (right) shows the result for events in the residual range bin centered at 6($\pm$1)~cm.
+Fig.~\ref{fig:resrange} (right) 
+shows the distribution of reconstructed dQ/dx in a narrow bin of residual range 6($\pm$1)cm to illustrate the scale of difference between particle types. Proton and kaon bands are well separated from each other and from pion and muon bads, while pion and muon bands are almost overlapping are challenging for the efficient separation. 
+Simulation is performed with
+FLUKA~\cite{fluka05} and ICARUS geometry (3mm wire pitch) and Reconstruction code~\cite{icarus_reco}.
+%Stopping particles were selected using truth information.
+
+%shows the result for events in the residual range bin centered at 6($\pm$1)~cm.
 The PID efficiency and purity will  depend on the detector configuration, geometry and 
 reconstruction algorithm. The DUNE APA configuration and reconstruction algorithms
 %Fig.~\ref{fig:resrange} uses ICARUS geometry with 3~mm pitch, APA configuration 
@@ -451,10 +456,8 @@ perform tests of PID and dE/dx calibration measurements.
 \includegraphics[width=0.30\textwidth,height=5.0cm]{figures/pids}
 \includegraphics[width=0.69\textwidth,height=5.0cm]{figures/prkpimu}
 %\includegraphics[width=\textwidth,height=5.0cm]{figures/pid_curves}
-  \caption{(right) ICARUS simulated track energy loss per unit length as a function of residual 
-range for muons, pions, protons and kaons.  (right) Particle hypothesis curves obtained using a
-neutral-net-based PID for
-each particle type for a bin with residual range  6($\pm$1)~cm.
+  \caption{(left) ICARUS simulated track dQ/dx as a function of residual range for muons, pions, protons and kaons, used as a training data in a neutral-net-based PID algorithm. (right) Distribution of dQ/dx for each particle type for a bin with residual range 
+6($\pm$1)~cm. The small difference between muon and pion PID is illustrated.
 }
 \label{fig:resrange}
 \end{figure}
@@ -542,9 +545,11 @@ from the energy deposition pattern.
 %\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pid_probabilities}
 \includegraphics[width=0.49\textwidth,height=6.0cm]{figures/eff-bgdrej-diffen}
 \includegraphics[width=0.49\textwidth,height=6.0cm]{figures/APAT600_all_norm}
-  \caption{(Left)Background rejection versus signal efficiency for various energies.
-{\color{red}
-}
+  \caption{
+ (Left)Background rejection versus signal efficiency for various energies, calculated for sample which pass the reconstruction. Simulation performed in APA design configuration (4.67mm wire pitch, Induction wires at $\pm$35.7 deg w.r.t. Collection wires). (Right) Background rejection versus signal efficiency for two different readout designs: APA parameters as on the left plot, ICARUS parameters: 3mm wire pitch, Induction wires at $\pm$60 deg w.r.t. Collection wires. Background rejection and signal selection efficiency values normalized to the full data sample size, including events which do not pass reconstruction.
+%(Left)Background rejection versus signal efficiency for various energies.
+%{\color{red}
+%}
 }
 \label{fig:egam}
 \end{figure}
