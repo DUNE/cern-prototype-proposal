@@ -1,56 +1,91 @@
-
+\label{cryo}
 \subsection{Cryostat}
 
-The Single Phase TPC test at CERN will use a membrane tank technology to contain  673 tons of LAr, equivalent to about $483 m^3$. The design is based on a scaled up version of the LBNE 35-ton Prototype\cite{montanari_35ton} 
-% (this is a comment) add \cite{montanari_sbn_perf} if public access in docdb 9270 (AH)
-and the Fermilab Short-Baseline Near Detector\cite{acciarri_sbn_proposal}.  
-The cryostat will use a steel outer supporting structure with a metal liner inside to isolate the insulation volume, similar to the one of the dual phase detector prototype WA105 $1\times1\times3$ and to the Fermilab Short-Baseline Near Detector. The support structure will rest on I-beams to allow for air circulation underneath in order to maintain the temperature within the allowable limits.
-This section describes the proposed design, whose scope encompasses the following components:
 
+
+%\subsection{Cryostat size from TPC dimensions }
+
+The Single Phase detector test at CERN will use a membrane tank technology which is supported by an outer steel structure.
+
+The minimum internal size of the cryostat is determined from size of the TPC.  At the bottom of the 
+cryostat there needs to be a minimum of 0.36 m between the frame of the CPA and closest point on the stainless steel 
+membrane.  This is to prevent high voltage discharge between the CPA and the electrically grounded 
+membrane. It is foreseen that there would be some cryogenic piping and instrumentation under the TPC.  
+There is a height allowance of 0.165 m for this.  There will be access and egress space around the outside 
+of the TPC and the membrane walls.  On two sides, 0.15 m of space is reserved for this. The front will have 0.36 mm and the back, where piping and instrumentation for the cryogenic system will be located, 1.20 m.
+
+The support system for the TPC will be located outside the cryostat roof, with a bridge connected to the floor. 
+It is the same design solution currently foreseen for the DUNE single phase TPC in the LBNF cryostat.  
+The plan is to model this space similar to what is planned for the far site TPC.  There 
+will be 0.82 m of ullage space.  In order to prevent high voltage discharge, the upper most part of the CPA 
+needs to be submerged a minimum of 0.5 m below the liquid Argon surface.  The top of the TPC will be 
+separated from the membrane by a minimum of 1.1 m.  
+
+Adding all of these to the size of the TPC yields the minimum inner dimensions of the cryostat.  A 
+minimally sized cryostat would be 8.9~m long, 7.8~m wide and 8.1~m high.  This assumes the TPC will be 
+positioned inside the cryostat with the CPAs and end field cages parallel to the walls of the cryostat. 
+Figure~\ref{fig:fardet-overview} shows a 3D view of the detector inside the cryostat and Figure~\ref{fig:cryostat-views} shows side and end views of the cryostat, respectively. 
+%
+\begin{figure}
+\begin{center}
+\includegraphics[width=.53\textwidth]{figures/cryostat-side-view} 
+\includegraphics[width=.455\textwidth]{figures/cryostat-westend-view}  
+\caption[Views of cryostat]{Side (left) and end (right) views of cryostat}
+\label{fig:cryostat-views} 
+\end{center}
+\end{figure}
+%
+The beam window design is still being worked on and may lead to minor modifications if
+any of the current boundaries conditions listed above is violated.
+  
+%%%%%%%%%%%%%%%%%
+
+The cryostat has an inner volume of $483 m^3$ and can contain  673 tons of LAr.
+%
+%The design is based on a scaled up version of the LBNE 35-ton Prototype\cite{montanari_35ton} 
+%% (this is a comment) add \cite{montanari_sbn_perf} if public access in docdb 9270 (AH)
+%and the Fermilab Short-Baseline Near Detector\cite{acciarri_sbn_proposal}.  
+%
+The cryostat will use a steel outer supporting structure with a metal liner inside to isolate the insulation volume, similar to the one of the dual phase WA105 detector, the $1\times1\times3$~m$^3$ prototype and to the Fermilab Short-Baseline Near Detector. 
+The support structure will rest on I-beams to allow for air circulation underneath in order to maintain the temperature within the allowable limits. The proposed design encompasses the following components:
+%
 \begin{itemize}
 \item steel outer supporting structure,
 \item main body of the membrane cryostat (sides and floor), 
 \item top cap of the membrane cryostat.
 \end{itemize}
-
+%
 A membrane cryostat design commonly used for liquefied natural gas (LNG) storage and transportation will be used. In this vessel a stainless steel membrane contains the liquid cryogen. The pressure loading of the liquid cryogen is transmitted through rigid foam insulation to the surrounding outer support structure, which provides external support. The membrane is corrugated to provide strain relief resulting from temperature related expansion and contraction. The vessel is completed with a top cap that uses the same technology.
 
-Two membrane cryostat vendors are known: GTT (Gaztransport \& Technigaz) from France and IHI (Ishikawajima-Harima Heavy Industries) from Japan. Each one is technically capable of delivering a membrane cryostat that meets the design requirements for this detector. To provide clarity, only one vendor is represented in this document, GTT; this is for informational purposes only. Figure 1 shows a 3D model of the GTT membrane and insulation design.
-
+Two membrane cryostat vendors are known: GTT (Gaztransport \& Technigaz) from France and IHI (Ishikawajima-Harima Heavy Industries) from Japan. Each one is technically capable of delivering a membrane cryostat that meets the design requirements for this detector. To provide clarity, only one vendor is represented in this document, GTT; this is for informational purposes only. Figure~\ref{fig:lar-org} shows a 3D model of the GTT membrane and insulation design.
 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=.9\textwidth]{figures/membrane-exploded-view}
-\caption[Exploded view of the membrane cryostat technology]{\label{fig:lar-org} Exploded view of the membrane cryostat technology}
+\caption[Exploded view of the membrane cryostat technology]{ Exploded view of the membrane cryostat technology}
+\label{fig:lar-org}
 \end{center}
 \end{figure}
 
-The conceptual proposed design for the Single Phase Test at CERN cryostat is a rectangular vessel measuring 8.8 m in length (parallel to the beam direction), 7.8 m in width, and 8.0 m in height; containing a total mass of 673 tons of liquid argon. Figure~\ref{fig:cryostat-views} shows side and end views of the cryostat respectively. Figure 15 shows a 3D view. To minimize the contamination from warm surfaces, during operation the temperature of all surfaces in the ullage shall be lower than 100 K. 
+To minimize the contamination from warm surfaces, during operation the temperature of all surfaces in the ullage shall be lower than 100~K. 
+It has been observed in the Materials Test Stand (MTS) and the Liquid Argon Purity Demonstrator (LAPD) at Fermilab that the outgassing is significantly reduced below 100~K \cite{outgassing}. A possible way to achieve this requirement is to spray a mist of clean liquid and gaseous argon to the metal surfaces in the ullage and keep them cold, similar to the strategy that was developed for the cool down of the LBNE 35 Ton prototype.
+
 The top plate will contain two hatches for the installation of the TPCs; it will also contain a manhole to enter the tank after closing the hatches, and several penetrations for the cryogenic system and the detector. 
 
-\begin{figure}
-\begin{center}
-\includegraphics[width=.53\textwidth]{figures/cryostat-side-view} 
-\includegraphics[width=.42\textwidth]{figures/cryostat-westend-view}  
-\caption[Views of cryostat]{\label{fig:cryostat-views} Side (left) and end (right) views of cryostat}
-\end{center}
-\end{figure}
+%\begin{figure}[htb]
+%\begin{center}
+%\includegraphics[width=.75\textwidth]{figures/cryostat-isometric-view} 
+%\caption[Isometric view of cryostat]{\label{fig:cryostat-views} Isometric view of the membrane cryostat}
+%\end{center}
+%\end{figure}
 
-\begin{figure}[htb]
-\begin{center}
-\includegraphics[width=.75\textwidth]{figures/cryostat-isometric-view} 
-\caption[Isometric view of cryostat]{\label{fig:cryostat-views} Isometric view of the membrane cryostat}
-\end{center}
-\end{figure}
-
-\textbf{Design Parameters}
-
-This design includes technical solutions that may be of interested for the future needs of the Long Baseline Neutrino program. For example the use of a cold ullage (\textless  100 K) to lower the impurities in the gas region, and of a LAr pump outside the cryostat to minimize the effect of noise, vibration and microphonics to the TPC inside the liquid argon volume.
-
+%\textbf{Design Parameters:}
+%
+The cryostat design for the CERN prototypes includes technical solutions that are of interested for the future needs of the DUNE program. For example the use of a cold ullage (\textless  100~K) to lower the impurities in the gas region, and of a LAr pump outside the cryostat to minimize the effect of noise, vibration and microphonics to the TPC inside the liquid argon volume.
+%
 The design parameters for the TPC Test at CERN cryostat are listed in Table~\ref{tbl:cryogenics-design-parameters}.
 
 \begin{table}[htpb]
-\label{tbl:cryogenics-design-parameters}
 \centering
 \begin{tabular}{|p{.4\textwidth}|p{.5\textwidth}|}
 \hline
@@ -63,7 +98,7 @@ Other materials upon approval.\\ \hline
  Total cryostat volume  &  538 m3 \\ \hline
  Total LAr volume  &  483 m3 \\ \hline
 LAr total mass   & 673,000 kg  \\ \hline
-Minimum inner dimensions (flat plate to flat plate).   &  7.8 m (W) x 8.8 m (L) x 8.4 0 (H) \\ \hline
+Minimum inner dimensions (flat plate to flat plate).   &  7.8 m (W) x 8.9 m (L) x 8.1 0 (H) \\ \hline
 Depth of LAr   &  7.2 m (0.82 m ullage, same as LBNF) \\ \hline
 Primary membrane   &   1.2 mm thick SS 304L corrugated stainless steel\\ \hline
 Secondary barrier system   &  GTT design; 0.07 mm thick aluminum between fiberglass cloth. Overall thickness 1 mm located between insulation layers.  \\ \hline
@@ -75,20 +110,21 @@ Operating gas pressure   &  Positive pressure. Nominally 70 mbarg ($\sim$1 psig)
  Design pressure  &  350 mbarg ($\sim$5 psig) + LAr head (1,025 mbarg) \\ \hline
 Design temperature   &  77 K (liquid nitrogen temperature for flexibility) \\ \hline
 Temperature of all surfaces in the ullage during operation   & \textless 100 K  \\ \hline
-Leak tightness   & $1e-6$ mbar*l/sec   \\ \hline
+Leak tightness   & $10^{-6}$ mbar*l/sec   \\ \hline
 Maximum noise/vibration/microphonics inside the cryostat   & LAr pump outside the cryostat  \\ \hline
-Beam window   & Precise location TBD. Figure~\ref{fig:cryostat-views} shows the location where the beam enters the cryostat.  \\ \hline
+Beam window   & Precise location TBD. Figure~XXX shows the location where the beam enters the cryostat.  \\ \hline
  Accessibility after operations  & Capability to empty the cryostat in 30 days and access it in 60 days after the end of operations. \\ \hline
   Lifetime / Thermal cycles &  Consistent with liquid argon program. TBD. \\ \hline
  \end{tabular}
 \caption{Design requirements for the membrane cryostat}
+\label{tbl:cryogenics-design-parameters}
 \end{table}
 
-\textbf{Insulation system and secondary membrane}
-
+\textbf{Insulation system and secondary membrane: }
+%
 The membrane cryostat requires insulation applied to all internal surfaces of the outer support structure 
 and roof in order to control the heat ingress and hence required refrigeration heat load. 
-To avoid bubbling of the liquid Argon inside the tank, the maximum static heat leak is $10 W/m^2$ for the floor and the sides and $15 W/m^2$ for the roof, higher to account for the penetrations that increase the heat budget. Preliminary calculations show that these values it can be obtained using 0.9 m thick insulation panels of polyurethane foam.
+To avoid bubbling of the liquid Argon inside the tank, the maximum static heat leak is $10 W/m^2$ for the floor and the sides and $15 W/m^2$ for the roof, higher to account for the penetrations that increase the heat budget. Preliminary calculations show that these values can be obtained using 0.9 m thick insulation panels of polyurethane foam.
 Given an 
 average thermal conductivity coefficient for the insulation material of 0.0283 W/(m·K), the heat input 
 from the surrounding steel is expected to be about 3.2~kW total. It assumes that the hatches are foam 
@@ -102,7 +138,7 @@ the 3-cm gap, the secondary membrane is spliced together by epoxying an addition
 of secondary membrane over the joint. All seams are covered so that the secondary membrane is a 
 continuous liner.
 
-In the current GTT design, the secondary membrane is comprised of a thin aluminum sheet and 
+In the GTT design, the secondary membrane is comprised of a thin aluminum sheet and 
 fiberglass cloth. The fiberglass-aluminum-fiberglass composite is very durable and flexible with an 
 overall thickness of about 1 mm. The secondary membrane is placed within the insulation space. It 
 surrounds the bottom and sides. In the unlikely event of an internal leak from the primary membrane of 
@@ -113,7 +149,6 @@ leakage through the inner (primary) membrane will escape to the insulation volum
 GAr at the rate of one volume exchange per day.
 
 \begin{table}[htpb]
-\label{tbl:heat-load-calc}
 \centering
 \begin{tabular}{|p{.15\textwidth}|p{.15\textwidth}|p{.15\textwidth}|p{.15\textwidth}|p{.15\textwidth}|}
 \hline
@@ -126,47 +161,46 @@ Roof  &  83 & 0.0283  & 205  &  550\\ \hline
    &   &   &   &  \\ \hline
 Total   &   &   &   & 3,162 \\ \hline
 \end{tabular}
-\caption{Heat load calculation for the membrane cryostat (insulation thickness = 0.9 m). (note to self: has right values)}
+\caption{Heat load calculation for the membrane cryostat (insulation thickness=0.9~m). }
+\label{tbl:heat-load-calc}
 \end{table}
 
-\textbf{Cryostat Configuration}
 
-With the intent to minimize the contamination in the gas region, the ullage will be kept cold (\textless 100 K). It has been observed in the Materials Test Stand (MTS) and the Liquid Argon Purity Demonstrator (LAPD) at Fermilab that the outgassing is significantly reduced below 100 K [add reference]. A possible way to achieve this requirement is to spray a mist of clean liquid and gaseous argon to the metal surfaces in the ullage and keep them cold, similar to the strategy that was developed for the cool down of the LBNE 35 Ton prototype.
+\textbf{Outer Support Structure:}
+%
+The proposed design is a steel support structure with a metal liner on the inside to isolate the insulation region and keep the moisture out. This choice allows natural and forced ventilation to maintain the temperature of the steel within its limit, without the need of heating elements and temperature sensors. 
+The main body of the membrane cryostat does not have side openings for construction. The access is only from the top. There is a side penetration for the liquid argon pump for the purification of the cryogen.
 
-\textbf{Outer Support Structure}
+%\textbf{Main body of the membrane cryostat:}
+%
+%The sides and bottom of the vessel constitute the main body of the membrane cryostat. They consist of several layers. From the inside to the outside the layers are stainless steel primary membrane, insulation, thin aluminum secondary membrane, more insulation, and steel outer support structure with meal panels acting as vapor barier. The secondary membrane contains the LAr in case of any primary membrane leaks and the vapor barrier prevents water ingress into the insulation. 
 
-The proposed design is a steel support structure with a metal liner on the inside to isolate the insulation region and keep the moisture out. This choice allows natural and forced ventilation to maintain the temperature of the steel within its limit, without the need of heating elements and temperature sensors. It reduces the time needed for the construction: the structure will be prefabricated in pieces of dimensions appropriate for transportation, shipped to the destination and only assembled in place. Fabrication will take place at the vendor’s facility for the most part. This shortens the construction of the outer structure on the detector site, leaving more time for completion of the building infrastructure. If properly designed, a steel structure may allow the cryostat to be moved, should that be desired in the future.
 
-\textbf{Main body of the membrane cryostat}
-
-The sides and bottom of the vessel constitute the main body of the membrane cryostat. They consist of several layers. From the inside to the outside the layers are stainless steel primary membrane, insulation, thin aluminum secondary membrane, more insulation, and steel outer support structure with meal panels acting as vapor barier. The secondary membrane contains the LAr in case of any primary membrane leaks and the vapor barrier prevents water ingress into the insulation. The main body does not have side openings for construction. The access is only from the top. There is a side penetration for the liquid argon pump for the purification of the cryogen.
-
-\textbf{Top cap}
-
+\textbf{Top cap:}
+%
 Several steel reinforced plates welded together constitute the top cap. The stainless steel primary 
 membrane, intermediate insulation layers and vapor barrier continue across the top of the detector, 
 providing a leak tight seal. The secondary barrier is not used nor required at the top. The cryostat roof is 
 a removable steel truss structure that also supports the detector. Stiffened steel plates are welded to the 
 underside of the truss to form a flat vapor barrier surface onto which the roof insulation attaches directly. 
-The penetrations will be clustered in the back region. The top cap will have two large openings for TPC 
+The penetrations will be clustered in one region. The top cap will have two large openings for TPC 
 installation, and a manhole to enter the tank  after the 
 hatches have been closed.
 
-The truss structure rests on the top of the supporting structure where a positive structural connection 
+The truss structure rests on top of the supporting structure where a positive structural connection 
 between the two is made to resist the upward force caused by the slightly pressurized argon in the ullage 
-space. The hydrostatic load of the LAr in the cryostat is carried by the floor and the sidewalls. In order to meet the maximum deflection between APA and CPA and to decouple the detector form possible sources of vibrations, the TPCs will be connected to an external bridge over the top of the plate supported on the floor of the building. Everything else within the cryostat %(TPC planes, 
+space. The hydrostatic load of the LAr in the cryostat is carried by the floor and the sidewalls. In order to meet the maximum deflection of 3~mm between APA and CPA 
+and to decouple the detector from possible sources of vibrations, the TPCs will be connected to an external bridge over the top of the plate supported on the floor of the building. Everything else within the cryostat %(TPC planes, 
 (electronics, sensors, cryogenic and gas plumbing connections) is 
 supported by the steel plates under the truss structure. All piping and electrical penetration into the 
 interior of the cryostat are made through this top plate, primarily in the region of the penetrations to 
 minimize the potential for leaks. Studs are welded to the underside of the top plate to bolt the insulation 
 panels. Insulation plugs are inserted into the bolt-access holes after panels are mounted. The primary 
 membrane panels are first tack-welded then fully welded to complete the inner cryostat volume.
-
-
+%
 Table~\ref{tbl:cryostat-top-parameters} presents the list of the design parameters for the top of the cryostat.
-
+%
 \begin{table}[htpb]
-\label{tbl:cryostat-top-parameters}
 \centering
 \begin{tabular}{|p{.3\textwidth}|p{.7\textwidth}|} % AH {|p{.4\textwidth}|p{.5\textwidth}|}
 \hline
@@ -209,49 +243,51 @@ Penetrations  &  1 LAr In, 1 Purge GAr In, 1 Vent GAr In \\
 Lifetime / Thermal cycles  & Consistent with the liquid argon program TBD. \\ \hline
 \end{tabular}
 \caption{Design parameters for the top of the cryostat}
+\label{tbl:cryostat-top-parameters}
 \end{table}
 
-\textbf{Cryostat grounding and isolation requirements}
-
+\textbf{Cryostat grounding and isolation requirements:}
+%
 The cryostat has to be grounded and electrically isolated from the building. 
-This section presents the list of the current grounding and isolation requirements for the cryostat. 
 Figure~\ref{fig:top-plate-gnd} shows the layout of the top plate grounding.
+We list the grounding and isolation requirements for the cryostat. 
 
-\textbf{Isolation}
 \begin{enumerate}
-\item The cryostat membrane and any supporting structure, whether it is a steel structure or a concrete and rebar pour, shall be isolated from any building metal or building rebar with a DC impedance greater than 300 k$\Omega$.
-\item All conductive piping penetrations through the cryostat shall have dielectric breaks prior to entering the cryostat and the top plate.
+\item \textbf{Isolation}
+	\begin{enumerate}
+	\item The cryostat membrane and any supporting structure, whether it is a steel structure or a concrete and rebar pour, shall be isolated from any building metal or building rebar with a DC impedance greater than 300 k$\Omega$.
+	\item All conductive piping penetrations through the cryostat shall have dielectric breaks prior to entering the cryostat and the top plate.
+	\end{enumerate}
+
+\item \textbf{Grounding}
+	\begin{enumerate}
+	\item The cryostat, or ``detector'' ground, shall be separated from the ``building'' ground.
+	\item A safety ground network consisting of saturated inductors shall be used between detector ground and building ground.
+	\end{enumerate}
+
+\item \textbf{Top plate grounding}
+	\begin{enumerate}
+	\item The top grounding plate shall be electrically connected to the cryostat membrane by means of copper braid connections.
+	   \begin{enumerate}
+	   \item Each connection shall be at least 1.6 mm thick and 63.5 mm wide.
+	   \item The length of each connection is required to be as short as possible.
+	   \item The distance between one connection and the next one shall be no more than 1.25 m.
+	   \item The layout can follow the profile of several pieces of insulation, but it shall be continuous.	
+	   \item The DC impedance of the membrane to the top plate shall be less than 1 ohm.
+	   \end{enumerate}
+	\end{enumerate}
 \end{enumerate}
 
-\textbf{Grounding}
-\begin{enumerate}
-\item The cryostat, or ``detector'' ground, shall be separated from the ``building'' ground.
-\item A safety ground network consisting of saturated inductors shall be used between detector ground and building ground.
-\item Parameters TBD.
-\end{enumerate}
-
-\textbf{Top plate grounding}
-\begin{enumerate}
-\item If the cryostat is contained within a concrete pour, the top plate shall be electrically connected to any rebar used in that pour, and the rebar shall be conductively tied at regular intervals. Parameters TBD.
-\item The top grounding plate shall be electrically connected to the cryostat membrane by means of copper braid connections.
-   \begin{enumerate}
-   \item Each connection shall be at least 1.6 mm thick and 63.5 mm wide.
-   \item The length of each connection is required to be as short as possible.
-   \item The distance between one connection and the next one shall be no more than 1.25 m.
-   \item The layout can follow the profile of several pieces of insulation, but it shall be continuous.
-   \item The DC impedance of the membrane to the top plate shall be less than 1 ohm.
-   \end{enumerate}
-\end{enumerate}
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=.95\textwidth]{figures/cryostat-top-plate-gnd} 
+\includegraphics[width=1.0\textwidth]{figures/cryostat-top-plate-gnd} 
 \caption[Top plate grounding layout]{\label{fig:top-plate-gnd}Top plate grounding layout}
 \end{center}
 \end{figure}
 
-\textbf{Leak prevention}
-
+\textbf{Leakage quality assurance: }
+%
 The primary membrane will be subjected to several leak tests and weld remediation, as necessary. All 
 (100\%) of the welds will be tested by an Ammonia colorimetric leak test (ASTM E1066-95) in which 
 welds are painted with a reactive yellow paint before injecting a Nitrogen-Ammonia mixture into the 
@@ -268,71 +304,35 @@ space to ensure that the pressure does not exceed the operating pressure inside 
 will be recirculated by a blower, purified, and reused as purge gas. The purge system is not safety-
 critical; an outage of the purge blower would have negligible impact on LAr purity.
 
-%%%%%%%%%%%%%%%%%
-\subsection{Cryostat size from TPC dimensions (Move to begining of sec 4 per DM) }
-
-The minimum internal size of the cryostat is determined from size of the TPC.  At the bottom of the 
-cryostat there needs to be a minimum of 0.36 m between the frame of the CPA and closest point on the SS 
-membrane.  This is to prevent high voltage discharge between the CPA and the electrically grounded 
-membrane. It is foreseen that there would be some cryogenic piping and instrumentation under the TPC.  
-There is a height allowance of 0.165 m for this.  There will be access and egress space around the outside 
-of the TPC and the membrane walls.  On two sides, 0.15 m of space is reserved for this. The front will have 0.36 mm and the back, where piping and instrumentation for the cryogenic system will be located, 1.20 m.
-
-The support system for the TPC will be located outside the cryostat roof, with a bridge connected to the floor. 
-It is the same design solution currently looked at for the DUNE TPC in the LBNF cryostat.  The plan is to model this space similar to what is planned for the far site TPC.  There 
-will be 0.82 m of ullage space.  In order to prevent high voltage discharge, the upper most part of the CPA 
-needs to be submerged a minimum of 0.5 m below the liquid Argon surface.  The top of the TPC will be 
-separated from the membrane by a minimum of 1.1 m.  
-
-Adding all of these to the size of the TPC yields the minimum inner dimensions of the cryostat.  A 
-minimally sized cryostat would be 8.8m long, 7.8 m wide and 8.0 m high.  This assumes the TPC will be 
-positioned inside the cryostat with the CPAs and end field cages parallel to the walls of the cryostat.  Also 
-there is no space allotted for a beam window to enter the cryostat.  Clearance would need to be added if 
-it violates any of the current boundaries listed above.  
-The current plan is to have the CPAs located in the center of the cryostat with an APA on each side.    
 
 %%%%%%%%%%%%%%%%%
 \subsection{Cryogenic System}
 
 Figure~\ref{fig:proposed-LN2-system} outlines the basic scheme of the LN2 supply system, which was 
 proposed by CERN for the Short Baseline Program and found to be an appropriate solution for this 
-detector as well. The experiment will rely on LN2 tankers for regular deliveries to a local dewar storage, 
+detector as well. 
+%
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=.95\textwidth]{figures/proposed-LN2-system} 
+\caption[Schematic diagram for the proposed LN2 system]{\label{fig:proposed-LN2-system}Schematic diagram for the proposed LN2 system}
+\end{center}
+\end{figure}
+%
+The experiment will rely on LN2 tankers for regular deliveries to a local dewar storage, 
 which will be sized to provide several days of cooling capacity in the event of a delivery interruption. 
 From the dewar storage the LN2 is then transferred to a distribution facility located in the experimental 
 hall. It includes a small buffer volume and an LN2 pumping station that transfers the LN2 to the argon 
 condenser and other services as needed. The low estimated heat leak of the vessel ($\sim$3.2~kW) and the 
 location inside an above ground building allow for use of an open loop system typical of other 
-installations operated at Fermilab (LAPD, LBNE 35 ton prototype, MicroBooNE) and at CERN (???). 
+installations operated at Fermilab (LAPD, LBNE 35 ton prototype, MicroBooNE) and at CERN. 
 Main goal of the LN2 system is to provide cooling power for the argon condenser, the initial cool down of 
 the vessel and the detector, and all other services as needed.
-
+%
  Table~\ref{tbl:cryo-design-parameters} presents the list of 
-requirements for the cryogenic system for the Single Phase TPC test at CERN detector.
-
-Figure~\ref{fig:proposed-LAr-system} shows a schematic diagram of the proposed liquid argon system. It is based on the design of the 
-LBNE 35 ton prototype, the MicroBooNE detector systems and the current plans for the Long Baseline Far 
-Detector.
-
-Main goal of the LAr system is to purge the cryostat prior to the start of the operations (with GAr in open 
-and closed loop), cool down the cryostat and fill it with LAr. Then continuously purify the LAr and the boil 
-off GAr to maintain the required purity (electron lifetime measured by the detector).
-
-The LAr receiving facility includes a storage dewar and an ambient vaporizer to deliver LAr and GAr to the 
-cryostat. The LAr goes through the liquid argon handling and purification system, whereas the Gar 
-through the gaseous argon purification before entering the vessel.
-
-The LAr purification system is currently equipped with a filter containing mol sieve and copper beds, and 
-a regeneration loop to regenerate the filter itself. Filters containing Oxysorb and Hydrosorb rather than 
-mol sieve and copper beds, were also successfully employed. Same concept, but different medium. 
-Studies are ongoing to standardize the filtration scheme and select the optimal filter medium for all 
-future generation detectors, including this test prototype. 
-
-During operation, an external LAr pump circulates the bulk of the cryogen through the LAr purification 
-system. The boil off gas is first recondensed and then is sent to the LAr purification system before re-
-entering the vessel.
-
+requirements for the cryogenic system for the single phase detector test at CERN.
+%
 \begin{table}[htbp]
-\label{tbl:cryo-design-parameters}
 \centering
 \begin{tabular}{|p{.45\textwidth}|p{.45\textwidth}|}
 \hline
@@ -351,20 +351,40 @@ Nominal LAr purification flow rate (filling/ops) & 5.5 day/volume exchange \\ \h
  Lifetime of the cryogenic system & Consistent with the LAr program. TBD. \\ \hline
 \end{tabular}
 \caption{Design requirements for the cryogenic system}
+\label{tbl:cryo-design-parameters}
 \end{table}
+%
 
-\begin{figure}[htb]
-\begin{center}
-\includegraphics[width=.75\textwidth]{figures/proposed-LN2-system} 
-\caption[Schematic diagram for the proposed LN2 system]{\label{fig:proposed-LN2-system}Schematic diagram for the proposed LN2 system}
-\end{center}
-\end{figure}
 
+Figure~\ref{fig:proposed-LAr-system} shows a schematic diagram of the proposed liquid argon system. It is based on the design of the 
+LBNE 35 ton prototype, the MicroBooNE detector systems and the plans for the DUNE Far Detector.
+%
 \begin{figure}
 \begin{center}
-\includegraphics[width=.75\textwidth]{figures/proposed-LAr-system} 
+\includegraphics[width=1.0\textwidth]{figures/proposed-LAr-system} 
 \caption[Schematic diagram for the proposed LAr system]{\label{fig:proposed-LAr-system} Schematic diagram for the proposed LAr system}
 \end{center}
 \end{figure}
+
+
+Main goal of the LAr system is to purge the cryostat prior to the start of the operations (with GAr in open 
+and closed loop), cool down the cryostat and fill it with LAr. Then continuously purify the LAr and the boil 
+off GAr to maintain the required purity which is measured by the detector in form of an electron lifetime.
+
+The LAr receiving facility includes a storage dewar and an ambient vaporizer to deliver LAr and GAr to the 
+cryostat. The LAr goes through the liquid argon handling and purification system, whereas the GAr 
+through the gaseous argon purification before entering the vessel.
+
+The LAr purification system is currently equipped with a filter containing mol sieve and copper beads, and 
+a regeneration loop to regenerate the filter itself. Filters containing Oxysorb and Hydrosorb rather than 
+mol sieve and copper beads represent a proven alternate solutions.
+Studies are ongoing to standardize the filtration scheme and select the optimal filter medium for all 
+future generation detectors, including the CERN prototypes. 
+
+During operation, an external LAr pump circulates the bulk of the cryogen through the LAr purification 
+system. The boil off gas is first recondensed and then is sent to the LAr purification system before 
+re-entering the vessel.
+
+
 
 
