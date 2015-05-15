@@ -4,11 +4,11 @@
 The CERN single phase prototype detector builds upon the technology and expertise developed in the
 process of design and operation of its smaller predecessor, the 35t detector at Fermilab.
 This includes elements of front-end electronics, data acquisition, run controls and related systems. We also expect that for the most part,
-Monte Carlo studies necessary to support this program will be conducted utilizing software evolved from tools currently used (2015). Likewise,
+Monte Carlo studies necessary to support this program will be conducted using software evolved from current (2015) tools. Likewise,
 event reconstruction software and analysis tools will rely on the evolving software tools developed for DUNE.
 
 The volume of the recorded data  will depend on the number of events to be collected in each measurement,
-as specified in the run plan (see table \ref{tab:RunPlan}).
+as specified in the run plan (see Table \ref{tab:RunPlan}).
 Cosmic ray muons have a very large impact on the data volume due to the large detector dimensions and surface operation.
 
 It is optimal to first stage the data collected from the prototype on disk at CERN and then save it to tape also at CERN,
@@ -21,11 +21,11 @@ while simultaneously performing replication to data centers in the US. For the l
 
 Given standard values quoted for the cosmic ray muon flux at sea level, we arrive at a number of roughly 200 incident muons
 per square meters per second.
-Taking into account the dimensions of the TPC, we estimate the area of the top face of its rectangular volume to be just over 50m$^{2}$,
+Taking into account the dimensions of the TPC, we estimate the area of the top face of its rectangular volume to be just over 50~m$^{2}$,
 which means that the detector will be subject to $\sim10^{4}$ particles per second.
 Since the full electron drift time in liquid argon for a 3.6~m drift length is 2.25~ms, each readout window will contain 
 $\sim$45 track segments on top of the actual beam event. These track segments may be from tracks that were initiated in the triggered
-readout window or the be left drifting charges from the window just prior to the triggered one.
+readout window or there may be charge still drifting from the window just prior to the triggered one.
 
 
 Background tracks due to cosmic ray particles must be properly identified and accounted for, in order to ensure high quality of the measurements and subsequent detector characterization. Since overlay of cosmic
@@ -45,13 +45,13 @@ such that realistic data volume estimates can be obtained from the TPC event dat
 
 Event sizes  can be estimated from "first principles" under the assumption of some event topology.
 Based on the track range and the number of needed samples to capture the track, a given drift velocity and sample rate
-a generous over-estimate is that a 1 GeV MIP needs some 20~kbyte. Then 5GeV MIP needs no more than 100~kbyte.
+a generous over-estimate is that a 1 GeV MIP needs some 20~kbyte. Then 5~GeV MIP needs no more than 100~kbyte.
 Showering events will require less data for the same energy deposition
 due to some portion of the activity overlapping in the same voxels.
 The estimate assumes that all particles are minimum ionizing so this is
 another source of over-estimation.
 The estimate is based on signals above the threshold of zero-suppression and neglects
-radioactivity or assumes that signals from radioactivity (predominantly from $^{39}Ar$) are below the zero-suppression threshold.
+radioactivity or assumes that signals from radioactivity (predominantly from $^{39}$Ar) are below the zero-suppression threshold.
 This basic estimate serves to set the scale but does neglect channel overhead information that may be useful in 
 interpreting the saved data.\\
 
@@ -72,11 +72,11 @@ the $clock \, rate$ is 2~MHz, the $readout \, time$ is assumed to be 3 $ \times 
 
 {\color{red} This results in an event size of $\sim$ 400~Mbyte.\\
 HOW WERE THE 2.5 MB CALCULATED ??! EMAIL FROM BRETT IN RESPONSE TO QIUGUANG AND DATED MAY 5TH INDICATED THAT 2 BYTES PER CHANNEL WERE ASSUMED ?!\\
-FOR NOW WILL MOVE FORWARD WITH 2.5MB\\}
+FOR NOW WILL MOVE FORWARD WITH 2.5 MB\\}
 %
 
 Based on these assumptions which leave room for optimization
-we arrive at an event size of 2.5MB/event which is ZS but uncompressed.
+we arrive at an event size of 2.5 MB/event which is ZS but uncompressed.
 With compression event sizes are expected to reduce to 0.1MB/event (ZS + compressed).
 %
 %Since each sample is 16 bit (or 12 bit in more recent design), we arrive to the limit of approximately 20MB per single charged track.
@@ -91,13 +91,13 @@ With compression event sizes are expected to reduce to 0.1MB/event (ZS + compres
 The estimate is supported by Monte Carlo studies.
 
 
-In view of the factors due to the cosmic ray muons presented above, the actual beam particle event data will represent but a fraction of
+In view of the factors due to the cosmic ray muons presented above, the actual beam particle event data will represent only a fraction of
 the total volume being read out.  
 %As a concrete example, for an incident
 %electron of 4GeV/c momentum MC calculations indicate an average event size of $\sim$2MB, after zero-suppression.
 %This is less than 1\% of the estimate quoted above. 
 
-Total statistics resulting from the run plan presented in section~\ref{tab:RunPlan} is approximately 25M events total, 
+Total statistics resulting from the run plan presented in table~\ref{tab:RunPlan} is approximately 25M events total, 
 split across different particle species and incident momentum bins. Taking into account the 2.5~MB data load per event, 
 this leads to the estimate of YYY~PB of nominal data volume to be collected in this experiment. 
 
@@ -112,8 +112,7 @@ Processed and Monte Carlo data placement will require additional resources that 
 Moving data to remote locations outside of CERN is subject to a number of requirements that include
 automation, monitoring and error checking and recovery. 
 
-A number of candidate systems satisfy these requirements, and one of them where we possess sufficient expertise and experience 
-is Spade, first used in IceCube~\cite{spade_icecube} and then enhanced and successfully utilized in the Daya Bay experiment~\cite{spade_dayabay}.
+A number of candidate systems satisfy these requirements. One for which we have sufficient expertise and experience is Spade, which was first used in IceCube~\cite{spade_icecube} and then enhanced and successfully utilized in the Daya Bay experiment~\cite{spade_dayabay}.
 
 
 \subsection{Databases}
@@ -142,32 +141,32 @@ The estimates we have at this point range from 10 to 100 seconds required by a t
 CPU to reconstruct a single event. 
 This means that utilizing a few thousand cores through Grid facilities, it will be possible to ensure timely processing of these data.
 
-To ensure adequate capacity, we envisage a distributed computing model where Grid resources are utilized in addition to Fermilab
+To ensure adequate capacity, we envisage a distributed computing model where Grid resources are utilized in addition to Fermilab.
 As an example, we have had good experience working with the Open Science Grid Consortium.
 
 
 \subsubsection{Data processing}
 \label{dataprocess}
 
-In addition to the raw data preparations are being made for offline data handling, processing and storage.
+In addition to the raw data preparations being made for offline data handling, processing and storage.
 The offline data can be classified as follows:
 \begin{itemize}
 \item Monte Carlo data, which will contain multiple event samples to cover various event types and other conditions during the measurements with the prototype detector
 \item Data derived from Monte Carlo events, and produced with a variety of tracking and pattern recognition algorithms in order to create a basis for the detector characterization
 \item Intermediate calibration files, derived from calibration data
-\item Processed experimental data, which will likely exist in several parallel branches corresponding to a few reconstruction algorithms being applied, with the purpose of their evaluation.
+\item Processed experimental data, which will likely exist in several parallel branches corresponding to different reconstruction algorithms being applied, with the purpose of evaluating the performance of the different algorithms.
 \end{itemize}
 
 In the latter, there will likely be more than one processing step, thus multiplying data volume. 
 
 The derived data will at most contain a small fraction of the raw data in order to keep the data manageable.
 Hence the size of the processed data will likely by significantly smaller than the input (the raw data). 
-Given consideration presented above, we will plan for
+Given the consideration presented above, we will plan for
 $\sim$$ O($1PB$)$ of tape storage to keep the processed data. 
 For efficient processing, disk storage will be necessary
 to stage a considerable portion of both raw data (inputs) and one or a few steps in processing (outputs).
 
-Extrapolating from our previous experience running Monte Carlo for the former LBNE Far Detector, we estimate that we'll need a few hundred TB of continuously available
+Extrapolating from our previous experience running Monte Carlo for the former LBNE Far Detector, we estimate that we will need a few hundred TB of continuously available
 disk space. In summary, we expect the need for 5~PB of disk storage at Fermilab to ensure optimal data availability and 
 processing efficiency. 
 
