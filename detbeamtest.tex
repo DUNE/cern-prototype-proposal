@@ -1,5 +1,5 @@
 \label{detbeamtest}
-One of the main goals of the Single-Phase prototype test beam program is to perform measurements 
+One of the main goals of the single-phase prototype test beam program is to perform measurements 
 needed to control and understand systematic uncertainties in DUNE oscillation measurements.
 The program also includes measurements to support other important DUNE physics measurements as described below.
 %detector is intended to provide input necessary to reduce systematic uncertainties for oscillation measurements 
@@ -29,7 +29,6 @@ Fig.~\ref{fig:spectraleffect} shows the effect of a lepton energy scale
 shift of -5\% on the measured 
 appearance signal %(for $\delta_{CP}=0$)
  and backgrounds in DUNE. 
-The crosses shows 
 The expected signal shape is shown for several values of $\delta_{CP}$. 
 (solid curve: $\delta_{CP}=0$, lower crosses: $\delta_{CP}=+\pi/2$, and upper crosses: $\delta_{CP}=-\pi/2$). 
 Energy scale uncertainties will distort and shift the $\nu_e$ appearance spectra and
@@ -50,12 +49,12 @@ Ratios show the distortion on the $\nu_e$ and $\overline{\nu}_e$ spectra due to 
 \end{figure}
 
 
- Fig.~\ref{fig:global_escale_sens} from Ref.~\cite{dunecdr} shows the effect of 
+ Fig.~\ref{fig:global_escale_sens} taken from Ref.~\cite{dunecdr} shows the effect of 
 three values of neutrino energy scale uncertainty on the DUNE 
 mass hierarchy and $\delta_{CP}$ sensitivities.
 The nominal sensitivity assumes a 230-kt-MW-year 
 exposure with equal neutrino and antineutrino running. 
-Work to evaluate effect of all systematic uncertainties in DUNE sensitivities is still in progress. 
+Work to evaluate the effect of all systematic uncertainties in DUNE sensitivities is still in progress. 
 The size of effects shown here do not account for correlated uncertainties in neutrino and 
 antineutrino running or effects on backgrounds and is therefore likely
 a best-case scenario. 
@@ -92,21 +91,23 @@ LAr TPC technology was first proposed for use in neutrino experiments by C. Rubb
 %CERN-EP-INT-77-8
 %Title 	The liquid-argon time projection chamber : a new concept for neutrino detectors
 %operating in the CNGS beamline  (with mean beam energy $\sim$17 GeV)~\cite{ICARUSmain}. 
-The ICARUS T600 detector~\cite{icarus_mainref} pioneered the first large-scale detector operating in the CNGS 
+The ICARUS T600 detector~\cite{icarus_mainref} pioneered the first large-scale detector when it operated in the CNGS 
 neutrino beam at mean energy $\sim$17 GeV. ArgoNeuT~\cite{argoneut1}\cite{argoneut2} recently studied 
-neutrino interactions in the NuMI beam down to sub-GeV energies with a small-scale (170~$l$ fiducial volume) detector. 
-While these samples are proving useful, they do now allow full isolation of
+neutrino interactions in the NuMI beam down to sub-GeV energies with a small-scale (170~l fiducial volume) detector. 
+While these samples are proving useful, they do not allow full isolation of
 the low energy neutrino interaction processes
 and final states from reconstruction and detector effects. 
 The use of this technology in future precision neutrino experiments will require dedicated 
 information on particle response
-in the few-GeV to sub-GeV range provided by charged-particle test beams. 
+in the sub-GeV to few-GeV range provided by charged-particle test beams. 
 
 %%%
 %\subsubsection{Particles energy and direction}
 %\label{detbeam_particles}
-The DUNE experiment will run beam in both neutrino and anti-neutrino 
-configurations. These beams will be composed  mainly of muon neutrinos (anti-neutrinos) as well as electron neutrinos (anti-neutrinos). In Fig.~\ref{fig:particle_momenta} the distributions of momenta and angles of particles created in neutrino interactions from simulated beam fluxes are shown. The rate on the particles are calculated for the 34kton far detector and  are combined from both neutrino and anti-neutrino beams. In addition the electron rates from charged current interactions for muon neutrinos oscillated to electron neutrinos are shown. 
+The DUNE experiment will run in both neutrino and anti-neutrino 
+configurations. These beams will be composed  mainly of muon neutrinos (anti-neutrinos) as well as electron neutrinos (anti-neutrinos). In Fig.~\ref{fig:particle_momenta} the distributions of momenta and angles of particles created in neutrino interactions from 
+simulated beam fluxes, including oscillation effects, are shown. The particle rates are calculated for a 34kt far detector and  are combined from both neutrino and anti-neutrino beams.
+% In addition the electron rates from charged current interactions for muon neutrinos oscillated to electron neutrinos are shown. 
 \begin{figure}[h!]
   \centering
 \includegraphics[width=0.49\textwidth,height=6.0cm]{figures/True_Momenta_per_Particle_9_2_1_0_log} 
@@ -129,13 +130,13 @@ from $\nu_e$, $\nu_\mu$, $\bar \nu_e$ and $\bar \nu_\mu$ at the far detector loc
 
 %\newpage
 
-The detector is designed from components that match exactly the current DUNE far detector design components. 
+The detector is designed from components that match exactly the current DUNE reference far detector design components. 
 The test beam detector must be sufficiently large in both
 longitudinal and transverse dimensions to contain showering particles up to the energy range of interest ($\sim$10~GeV).
 Fig.~\ref{fig:containment} shows the simulated longitudinal and transverse 
 energy containment for proton showers up to 10~GeV in energy.
 For 10 GeV showers, more than 95\% of the energy is contained in a detector of longitudinal size of 6~m and 
-radius of 2.5~m. Shower from pions, kaons, and electrons have also been studied and better containment
+radius of 2.5~m. Showers from pions, kaons, and electrons have also been studied and better containment
 is achieved in those cases. 
 \begin{figure}[htp]
   \centering
@@ -215,7 +216,9 @@ K$^+$  & 1 & (13K)   &   response, PID, PDK  \\ \hline
 K$^+$  & 0.5, 0.7 & (5K)   &   response, PID, PDK  \\ \hline \hline
 $\mu$, e, proton  & 1 (vary angle $\times$5) & 10K  & reconstruction  \\ \hline
 \end{tabular}
-\caption{Requirements summary for particle types and momenta. Items in parenthesis indicate lower priority (see text).
+\caption{Requirements summary for particle types and momenta.
+The Exposure column indicates the number of particles for each momentum point.
+Items in parenthesis indicate lower priority (see text).
 }
 \label{tab:runsum}
 \end{table}
@@ -223,9 +226,9 @@ $\mu$, e, proton  & 1 (vary angle $\times$5) & 10K  & reconstruction  \\ \hline
 
 Pions and protons spanning the energy range expected in DUNE beam neutrino interactions will be used 
 primarily to study hadronic showering reconstruction and calibration as described in Sec.~\ref{sec:showers}
- as well as particle identification (PID) algorithms discussed in Sec.~\ref{detbeam_pid}. A sample 600K
+ as well as particle identification (PID) algorithms discussed in Sec.~\ref{detbeam_pid}. A sample of 600K
  2~GeV $\pi^+$ will be used to study  secondary $\pi^o$ over a large angular range 
-to tune and calibration electron/photon separation algorithms (see Sec.~\ref{sec_egam}).
+to tune and calibrate electron/photon separation algorithms (see Sec.~\ref{sec_egam}).
 A large sample (10$^{6}$) 1 GeV protons will produce a sample of low energy stopping protons over a 
 wide angular range needed to study angular
 dependent effects on collected charge as described in Sec.~\ref{sec_angle}.
@@ -236,7 +239,7 @@ Michel electron events for calibration
 algorithms for charge-sign determination (see Secs.\ref{sec_reco} and \ref{sec_other}).
 
 Charged-kaon samples will be useful to characterize kaon PID efficiency for proton decay sensitivity but
-are a somewhat lower priority need. The requested antiproton sample
+are a somewhat lower priority need. The antiproton sample
 will be helpful for exotic physics sensitivity studies. Both of these lower priority requests are discussed
 in Sec.~\ref{sec_other}.
 
@@ -262,14 +265,15 @@ Monte Carlo simulations and allow more precise reconstruction of neutrino energy
 \label{sec:showers}
 
 Accurate measurement of neutrino energy will require reconstruction of both electromagnetic and hadronic showers. Reconstruction of hadron energy 
-in these energy range will require knowledge of the initiating hadron's 
-($\pi^{+/-}$, $p$, or $K^{+/-}$)
-fate (interact, decay, or stop). For the case of  interacting hadrons 
-the composition of secondaries, which will include neutrals, particles which 
-deposit energy electromagnetically ($\pi^o$, $\gamma$), as well as 
+in these energy ranges will require knowledge of the fate (interact, decay, or stop) of the
+initiating hadron ($\pi^{+/-}$, $p$, or $K^{+/-}$).
+%fate (interact, decay, or stop). 
+For the case of  interacting hadrons the composition of secondaries
+will need to be determined to characterize the response. 
+These will include neutrals and particles which 
+deposit energy electromagnetically ($\pi^o$, $\gamma$), as well as
 secondary hadrons,
 %and their energy responses 
-will need to be determined to characterize the response. 
 The test beam with known incoming particle type and momentum will be used
 to characterize interacting hadrons in this energy range.
 %quantify responses to initiating hadrons
@@ -278,12 +282,12 @@ to characterize interacting hadrons in this energy range.
 
 Fig.~\ref{fig:hadronshwr} shows the fraction of true energy deposited by interacting protons with 1~GeV/c (left) and
 3~GeV/c (right) incident momenta simulated using FLUKA particle transport code~\cite{fluka05}. 
-Interacting protons (65\% of  sample 1~GeV/c) are selected.
+Interacting protons (65\% of the 1~GeV/c sample) are selected.
 % The remaining 
 %35\% which range out are be used to study particle identification algorithms (PID) (see Sec.~\ref{detbeam_pid}). 
 %Reconstruction is performed with ICARUS spatial and calorimetric reconstruction algorithm~\cite{icarus_reco}.
-For this study, visible energy is summed using hit information with corrections applied for electron lifetime.
-(No attempt is made to correct for electromagnetic shower fractions). 
+For this study, visible energy is summed using hit information with corrections applied for the lifetime of 
+the drift electrons. (No attempt is made here to correct for recombination effects or electromagnetic shower fractions). 
 The resulting energy deposition in the two cases cannot be 
 accurately characterized by an average shower calibration factor. Monte Carlo simulations of 
 outgoing particles, especially at low energies, must be checked and bench-marked against calibration data to avoid
@@ -302,14 +306,16 @@ large uncertainties from shower modeling.
 \end{figure}
 
 Pion showers at low energies will also be important both for determining the interacted neutrino energy as well
-as for modeling neutral current backgrounds resulting from $\pi^o$ content in showers. Differences in energy deposited
-by $\pi^+$ versus $\pi^-$ initiated interactions are present up to momenta on the order of 1~GeV/c due to different
+as for modeling neutral current backgrounds resulting from $\pi^o$ content in showers. Significant
+ differences in energy deposited in interactions initiated
+by $\pi^+$ versus $\pi^-$  are present up to momenta on the order of 1~GeV/c due to different
 final state particles and interaction cross sections. This is illustrated in 
 Fig.~\ref{fig:pionshwr} which shows the differences in mean energy deposited (left) and width (right) 
 for interacting pions ranging from 0.2~GeV/c up to 5~GeV/c momenta.
 % simulated using FLUKA~\cite{fluka05}.
-Resulting shower calibrations and reconstruction will differ and therefore each charge must be separately
-studied. 
+Resulting shower calibrations and reconstruction will differ and therefore each charge must be 
+studied separately.
+
 \begin{figure}[h!]
   \centering
 %\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pi+pi-_means}
@@ -347,7 +353,8 @@ for interacting $\pi^+$ versus $\pi^-$ ranging from 0.2~GeV/c up to 5~GeV/c.
 \subsubsection{Cross section measurements}
 
 
-Final state pions are produce copiously in neutrino interactions in this energy range 
+Final state pions are produced copiously in neutrino interactions in our energy range 
+of interest
 and contribute substantially to total visible energy in the interaction.
 These particles can re-interact or be absorbed in the nuclear medium
 and substantially change the visible energy deposited in the event. 
@@ -395,13 +402,13 @@ $Q_o$ and $Q$ are the ionization charge and the collected charge respectively,
 $k_c$ is a constant that depends on LAr diffusion and mobility coefficients, $\cal E$ 
 is the electric field strength, and $\phi$ is the angle relative to the drift direction.
 %
-ICARUS~\cite{icarus_recombination} and LArSoft default recombination models do no currently incorporate angular dependence. 
+ICARUS~\cite{icarus_recombination} and LArSoft default recombination models do not currently incorporate angular dependence. 
 %(ArgoNeuT~\cite{arogneut_angle} suggests a 
 %modified Box model with explicit angular dependence can be incorporated 
 %into Birk's law  by replacing ${\cal E}$  with ${\cal E} \sin\phi$).
 Recent results from ArgoNeuT~\cite{argoneut_angle} find a small unmodeled
-angular dependence in a data same obtained using stopping protons from 
-neutrino interactions in the range 50-300 MeV with angles from 40-90$^{\circ}$.
+angular dependence in a data sample obtained using stopping protons from 
+neutrino interactions in the range 50-300 MeV with angles in the range 40-90$^{\circ}$.
 
 Additional data covering a large angular range would be useful to further investigate this possibility.
 The large sample of 1~GeV protons requested will also be used to study angular dependence using 
@@ -415,22 +422,22 @@ respect to the field direction.
 
 %The reconstruction of events in the LAr TPC is still a challenge but rapid progress has been achieved in recent years (cite pandora and other reconstruction algorithms). Despite the progress reconstruction algorithms have to rely Monte Carlo predictions which don't simulate liquid argon detectors responses correctly. Reconstruction algorithms will benefit greatly from test beam data particularly from the full scale prototype. The reconstruction algorithms will be trained to correctly reconstruct track, electromagnetic and hadronic showers.
 %The data of tracks and showers can be used to create a library of reference events with which to tune algorithms.
-%which can be used for matching with he neutrino data, similar to the  LEM (library event matching).
+%which can be sed for matching with he neutrino data, similar to the  LEM (library event matching).
 
 Information on range and charge deposition for stopping charged-particles can be used to 
 accurately identify particle type as well as measure kinetic energy. 
 Fig.~\ref{fig:resrange}  (left) shows track energy loss per unit length\footnote{Signal attenuation due to recombination effect is not corrected for the PID purpose since it is a deterministic transformation which does not add measurement information.}
 (dQ/dx) as a function of residual 
 track range for simulated muon, pion, proton and kaon particle tracks. 
-A neutral-net-based algorithm~\cite{nn_pid,rd_pid}
+A neural-net-based algorithm~\cite{nn_pid,rd_pid}
 was used to determine PID functions for each particle hypothesis.
 % at a bin centered at 6$\pm$1~cm.
 %  for each particle hypothesis.
 %functions for each particle hypothesis. 
 Fig.~\ref{fig:resrange} (right) 
-shows the distribution of reconstructed dQ/dx in a narrow bin of residual range 6($\pm$1)cm to illustrate the scale of difference between particle types. Proton and kaon bands are well separated from each other and from pion and muon bads, while pion and muon bands are almost overlapping are challenging for the efficient separation. 
+shows the distribution of reconstructed dQ/dx in a narrow bin of residual range 6($\pm$1)cm to illustrate the scale of difference between particle types. Proton and kaon bands are well separated from each other and from pion and muon bands, while pion and muon bands are almost overlapping which is challenging for the efficient separation. 
 Simulation is performed with
-FLUKA~\cite{fluka05} and ICARUS geometry (3mm wire pitch) and Reconstruction code~\cite{icarus_reco}.
+FLUKA~\cite{fluka05} and ICARUS geometry (3~mm wire pitch) and reconstruction code~\cite{icarus_reco}.
 %Stopping particles were selected using truth information.
 
 %shows the result for events in the residual range bin centered at 6($\pm$1)~cm.
@@ -439,11 +446,11 @@ reconstruction algorithm. The DUNE APA configuration and reconstruction algorith
 %Fig.~\ref{fig:resrange} uses ICARUS geometry with 3~mm pitch, APA configuration 
 may give significantly different results, especially for pion/muon separation. 
 %Plots were made for 3mm pitch, we don't have such simulation for APA configuration, it may differ a bit (which does not change much for proton/kaon, but can be significant for pion/muon).
-It is therefore important to test PID a realistic prototype detector
+It is therefore important to test PID in a realistic prototype detector
 data in the presence of all detector effects.
 Event samples which include an adequate number of stopping particles for each species
 (muon, pions, protons and kaons) are included in the particle summary request in order to 
-perform tests of PID and dE/dx calibration measurements.
+perform tests of PID algorithms and Bethe-Bloch calibration measurements.
 
 
 %The tail is used to calibration the MIP response, the region near the end of the track is used
@@ -456,7 +463,7 @@ perform tests of PID and dE/dx calibration measurements.
 \includegraphics[width=0.53\textwidth,height=6.0cm]{figures/pids}
 \includegraphics[width=0.46\textwidth,height=6.0cm]{figures/prkpimu}
 %\includegraphics[width=\textwidth,height=5.0cm]{figures/pid_curves}
-  \caption{(left) ICARUS simulated track dQ/dx as a function of residual range for muons, pions, protons and kaons, used as a training data in a neutral-net-based PID algorithm. (right) Distribution of dQ/dx for each particle type for a bin with residual range 
+  \caption{(left) ICARUS simulated track dQ/dx as a function of residual range for muons, pions, protons and kaons, used as training data in a neutral-net-based PID algorithm. (right) Distribution of dQ/dx for each particle type for a bin with residual range 
 6($\pm$1)~cm. The small difference between muon and pion PID is illustrated.
 }
 \label{fig:resrange}
@@ -471,16 +478,23 @@ perform tests of PID and dE/dx calibration measurements.
 \subsubsection{Reconstruction Effects}
 \label{sec_reco}
 
-Reconstruction algorithms use all three signal planes for 3D track and event reconstruction. The quality of reconstruction is affected by the two main factors which can be quantified with test beam data:
+Reconstruction algorithms use all three signal planes for 3D track and event reconstruction. The quality of reconstruction is affected by two main factors that can be quantified with test beam data:
 \begin{itemize}
-\item The complexity of the event topology, that includes the number of objects overlapping in 2D projections and the number of possible object associations between 2D projections. The topology complexity depends on the energy of incident particle. Hadronic showers collected with the test beam can provide data sample to assess the reconstruction algorithm performance and test its dependence on the incident particle energy.
+\item The complexity of the event topology, which includes the number of objects overlapping in 2D projections and the number of possible object associations between 2D projections. The topology complexity depends on the energy of incident particle. Hadronic showers collected with the test beam can provide data sample to assess the reconstruction algorithm performance and test its dependence on the incident particle energy.
 \item Orientation of the reconstructed object w.r.t. the readout wires and electron drift direction:
 \begin{itemize}
-\item Tracks and cascades in the plane parallel or almost parallel to the signal planes have strongly limited variation of the hit drift time, required for the 3D reconstruction; various reconstruction algorithms can show different performance in the real detector conditions for such inclined objects, especially in the presence of the noise affecting hit time reconstruction.
-\item 2D projection of objects aligned with the wires of one of the planes is strongly shortened, which limits the amount of information available to the reconstruction algorithm; the two other signal planes can be used for the spatial reconstruction, however, the validation of the correctness of reconstruction, calculated from the 3D object projected to the third plane, is less efficient.
-
-The most important aspect of this issue is the usage of all planes for the charge measurement. If the reconstructed object is aligned with Collection wires then the calorimetric measurement has to be carried out with the signal of Induction planes. Additional shielding wire plane of the DUNE design will improve the quality of the bipolar signal of Induction planes and the test beam experiment will help with its calibration.
-\item Objects aligned with the drift field are projected to a low number of wires and have a large span of drift time. Wire signals of such objects are significantly different than those of objects at higher angles w.r.t. the drift field, requiring a dedicated signal processing for the hit reconstruction. In such orientation also the correction of eventual angular dependence of the recombination effect should be included in the calorimetric reconstruction and calibrated with real data.
+\item Tracks and cascades in the plane parallel or almost parallel to the signal planes have strongly limited variation of the hit drift time, required for the 3D reconstruction; various reconstruction algorithms can show different performance in real detector conditions for such inclined objects, especially in the presence of noise affecting hit time reconstruction.
+\item A 2D projection of objects aligned with the wires of one of the planes is strongly shortened, which limits the amount of information available to the reconstruction algorithm; the two other signal planes can be used for spatial reconstruction, however, the validation of the correctness of reconstruction, calculated from the 3D object projected to the third plane, is less efficient.
+The most important aspect of this issue is the use of all planes for the charge measurement. If the reconstructed object is aligned with collection wires then the calorimetric measurement has to be carried out with the signal from the induction planes. The additional shielding wire plane in the DUNE design will improve the quality of the bipolar induction plane signals.  The test beam 
+data will help with the calibration of these signals.
+\item Objects aligned with the drift field are projected onto a low
+number of wires and have a large span of drift time. The wire signals in these
+cases are significantly different than those from tracks at higher angles with
+respect to the drift field, and therefore require a dedicated signal processing
+algorithm to do hit reconstruction. Corrections for angular dependence of
+recombination will also need to be included in the calorimetric reconstruction
+and calibrated with real data.
+%Objects aligned with the drift field are projected to a low number of wires and have a large span of drift time. Wire signals of such objects are significantly different than those of objects at higher angles w.r.t. the drift field, requiring a dedicated signal processing for the hit reconstruction. In such orientation also the correction of eventual angular dependence of the recombination effect should be included in the calorimetric reconstruction and calibrated with real data.
 \end{itemize}
 \end{itemize}
 
@@ -526,8 +540,8 @@ Backgrounds originating from photons produced primarily from
 final state $\pi^0$'s must be identified and removed from the signal
 electron sample. 
 
-Photons can undergo two process: pair production and Compton scattering. 
-The dominant process for photons with energies of several hundreds MeV is 
+High energy photons can undergo two process: pair production and Compton scattering. 
+The dominant process for photons with energies of several hundred MeV is 
 e$^+$ e$^-$ pair production.
 %energies. 
 %For pair production the 
@@ -535,7 +549,7 @@ e/$\gamma$ discrimination
 for this process can be achieved using the beginning of the electromagnetic shower, where 
 a single MIP is characteristic of electron energy deposition while two MIPs is consistent 
 with a photon hypothesis.
-In case where the photon Compton scatters, the two particles cannot easily be distinguished
+In the case where the photon Compton scatters, the two particles cannot easily be distinguished
 from the energy deposition pattern.
 
 
@@ -546,7 +560,9 @@ from the energy deposition pattern.
 \includegraphics[width=0.49\textwidth,height=6.0cm]{figures/eff-bgdrej-diffen}
 \includegraphics[width=0.49\textwidth,height=6.0cm]{figures/APAT600_all_norm}
   \caption{
- (Left)Background rejection versus signal efficiency for various energies, calculated for sample which pass the reconstruction. Simulation performed in APA design configuration (4.67mm wire pitch, Induction wires at $\pm$35.7 deg w.r.t. Collection wires). (Right) Background rejection versus signal efficiency for two different readout designs: APA parameters as on the left plot, ICARUS parameters: 3mm wire pitch, Induction wires at $\pm$60 deg w.r.t. Collection wires. Background rejection and signal selection efficiency values normalized to the full data sample size, including events which do not pass reconstruction.
+ (left) Background rejection versus signal efficiency for various energies, calculated for sample which pass the reconstruction. Simulation performed in APA design configuration (4.67~mm wire pitch, Induction wires at $\pm$35.7$^{\circ}$ w.r.t. Collection wires). (right) Background rejection versus signal efficiency
+integrated over the energy range 0.2-1.0 GeV for two different readout designs: APA parameters as on the left plot, ICARUS parameters: 3~mm wire pitch, Induction wires at $\pm$60$^{\circ}$ w.r.t. Collection wires. 
+Background rejection and signal selection efficiency values normalized to the full data sample size, including events which do not pass reconstruction.
 %(Left)Background rejection versus signal efficiency for various energies.
 %{\color{red}
 %}
@@ -576,8 +592,8 @@ on particular features of the geometry including wire pitch and plane
 orientation which affect the reconstruction. 
 For example, Fig.~\ref{fig:egam} (right) shows a comparison of background
 rejection versus signal efficiency for simulated
-DUNE APA configuration compared with with ICARUS T600 geometry
-integrated over the energy range 0.2-1.0 GeV. 
+DUNE APA configuration compared with with ICARUS T600 geometry.
+%integrated over the energy range 0.2-1.0 GeV. 
 Pure samples of electrons and photons in the sub-GeV energy range will be
 needed to tune the separation algorithms and to measure 
 detector-dependent electron-photon separation efficiency and purity.
@@ -595,9 +611,10 @@ detector-dependent electron-photon separation efficiency and purity.
 \subsection{Other measurements} 
 \label{sec_other}
 
-The DUNE experiment will be capable of addressing other new physics possibilities with its one-of-a-kind
-massive underground LAr TPC. Event samples discussed here include those that support DUNE
-rich array of other physics goals. 
+The DUNE experiment will be capable of addressing other physics beyond the flagship long-baseline neutrino measurements with the unique massive underground LAr TPC. Event samples discussed here include those that support this rich array of additional physics goals.
+%The DUNE experiment will be capable of addressing other new physics possibilities with its one-of-a-kind
+%massive underground LAr TPC. Event samples discussed here include those that support DUNE
+%rich array of other physics goals. 
 
 
 \subsubsection{Supernova and Michel electrons}
@@ -658,15 +675,15 @@ A sample of 13K beam kaons with 1~GeV/c momentum are requested to provide 2K sto
 
 A sizable sample of protons ($\sim 10^6$)
 are requested to study the possible background contributions to  $p \rightarrow K^+ \overline{\nu}$.
-This sample of  protons are needed to quantify the possibility that an interacting {\bf p} 
-is  {\em mis-IDed as stopping K}. A proton interaction which produces neutrals and one charged pion 
+This sample of  protons are needed to quantify the possibility that an interacting proton 
+is  {\em mis-IDed} as stopping kaon. A proton interaction which produces neutrals and one charged pion 
 (which is mis-IDed or subsequently decays to $\mu$) can fake the final state kaon signal.
 
 
 \subsubsection{Anti-proton annihilation }
 
-A sample of antiproton would be useful to calibrate the $p$-$\overline{p}$ annihilation process. 
-This would provide input to exotic B-violating process in which neutron-antineutron oscillation
+A sample of antiprotons would be useful to calibrate the $p$-$\overline{p}$ annihilation process. 
+This would provide input to exotic baryon number-violating process in which neutron-antineutron oscillation
 occurs and results in a
 % (reference) modeling of 
 subsequent  $n$-$\overline{n}$ annihilation. The modeling of $p\overline{p}$ annihilation could be
