@@ -89,7 +89,7 @@ At the time of this proposal, the beamline design has not been finalized. To est
 \label{fig:PionOnCuTarget}
 \end{figure}
 
-To formulate a preliminary beam time request, we assume the hadron beam rates and spectrum as given in Figure~\ref{fig:PionOnCuTarget}. For the beam rate estimates, we account for particle lifetimes assuming the distance from the secondary target to the cryostat to be 30 m and the data taking efficiency to be about 50\%. For the electron sample, we expect a different optimized beamline setup to produce a pure electron beam with a flux of about 200 Hz. A preliminary run plan for one configuration is shown in Table~\ref{tab:RunPlan}. The number of spills needed for each momentum bin is driven by the samples highlighted in red or by the requirement that we collect at least 150 spills ($\approx$ 2 hours of beam time) per momentum bin.  This proposed plan satisfies the requested samples as listed in Table~\ref{tab:runsum}, except for kaons less than 1 GeV. Most low momentum kaons produced from the secondary target decay before reaching the liquid argon cryostat. To obtain those samples, we will need to carry out extended runs and trigger exclusively on particles tagged as kaons by either the time-of-flight or the threshold Cherenkov counters.
+To formulate a preliminary beam time request, we assume the hadron beam rates and spectrum as given in Figure~\ref{fig:PionOnCuTarget}. For the beam rate estimates, we account for particle decays assuming the distance from the secondary target to the cryostat to be 30 m. A significant fraction of pions and kaons below 1 GeV/c decay before reaching the liquid argon cryostat. In addition, we also assume the data taking efficiency to be about 50\%. For the electron sample, we expect a different optimized beamline setup to produce a pure electron beam with a flux of about 200 Hz. A preliminary run plan for one configuration is shown in Table~\ref{tab:RunPlan}. The number of spills needed for each momentum bin is driven by the samples highlighted in red or by the requirement that we collect at least 150 spills ($\approx$ 2 hours of beam time) per momentum bin.  This proposed plan satisfies the requested samples as listed in Table~\ref{tab:runsum}, except for kaons less than 1 GeV. Most low momentum kaons produced from the secondary target decay before reaching the liquid argon cryostat. To obtain those samples, we will need to carry out extended runs and trigger exclusively on particles tagged as kaons by either the time-of-flight or the threshold Cherenkov counters.
 
 \begin{table}[tb]
 \centering
@@ -109,7 +109,8 @@ To formulate a preliminary beam time request, we assume the hadron beam rates an
 2  &600 &8 &320K&\textcolor{red}{\bf 10K} &3K        &130K\\
 3  &500 &6 &290K &\textcolor{red}{\bf 5K} &7K        &70K \\
 5  &1800&23& 1M &\textcolor{red}{\bf 5K}  &5K        &270K\\
-7  &1200&15&660K&\textcolor{red}{\bf 6K}  &3K        &120K\\
+7  &1200&15&660K&\textcolor{red}{\bf 6K}  &3K        &120K\\ \hline
+Total &6000&76&2.5M  & 286K  &18K   & 1M\\
 \hline \hline
 \multicolumn{7}{|c|}{\bf Negative Sample} \\ \hline
 \showrowcolors 
@@ -126,7 +127,8 @@ To formulate a preliminary beam time request, we assume the hadron beam rates an
 0.5&150&\textcolor{red}{\bf 2}&\multicolumn{2}{|c|}{40K} &\multicolumn{2}{|c|}{13K}\\
 0.7&150&\textcolor{red}{\bf 2}&\multicolumn{2}{|c|}{50K} &\multicolumn{2}{|c|}{12K}\\
 1  &150&\textcolor{red}{\bf 2}&\multicolumn{2}{|c|}{70K} &\multicolumn{2}{|c|}{12K}\\
-2  &200&3&\multicolumn{2}{|c|}{135K}&\multicolumn{2}{|c|}{\textcolor{red}{\bf 6K}}\\ 
+2  &200&3&\multicolumn{2}{|c|}{135K}&\multicolumn{2}{|c|}{\textcolor{red}{\bf 6K}}\\ \hline
+Total  &1600&22&\multicolumn{2}{|c|}{400K}&\multicolumn{2}{|c|}{180}\\ 
 \hline 
 \hline
 \multicolumn{7}{|c|}{\bf Electron Sample} \\ \hline
@@ -136,10 +138,11 @@ To formulate a preliminary beam time request, we assume the hadron beam rates an
 \hline
 \hiderowcolors
 \multicolumn{3}{|c|}{0.2,0.3,0.4,0.5,0.7,1,2,3,5,7}  & 150 per bin & \multicolumn{2}{|c|}{2 hours per bin} &{140K per bin} \\ \hline
+\multicolumn{3}{|c|}{Total}  & 1500 & \multicolumn{2}{|c|}{20} &{1.4M} \\ \hline
 \end{tabular}
 \caption{A preliminary run plan for one beam angle and position. The number of spills needed for a given momentum bin is driven by the samples highlighted in red or by the requirement of at least 150 spills per momentum bin.}
 \label{tab:RunPlan}
 \end{table}
 
-In addition to the above samples with beam at the nominal position, we expect to take some additional data with the beam entering the TPC at different position and angles. Without a detail beamline design, there are still some uncertainties on the actual beam rates. Based on the information that we have, the total estimated beam time needed to carry out the physics program (physics samples as listed in Table~\ref{tab:runsum}, multiple angles and beam positions, dedicated kaon runs, etc) in this proposal is about 4 to 6 weeks.
+In addition to the above samples with beam at the nominal position, we expect to take some additional data with the beam entering the TPC at different position and angles. Without a detail beamline design, there are still some uncertainties on the actual beam rates. We are working on estimating the amount of beam time required. Based on the current information that we have, the total estimated beam time needed to carry out the physics program (physics samples as listed in Table~\ref{tab:runsum}, multiple angles and beam positions, dedicated kaon runs, etc) in this proposal is in the range of 4 to 6 weeks.
  
