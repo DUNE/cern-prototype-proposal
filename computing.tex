@@ -3,81 +3,58 @@
 
 The CERN single phase prototype detector builds upon the technology and expertise developed in the
 process of design and operation of its smaller predecessor, the 35t detector at Fermilab.
-This includes elements of front-end electronics, data acquisition, run controls and related systems. We also expect that for the most part,
-Monte Carlo studies necessary to support this program will be conducted using software evolved from current (2015) tools. Likewise,
+This includes elements of front-end electronics, data acquisition, run controls and related systems. We also expect that for the most part, Monte Carlo studies necessary to support this program will be conducted using software evolved from current (2015) tools. Likewise,
 event reconstruction software and analysis tools will rely on the evolving software tools developed for DUNE.
 
-The volume of the recorded data  will depend on the number of events to be collected in each measurement,
-as specified in the run plan (see Table \ref{tab:RunPlan}).
-Cosmic ray muons have a very large impact on the data volume due to the large detector dimensions and surface operation.
+The volume of the recorded data will depend on the number of events to be collected in each measurement,
+as specified in the run plan (see Table \ref{tab:RunPlan}).  Cosmic ray muons have a very large impact on the data volume due to the large detector dimensions and surface operation.
 
 It is optimal to first stage the data collected from the prototype on disk at CERN and then save it to tape also at CERN,
 while simultaneously performing replication to data centers in the US. For the latter, Fermilab will be the primary site, with additional data centers at Brookhaven National Laboratory and the NERSC facility as useful additional locations for better redundancy and more efficient access to the data from a greater number of locations.
 
 
 
-\subsubsection{Cosmic ray muons and readout window}
-\label{readout_windows}
-
-Given standard values quoted for the cosmic ray muon flux at sea level, we arrive at a number of roughly 200 incident muons
-per square meters per second.
-Taking into account the dimensions of the TPC, we estimate the area of the top face of its rectangular volume to be just over 50~m$^{2}$,
-which means that the detector will be subject to $\sim10^{4}$ particles per second.
-Since the full electron drift time in liquid argon for a 3.6~m drift length is 2.25~ms, each readout window will contain 
-$\sim$45 track segments on top of the actual beam event. These track segments may be from tracks that were initiated in the triggered
-readout window or there may be charge still drifting from the window just prior to the triggered one.
-
-
-Background tracks due to cosmic ray particles must be properly identified and accounted for, in order to ensure high quality of the measurements and subsequent detector characterization. Since overlay of cosmic
-ray muons over beam events is stochastic in nature, the optimal way to achieve this is by recording signals which were 
-produced ``just before'' and ``just after'' the arrival of the test particle from the beam line. 
-It will be possible because the design of the DAQ contains buffer memory that
-can be accessed after the trigger decision is made. 
-This technique will enable us to record and reconstruct either partial or complete background
-tracks present in the ``main'' event.
-
-
+%\subsubsection{Cosmic ray muons and readout window}
+%\label{readout_windows}
 \subsection{Event size estimate and data volume}
 
-The data volume will dominated by the TPC data. Even though the photon detector as well as  other elements of the experimental apparatus 
-(muon counters, trigger systems) contribute to the data stream their contributions to the data volume are expected to be sufficiently small 
-such that realistic data volume estimates can be obtained from the TPC event data sizes alone.
+The data volume will be dominated by the TPC data. Even though the photon detector as well as other elements of the experimental apparatus (muon counters, trigger systems) contribute to the data stream their contributions to the data volume are expected to be sufficiently small such that realistic data volume estimates can be obtained from the TPC event data sizes alone.
 
-Event sizes  can be estimated from "first principles" under the assumption of some event topology.
-Based on the track range and the number of needed samples to capture the track, a given drift velocity and sample rate
-a generous over-estimate is that a 1 GeV MIP needs some 20~kbyte. Then 5~GeV MIP needs no more than 100~kbyte.
-Showering events will require less data for the same energy deposition
-due to some portion of the activity overlapping in the same voxels.
-The estimate assumes that all particles are minimum ionizing so this is
-another source of over-estimation.
-The estimate is based on signals above the threshold of zero-suppression and neglects
-radioactivity or assumes that signals from radioactivity (predominantly from $^{39}$Ar) are below the zero-suppression threshold.
-This basic estimate serves to set the scale but does neglect channel overhead information that may be useful in 
-interpreting the saved data.\\
-
-In the LArSoft framework which is presently being used for the 35t detector
-data are zero suppressed (ZS). 
-Our assumption is that the nominal readout policy for the bulk of the data
-will be to use ZS in order to follow the plan for the DUNE FD.
-However, even for 
-ZS data LArSoft saves 2 bytes for every channel even if that channel is
-ZS'ed away. 
-
-The data event size can be calculated as
-\begin{equation}
-  Event size = (\#channels) \times (clock\, rate) \times (readout \, time) \times (sample \, size)
-\end{equation}
-where the $\# channels$ equals 15,360 channels, corresponding to the proposed TPC which consists of 6 APAs with 2560 channels each, 
-the $clock \, rate$ is 2~MHz, the $readout \, time$ is assumed to be 3 $ \times $ 2.25 ms = 6.75 ms corresponding to three drift times and the $sample \, size$ is 2~bytes.
-
-{\color{red} This results in an event size of $\sim$ 400~Mbyte.\\
-HOW WERE THE 2.5 MB CALCULATED ??! EMAIL FROM BRETT IN RESPONSE TO QIUGUANG AND DATED MAY 5TH INDICATED THAT 2 BYTES PER CHANNEL WERE ASSUMED ?!\\
-FOR NOW WILL MOVE FORWARD WITH 2.5 MB\\}
+Event sizes can be estimated from "first principles" under the assumption of some event topology and noting the significant amount of cosmic contamination at sea level.  Given standard values quoted for the cosmic ray muon flux at sea level, we arrive at a number of roughly 200 incident muons per square meters per second.  Taking into account the dimensions of the TPC, we estimate the area of the top face of its rectangular volume to be just over 50~m$^{2}$, which means that the detector will be subject to $\sim10^{4}$ particles per second.  The full electron drift time in liquid argon for a 3.6~m drift length is 2.25~ms, and each readout window for an event will contain three drift time windows which will include data from drift windows before and after the event.  Based on the cosmic rate and the size of the readout window, there is expected to be on average $\sim$68 track segments on top of the actual beam event. This estimate takes into account the readout of charge that may still be drifting from the window just prior to the triggered one and the loss of charge that is still drifting after the triggered window ends.  The resulting number of particles in a readout window will result in the readout of 6~MB per beam event.  
+%This assumes that you have 80~kbyte per 4 GeV mip and that cosmic muons at the surface have an averagae enegy of 4 GeV
+%Multiply by (68 muons + 1 beam particle) we get 5.5 MB
+In addition to the data associated with the individual particles in the event, there is channel overhead information.   Experience from the 35t detector at Fermilab indicates that with zero suppression that there is an event overhead 0.3~kB per channel for a readout of three drift windows.
 %
+%This is based on 600kB zero suppressed readout of 3 drift windows in 35 t for 2048 channels.  There are 15,360 channels inn the CERN prototype, corresponding to the proposed TPC which consists of 6 APAs with 2560 channels each. 
+%
+Since there are 15,360 channels in the CERN prototype, the expected overhead corresponds to 5~MB per event.  Resulting total event size from overhead and charge from individual particles is 11~MB. 
+%Background tracks due to cosmic ray particles must be properly identified and accounted for, in order to ensure high quality of the measurements and subsequent detector characterization. Since overlay of cosmic ray muons over beam events is stochastic in nature, the optimal way to achieve this is by recording signals which were produced ``just before'' and ``just after'' the arrival of the test particle from the beam line.  It will be possible because the design of the DAQ contains buffer memory that can be accessed after the trigger decision is made.  This technique will enable us to record and reconstruct either partial or complete background tracks present in the ``main'' event.
 
-Based on these assumptions which leave room for optimization
-we arrive at an event size of 2.5 MB/event which is ZS but uncompressed.
-With compression event sizes are expected to reduce to 0.1MB/event (ZS + compressed).
+
+%\subsection{Event size estimate and data volume}
+
+%The data volume will be dominated by the TPC data. Even though the photon detector as well as other elements of the experimental apparatus (muon counters, trigger systems) contribute to the data stream their contributions to the data volume are expected to be sufficiently small such that realistic data volume estimates can be obtained from the TPC event data sizes alone.
+
+%Event sizes can be estimated from "first principles" under the assumption of some event topology.  Based on the track range and the number of needed samples to capture the track, a given drift velocity and sample rate a generous over-estimate is that a 1 GeV MIP needs about 20~kbyte and a 5~GeV MIP needs no more than 100~kbyte.  Showering events will require less data for the same energy deposition due to some portion of the activity overlapping in the same voxels.  The estimate assumes that all particles are minimum ionizing so this is another source of over-estimation.  The estimate is based on signals above the threshold of zero-suppression and neglects radioactivity or assumes that signals from radioactivity (predominantly from $^{39}$Ar) are below the zero-suppression threshold.
+
+%This basic estimate serves to set the scale but does neglect channel overhead information that may be useful in interpreting the saved data.  Considering that the beam event readout window will contain $\sim$45 muons with an average energy of 4 GeV, a signal beam event is expected to result in 3.7 MB data record.
+
+%In the LArSoft framework which is presently being used for the 35t detector data are zero suppressed (ZS).  Our assumption is that the nominal readout policy for the bulk of the data will be to use ZS in order to follow the plan for the DUNE FD.  However, even for ZS data LArSoft saves 2 bytes for every channel even if that channel is ZS'ed away. 
+
+%The data event size can be calculated as
+%\begin{equation}
+%  Event size = (\#channels) \times (clock\, rate) \times (readout \, time) \times (sample \, size)
+%\end{equation}
+%where the $\# channels$ equals 15,360 channels, corresponding to the proposed TPC which consists of 6 APAs with 2560 channels each, the $clock \, rate$ is 2~MHz, the $readout \, time$ is assumed to be 3 $ \times $ 2.25 ms = 6.75 ms corresponding to three drift times and the $sample \, size$ is 2~bytes.
+%
+%{\color{red} This results in an event size of $\sim$ 400~Mbyte.\\
+%HOW WERE THE 2.5 MB CALCULATED ??! EMAIL FROM BRETT IN RESPONSE TO QIUGUANG AND DATED MAY 5TH INDICATED THAT 2 BYTES PER CHANNEL WERE %ASSUMED ?!\\
+%FOR NOW WILL MOVE FORWARD WITH 2.5 MB\\}
+%
+%
+%Based on these assumptions which leave room for optimization
+%we arrive at an event size of 2.5 MB/event which is ZS but uncompressed.
+%With compression event sizes are expected to reduce to 0.1MB/event (ZS + compressed).
 %
 %Since each sample is 16 bit (or 12 bit in more recent design), we arrive to the limit of approximately 20MB per single charged track.
 %For this class of events, the amount of data will scale roughly linearly with the length of the track, i.e. in cases when a track is
@@ -88,22 +65,17 @@ With compression event sizes are expected to reduce to 0.1MB/event (ZS + compres
 %will not be included into the outgoing data stream). 
 %The exact data reduction factor will depend on a variety of factors (cf. threshold, which is yet to be chosen), but as a rule of
 %thumb it's an order of magnitude. \textit{We conclude therefore the events will typically be a few megabytes in size}. 
-The estimate is supported by Monte Carlo studies.
+%The estimate is supported by Monte Carlo studies.
 
 
-In view of the factors due to the cosmic ray muons presented above, the actual beam particle event data will represent only a fraction of
-the total volume being read out.  
+%In view of the factors due to the cosmic ray muons presented above, the actual beam particle event data will represent only a fraction ofthe total volume being read out.  
 %As a concrete example, for an incident
 %electron of 4GeV/c momentum MC calculations indicate an average event size of $\sim$2MB, after zero-suppression.
 %This is less than 1\% of the estimate quoted above. 
 
-Total statistics resulting from the run plan presented in table~\ref{tab:RunPlan} is approximately 25M events total, 
-split across different particle species and incident momentum bins. Taking into account the 2.5~MB data load per event, 
-this leads to the estimate of YYY~PB of nominal data volume to be collected in this experiment. 
+Total particle statistics resulting from the number of spills presented in the run plan table~\ref{tab:RunPlan} multiple by data taken at different beam angles is approximately 50M events total.  Taking into account the 11~MB data load per event, this leads to the estimate of 550 TB of nominal data volume to be collected in this experiment. 
 
-In summary, we expect that tape storage of $O(PB)$ size will be required
-and a somewhat more modest disk space for raw data staging at CERN, for replication purposes. 
-We envisage storing the primary copy of raw data at CERN, with replicas at additional locations. 
+In summary, we expect that tape storage of $O(1 $PB$)$ size will be required and a somewhat more modest disk space for raw data staging at CERN, for replication purposes.  We envisage storing the primary copy of raw data at CERN, with replicas at additional locations. 
 %
 Processed and Monte Carlo data placement will require additional resources that are addressed in section \ref{dataprocess}.
 
@@ -120,7 +92,9 @@ Databases will be required to store Run Logs, Slow Controls records and detector
 
 Most database servers will need to be local to the experiment (i.e. at CERN) in order to reduce latency, guarantee reliability, minimize
 downtime due to network outages etc. A replication mechanism is foreseen to make data readily available at the US and other sites.
-The volume of data stored in these databases is expected to be modest and of the order of YYY B.
+The volume of data stored in these databases is expected to be modest and of the order of 100~GB.
+%Talk to Jon Paley who is in charge of the 35t DB.  He did not have a size for DUNE, but he did have a number for NOvA.  He suggested that the 40kton DUNE will have the same number of channels as NOvA and the NOvA DB uses 200 GB per year.  We should use significantly less.  100 GB is signficantly less than total requested disk space.
+
 
 \subsection{Computing and Software}
 
@@ -162,7 +136,7 @@ In the latter, there will likely be more than one processing step, thus multiply
 The derived data will at most contain a small fraction of the raw data in order to keep the data manageable.
 Hence the size of the processed data will likely by significantly smaller than the input (the raw data). 
 Given the consideration presented above, we will plan for
-$\sim$$ O($1PB$)$ of tape storage to keep the processed data. 
+$\sim$ $O($1 PB$)$ of tape storage to keep the processed data. 
 For efficient processing, disk storage will be necessary
 to stage a considerable portion of both raw data (inputs) and one or a few steps in processing (outputs).
 
