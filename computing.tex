@@ -23,11 +23,11 @@ The data volume will be dominated by the TPC data. Even though the photon detect
 Event sizes can be estimated from "first principles" under the assumption of some event topology and noting the significant amount of cosmic contamination at sea level.  Given standard values quoted for the cosmic ray muon flux at sea level, we arrive at a number of roughly 200 incident muons per square meters per second.  Taking into account the dimensions of the TPC, we estimate the area of the top face of its rectangular volume to be just over 50~m$^{2}$, which means that the detector will be subject to $\sim10^{4}$ particles per second.  The full electron drift time in liquid argon for a 3.6~m drift length is 2.25~ms, and each readout window for an event will contain three drift time windows which will include data from drift windows before and after the event.  Based on the cosmic rate and the size of the readout window, there is expected to be on average $\sim$68 track segments on top of the actual beam event. This estimate takes into account the readout of charge that may still be drifting from the window just prior to the triggered one and the loss of charge that is still drifting after the triggered window ends.  The resulting number of particles in a readout window will result in the readout of 6~MB per beam event.  
 %This assumes that you have 80~kbyte per 4 GeV mip and that cosmic muons at the surface have an averagae enegy of 4 GeV
 %Multiply by (68 muons + 1 beam particle) we get 5.5 MB
-In addition to the data associated with the individual particles in the event, there is channel overhead information.   Experience from the 35t detector at Fermilab indicates that with zero suppression that there is an event overhead 0.3~kB per channel for a readout of three drift windows.
+In addition to the data associated with the individual particles in the event, there is channel overhead information.   Experience from the 35t detector at Fermilab indicates that with zero suppression that there is an event overhead 6~kB per channel for a readout of three drift windows.
 %
 %This is based on 600kB zero suppressed readout of 3 drift windows in 35 t for 2048 channels.  There are 15,360 channels inn the CERN prototype, corresponding to the proposed TPC which consists of 6 APAs with 2560 channels each. 
 %
-Since there are 15,360 channels in the CERN prototype, the expected overhead corresponds to 5~MB per event.  Resulting total event size from overhead and charge from individual particles is 11~MB. 
+Since there are 15,360 channels in the CERN prototype, the expected overhead corresponds to 92~MB per event.  Resulting total event size from overhead and charge from individual particles is 100~MB. 
 %Background tracks due to cosmic ray particles must be properly identified and accounted for, in order to ensure high quality of the measurements and subsequent detector characterization. Since overlay of cosmic ray muons over beam events is stochastic in nature, the optimal way to achieve this is by recording signals which were produced ``just before'' and ``just after'' the arrival of the test particle from the beam line.  It will be possible because the design of the DAQ contains buffer memory that can be accessed after the trigger decision is made.  This technique will enable us to record and reconstruct either partial or complete background tracks present in the ``main'' event.
 
 
@@ -73,7 +73,7 @@ Since there are 15,360 channels in the CERN prototype, the expected overhead cor
 %electron of 4GeV/c momentum MC calculations indicate an average event size of $\sim$2MB, after zero-suppression.
 %This is less than 1\% of the estimate quoted above. 
 
-Total particle statistics resulting from the number of spills presented in the run plan table~\ref{tab:RunPlan} multiple by data taken at different beam angles is approximately 50M events total.  Taking into account the 11~MB data load per event, this leads to the estimate of 550 TB of nominal data volume to be collected in this experiment. 
+The total particle statistics in the run plan table~\ref{tab:RunPlan} is approximately 5M events in total.  Taking into account the data load per event, this leads to the estimate of $\sim$500 TB of nominal data volume to be collected in this experiment. 
 
 In summary, we expect that tape storage of $O(1 $PB$)$ size will be required and a somewhat more modest disk space for raw data staging at CERN, for replication purposes.  We envisage storing the primary copy of raw data at CERN, with replicas at additional locations. 
 %
