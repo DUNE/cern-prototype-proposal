@@ -3,7 +3,7 @@
 The primary goals of DUNE are to 
 constrain or discover CP violation in the lepton sector by determining 
 the value of the
-CP violating phase, $\delta_{CP}$, in the mixing matrix and
+CP violating phase, $\delta_{CP}$, and
 to determine the mass ordering of the three neutrino mass eignestates. 
 This will be accomplished through measurement of 
 appearance rate of electron neutrinos and electron anti-neutrinos 
@@ -32,8 +32,13 @@ $\delta_{CP}$ phase.
 \centering
 %\includegraphics[width=0.7\textwidth,height=7.7cm]{figures/lepbias10}
 \includegraphics[width=0.7\textwidth,height=7.7cm]{figures/CSPP_LeptonBias_nue_app_FHC}
+<<<<<<< HEAD
 \label{fig:newlabel}
   \caption{DUNE $\nu_e$ appearance signal and background spectra. 
+=======
+
+  \caption{\label{fig:spectraleffect} DUNE $\nu_e$ appearance signal and background spectra. 
+>>>>>>> 2c5b198b7d3b11295a0b469fcfe62a9005ecfa0b
 Solid curves show the effect of -5\% lepton energy scale shift on the 
 measured appearance $\nu_e$ and $\overline{\nu}_e$ signals assuming $\delta_{CP}=0$.
 The crosses show the expected signal shape for $\delta_{CP}=+\pi/2$ (lower crosses) and -$\pi/2$  (upper crosses). 
@@ -203,12 +208,13 @@ is achieved in those cases.
 \subsection {Beam Particle Requirements}
 
 Table~\ref{tab:runsum} summarizes the requested particle types and momenta along with 
-required exposures for the test beam program.
+required sample sizes for the test beam program.
 \begin{table}[h]
 \centering
 \begin{tabular}{|c|c|c|l|}
 \hline
-Particle & Momenta (GeV/c) & Exposure & Purpose \\ \hline
+Particle & Momenta (GeV/c) & Sample & Purpose \\ 
+ &  &  Size &  \\ \hline \hline
 $\pi^+$       & 0.2, 0.3, 0.4, 0.5, 0.7, 1, 2, 3, 5, 7     &  10K  & hadronic cal, $\pi^0$ content \\ \hline
 $\pi^-$       &  0.2, 0.3, 0.4, 0.5, 0.7, 1     &  10K  & hadronic cal, $\pi^0$ content \\ \hline
 $\pi^+$   &  2  &  600K & $\pi^o$/$\gamma$ sample \\ \hline
@@ -569,20 +575,11 @@ from the energy deposition pattern.
 
 \begin{figure}[h!]
   \centering
-%\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pid}
-%\includegraphics[width=0.49\textwidth,height=5.0cm]{figures/pid_probabilities}
 \includegraphics[width=0.49\textwidth,height=6.0cm]{figures/eff-bgdrej-diffen}
-\includegraphics[width=0.49\textwidth,height=6.0cm]{figures/APAT600_all_norm}
+%\includegraphics[width=0.49\textwidth,height=6.0cm]{figures/APAT600_all_norm}
   \caption{
- (left) Photon background rejection % Background rejection 
-versus electron identification efficiency for various energies, calculated for sample which pass the reconstruction. 
-%The background is due to mid-identified photons.
-The simulation was performed in APA design configuration (4.67~mm wire pitch, induction wires at $\pm$35.7$^{\circ}$ w.r.t. collection wires). (right) Photon background rejection versus electron identification efficiency
-integrated over the energy range 0.2-1.0 GeV for two different readout designs: APA parameters as on the left plot, ICARUS parameters: 3~mm wire pitch, induction wires at $\pm$60$^{\circ}$ w.r.t. collection wires. 
-Rejection and efficiency values are normalized to the full data sample size, including events which do not pass reconstruction.
-%(Left)Background rejection versus signal efficiency for various energies.
-%{\color{red}
-%}
+ Photon background rejection versus electron identification efficiency for various energies, calculated for and normalized to samples which pass the reconstruction. 
+The simulation was performed in APA design configuration (4.67~mm wire pitch, induction wires at $\pm$35.7$^{\circ}$ w.r.t. collection wires). 
 }
 \label{fig:egam}
 \end{figure}
@@ -600,25 +597,23 @@ APA geometry configuration ~\cite{dunecdr}.
 %event reconstruction chain 
 The results are found to be mildly dependent
 on incoming particle energy in the range of interest. 
-%Greater than 90\% background rejection can be 
-%achieved with $>$70\% efficiency for energies above 300~MeV. (Above 1~GeV 
-%rejection is even greater at high efficiency).
+%
 Our studies indicate that rejection and efficiency depend 
 on particular features of the geometry including wire pitch and plane 
 orientation which affect the reconstruction. 
-For example, Fig.~\ref{fig:egam} (right) shows a comparison of background
-rejection versus signal efficiency for simulated
-DUNE APA configuration compared with with ICARUS T600 geometry.
-%integrated over the energy range 0.2-1.0 GeV. 
+For example, a comparison of signal efficiencies for a simulated 
+DUNE APA configuration and with the ICARUS T600 geometry
+and averaged over the energy range 0.2-1.0 GeV shows 
+a 10\% higher efficiency for the 3~mm wire spacing used in ICARUS.
+%
 Pure samples of electrons and photons in the sub-GeV energy range will be
 needed to tune the separation algorithms and to measure 
 detector-dependent electron-photon separation efficiency and purity.
 
-%Therefore, it is critically important 
-%to study e/$\gamma$ separation in a prototype LAr TPC detector.
+%(right) Photon background rejection versus electron identification efficiency
+%integrated over the energy range 0.2-1.0 GeV for two different readout designs: APA parameters as on the left plot, ICARUS parameters: 3~mm wire pitch, induction wires at $\pm$60$^{\circ}$ w.r.t. collection wires. 
+%Rejection and efficiency values are normalized to the full data sample size, including events which do not pass reconstruction.
 
-%More discussion of specific samples to be used here.
-% move to table section.
 
 
 

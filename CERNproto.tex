@@ -48,7 +48,7 @@
 \date{\today}
 %\date{April 15, 2015}
 	\input{authors}
-%	\input{150506_v2_DUNE_authors}
+%	\input{150519_DUNE_authors}
 
 \maketitle
 
@@ -124,3 +124,131 @@ the sharing of responsibilities.
 \input{bibliography}
 
 \end{document}
+=======
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 			CERN prototype proposal 2014/2015  					%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+
+\topmargin=-0.5in
+\oddsidemargin=0in
+\evensidemargin=0in
+\textwidth=6.2in
+\textheight=9.25in
+
+\usepackage[dvips]{graphics}
+\usepackage{rotating}
+\usepackage{amssymb,amsmath}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{color}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+\usepackage{enumerate}
+
+%% draftwatermark causes infinite loop on SL6's ancient TeXLive
+%\usepackage[firstpage]{draftwatermark}
+\usepackage{lipsum}
+\usepackage{tikz}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{authblk}
+
+\RequirePackage{lineno}
+
+\bibliographystyle{plain}
+\bibliographystyle{unsrt}
+
+\usepackage{graphicx, subfigure}
+\usepackage[colorlinks=true,urlcolor=black,linkcolor=black,citecolor=black,bookmarks=true]{hyperref}
+
+\setcounter{tocdepth}{2}
+
+
+\begin{document}
+\linenumbers
+
+\title{  Proposal for a Engineering Test and Beam Calibration of a Full-Scale Single-Phase Liquid Argon Time Projection Chamber}
+
+\date{\today}
+%\date{April 15, 2015}
+%\input{authors}
+\input{150506_v2_DUNE_authors}
+
+\maketitle
+
+
+%\SetWatermarkText{DRAFT}
+%\SetWatermarkLightness{0.8}
+%\SetWatermarkScale{5}
+
+
+\begin{abstract}
+
+After a short introduction to the DUNE physics program we motivate the proposed single phase liquid argon detector engineering test and charged particle beam measurement program. A detailed motivation for the planned beam measurements is provided. The proposed
+single phase liquid argon detector design is described in detail. 
+The proposed single phase liquid argon detector described corresponds largely to the former LBNE detector design which has been adopted by the DUNE collaboration for the first 10~kt detector module at the far site.
+The detector will be placed inside a membrane cryostat which will be connected to a cryogenics systems for both of which we provide engineering details. 
+Furthermore we introduce and justify the anticipated calibration tools before 
+describing the required beam line and beam monitoring instrumentation for the project.
+Installation and computing plans are presented before
+the proposal concludes with a schedule, an overview of the organizational structure put in place to execute the plan and 
+the sharing of responsibilities.
+
+%analysis plans, 
+
+\end{abstract}
+
+\newpage
+\tableofcontents
+
+\newpage
+
+%\section{Introduction [$\sim$5 pages; {\color{red} Thomas/Greg/B.Wilson}]}
+\section{Introduction}
+	\input{introduction}
+%	\input{../150212_introduction_Greg}
+
+%\section{CERN prototype detector and charged particle beam test [$\sim$10 pages; {\color{red} Donna/Jarek}]}
+\section{Scientific Motivation and Measurement Program} % [$\sim$10 pages; {\color{red} Donna/Jarek}]}
+	\input{detbeamtest}
+	
+
+%\section{Single Phase LAr Detector [$\sim$10 pages; {\color{red} J. Stewart et al.}]}
+\section{Single Phase LAr Detector} 
+%\rm
+
+	\input{singlephasedet}
+
+
+\section{Cryostat and Cryogenics system} % [$\sim$5 pages; {\color{red} David/Barry/Jack}]}
+	\input{cryo.tex}
+	
+\section{Calibration}
+	\input{calibration}
+
+%\newpage
+\section{Charged Particle Test Beam Requirements} % [$\sim$10 pages; {\color{red} Cheng-Ju}]}
+	\input{testbeamreq}
+
+
+\section{Computing, data handling and software} %  [$\sim$3 pages; {\color{red} Maxim/Craig}]}
+	\input{computing}
+
+\section{Installation and infrastructure}  % [5 pages; {\color{red} David/Jack/Cheng-Ju/Thomas}]}
+	\input{nuplatform}
+	
+	
+\section{Schedule, organization and cost estimate} % [$\sim$5 pages; {\color{red} Thomas/Greg}]}
+	\input{organ}
+
+\section{Summary}  % [$\sim$2 pages; {\color{red} Thomas/Greg}]}
+	\input{summary}
+
+
+\input{bibliography}
+
+\end{document}
+>>>>>>> 447cbe6d5c3edeea2c787cd9b18b4297f3aad2c3
