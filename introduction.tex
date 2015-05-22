@@ -1,66 +1,36 @@
 
-
-
-
-The preponderance of matter over antimatter in the early Universe, the dynamics of the supernova bursts that produce the heavy elements necessary for life and whether nucleons eventually decay - these mysteries at the forefront of particle physics and astrophysics are key to understanding the early evolution of our Universe, its current state and its eventual fate. The Deep Underground Neutrino Experiment (DUNE)
-in combination with the Long-Baseline Neutrino Facility (LBNF) represent an extensively developed plan for a world-class experiment dedicated to addressing these questions.
-
-Experiments carried out over the past half century have revealed that neutrinos are found in three states, or flavors, and can transform from one flavor into another. These results indicate that each neutrino flavor state is a mixture of three different mass states. In a single experiment, DUNE will enable a broad exploration of the three-flavor model of neutrino physics with unprecedented detail. Chief among its potential discoveries is that of matter-antimatter asymmetries (through the mechanism of charge-parity violation) in neutrino flavor mixing - a step toward unraveling the mystery of matter generation in the early Universe. Independently, determination of the unknown neutrino mass ordering and precise measurement of neutrino mixing parameters by DUNE may reveal new fundamental symmetries of Nature.
-
-Grand Unified Theories, which attempt to describe the unification of the known forces, predict rates for proton decay that cover a range directly accessible with the next generation of large underground detectors such as the DUNE detector. The experiment's sensitivity to key proton decay channels will offer unique opportunities for the ground-breaking discovery of this phenomenon.
-
-Neutrinos emitted in the first few seconds of a core-collapse supernova carry with them the potential for great insight into the evolution of the Universe. DUNE's capability to collect and analyze this high-statistics neutrino signal from a supernova within our galaxy would provide a rare opportunity to peer inside a newly-formed neutron star and potentially witness the birth of a black hole.
-
-To achieve these goals, DUNE and LBNF are centered around three central components: (1) a new, high-intensity neutrino source generated from a megawatt-class proton accelerator at Fermi National Accelerator Laboratory (Fermilab), (2) a near neutrino detector system installed just downstream of the source, and (3) a massive liquid argon (LAr) time-projection chamber (TPC) deployed as a far detector deep underground at the Sanford Underground Research Facility (SURF). This facility, located at the site of the former Homestake Mine in Lead, South Dakota, is $\sim$1,300 km from the neutrino source at Fermilab - a distance (baseline) that delivers optimal sensitivity to neutrino charge-parity symmetry violation and mass ordering effects. This ambitious yet cost-effective design incorporates scalability and flexibility and can accommodate a variety of upgrades and contributions.
-
-DUNE plans to place modular LAr TPCs with a combined total fiducal mass of at least  40 kton in the underground facility at Homestake to intercept the neutrino beam.
-The first 10~kton LAr TPC module is planned to be constructed underground on the time scale of 2022.
-
-With its exceptional combination of experimental configuration, technical capabilities, and potential for transformative discoveries, DUNE promises to be a vital facility for the field of particle physics worldwide, providing physicists from institutions around the globe with opportunities to collaborate in a twenty to thirty year program of exciting science.
-
-
-
-\subsection{Key physics goals of DUNE}
-
-
-The primary goal of DUNE  is to measure the disappearance rate of muon neutrinos and muon anti-neutrinos and the corresponding appearance rate of electron neutrinos and electron anti-neutrinos over the 1300~km baseline of the experiment. Precise measurement of this
-phenomenon would allow for determination of the mass ordering of the three mass eigenstates and could potentially lead to the discovery of CP violation in the lepton sector through the measurement of the
-CP violation phase, $\delta_{CP}$, which may connect to the dominance of matter
-over antimatter in the universe.	
-
-
-The full power of the DUNE experiment to perform a careful test of the three-flavor paradigm will come from a measurement of the detected neutrino spectral shape over a broad energy range.  For a baseline of 1300~km the first maximum of the oscillation probability occurs in the 2 - 3~GeV energy range with additional oscillation maxima at lower energies so the high intensity neutrino flux must be maximized in this energy range. It is desirable to have sufficient flux in the sub-GeV energy range to enable a measurement of the rapidly changing spectral shape in the region of the second maximum in the oscillation probability. It is this requirement on the neutrino energy spectrum, and the subsequent energy range of charged particles that result from their interactions, that determines the performance requirements for the DUNE detectors. 
-
-
-\subsection{Single-phase LAr detector}
-
-The basic components of the liquid argon detector include time projection chamber (TPC) and readout electronics housed in a cryostat and the associated cryogenics system. 
-
-The cryostat contains the liquid argon target material and the cryogenic system keeps the liquid argon at a temperature of 89K, and maintains the required purity through a pump and filter system. A uniform electric field is created within the TPC volume between cathode planes and anode wire planes. Charged particles passing through the TPC release ionization electrons that drift to the anode wires. The bias voltage is set on the anode plane wires so that ionization electrons drift between the first several (induction) planes and is collected on the last (collection) plane. Readout electronics amplify and continuously digitize the induced waveforms on the sense wires at several MHz, and transmit these data to the DAQ system for analysis. The wire planes are oriented at different angles allowing a 3D reconstruction of the particle trajectories. In addition to these basic components, a photon detection system
-is included in the design to provide timing information for events not associated with the neutrino beam, enabling the study of proton decay and be sensitive to galactic supernova neutrinos.
-
-The LAr detector design is characterized by a modular approach in which the LAr volume in the cryostat is instrumented with a number of identical anode wire plane assemblies (APA) and associated cathode plane assemblies (CPA). To a large extent, scaling from detector volumes containing from a few to several hundred of such modules should be straightforward with low and predictable risk.
+{\it 
+This document describes the motivation and technical details of the proposed detector. Section~\ref{detbeamtest} describes the scientific motivation and the planned program of measurements. The layout of the single phase liquid argon detector and technical details of the detector components are specified in section~\ref{singlephasedet}. In section~\ref{cryo} we provide information on the proposed cryostat which houses the detector as well as on the required cryogenics system. Section~\ref{calibration} introduces our approach to calibrating the detector and the necessary tools. We describe the requirements for the charged particle beam and a draft run plan in section~\ref{testbeamreq}.
+In section~\ref{computing} we estimate computing and data handling needs before describing the installation procedure for the detector
+and the interface to the CERN Neutrino Platform in section~\ref{nuplatform}. A Schedule and organization are presented in section~\ref{organ} before we conclude in section~\ref{summary}.}
 
 
 \subsection{Goals for the prototype detector and beam test}
 
 
-The CERN test single-phase prototype detector is a crucial milestone that will inform the construction and operation of the first 10 kt DUNE far detector module.  The prototype detector and beam test serve two principal functions. 
-The first is to serve as an engineering prototype to validate the performance of all detector components,
-establish and commission production sites, and to test the installation procedure. 
-The second is to collect and response of the detector to charged particles of different type and energy. 
-Results from these measurements serve to validate MC simulations, serve as data input to sensitivity studies 
-of the DUNE experiment and provide validation tuning for event reconstruction and particle identification tools.\\
-To mitigate the risks associated with extrapolating small scale versions of the single-phase LAr TPC technology 
-to a full-scale detector element, it is essential to benchmark the operation of full-scale detector elements
+The CERN test single-phase prototype detector is a crucial milestone for the DUNE experiment that will inform the construction and operation of the first 10~kt DUNE far detector module.  The prototype detector and beam test serve two principal functions. 
+
+The first goal is 
+to collect and study the response of the detector to charged particles of different type and energy. 
+Results from these measurements serve to assess systematic detector uncertainties and
+validate MC simulations. They also enable validation and tuning of event reconstruction algorithms and particle identification tools.\\
+
+The second goal is 
+to serve as an engineering prototype to validate the performance of all detector components,
+establish and commission production sites and associated quality assurance procedures and to validate the installation procedure. 
+
+In order to mitigate the risks associated with extrapolating 
+from a detector with a few TPC modules to one which contains several hundred 
+ it is essential to benchmark the operation of full-scale detector elements
 and perform measurements in a well characterized charged particle beam.  
 
-Many basic detector performance parameters can be established with cosmic ray muons and the results are critical input to finalizing the production procedures of the first 10 kt DUNE far detector components. Potentially problematic components can be identified and improvements and optimizations of the detector design for future far detector modules can be developed. However, the use of a well-defined charged particle test beam will significantly enhance the detector performance measurements.
+Numerous basic detector performance parameters can be established with cosmic ray muons and these results are a critical input to finalizing the production procedures of the first 10~kt DUNE far detector components. Potentially problematic components can be identified and improvements and optimizations of the detector design for future far detector modules can be developed. The use of a well-defined charged particle test beam will significantly enhance our understanding of the detector performance.
+%
 In particular, the following checks are anticipated:
 \begin{enumerate}
  \item characterizing the performance of full scale TPC module
  \item studying the performance of the photon detection system
- \item testing and evaluating the performance of detector calibration tools (e.g. laser system)
+ \item testing and evaluating the performance of detector calibration tools
   \item verifying the functionality of cold TPC electronics under LAr cryogenic conditions
   \item performing a full-scale structural test under LAr cryogenic conditions
   \item verifying argon contamination levels and associated mitigation procedures
@@ -68,16 +38,10 @@ In particular, the following checks are anticipated:
   \item identifying flaws and inefficiencies in the manufacturing process
 \end{enumerate}
 
-The physics sensitivity of the DUNE experiment has been estimated based on detector performance characteristics published in the literature, simulation-based estimates as well as a variety of assumptions about the anticipated performance of the future detector and event reconstruction and particle identification algorithms.
-The proposed single-phase LAr prototype detector and CERN beam test aim to replace these assumptions with measurements for the full scale DUNE detector components and the presently available algorithms.
-
-In this way the accuracy and reliability of the DUNE physics sensitivity projections will be significantly enhanced by these measurements.  The beam measurements will serve as a calibration data set to tune the Monte Carlo simulations and serve as a reference data set for measurements of the future DUNE detector. \\
+The beam measurements will serve as a calibration data set to tune the Monte Carlo simulations and serve as a reference data set for measurements of the future DUNE detector. 
 %
-
 In order to make such precise measurements, the detector will need to accurately identify and measure the energy of the particles produced in the neutrino interaction with Argon which will range from hundreds of MeV to several GeV.
-
-
-
+%
 More specifically, the goals of the prototype detector and beam test measurements include the use of a charged particle beam to:
 \begin{enumerate}
 \item measure the detector calorimetric response for
@@ -100,27 +64,36 @@ More specifically, the goals of the prototype detector and beam test measurement
     \item muon capture for charge identification
  \end{enumerate}
 \end{enumerate}
-
+%
 The CERN charged particle beam lines provide an opportunity to perform this crucial test of the 
-proposed single-phase LAr TPC and thereby inform the decision regarding the far detector design and layout for DUNE.
-In order to be of greatest value to this decision making process results should be available before the 2018 CERN accelerator shutdown.
-
-
-A detailed estimate enumerating the desired minimum integrated particle counts as a function
-of charged particle species and momentum is converted into a run plan based on realistic beam composition, particle energies and efficiency information. 
-
-The goal is to take a first beam data run in 2018 before the long shutdown of the LHC. 
-The requested beam time has been estimated and amounts to {\color{red} $\sim$ XX weeks} of data collection. 
+proposed single-phase LAr TPC.
+%
+%We estimate the desired minimum integrated particle counts as a function of charged particle species and momentum
+% is converted into a run plan based on realistic beam composition, particle energies and efficiency information. 
+%
 Experience gained from construction, installation and commissioning of the CERN single-phase prototype detector 
-as well as performance tests with cosmic ray data are expected to lead to an optimization of equivalent phases 
+as well as performance tests with cosmic ray data are expected to lead to a detector optimization of equivalent phases 
 for the DUNE far detector. 
+
 Additional follow-up measurements with potentially modified detector components form a potential future extension 
 to the proposed program.\\
 
-This document describes the motivation and technical details of the proposed detector. Section~\ref{detbeamtest} describes the scientific motivation and the planned program of measurements. The layout of the single phase liquid argon detector and technical details of the detector components are specified in section~\ref{singlephasedet}. In section~\ref{cryo} we provide information on the proposed cryostat which houses the detector as well as on the required cryogenics system. Section~\ref{calibration} introduces our approach to calibrating the detector and the necessary tools. We describe the requirements for the charged particle beam and a draft run plan in section~\ref{testbeamreq}.
-In section~\ref{computing} we estimate computing and data handling needs before describing the installation procedure for the detector
-and the interface to the CERN Neutrino Platform in section~\ref{nuplatform}. Schedule and organization are presented in section~\ref{organ} before
-ending with concluding remarks in section~\ref{summary}.
+
+\subsection{Single-phase LAr detector}
+
+%DUNE plans to place modular LAr TPCs with a combined total fiducal mass of at least  40 kton in the underground facility at Homestake to 
+%detect neutrinos and search for proton decay.
+%The first 10~kton LAr TPC module is planned to be constructed underground on the time scale of 2022.
+
+The basic components of the liquid argon detector include a time projection chamber (TPC) housed in a cryostat which is connected to  
+a cryogenics system. 
+%
+The cryostat contains the liquid argon target material and the cryogenic system keeps the liquid argon at a temperature of 89K, and maintains the required purity through a pump and filter system. A uniform electric field is created within the TPC volume between cathode planes and anode wire planes. Charged particles passing through the TPC release ionization electrons that drift to the anode wires. The bias voltage is set on the anode plane wires so that ionization electrons drift between the first several (induction) planes and is collected on the last (collection) plane. Readout electronics amplify and continuously digitize the induced waveforms on the sense wires at several MHz, and transmit these data to the DAQ system for analysis. The wire planes are oriented at different angles allowing a 3D reconstruction of the particle trajectories. In addition to these basic components, a photon detection system
+is included in the design to provide timing information for events not associated with the neutrino beam, enabling the study of proton decay and be more sensitive to galactic supernova neutrinos.
+
+Our LAr detector design is characterized by a modular approach in which the LAr volume in the cryostat is instrumented with a number of identical anode wire plane assemblies (APA) and associated cathode plane assemblies (CPA). To a large extent, scaling from detector volumes containing a few of such modules  to several hundred should be feasible with low and predictable risk.\\
+
+
 
 
 
