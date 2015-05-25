@@ -1,11 +1,8 @@
-{\color{red} Need a better introductory paragraph for TPC electronics giving a quick high level overview before describing details; should include channel count, how many channels are grouped, how many channels read through the same cables, etc.}
-
-The {\bf TPC electronics} is designed to operate at liquid argon temperature and is placed as close to the sense wires as possible,
-thus minimizing the capacitance and the preamplifier noise.
+A single APA has 2560 sense wires that need to be readout.  In order to  minimizing the capacitance, the preamplier noise, and the number of penetrations through the cryostat, the front-end (FE) electronics boards of the {\bf TPC electronics} are mounted in the cryostat on one end of the wire frame just outside of the active TPC volume.  A single APA is readout by 20 sets of FE readout boards with each FE reading in 128 wire channel inputs (40 U-view + 40 V-view + 48 X-view) and each FE transmitting 4 outputs through the cryostat to back-end electronics.
+ 
 The present design has a maximum wire length of 7.3~m (induction planes)
 with a corresponding capacitance of 164~pF and an expected intrinsic noise of 400 electrons.
-The preamplifiers include shaping circuits, and are implemented in 16 channel front-end (FE) ASICs,
-which couple directly to 16 channel, 12 bit ADC ASICs operating at 2~MS/s, which include a 1:8 multiplexing stage.
+The preamplifiers include shaping circuits, and are implemented in 16 channel FE ASICs, which couple directly to 16 channel, 12 bit ADC ASICs operating at 2~MS/s, which include a 1:8 multiplexing stage.
 The ADCs are read out by a commercial FPGA, which provides an additional factor of 4 in multiplexing.
 This level of multiplexing is low enough for transmitting the entire raw data stream,
 while also being high enough that the number of signal lines is actually smaller than the number of the various
