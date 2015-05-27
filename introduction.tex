@@ -1,30 +1,33 @@
 
 {\it 
-This document describes the motivation and technical details of the proposed detector. Section~\ref{detbeamtest} describes the scientific motivation and the planned program of measurements. The layout of the single phase liquid argon detector and technical details of the detector components are specified in section~\ref{singlephasedet}. In section~\ref{cryo} we provide information on the proposed cryostat which houses the detector as well as on the required cryogenics system. Section~\ref{calibration} introduces our approach to calibrating the detector and the necessary tools. We describe the requirements for the charged particle beam and a draft run plan in section~\ref{testbeamreq}.
-In section~\ref{computing} we estimate computing and data handling needs before describing the installation procedure for the detector
-and the interface to the CERN Neutrino Platform in section~\ref{nuplatform}. A Schedule and organization are presented in section~\ref{organ} before we conclude in section~\ref{summary}.}
+This document describes the motivation and technical details of the proposed detector. 
+In section~\ref{intro} we give a brief overview of the goals for the detector and beam test.
+Section~\ref{detbeamtest} describes the scientific motivation and the planned program of measurements. The layout of the single phase liquid argon detector and technical details of the detector components are specified in section~\ref{singlephasedet}. In section~\ref{cryo} we provide information on the proposed cryostat which houses the detector as well as on the required cryogenics system. Section~\ref{calibration} introduces our approach to calibrating the detector and the necessary tools to do so. We describe the requirements for the charged particle beam and a preliminary run plan in section~\ref{testbeamreq}.
+In section~\ref{computing} we estimate computing and data handling needs before we describe the installation procedure for the detector
+and the interface to the CERN Neutrino Platform in section~\ref{nuplatform}. We present schedule and organization for the proposed activities in section~\ref{organ} before we conclude in section~\ref{summary}.}
+
+\label{intro}
 
 
 \subsection{Goals for the prototype detector and beam test}
 
-
-The CERN test single-phase prototype detector is a crucial milestone for the DUNE experiment that will inform the construction and operation of the first 10~kt DUNE far detector module.  The prototype detector and beam test serve two principal functions. 
+The CERN single-phase prototype detector is a crucial milestone for the DUNE experiment that will inform the construction and operation of the first 10~kt DUNE far detector module.  The prototype detector and beam test serve two principal functions. 
 
 The first goal is 
-to collect and study the response of the detector to charged particles of different type and energy. 
+to measure and study the response of the detector to charged particles of different types and energies. 
 Results from these measurements serve to assess systematic detector uncertainties and
-validate MC simulations. They also enable validation and tuning of event reconstruction algorithms and particle identification tools.\\
+validate MC simulations. They also enable validation and tuning of event reconstruction algorithms and particle identification tools.
 
 The second goal is 
 to serve as an engineering prototype to validate the performance of all detector components,
-establish and commission production sites and associated quality assurance procedures and to validate the installation procedure. 
-
+establish and commission detector production sites and associated quality assurance procedures and to validate the installation procedure. 
+%
 In order to mitigate the risks associated with extrapolating 
 from a detector with a few TPC modules to one which contains several hundred 
  it is essential to benchmark the operation of full-scale detector elements
 and perform measurements in a well characterized charged particle beam.  
 
-Numerous basic detector performance parameters can be established with cosmic ray muons and these results are a critical input to finalizing the production procedures of the first 10~kt DUNE far detector components. Potentially problematic components can be identified and improvements and optimizations of the detector design for future far detector modules can be developed. The use of a well-defined charged particle test beam will significantly enhance our understanding of the detector performance.
+Numerous basic detector performance parameters can be established with cosmic ray muons and these results are a critical input to finalizing the production procedures of the first 10~kt DUNE far detector components. Potentially problematic components can be identified and improvements and optimizations of the detector design for future far detector modules can be developed. 
 %
 In particular, the following checks are anticipated:
 \begin{enumerate}
@@ -38,6 +41,11 @@ In particular, the following checks are anticipated:
   \item identifying flaws and inefficiencies in the manufacturing process
 \end{enumerate}
 
+Experience gained from construction, installation and commissioning of the CERN single-phase prototype detector 
+as well as performance tests with cosmic ray data are expected to lead to a detector optimization of equivalent phases 
+for the DUNE far detector. 
+
+The use of a well-defined charged particle test beam will significantly enhance our understanding of the detector performance beyond the criteria already mentioned.
 The beam measurements will serve as a calibration data set to tune the Monte Carlo simulations and serve as a reference data set for measurements of the future DUNE detector. 
 %
 In order to make such precise measurements, the detector will need to accurately identify and measure the energy of the particles produced in the neutrino interaction with Argon which will range from hundreds of MeV to several GeV.
@@ -51,7 +59,7 @@ More specifically, the goals of the prototype detector and beam test measurement
 \end{enumerate}
 \item study e/$\gamma$-separation capabilities
 \item measure event reconstruction efficiencies as a function of energy and particle type
-\item measure performance of particle identification algorithms as function of energy and for realistic detector conditions
+\item measure performance of particle identification algorithms as function of energy and for real detector conditions
 \item assess single particle track calibration and reconstruction
 %		-- characterize performance of algorithms
 \item validate accuracy of Monte Carlo simulations for relevant energy ranges as well as directions with respect to the wire-plane geometry
@@ -60,7 +68,7 @@ More specifically, the goals of the prototype detector and beam test measurement
 \item study other topics with the collected data sets
  \begin{enumerate}
     \item pion interaction kinematics and cross sections
-    \item kaon interaction cross section to remove proton decay backgrounds ...
+    \item kaon interaction cross section to remove proton decay backgrounds
     \item muon capture for charge identification
  \end{enumerate}
 \end{enumerate}
@@ -71,11 +79,7 @@ proposed single-phase LAr TPC.
 %We estimate the desired minimum integrated particle counts as a function of charged particle species and momentum
 % is converted into a run plan based on realistic beam composition, particle energies and efficiency information. 
 %
-Experience gained from construction, installation and commissioning of the CERN single-phase prototype detector 
-as well as performance tests with cosmic ray data are expected to lead to a detector optimization of equivalent phases 
-for the DUNE far detector. 
-
-Additional follow-up measurements with potentially modified detector components form a potential future extension 
+Additional follow-up measurements with modified detector components form a potential future extension 
 to the proposed program.\\
 
 
