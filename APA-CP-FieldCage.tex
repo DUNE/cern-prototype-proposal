@@ -1,6 +1,6 @@
 % Input from Bo and Lee Greenler on the TPC detail design
 
-\subsubsection{Anode Plane Assemblies (APAs)}
+\subsubsection{Anode plane assemblies (APAs)}
 
 % input from Lee Greenler
 
@@ -19,10 +19,10 @@
 \end{figure}
 
 
-Each APA (Figure \ref{fig:tpc_apa_overview}) is instrumented with 3 layers of signal wires, one longitudinal collection plane and two 35.7$^\circ$ angled induction planes with an additional outer grid plane that helps maintain the field. 
+Each APA (Fig.~\ref{fig:tpc_apa_overview}) is instrumented with 3 layers of signal wires, one longitudinal collection plane and two 35.7$^\circ$ angled induction planes with an additional outer grid plane that helps maintain the field. 
 The overall dimensions of the active area are 2.3 m wide and 6 m long. The dimension of the wire planes were selected to fit down the Ross shaft at SURF, the future location of the DUNE far detector, be compatible with a standard HiCube transport container, and allow construction from readily available materials.  The wire angle was selected so that a given angled induction wire will not overlay any longitudinal collection wire more than once in order to reduce ambiguities caused by the wrapped wire construction. Partial wire layers are shown in 
 Figure ~\ref{fig:tpc_apa_overview} at the bottom.  With a wire pitches of 4.67 mm (diagonal layers) and 4.79 (straight layers), the total number of readout channels in an APA is 2560.
-The grid layer is not depicted in Figure ~\ref{fig:tpc_apa_overview} for clarity. The underlying structure of each APA is a framework of rectangular, stainless steel tubing.  The side and bottom edges of the frame are lined with multiple layers of fiberglass circuit boards, notched along the edges to support and locate the wires that cross the APA face. A set of FR4 combs are glued to the APA frame to capture the wires at regular intervals. The front-end electronics boards are mounted at the top end of the frame and protected by a metal enclosure. 
+The grid layer is not depicted in Fig.~\ref{fig:tpc_apa_overview} for clarity. The underlying structure of each APA is a framework of rectangular, stainless steel tubing.  The side and bottom edges of the frame are lined with multiple layers of fiberglass circuit boards, notched along the edges to support and locate the wires that cross the APA face. A set of FR4 combs are glued to the APA frame to capture the wires at regular intervals. The front-end electronics boards are mounted at the top end of the frame and protected by a metal enclosure. 
 
 
 The distance between wire planes is 4.8 mm (3/16 in) matching the standard printed circuit board thickness, and are designed to maintain optimal signal formation. The four wire planes will be electrically biased so that electrons from ionizing-particle tracks completely drift past the first three planes and are collected by the fourth plane. Calculations show that the minimum bias voltages needed to achieve this goal are $V_G$ = -665 V, $V_U$ = -370 V, $V_V$ = 0 V and $V_X$ = 820 V respectively (where G, U, V, and X are the wire-layer labels from outside in, towards the frame).  It is convenient to set one of the wire planes to ground so that the wires can be DC coupled to the front-end readout electronics. In this instance, the V wire plane is set to ground potential to reduce the maximum bias voltages on the other wire planes, and enable the use of lower voltage rated AC coupling capacitors. A grounded mesh plane, located 4.8 mm behind the collection (X) plane, prevents the electric field around this set of wires from being distorted by the metal frame structure and the wires on the opposite side of the frame. It also shields the sensing wires from potential EM interferences from the photon detectors (Fig.~\ref{fig:pd_insertion}) mounted within the frame. The mesh should have a wire pitch less than 2 mm to ensure a uniform electric field while maintaining good optical transparency.
@@ -36,7 +36,7 @@ The distance between wire planes is 4.8 mm (3/16 in) matching the standard print
 \end{figure}
 
 
-\subsubsection{CPA and Field Cage}
+\subsubsection{CPA and field cage}
 
 % input from Bo Yu
 
@@ -76,7 +76,7 @@ voltage on the cathode plane must reach $-$180~kV. One high voltage power supply
 \centering
 \includegraphics[width=.49\textwidth]{figures/TPC_FCA_1}
 %\includegraphics[width=.49\textwidth]{figures/TPC_FCA_2}
-\caption{A section of the field cage in the 35ton TPC.}
+\caption{A section of the field cage in the 35 t TPC.}
 \label{fig:tpc_fca_1}
 \end{figure}    
 
@@ -86,7 +86,7 @@ The field cages are constructed using copper-clad FR4 sheets reinforced with fib
  
 %Since the field cage completely encloses the TPC drift region on four (of six) sides, with the remaining two sides blocked by the solid cathodes, the FR4 sheets must  be frequently perforated to allow natural convection of the liquid argon.  The ``transparency'' of the perforation will be determined by a detailed LAr computerized fluid dynamic (CFD) study.
 
-The left of Figure~\ref{fig:tpc_fca_1} shows a section of the field cage in the 35ton TPC as it was being assembled.  The 35ton TPC test results will inform us whether we should improve upon the current design, or consider alternate designs.
+The left of Fig.~\ref{fig:tpc_fca_1} shows a section of the field cage in the 35 t TPC as it was being assembled.  The 35 t TPC test results will inform us whether we should improve upon the current design, or consider alternate designs.
 % change the design concept all together for this and future detectors.  
 %One area of concern with the current field cage design is that the electric field at the edges of the copper strips is still quite high due to the thinness of the copper.  
 %One possible remedy is to cover the entire surface of the field cage with a high resistive coating.  The resistivity between strips due to this coating must be kept many orders of magnitudes higher than the divider resistance to avoid distortion to the drift field.  Figure~\ref{fig:tpc_fca_1} (Right-Panel) shows an FEA simulation of such a configuration.

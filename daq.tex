@@ -3,7 +3,7 @@ photon detector and beam detector readouts using the
 artDAQ data acquisition toolkit using a farm of commercial 
 computers connected with an Ethernet switch.  ArtDAQ is 
 in use on several experiments at Fermilab.  We are using it
-on the 35t prototype, so we will have considerable 
+on the 35 t prototype, so we will have considerable 
 experience by the time of the CERN test.  
 
 The data collection for the CERN test will operate in a mode 
@@ -18,10 +18,10 @@ which work in parallel, each node receiving all the data from all
 the detectors for the time intervals it is responsible for processing.
 There will be 32 parallel incoming data streams from the TPCs
 and 16 streams from the photon detectors.  There will be an additional
-stream from the trigger board (the same board as used by 35t detector) 
+stream from the trigger board (the same board as used by 35 t detector) 
 which will receive input of the spill 
 gate, warning of extraction, and pattern-unit bits from trigger counters
-and other beamline instrumentation which is described in section \ref{beaminstrument}.
+and other beamline instrumentation which is described in Section \ref{beaminstrument}.
 
 Synchronisation across all the input sources is essential in order 
 that artDAQ can bring together the data from the input streams correctly for
@@ -46,7 +46,7 @@ To avoid oversized output data files, when a predetermined file size is reached,
 the aggregator will switch to writing to a new file.  
 
 Improved versions of the software systems which are being prototyped at the 
-35t test will be available for the CERN test including (a) Run control which 
+35 t test will be available for the CERN test including (a) Run control which 
 controls and monitors the DAQ processes and allows run starts and stops to
 be performed by the operator (b) online monitoring (c) slow control of 
 voltages and temperatures being used by the electronics. The trigger board includes facilities 
