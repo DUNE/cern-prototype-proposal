@@ -14,18 +14,18 @@ This schedule is based on experience of designing and manufacturing components f
 %
 \begin{figure}[htb]
   \centering
-\includegraphics[scale=0.34]{figures/150514_CERN_test_sched.png}
-  \caption{Rolled up version of a draft schedule for manufacturing, installing and commissioning the CERN prototype detector. A 2 - 3 months data taking period is included in the schedule. }
+\includegraphics[scale=0.34]{figures/150526_CERNproto_schedule.png}
+  \caption{Rolled up version of a draft schedule for the CERN single phase prototype detector. A 2 - 3 months data taking period is included in the schedule. }
   \label{fig:schedule}
 \end{figure}
 %
 Pending an approval of the effort proposed in this document we foresee the following milestones
 \begin{itemize}
-\item 2016: Cryostat constructed
+\item early 2017: Cryostat constructed
 \item early 2016: TPC production readiness review
-\item spring 2017: Engineering Trial Detector Assembly
-\item early 2018: Detector Installation
-\item spring 2018: Detector commissioning 
+\item 2016/2017: Engineering Trial Detector Assembly
+\item 2017/2018: Detector Installation
+\item 2018: Detector commissioning 
 \end{itemize}
 
 
@@ -67,44 +67,51 @@ The CERN prototype coordinators work closely with the DUNE technical coordinator
 The CTC also coordinates closely with the CERN Neutrino Platform leader.
 The leaders of the "measurement program + analysis" subgroup work closely with the DUNE physics and software tools working group leaders. The leader of the "beam" subgroup works closely with the relevant CERN beam-line group leader.
 
-The project work break down structure (WBS) for the CERN single phase prototype detector down to level 3 and along with contributing institutions is shown in table~\ref{tab:wbs}.
+The deliverables for the CERN single phase prototype detector down to level 3, associated DUNE project 
+work break down structure (WBS)  numbers and contributing institutions are shown in table~\ref{tab:wbs}.
 %
 \begin{table}[h]
 \centering
 \begin{tabular}{|l l c|}
 \hline
-\textbf{WBS no. } & \textbf{Description}  & \textbf{Contributing Institutes}  \\ \hline
+\textbf{item no. } & \textbf{Deliverable}  & \textbf{Presently Contributing}  \\ 
+ &   & \textbf{Institutes}  \\ \hline
 
-X.1 & Single Phase LAr detector & \\
-X.1.1 & TPC & Wisconsin \\
-X.1.2 & Photon Detection System  &  ANL, CSU, IU, LSU \\
-X.1.3 & Electronics  &   \\
-X.1.4 &  DAQ & Oxford, SLAC  \\
-X.1.5 & Installation  & Duke  \\
-X.1.6 & ...  & ...  \\ \hline
+1. & Single phase LAr detector & \\
+1.1 & TPC & BNL, Princeton, Wisconsin \\
+1.2 & Photon detection system  &  ANL, Campinas, CSU, Hawaii, IU, LSU \\
+1.3 & Cold electronics  & BNL, Fermilab  \\ 
+1.4 &  DAQ & Cambridge, LANL, Oxford, Penn, SLAC  \\
+1.5 & Installation & Duke, Fermilab  \\ \hline
 
-X.2 & Experiment Infrastructure  &   \\
-X.2.1 & Cryostat + Top Cap &  CERN, Fermilab \\
-X.2.2 & Cryogenics System  &  CERN, Fermilab \\
-X.2.3 &  Slow control ? &  CERN \\
-X.2.4 &  Clean Room & CERN   \\ 
-X.2.5 &  Logistics \& Integration & CERN  \\ 
-X.2.6 &  Detector Commissioning \& operations &  all  \\ 
-X.2.7 &  Beam \& Run Coordination &  LBNL, CERN \\ \hline
 
-X.3 &  Safety ?? &   \\ \hline
+2. & Experiment Infrastructure  &   \\
+2.1 & Cryostat &  CERN, Fermilab, LBNL \\
+2.2 & Top cap + feedthroughs &  BNL, CERN, Fermilab \\
+2.3 & Cryogenics system  &  CERN, Fermilab \\
+2.4 &  HV power supplies  &  ETHZ \\
+2.5 &  Slow control  &  CERN \\
+2.6 &  Clean room & CERN   \\ 
+2.7 &  Logistics \& Integration & CERN  \\ 
+2.8 &  Detector commissioning  &  all  \\ 
+2.9 &  Detector operations &  all  \\ 
+2.10 &  Beam \& Run coordination &  LBNL, CERN \\ \hline
 
-X.4 & Scientific Effort &    \\ 
-X.4.1 & Software \& Simulations &  all  \\
-X.4.2 & Data analysis &  all  \\ \hline
+3. & Scientific Effort &    \\ 
+3.1 & Software \& Simulations &  all  \\
+3.2 & Data analysis &  all  \\ \hline
 
 \end{tabular}
-\caption{Work break down structure down to level 3.}
+\caption{List of work packages and deliverables. Institutions shown are present contributors only.} 
+
 \label{tab:wbs}
 \end{table}
 %
 Work on a MOU between the CERN nu-platform and DUNE describing responsibilities, listing institutions involved and defining deliverables has started. 
-%
+
+
+All work and production of components is to be conducted according to Fermilab and CERN safety regulations. The DUNE project safety 
+manager, NAME-HERE, is responsible for the implementation of adequate safety procedures.
 
 \subsection{Cost estimate}
 The total estimated cost of the CERN single phase LAr prototype detector is presented in table~\ref{tab:cost}.
@@ -115,21 +122,19 @@ Cost figures are informed by component production for the 35~t detector.
 \begin{tabular}{| l| l| c |}
 \hline
 \textbf{no. } & \textbf{Item}  & \textbf{Cost [kUSD]}  \\ \hline
-1 & APAs & \\
-2 & CPA  & \\
-3 & PDS  & \\
-4 & field cage  & \\
-5 & TPC support & \\
-6 & power supplies & \\
-7 & Electronics & \\
-8 & DAQ & \\
-9 & computing & \\
-10 & cryostat &  \\   % 2300 CHF in WA105
-11 & cryogenics system &  \\  % 1400 CHF for WA105
-12 & clean room & \\
-13 & infrastructure & \\
-14 & installation \& logistics & \\
-15 & ... & \\ \hline
+1 & Time Projection Chamber & 2'999 \\
+2 & DAQ \& Monitoring  & 73 \\
+3 & FD Installation  & 1'322 \\
+4 & Photon Detector  & 935 \\
+5 & Cold Electronics & 476 \\
+6 & HV power supplies & 300\\
+
+7 & computing & \\
+8 & cryostat &  2'300 ?\\   % 2300 CHF in WA105
+9 & cryogenics system & 1'400 ? \\  % 1400 CHF for WA105
+10 & clean room & 400 ? \\
+11 & infrastructure & \\
+12 & integration \& logistics & \\ \hline
   & \textbf{Total } & \\ \hline
 \end{tabular}
 \caption{Estimated cost for the single phase LAr detector.}
