@@ -2,12 +2,12 @@
 % moved to main doc \section{Computing requirements, data handling and software}
 
 The CERN single phase prototype detector builds upon the technology and expertise developed in the
-process of design and operation of its smaller predecessor, the 35t detector at Fermilab.
+process of design and operation of its smaller predecessor, the 35 t detector at Fermilab.
 This includes elements of front-end electronics, data acquisition, run controls and related systems. We also expect that for the most part, Monte Carlo studies necessary to support this program will be conducted using software evolved from current (2015) tools. Likewise,
 event reconstruction software and analysis tools will rely on the evolving software tools developed for DUNE.
 
 The volume of the recorded data will depend on the number of events to be collected in each measurement,
-as specified in the run plan (see Table \ref{tab:RunPlan}).  Cosmic ray muons have a very large impact on the data volume due to the large detector dimensions and surface operation.
+as specified in the run plan (see Table~\ref{tab:RunPlan}).  Cosmic ray muons have a very large impact on the data volume due to the large detector dimensions and surface operation.
 
 It is optimal to first stage the data collected from the prototype on disk at CERN and then save it to tape also at CERN,
 while simultaneously performing replication to data centers in the US. For the latter, Fermilab will be the primary site, with additional data centers at Brookhaven National Laboratory and the NERSC facility as useful additional locations for better redundancy and more efficient access to the data from a greater number of locations.
@@ -23,7 +23,7 @@ The data volume will be dominated by the TPC data. Even though the photon detect
 Event sizes can be estimated from "first principles" under the assumption of some event topology and noting the significant amount of cosmic contamination at sea level.  As was shown in Sec.~\ref{calibration}, there is expected to be on average $\sim$68 track segments on top of the actual beam event.  Given that a 4 GeV mip will produce on average 80~kbyte of data, the resulting number of particles in a readout window will result in the readout of 6~MB per beam event.  
 %This assumes that you have 80~kbyte per 4 GeV mip and that cosmic muons at the surface have an averagae enegy of 4 GeV
 %Multiply by (68 muons + 1 beam particle) we get 5.5 MB
-In addition to the data associated with the individual particles in the event, there is channel overhead information.   Experience from the 35t detector at Fermilab indicates that with zero suppression that there is an event overhead of 6~kB per channel for a readout of three drift windows.
+In addition to the data associated with the individual particles in the event, there is channel overhead information.   Experience from the 35 t detector at Fermilab indicates that with zero suppression that there is an event overhead of 6~kB per channel for a readout of three drift windows.
 %
 %This is based on 600kB zero suppressed readout of 3 drift windows in 35 t for 2048 channels.  There are 15,360 channels inn the CERN prototype, corresponding to the proposed TPC which consists of 6 APAs with 2560 channels each. 
 %
@@ -73,14 +73,14 @@ Since there are 15,360 channels in the CERN prototype, the expected overhead cor
 %electron of 4GeV/c momentum MC calculations indicate an average event size of $\sim$2MB, after zero-suppression.
 %This is less than 1\% of the estimate quoted above. 
 
-The total particle statistics in the run plan table~\ref{tab:RunPlan} is approximately 5M events in total.  Taking into account the data load per event, this leads to the estimate of $\sim$500 TB of nominal data volume to be collected in this experiment. 
+The total particle statistics in the run plan Table~\ref{tab:RunPlan} is approximately 5M events in total.  Taking into account the data load per event, this leads to the estimate of $\sim$500 TB of nominal data volume to be collected in this experiment. 
 
 In summary, we expect that tape storage of $O(1 $PB$)$ size will be required and a somewhat more modest disk space for raw data staging at CERN, for replication purposes.  We envisage storing the primary copy of raw data at CERN, with replicas at additional locations. 
 %
-Processed and Monte Carlo data placement will require additional resources that are addressed in section \ref{dataprocess}.
+Processed and Monte Carlo data placement will require additional resources that are addressed in Section \ref{dataprocess}.
 
 
-\subsubsection{Data Transmission and Distribution}
+\subsubsection{Data transmission and distribution}
 Moving data to remote locations outside of CERN is subject to a number of requirements that include
 automation, monitoring and error checking and recovery. 
 
@@ -96,7 +96,7 @@ The volume of data stored in these databases is expected to be modest and of the
 %Talk to Jon Paley who is in charge of the 35t DB.  He did not have a size for DUNE, but he did have a number for NOvA.  He suggested that the 40kton DUNE will have the same number of channels as NOvA and the NOvA DB uses 200 GB per year.  We should use significantly less.  100 GB is signficantly less than total requested disk space.
 
 
-\subsection{Computing and Software}
+\subsection{Computing and software}
 
 %\subsubsection{Distributed Processing}
 %\label{distr_proc}
@@ -166,10 +166,10 @@ Copies for a significant portion of raw and derived data are planed to be hosted
 These two institutions have substantial expertise  in the field of data handling and processing at scale and will serve as ``hubs'' for data archival and distribution.
 
 
-\subsubsection{Software Infrastructure}
+\subsubsection{Software infrastructure}
 
 The CERN prototype effort will benefit from utilizing simulation toolkits, tracking and other reconstruction
-that have and continue to be developed for DUNE, the 35t detector test and the short baseline program at Fermilab as well as the 
+that have and continue to be developed for DUNE, the 35 t detector test and the short baseline program at Fermilab as well as the 
 neutrino platform development efforts and in particular the WA105 experiment.
 
 The software tools will need to be portable, well maintained and validated. To ensure that this happens,
