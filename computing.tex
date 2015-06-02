@@ -10,7 +10,7 @@ The volume of the recorded data will depend on the number of events to be collec
 as specified in the run plan (see Table~\ref{tab:RunPlan}).  Cosmic ray muons have a very large impact on the data volume due to the large detector dimensions and surface operation.
 
 It is optimal to first stage the data collected from the prototype on disk at CERN and then save it to tape also at CERN,
-while simultaneously performing replication to data centers in the US. For the latter, Fermilab will be the primary site, with additional data centers at Brookhaven National Laboratory and the NERSC facility as useful additional locations for better redundancy and more efficient access to the data from a greater number of locations.
+while simultaneously performing replication to data centers in the US. For the latter, Fermilab will be the primary site, with additional data centers at Brookhaven National Laboratory (BNL) and the National Energy Research Scientific Computing Center (NERSC) facility as useful additional locations for better redundancy and more efficient access to the data from a greater number of locations.
 
 
 
@@ -20,10 +20,10 @@ while simultaneously performing replication to data centers in the US. For the l
 
 The data volume will be dominated by the TPC data. Even though the photon detector as well as other elements of the experimental apparatus (muon counters, trigger systems) contribute to the data stream their contributions to the data volume are expected to be sufficiently small such that realistic data volume estimates can be obtained from the TPC event data sizes alone.
 
-Event sizes can be estimated from "first principles" under the assumption of some event topology and noting the significant amount of cosmic contamination at sea level.  As was shown in Sec.~\ref{calibration}, there is expected to be on average $\sim$68 track segments on top of the actual beam event.  Given that a 4 GeV mip will produce on average 80~kbyte of data, the resulting number of particles in a readout window will result in the readout of 6~MB per beam event.  
+Event sizes can be estimated from "first principles" under the assumption of some event topology and noting the significant amount of cosmic contamination at sea level.  As was shown in Sec.~\ref{calibration}, there is expected to be on average $\sim$68 cosmic muon track segments per readout window and on top of the actual beam event.  Given that a 4 GeV mip will produce on average 80~kbyte of data, the resulting number of particles in a readout window will result in the readout of 6~MB per beam event.  
 %This assumes that you have 80~kbyte per 4 GeV mip and that cosmic muons at the surface have an averagae enegy of 4 GeV
 %Multiply by (68 muons + 1 beam particle) we get 5.5 MB
-In addition to the data associated with the individual particles in the event, there is channel overhead information.   Experience from the 35 t detector at Fermilab indicates that with zero suppression that there is an event overhead of 6~kB per channel for a readout of three drift windows.
+In addition to the data associated with the individual particles in the event, channel overhead information needs to be accounted for.   Experience from the 35 t detector at Fermilab indicates that with zero suppression the event overhead amounts to 6~kB per channel for a readout of three drift windows.
 %
 %This is based on 600kB zero suppressed readout of 3 drift windows in 35 t for 2048 channels.  There are 15,360 channels inn the CERN prototype, corresponding to the proposed TPC which consists of 6 APAs with 2560 channels each. 
 %
@@ -73,7 +73,7 @@ Since there are 15,360 channels in the CERN prototype, the expected overhead cor
 %electron of 4GeV/c momentum MC calculations indicate an average event size of $\sim$2MB, after zero-suppression.
 %This is less than 1\% of the estimate quoted above. 
 
-The total particle statistics in the run plan Table~\ref{tab:RunPlan} is approximately 5M events in total.  Taking into account the data load per event, this leads to the estimate of $\sim$500 TB of nominal data volume to be collected in this experiment. 
+The total particle statistics in the preliminary run plan (Table~\ref{tab:RunPlan}) is approximately 5M events in total.  Taking into account the data load per event, this leads to the estimate of $\sim$500 TB of nominal data volume to be collected in this experiment. 
 
 In summary, we expect that tape storage of $O(1 $PB$)$ size will be required and a somewhat more modest disk space for raw data staging at CERN, for replication purposes.  We envisage storing the primary copy of raw data at CERN, with replicas at additional locations. 
 %
@@ -88,10 +88,10 @@ A number of candidate systems satisfy these requirements. One for which we have 
 
 
 \subsection{Databases}
-Databases will be required to store Run Logs, Slow Controls records and detector conditions, as well as (offline) calibration information.
+Databases will be required to store Run Logs, Slow Control records and detector conditions, as well as (offline) calibration information.
 
-Most database servers will need to be local to the experiment (i.e. at CERN) in order to reduce latency, guarantee reliability, minimize
-downtime due to network outages etc. A replication mechanism is foreseen to make data readily available at the US and other sites.
+Most database servers will need to be local to the experiment (i.e. at CERN) in order to reduce latency, guarantee reliability and minimize
+downtime due to network outages. A replication mechanism is foreseen to make data readily available at the US and other sites.
 The volume of data stored in these databases is expected to be modest and of the order of 100~GB.
 %Talk to Jon Paley who is in charge of the 35t DB.  He did not have a size for DUNE, but he did have a number for NOvA.  He suggested that the 40kton DUNE will have the same number of channels as NOvA and the NOvA DB uses 200 GB per year.  We should use significantly less.  100 GB is signficantly less than total requested disk space.
 
@@ -102,11 +102,11 @@ The volume of data stored in these databases is expected to be modest and of the
 %\label{distr_proc}
 
 Fermilab provides the bulk of computational power to DUNE via Fermigrid and other facilities. 
-We plan to leverage these resources to process the data coming from the test.
+We plan to leverage these resources to process the data coming from the CERN prototype detector and beam test.
 
 One of the principal goals will be quick validation of the data collected in each measurement, in
 order to be able to make adjustments during the run as necessary. 
-This is common practice in other experiment which have "express streams" to assess data quality~\cite{atlas_express}.
+This is common practice in other experiments which have "express streams" to assess data quality~\cite{atlas_express}.
 
 
 Given that tracking, reconstruction and other algorithms are in a stage of development with significant improvements
@@ -115,7 +115,7 @@ The estimates we have at this point range from 10 to 100 seconds required by a t
 CPU to reconstruct a single event. 
 This means that utilizing a few thousand cores through Grid facilities, it will be possible to ensure timely processing of these data.
 
-To ensure adequate capacity, we envisage a distributed computing model where Grid resources are utilized in addition to Fermilab.
+To ensure adequate capacity, we envisage a distributed computing model where Grid resources are utilized in addition to Fermilab's computing resources.
 As an example, we have had good experience working with the Open Science Grid Consortium.
 
 
@@ -134,31 +134,29 @@ The offline data can be classified as follows:
 In the latter, there will likely be more than one processing step, thus multiplying data volume. 
 
 The derived data will at most contain a small fraction of the raw data in order to keep the data manageable.
-Hence the size of the processed data will likely by significantly smaller than the input (the raw data). 
+Hence the size of the processed data will likely be significantly smaller than the input (the raw data). 
 Given the consideration presented above, we will plan for
 $\sim$ $O($1 PB$)$ of tape storage to keep the processed data. 
 For efficient processing, disk storage will be necessary
 to stage a considerable portion of both raw data (inputs) and one or a few steps in processing (outputs).
 
 Extrapolating from our previous experience running Monte Carlo for the former LBNE Far Detector, we estimate that we will need a few hundred TB of continuously available
-disk space. In summary, we expect the need for 5~PB of disk storage at Fermilab to ensure optimal data availability and 
+disk space. In summary, we expect the need for a few~PB of disk storage at Fermilab to ensure optimal data availability and 
 processing efficiency. 
 
 \subsubsection{Data distribution}
 We foresee that data analysis (both experimental data and Monte Carlo) will be performed by collaborators residing in many 
 institutions and geographically dispersed. In our
-estimated above, we mostly outlined storage space requirements for major data centers like CERN and FNAL. When it comes to making these data available to the researchers,
-we will utilize a combination of the following:
+estimate above, we mostly outlined storage space requirements for major data centers like CERN and Fermilab. When it comes to making these data available to collaborators, we will utilize a combination of the following:
 \begin{itemize}
-\item Managed replication of data in bulk, performed with tools like Spade discussed above. Copies will be made according to wishes and capabilities of participating institutions.
+\item Managed replication of data in bulk, performed with tools like Spade. Copies will be made according to wishes and capabilities of participating institutions.
 \item Network-centric federated storage, based on XRootD. This allows for agile, just-in-time delivery of data to worker nodes and workstations over the network. This
-technology has been evolving rapidly in the past few years, and solutions have been found to mitigate performance penalty due to remote data access, by implementing caching
-and other techniques.
+technology has been evolving rapidly in the past few years, and solutions have been found to mitigate performance drops due to remote data access, by implementing caching and other techniques.
 \end{itemize}
 
 In order to act on the latter item, we plan to implement a global XRootD redirector, which will make it possible to transparently access data from anywhere.
-A concrete technical feature of storage at FNAL is that there is a dCache network running at this facility, with substantial capacity which can be leveraged
-for the needs of the CERN prototype analysis. This dCache instance is equipped with a XRootD ``door'' which makes it accessible to outside world, subject
+A concrete technical feature of storage at Fermilab is the dCache network which has substantial capacity and can be leveraged
+for the needs of the CERN prototype data analysis. This dCache instance is equipped with a XRootD ``door'' which makes it accessible to the outside world, subject
 to proper configuration, authentication and authorization.
 
 
@@ -168,8 +166,8 @@ These two institutions have substantial expertise  in the field of data handling
 
 \subsubsection{Software infrastructure}
 
-The CERN prototype effort will benefit from utilizing simulation toolkits, tracking and other reconstruction
-that have and continue to be developed for DUNE, the 35 t detector test and the short baseline program at Fermilab as well as the 
+The CERN prototype detector effort will benefit from utilizing simulation toolkits, tracking and other reconstruction
+that have and continue to be developed for DUNE, the 35 t detector and the short baseline program at Fermilab as well as the 
 neutrino platform development efforts and in particular the WA105 experiment.
 
 The software tools will need to be portable, well maintained and validated. To ensure that this happens,
