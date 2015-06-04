@@ -2,11 +2,11 @@
 
 \subsection{DUNE detector plans}
 
-The far detector for the DUNE collaboration will be a series of four liquid argon time projection chambers (TPC), each in a cryostat that holds a fiducial/active/total LAr mass of 10.0/13.3/16.9~kt. The TPCs will be instrumented with photon detection. It is planned that the first 10~kt detector will be ready for installation in the 2022 timeframe. 
+The far detector for the DUNE collaboration will be a series of four liquid argon TPCs, each in a cryostat that holds a fiducial/active/total LAr mass of 10.0/13.3/16.9~kt. The TPCs will be instrumented with a photon detection system. It is planned that the first 10~kt detector will be ready for installation in the 2022 timeframe. 
 The design for the first 10~kt detector is a submerged wire plane-based TPC with electronic readout also in the liquid argon.  Designs of this style are referred to as single-phase detectors as the charge generation, drift, and detection all occurs in the liquid argon phase.  This style TPC features no charge amplification before collection, thereby making a very precise charge measurement possible. 
 
 
-To achieve DUNE's goals, a detector is needed that is much larger than ICARUS, the largest LAr TPC detector built to date. The former long-baseline neutrino experiment (LBNE) developed a scalable far detector design shown in Fig.~\ref{fig:fardet-overview} that would scale-up LAr TPC technology by roughly a factor of 40 compared to the ICARUS T600 detector. To achieve this scale-up, a number of novel design elements need to be employed. A membrane cryostat typical for the liquefied natural gas industry will be used instead of a conventional evacuated cryostat.  The wire planes or anode plane assemblies (APAs) will be factory-built as planar modules that are then installed into the cryostat. The modular nature of the APAs allow the size of the detector to be scaled up to at least 40~kt fiducial mass. Both the analog and digital electronics will be mounted on the wire planes inside the cryostat in order to reduce the electronic noise, to avoid transporting analog signals large distances, and to reduce the number of cables that penetrate the cryostat. 
+To achieve DUNE's goals, a detector is needed that is much larger than ICARUS, the largest LAr TPC detector built to date. The former LBNE developed a scalable far detector design shown in Fig.~\ref{fig:fardet-overview} that would scale-up LAr TPC technology by roughly a factor of 40 compared to the ICARUS T600 detector. To achieve this scale-up, a number of novel design elements need to be employed. A membrane cryostat typical for the liquefied natural gas industry will be used instead of a conventional evacuated cryostat.  The wire planes or APAs will be factory-built as planar modules that are then installed into the cryostat. The modular nature of the APAs allow the size of the detector to be scaled up to at least 40~kt fiducial mass. Both the analog and digital electronics will be mounted on the wire planes inside the cryostat in order to reduce the electronic noise, to avoid transporting analog signals large distances, and to reduce the number of cables that penetrate the cryostat. 
 
 The scintillation photon detectors will employ light collection paddles to reduce the required photo-cathode area and thereby cost.  Designs being considered are also more compact than the photomuliplier tubes solution used elsewhere.
 
@@ -66,14 +66,13 @@ The DUNE detector design is very modular and the DUNE-PT will be constructed fro
 \end{figure}
 
 The TPC consists of alternating anode plane assemblies (APAs) and cathode plane assemblies (CPAs), with field-cage panels enclosing the four open sides between the anode and cathode planes.  Fig.~\ref{fig:CERNdet-overview} shows a sectioned view for the planned TPC 
-by itself and inside the cryostat at CERN.  A uniform electric field is created in the volume between the anode and cathode planes. A charged particle traversing this volume leaves a trail of ionization. The electrons drift toward the anode plane, which is constructed from multiple layers of sense wires, inducing electric current signals in the front-end electronic circuits connected to the wires.
+by itself and inside the cryostat at CERN.  A 500 V/cm uniform electric field is created in the volume between the anode and cathode planes. A charged particle traversing this volume leaves a trail of ionization. The electrons drift toward the anode plane, which is constructed from multiple layers of sense wires, inducing electric current signals in the front-end electronic circuits connected to the wires.
 
 The TPC will be assembled from elements that are of the same size and materials as those planned for the first DUNE far detector module.  
 
 The overall size of the TPC has been determined based on the desired particle containment in order to address the required physics measurements (see Section \ref{detbeamtest}). The TPC will have a 3-APA wide active volume and consists of two drift volumes with a drift length of 3.6~m each (see Fig.~\ref{fig:CERNdet-overview}).  
-The APAs have an active (total) area measuring 2.29 m (2.32 m) wide and 5.9 m (6.2 m) high. The combination of the three APAs determines the overall TPC length to be 7.0~m. There will be a cathode plane (CPA) in the center between the two rows of APAs.  
-The overall width of the TPC will be determined by a combination of the drift distances and the thicknesses of the two APA planes and the 
-CPAs and amounts to 7.4~m.  
+The APAs have an active (total) area measuring 2.29 m (2.32 m) wide and 5.9 m (6.2 m) high. The combination of the three APAs determines the overall TPC length to be 7.0~m. There will be a CPA in the center between the two rows of APAs.  
+The overall width of the TPC will be determined by the 7.4~m combination of the drift distances and the total thicknesses of the two APA planes and the CPAs.  
 The overall height of the TPC is determined by the height of the APA which is 6.2~m.  The TPC dimensions are summarized in 
 Table~\ref{table:TPC-dim}.
 %
@@ -103,8 +102,8 @@ All of this will be supported by rows of I-beams supported from a mechanical str
 The design also foresees the option to have the two APA rows mounted at 2.5~m from the central CPA each.
 A reduced drift distance between the APA and CPA represents a deviation from the DUNE far detector design but is potentially very
 useful in order to lessen the impact of space charge effects.
-Due to the operation of DUNE-PT on the surface space charge 
- effects are expected to be larger than for underground operation at SURF.
+Due to the operation of DUNE-PT on the surface, space charge 
+ effects (discussed in Section~\ref{calibration}) are expected to be larger than for underground operation at SURF.
 We foresee to calibrate out any space charge effects for a 3.6~m drift distance using laser beam calibration and comics. 
 At the same time we maintain the  possibility for a second test with reduced drift length if the uncertainties associated 
 with our calibration limit the precision of measurements.
