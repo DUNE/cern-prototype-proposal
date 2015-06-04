@@ -1,7 +1,7 @@
 \label{computing}
 % moved to main doc \section{Computing requirements, data handling and software}
 
-The CERN single phase prototype detector builds upon the technology and expertise developed in the
+DUNE-PT builds upon the technology and expertise developed in the
 process of design and operation of its smaller predecessor, the 35 t detector at Fermilab.
 This includes elements of front-end electronics, data acquisition, run controls and related systems. We also expect that for the most part, Monte Carlo studies necessary to support this program will be conducted using software evolved from current (2015) tools. Likewise,
 event reconstruction software and analysis tools will rely on the evolving software tools developed for DUNE.
@@ -9,7 +9,7 @@ event reconstruction software and analysis tools will rely on the evolving softw
 The volume of the recorded data will depend on the number of events to be collected in each measurement,
 as specified in the run plan (see Table~\ref{tab:RunPlan}).  Cosmic ray muons have a very large impact on the data volume due to the large detector dimensions and surface operation.
 
-It is optimal to first stage the data collected from the prototype on disk at CERN and then save it to tape also at CERN,
+It is optimal to first stage the data collected from DUNE-PT on disk at CERN and then save it to tape also at CERN,
 while simultaneously performing replication to data centers in the US. For the latter, Fermilab will be the primary site, with additional data centers at Brookhaven National Laboratory (BNL) and the National Energy Research Scientific Computing Center (NERSC) facility as useful additional locations for better redundancy and more efficient access to the data from a greater number of locations.
 
 
@@ -27,7 +27,7 @@ In addition to the data associated with the individual particles in the event, c
 %
 %This is based on 600kB zero suppressed readout of 3 drift windows in 35 t for 2048 channels.  There are 15,360 channels inn the CERN prototype, corresponding to the proposed TPC which consists of 6 APAs with 2560 channels each. 
 %
-Since there are 15,360 channels in the CERN prototype, the expected overhead corresponds to 92~MB per event.  The resulting total event size from overhead and charge from individual particles is 100~MB. 
+Since there are 15,360 channels in DUNE-PT, the expected overhead corresponds to 92~MB per event.  The resulting total event size from overhead and charge from individual particles is 100~MB. 
 %Background tracks due to cosmic ray particles must be properly identified and accounted for, in order to ensure high quality of the measurements and subsequent detector characterization. Since overlay of cosmic ray muons over beam events is stochastic in nature, the optimal way to achieve this is by recording signals which were produced ``just before'' and ``just after'' the arrival of the test particle from the beam line.  It will be possible because the design of the DAQ contains buffer memory that can be accessed after the trigger decision is made.  This technique will enable us to record and reconstruct either partial or complete background tracks present in the ``main'' event.
 
 
@@ -102,7 +102,7 @@ The volume of data stored in these databases is expected to be modest and of the
 %\label{distr_proc}
 
 Fermilab provides the bulk of computational power to DUNE via Fermigrid and other facilities. 
-We plan to leverage these resources to process the data coming from the CERN prototype detector and beam test.
+We plan to leverage these resources to process the data coming from the DUNE-PT and beam test.
 
 One of the principal goals will be quick validation of the data collected in each measurement, in
 order to be able to make adjustments during the run as necessary. 
@@ -125,7 +125,7 @@ As an example, we have had good experience working with the Open Science Grid Co
 In addition to the raw data preparations being made for offline data handling, processing and storage.
 The offline data can be classified as follows:
 \begin{itemize}
-\item Monte Carlo data, which will contain multiple event samples to cover various event types and other conditions during the measurements with the prototype detector
+\item Monte Carlo data, which will contain multiple event samples to cover various event types and other conditions during the measurements with DUNE-PT
 \item Data derived from Monte Carlo events, and produced with a variety of tracking and pattern recognition algorithms in order to create a basis for the detector characterization
 \item Intermediate calibration files, derived from calibration data
 \item Processed experimental data, which will likely exist in several parallel branches corresponding to different reconstruction algorithms being applied, with the purpose of evaluating the performance of the different algorithms.
@@ -156,7 +156,7 @@ technology has been evolving rapidly in the past few years, and solutions have b
 
 In order to act on the latter item, we plan to implement a global XRootD redirector, which will make it possible to transparently access data from anywhere.
 A concrete technical feature of storage at Fermilab is the dCache network which has substantial capacity and can be leveraged
-for the needs of the CERN prototype data analysis. This dCache instance is equipped with a XRootD ``door'' which makes it accessible to the outside world, subject
+for the needs of the DUNE-PT data analysis. This dCache instance is equipped with a XRootD ``door'' which makes it accessible to the outside world, subject
 to proper configuration, authentication and authorization.
 
 
@@ -166,7 +166,7 @@ These two institutions have substantial expertise  in the field of data handling
 
 \subsubsection{Software infrastructure}
 
-The CERN prototype detector effort will benefit from utilizing simulation toolkits, tracking and other reconstruction
+The DUNE-PT effort will benefit from utilizing simulation toolkits, tracking and other reconstruction
 that have and continue to be developed for DUNE, the 35 t detector and the short baseline program at Fermilab as well as the 
 neutrino platform development efforts and in particular the WA105 experiment.
 
