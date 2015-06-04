@@ -18,10 +18,11 @@ which work in parallel, each node receiving all the data from all
 the detectors for the time intervals it is responsible for processing.
 There will be 32 parallel incoming data streams from the TPCs
 and 16 streams from the photon detectors.  There will be an additional
-stream from the trigger board (the same board as used by 35 t detector) 
+stream from the trigger board (similar to the board used by 35~t detector) 
 which will receive input of the spill 
-gate, warning of extraction, and pattern-unit bits from trigger counters
-and other beamline instrumentation which is described in Section \ref{beaminstrument}.
+gate, warning of extraction, and pattern-unit bits from cosmic muon trigger counters
+and other beamline instrumentation which are described in Sections \ref{calibration} and
+\ref{beaminstrument}, respectively.
 
 Synchronisation across all the input sources is essential in order 
 that artDAQ can bring together the data from the input streams correctly for
