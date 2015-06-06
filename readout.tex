@@ -1,4 +1,4 @@
-A single APA has 2560 sense wires that need to be readout.  In order to  minimizing the capacitance, the preamplier noise, and the number of penetrations through the cryostat, the front-end (FE) electronics boards of the {\bf TPC electronics} are mounted in the cryostat on one end of the wire frame just outside of the active TPC volume.  A single APA is readout by 20 sets of FE readout boards with each FE reading in 128 wire channel inputs (40 U-view + 40 V-view + 48 X-view) and each FE transmitting 4 outputs through the cryostat to back-end electronics.
+A single APA has 2560 sense wires that need to be readout.  In order to minimize the capacitance, the preamplier noise, and the number of penetrations through the cryostat, the Front-End (FE) electronics boards of the {\bf TPC electronics} are mounted in the cryostat on one end of the wire frame just outside of the active TPC volume.  A single APA is readout by 20 sets of FE readout boards with each FE reading in 128 wire channel inputs (40 U-view + 40 V-view + 48 X-view) and each FE transmitting 4 outputs through the cryostat to back-end electronics.
  
 The present design has a maximum wire length of 7.3~m (induction planes)
 with a corresponding capacitance of 164~pF and an expected intrinsic noise of 400 electrons.
@@ -95,8 +95,7 @@ the front-end as preprocessing for trigger and DAQ.  The module is
 called the SiPM Signal Processor (SSP) and consists of 12 readout
 channels packaged in a self-contained 1U module.  Each channel
 contains a fully-differential voltage amplifier and a 14-bit, 150-MSPS
-analog-to-digital converter (ADC) that digitizes the waveforms
-received from the SiPMs. There is no shaping of the signal, since the
+ADC that digitizes the waveforms received from the SiPMs. There is no shaping of the signal, since the
 SiPM response is slow enough relative to the speed of the digitization
 to obtain several digitized samples of the leading edge of the pulse
 for the determination of signal timing. Digitized data is processed by
