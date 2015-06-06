@@ -114,7 +114,7 @@ a scheduled installation beginning in early 2022.  For this reason, the collabor
 detector and collect data for analysis prior to 2019.  However, the primary collaboration goal of validating the design for the 
 first 10~kt detector module at SURF can be mostly accomplished through the collection of cosmic ray data.  Therefore, although 
 it would be highly preferable to collect beam data prior to 2019, data collected after this date would still be available in time 
-to play its essential role in understanding the data to be collected form the first 10~kt detector at SURF.   
+to play its essential role in understanding the data to be collected from the first 10~kt detector at SURF.   
 
 A schedule that allows for the collection of test beam data prior to 2019 is shown in Fig.~\ref{fig:schedule}.  Detector construction 
 is scheduled to begin in the second quarter of 2016 and the modules would be transported to CERN in two batches so that installation 
@@ -173,14 +173,16 @@ needed for the DUNE-PT are listed.
 1.   & Single-phase LAr detector & \\
 1.1  & TPC & BNL, CERN, Lancaster, LBNL, Liverpool \\
   &  & Manchester, Princeton, Sheffield, Wisconsin \\
-1.2  & Photon detection system  &  ANL, Campinas, CSU, Hawaii, IU, LSU \\
-1.3  & Cold electronics  & BNL, Fermilab, Penn, SMU \\ 
+1.2  & Cold electronics  & BNL, Fermilab, Penn, SMU \\ 
+1.3  & Photon detection system  &  ANL, Campinas, CSU, Hawaii, IU, LSU \\
 1.4  & DAQ & Cambridge, Duluth,  Fermilab, LANL \\
        &          & Oxford, SLAC \\
-1.5  & HV power supplies  &  ETHZ \\
-1.6  & Installation & CERN, Duke, Fermilab, Minnesota \\ \hline
+1.5  & HV power supplies \& feedthroughs  &  ETHZ, UCLA \\
+1.6  & Installation & CERN, Duke, Fermilab, Minnesota \\ 
+1.7  & Interfaces  & BNL, LBNL, CERN, Fermilab  \\ \hline
+
 2.   & Operation \& Scientific Effort & \\ 
-2.1 & Operation & DUNE \\
+2.1 & Operation & DUNE-PT collaborators \\
 2.2  & Software \& Simulations &  DUNE \\
 2.3  & Data analysis &  DUNE \\ \hline
 
@@ -193,7 +195,7 @@ needed for the DUNE-PT are listed.
 the acceptance of recently-submitted or future funding requests from their supporting agencies.  A high priority for the DUNE 
 collaboration management moving forward will be to finalize a matrix of responsibilities among the collaborating institutions.  It 
 is expected that this process will lead to a significant increase in the level of effort associated with the development of all 
-required detector components.  In the meantime, the institutions who have been involved in the proposed design of the DUNE-PT will
+required detector components.  In the meantime, the institutions who have been involved in the proposed design of the DUNE-PT
 will be expected to push the effort forward during this transition period to ensure that the collaboration is able to maintain the 
 proposed schedule for having detectors installed at CERN in early 2018.
 
@@ -222,22 +224,6 @@ construction and installation of the cryostat and supporting cryogenic systems n
 as access to common infrastructure within the CERN test beam area such as slow controls and data concatenation systems.  We also 
 request support from the CERN accelerator departments to provide the required beamline.
 
-Table~\ref{tab:wbs-interfaces} summarizes joint effort on detector and infrastructure interfaces.
-%
-\begin{table}[h]
-\centering
-\begin{tabular}{|l l c|}
-\hline
-\textbf{item no. } & \textbf{Deliverable}  & \textbf{Contributing Institutes}  \\ \hline
-4. & Interfaces & \\ 
-4.1  & Cryostat beam window &  CERN, LBNL \\
-4.2  & Top plate \& feedthroughs &  BNL, CERN, Fermilab, UCLA \\
-4.3  & Cryo engineering &  CERN, Fermilab \\ \hline
-\end{tabular}
-\caption{List of work packages and deliverables for detector and infrastructure interfaces.} 
-\label{tab:wbs-interfaces}
-\end{table}
-
 Construction, installation, and operation of the DUNE-PT will be conducted following all Fermilab and CERN safety regulations.  
 DUNE management has direct line responsibility for safety and is assisted in this effort by the DUNE project ES\&H manager, 
 Mike Andrews (Fermilab). 
@@ -254,9 +240,9 @@ Mike Andrews (Fermilab).
 %involved and defining deliverables has started. 
 
 \subsection{Cost estimate and funding sources}
-Cost estimates in CORE accounting of the various detector components and infrastructure items that 
+Cost estimates in {\bf core}  accounting of the various detector components and infrastructure items that 
 will be provided for the DUNE-PT by the particpating members of the DUNE collaboartion are shown in 
-table~\ref{tab:cost}.  CORE M\&S cost estimates do include the cost of the labor hours required to 
+table~\ref{tab:cost}.  Core M\&S cost estimates do include the cost of the labor hours required to 
 assemble and install the various detector components, which are separately provided.  Costing of the 
 various detector components is informed by the previously mentioned construction activities associated 
 with building prototype detectors for the 35~t cryostat at Fermilab.
@@ -277,17 +263,18 @@ time period.
 \centering
 \begin{tabular}{| l| c| c |}
 \hline
-\textbf{Detector Element} & \textbf{CORE M\&S Cost }  & \textbf{CORE Labor}  \\
+\textbf{Detector Element} & \textbf{core M\&S Cost }  & \textbf{core Labor}  \\
  & \textbf{ [US \$]}  & \textbf{ [hours]}  \\ \hline
-Time Projection Chamber & 820,000 & 5,200 \\
-Cold Electronics & 960,000 & 3,000 \\
-Photon Detector System & 1,380,000 & 8,200 \\
+Time Projection Chamber & 1,210,000 & 6,200 \\
+Cold Electronics & 1,260,000 & 4,500 \\
+Photon Detection System & 610,000 & 4,200 \\
 DAQ & 100,000 & 1,700 \\
-HV power supplies & 300,000 & 0 \\
-Installation \& Commissioning & 0 & 12,400 \\ \hline
-\textbf{Totals} & 3,560,000 & 30,500 \\ \hline
+HV power supplies & 300,000 & 300 \\
+Installation \& Commissioning & 30,000 & 12,400 \\ 
+Interfaces & 110,000 & 2,500 \\ \hline 
+\textbf{Totals} & 3,620,000 & 31,800 \\ \hline
 \end{tabular}
-\caption{Estimated CORE costs and labor hours for the main DUNE-PT detector elements to be provided 
+\caption{Estimated core costs and labor hours for the main DUNE-PT detector elements to be provided 
 by the DUNE Collaboration}
 \label{tab:cost}
 \end{table}
