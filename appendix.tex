@@ -40,32 +40,6 @@ Beam window   & Precise location TBD. Multiple beam windows installed on the ups
 \label{tbl:cryogenics-design-parameters}
 \end{table}
 
-\noindent \textbf{Insulation system and secondary membrane: }
-%
-The membrane cryostat requires insulation applied to all internal surfaces of the outer support structure 
-and roof in order to control the heat ingress and hence required refrigeration heat load. 
-To avoid bubbling of the liquid argon inside the tank, the maximum static heat leak is 10 W/m$^2$ for the floor and the sides and 15 W/m$^2$ for the roof, higher to account for the penetrations that increase the heat budget. Preliminary calculations show that these values can be obtained using 0.9 m thick insulation panels of polyurethane foam.
-Given an 
-average thermal conductivity coefficient for the insulation material of 0.0283 W/(m$\cdot$K), the heat input 
-from the surrounding steel is expected to be about 3.2~kW total. It assumes that the hatches are foam 
-insulated as well. This is shown in Table~\ref{tbl:heat-load-calc}.\\
-
-\begin{table}[htpb]
-\centering
-\begin{tabular}{|p{.15\textwidth}|p{.15\textwidth}|p{.15\textwidth}|p{.15\textwidth}|p{.15\textwidth}|}
-\hline
- \textbf{Element} & \textbf{Area ($m^2$)}  &  \textbf{K ($W/mK$)} & \textbf{$\Delta$ T ($K$)}
- & \textbf{Heat Input ($W$)}\\ \hline
-Base   & 83  & 0.0283   &205   & 534 \\ \hline
-End walls  &  153 & 0.0283  &  205 &  986 \\ \hline
-Side walls   & 172  & 0.0283  &  205 & 1,108 \\ \hline
-Roof  &  83 & 0.0283  & 205  &  550\\ \hline
-   &   &   &   &  \\ \hline
-Total   &   &   &   & 3,162 \\ \hline
-\end{tabular}
-\caption{Heat load calculation for the membrane cryostat (insulation thickness=0.9~m). }
-\label{tbl:heat-load-calc}
-\end{table} 
 
 
 \noindent \textbf{Top cap:}
@@ -117,5 +91,34 @@ Lifetime / Thermal cycles  & Consistent with the liquid argon program TBD. \\ \h
 \caption{Design parameters for the top of the cryostat}
 \label{tbl:cryostat-top-parameters}
 \end{table}
+
+
+\noindent \textbf{Insulation system and secondary membrane: }
+%
+The membrane cryostat requires insulation applied to all internal surfaces of the outer support structure 
+and roof in order to control the heat ingress and hence required refrigeration heat load. 
+To avoid bubbling of the liquid argon inside the tank, the maximum static heat leak is 10 W/m$^2$ for the floor and the sides and 15 W/m$^2$ for the roof, higher to account for the penetrations that increase the heat budget. Preliminary calculations show that these values can be obtained using 0.9 m thick insulation panels of polyurethane foam.
+Given an 
+average thermal conductivity coefficient for the insulation material of 0.0283 W/(m$\cdot$K), the heat input 
+from the surrounding steel is expected to be about 3.2~kW total. It assumes that the hatches are foam 
+insulated as well. This is shown in Table~\ref{tbl:heat-load-calc}.\\
+
+\begin{table}[htpb]
+\centering
+\begin{tabular}{|p{.15\textwidth}|p{.15\textwidth}|p{.15\textwidth}|p{.15\textwidth}|p{.15\textwidth}|}
+\hline
+ \textbf{Element} & \textbf{Area ($m^2$)}  &  \textbf{K ($W/mK$)} & \textbf{$\Delta$ T ($K$)}
+ & \textbf{Heat Input ($W$)}\\ \hline
+Base   & 83  & 0.0283   &205   & 534 \\ \hline
+End walls  &  153 & 0.0283  &  205 &  986 \\ \hline
+Side walls   & 172  & 0.0283  &  205 & 1,108 \\ \hline
+Roof  &  83 & 0.0283  & 205  &  550\\ \hline
+   &   &   &   &  \\ \hline
+Total   &   &   &   & 3,162 \\ \hline
+\end{tabular}
+\caption{Heat load calculation for the membrane cryostat (insulation thickness=0.9~m). }
+\label{tbl:heat-load-calc}
+\end{table} 
+
 
 
