@@ -1,6 +1,6 @@
 
 {\it 
-This document describes the motivation and technical details of the proposed detector. 
+This document describes the motivation and technical details of the proposed prototype detector and beam test. 
 In Section~\ref{intro} we give a brief overview of the goals for the detector and beam test.
 Section~\ref{detbeamtest} describes the scientific motivation and the planned program of measurements. The layout of the single phase liquid argon detector and technical details of the detector components are specified in Section~\ref{singlephasedet}. In Section~\ref{cryo} we provide information on the proposed cryostat which houses the detector as well as on the required cryogenics system. Section~\ref{calibration} introduces our approach to calibrating the detector and the necessary tools to do so. We describe the requirements for the charged particle beam and a preliminary run plan in Section~\ref{testbeamreq}.
 In Section~\ref{computing} we estimate computing and data handling needs before we describe the installation procedure for the detector
@@ -11,16 +11,18 @@ and the interface to the CERN Neutrino Platform in Section~\ref{nuplatform}. We 
 
 \subsection{Goals for the prototype detector and beam test}
 
-The CERN single-phase liquid argon prototype detector (DUNE-PT) is a crucial milestone for the DUNE experiment that will inform the construction and operation of the first 10~kt DUNE far detector module.  The prototype detector and beam test serve two principal functions. 
+The CERN single-phase liquid argon prototype detector at CERN (DUNE-PT) is a crucial milestone for the DUNE experiment that will inform the construction and operation of the first 10~kt DUNE far detector module.  The prototype detector and beam test serve two principal functions. 
 
 The first goal is 
+to serve as an engineering prototype to validate the performance of all detector components,
+establish and commission detector production sites and associated quality assurance procedures and to validate the installation procedure. 
+
+
+The second goal is 
 to measure and study the response of the detector to charged particles of different types and energies. 
 Results from these measurements serve to assess systematic detector uncertainties and
 validate MC simulations. They also enable validation and tuning of event reconstruction algorithms and particle identification tools.
 
-The second goal is 
-to serve as an engineering prototype to validate the performance of all detector components,
-establish and commission detector production sites and associated quality assurance procedures and to validate the installation procedure. 
 %
 In order to mitigate the risks associated with extrapolating 
 from a detector with a few TPC modules to one which contains several hundred 
@@ -31,7 +33,7 @@ Numerous basic detector performance parameters can be established with cosmic ra
 %
 In particular, the following checks are anticipated:
 \begin{enumerate}
- \item characterizing the performance of full scale TPC module
+ \item characterizing the performance of full-scale TPC module
  \item studying the performance of the photon detection system
  \item testing and evaluating the performance of detector calibration tools
   \item verifying the functionality of cold TPC electronics under LAr cryogenic conditions
@@ -48,7 +50,7 @@ for the DUNE far detector.
 The use of a well-defined charged particle test beam will significantly enhance our understanding of the detector performance beyond the criteria already mentioned.
 The beam measurements will serve as a calibration data set to tune the Monte Carlo simulations and serve as a reference data set for measurements of the future DUNE detector. 
 %
-In order to make such precise measurements, the detector will need to accurately identify and measure the energy of the particles produced in the neutrino interaction with Argon which will range from hundreds of MeV to several GeV.
+In order to make such precise measurements, the detector will need to accurately identify and measure the energy of the particles produced in the neutrino interaction with argon which will range from hundreds of MeV to several GeV.
 %
 More specifically, the goals of the prototype detector and beam test measurements include the use of a charged particle beam to:
 \begin{enumerate}
@@ -79,8 +81,8 @@ proposed single-phase LAr TPC.
 %We estimate the desired minimum integrated particle counts as a function of charged particle species and momentum
 % is converted into a run plan based on realistic beam composition, particle energies and efficiency information. 
 %
-Additional follow-up measurements with modified detector components form a potential future extension 
-to the proposed program.\\
+%-%Additional follow-up measurements with modified detector components form a potential future extension 
+%-%to the proposed program.\\
 
 
 \subsection{Single-phase LAr detector}
@@ -92,7 +94,7 @@ to the proposed program.\\
 The basic components of the liquid argon detector include a Time Projection Chamber (TPC) housed in a cryostat which is connected to  
 a cryogenics system. 
 %
-The cryostat contains the liquid argon target material and the cryogenic system keeps the liquid argon at a temperature of 89K, and maintains the required purity through a pump and filter system. A 500 V/m uniform electric field is created within the TPC volume between cathode planes and anode wire planes. Charged particles passing through the TPC release ionization electrons that drift to the anode wires. The bias voltage is set on the anode plane wires so that ionization electrons drift between the first several (induction) planes and are collected on the last (collection) plane. Readout electronics amplify and continuously digitize the induced waveforms on the sense wires at several MHz, and transmit these data to the DAQ system for analysis. The wire planes are oriented at different angles allowing a 3D reconstruction of the particle trajectories. In addition to these basic components, a photon detection system
+The cryostat contains the liquid argon target material and the cryogenic system keeps the liquid argon at a temperature of 89K, and maintains the required purity through a pump and filter system. A 500 V/m uniform electric field is created within the TPC volume between cathode planes and anode wire planes. Charged particles passing through the TPC release ionization electrons that drift to the anode wires. The bias voltage is set on the anode plane wires so that ionization electrons drift between the first several (induction) planes and are collected on the last (collection) plane. Readout electronics amplify and continuously digitize the induced waveforms on the sense wires at several MHz, and transmit these data to the DAQ system for analysis. The wire planes are oriented at different angles allowing a 3D reconstruction of the particle trajectories in two dimensions, and the third dimension is provided by measuring the drift time. In addition to these basic components, a photon detection system
 is included in the design to provide timing information for events not associated with the neutrino beam, enabling the study of proton decay and be more sensitive to galactic supernova neutrinos.  The photon detection system will also provide timing information for cosmics which are important for calibration purposes.
 
 Our LAr detector design is characterized by a modular approach in which the LAr volume in the cryostat is instrumented with a number of identical Anode wire Plane Assemblies (APA) and associated Cathode Plane Assemblies (CPA). To a large extent, scaling from detector volumes containing a few of such modules  to several hundred should be feasible with low and predictable risk.\\
