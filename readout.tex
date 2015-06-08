@@ -1,4 +1,5 @@
-A single APA has 2560 sense wires that need to be readout.  In order to minimize the capacitance, the preamplier noise, and the number of penetrations through the cryostat, the Front-End (FE) electronics boards of the {\bf TPC electronics} are mounted in the cryostat on one end of the wire frame just outside of the active TPC volume.  A single APA is readout by 20 sets of FE readout boards with each FE reading in 128 wire channel inputs (40 U-view + 40 V-view + 48 X-view) and each FE transmitting 4 outputs through the cryostat to back-end electronics.
+A single APA has 2560 sense wires that need to be readout.  In order to minimize the capacitance, the preamplifier noise, and the number of penetrations through the cryostat, the Front-End (FE) electronics boards of the {\bf TPC electronics} digitize the signals and 
+are mounted in the cryostat.  They are located on one end of the wire frame just outside of the active TPC volume.  A single APA is readout by 20 sets of FE readout boards with each FE reading in 128 wire channel inputs (40 U-view + 40 V-view + 48 X-view) and each FE transmitting 4 outputs through the cryostat to back-end electronics.
  
 The present design has a maximum wire length of 7.3~m (induction planes)
 with a corresponding capacitance of 164~pF and an expected intrinsic noise of 400 electrons.
@@ -19,11 +20,11 @@ While serious doubts regarding the longevity of commercially-available FPGAs at 
 their use in the Far Detector, where reliability over 15-20 years is required,
 this is not a concern for the CERN test, where the proven FPGA lifetime of at least a year is adequate.
 
-The front end electronics is organized as a stack of three boards comprising the Cold Mother Board assembly (CMB),
+The front end electronics is organized as a stack of three boards comprising the FE Mother Board assembly (FEMB),
 which mounts directly on the APA.
 First is the Analog Mother Board, on which are mounted the FE and ADC ASICs.
 Second and third are the FPGA and SERDES Mezzanine Boards, themselves mounted on the Analog Mother Board.
-Each CMB has eight sets of FE and ADC ASICs and instruments 128 wires.
+Each FEMB has eight sets of FE and ADC ASICs and instruments 128 wires.
 A Faraday cage (FC) covers the end of the APAs to shield the electronics from ambient noise.
 The FC also serves to prevent any Ar gas-bubbles from LAr boiled by the electronics' heat from entering the active TPC volume.
 Figure \ref{fig:coldelec} shows a schematic of the cold electronics. 
@@ -59,7 +60,7 @@ The  cable bundles will be connected through a feedthrough on the roof of the cr
 
 The primary interface between the TPC front-end electronics (FE) and the DAQ subsystem consists of an ATCA-based system of
 RCEs (Reconfigurable Cluster Elements).
-The RCE system receives the serialized raw data for the FE, performs zero-suppression on it,
+The RCE system receives the serialized raw data from the FE, performs zero-suppression on it,
 and packetizes and transmits the resulting sparsified data to a back-end data farm for event building and further processing.
 Additionally, the RCE system transmits timing and control signals to the FE as well as forwarding configuration data
 to them at start-up.     
@@ -83,7 +84,7 @@ and the back-end, as well as other external sources such as the timing or trigge
 In this case we will use fiber optic connections between the flange and the TPC DAQ using 8 12-channel (full duplex)
 CXP connectors on the RTM. 
 
-With the assumption that each cold FE board multiplexes it's 128 wire channels to 4 outputs at 1-Gbps each,
+With the assumption that each cold FE board multiplexes its 128 wire channels to 4 outputs at 1-Gbps each,
 the non-zero suppressed data for 1 APA can be fed into a single COB (containing 8 RCEs).
 Each RCE would receive data from 2 FE boards, perform zero-suppression, and send the result to the back-end.  \\
 
