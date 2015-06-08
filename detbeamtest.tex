@@ -9,9 +9,10 @@ This will be accomplished through measurement of
 the appearance rate of electron neutrinos and electron anti-neutrinos 
 as well as the corresponding disappearance rate of muon neutrinos 
 and muon anti-neutrinos over the 1300~km baseline of the experiment. 
-Other important physics goals include sensitive searches for proton decay and detection of supernova neutrinos.
+Other important physics goals include sensitive searches for proton decay (PD) and detection of supernova neutrinos.
 
-The full power of the DUNE experiment to perform a careful test of the three-flavor paradigm will come from a measurement of the detected neutrino spectral shape over a broad energy range.  For a baseline of 1300 km the first maximum of the oscillation probability occurs in the 2 - 3 GeV energy range with additional oscillation maxima at lower energies so the high intensity neutrino flux must be maximized in this energy range. It is desirable to have sufficient flux in the sub-GeV energy range to enable a measurement of the rapidly changing spectral shape in the region of the second maximum in the oscillation probability. It is this requirement on the neutrino energy spectrum, and the subsequent energy range of charged particles that result from their interactions, that determines the performance requirements for the DUNE detectors. 
+The full power of the DUNE experiment to perform a careful test of the three-flavor paradigm will come from a measurement of the detected neutrino spectral shape over a broad energy range.  For a baseline of 1300 km the first maximum of the oscillation probability occurs around 2~GeV and the second oscillation maximum is around 0.6~GeV,
+ so the high intensity neutrino flux must be maximized in the energy range from 0.5 - 5~GeV. It is desirable to have sufficient flux in the sub-GeV energy range to enable a measurement of the rapidly changing spectral shape in the region of the second maximum in the oscillation probability. It is this requirement on the neutrino energy spectrum, and the subsequent energy range of charged particles that result from their interactions, that determines the performance requirements for the DUNE detectors. 
 
 
 One of the main goals of DUNE-PT test beam program is to perform measurements 
@@ -19,12 +20,12 @@ needed to control and understand systematic uncertainties in DUNE oscillation me
 %The program also includes measurements to support other important DUNE physics measurements as described below.
 %detector is intended to provide input necessary to reduce systematic uncertainties for oscillation measurements 
 As an example of the importance of controlling detector related uncertainties,
-Fig.~\ref{fig:spectraleffect} shows the effect of a lepton energy scale 
+Fig.~\ref{fig:spectraleffect} shows the effect of a reconstructed neutrino energy scale 
 shift of -5\% on the measured 
 appearance signal %(for $\delta_{CP}=0$)
  and backgrounds in DUNE. 
 The expected signal shape is shown for several values of $\delta_{CP}$. 
-(solid curve: $\delta_{CP}=0$, lower crosses: $\delta_{CP}=+\pi/2$, and upper crosses: $\delta_{CP}=-\pi/2$). 
+%(solid curve: $\delta_{CP}=0$, lower crosses: $\delta_{CP}=+\pi/2$, and upper crosses: $\delta_{CP}=-\pi/2$). 
 Energy scale uncertainties will distort and shift the $\nu_e$ appearance spectra and
 can mimic a non-zero
 $\delta_{CP}$ phase.
@@ -33,7 +34,7 @@ $\delta_{CP}$ phase.
 %\includegraphics[width=0.7\textwidth,height=7.7cm]{figures/lepbias10}
 \includegraphics[width=0.7\textwidth,height=7.7cm]{figures/CSPP_LeptonBias_nue_app_FHC}
   \caption{DUNE $\nu_e$ appearance signal and background spectra. 
-Solid curves show the effect of -5\% lepton energy scale shift on the 
+Solid curves show the effect of -5\% reconstructed neutrino energy scale shift on the 
 measured appearance $\nu_e$ and $\overline{\nu}_e$ signals assuming $\delta_{CP}=0$.
 The crosses show the expected signal shape for $\delta_{CP}=+\pi/2$ (lower crosses) and -$\pi/2$  (upper crosses). 
 Ratios show the distortion on the $\nu_e$ and $\overline{\nu}_e$ spectra due to the 
@@ -43,7 +44,7 @@ Ratios show the distortion on the $\nu_e$ and $\overline{\nu}_e$ spectra due to 
 \end{figure}
 
 
- Fig.~\ref{fig:global_escale_sens} taken from Ref.~\cite{dunecdr} demonstrates that
+ Fig.~\ref{fig:global_escale_sens} taken from \cite{dunecdr} demonstrates that
 energy scale uncertainties will impact DUNE 
 %shows the effect of 
 %three values of neutrino energy scale uncertainty on the DUNE 
@@ -56,7 +57,7 @@ mass hierarchy (left) and $\delta_{CP}$ (right) sensitivities.
 %details of the LBNF neutrino beam design.
 %exposure with equal neutrino and antineutrino running. 
 Work to evaluate the effect of all systematic uncertainties in DUNE sensitivities is still in progress.
-This study already indicates a significant reduction of the CPV peak sensitivity due to a lepton energy scale uncertainty. 
+This study already indicates a significant reduction of the CPV peak sensitivity due to a reconstructed neutrino energy scale uncertainty. 
 This example assumes linear neutrino energy scale variations at the levels indicated.
 More complex (and more likely) scenarios for energy scale uncertainties are under study and
 will likely result in larger effects on the sensitivities.
@@ -213,7 +214,7 @@ $\pi^-$       &  0.2, 0.3, 0.4, 0.5, 0.7, 1     &  10k  & hadronic cal, $\pi^0$ 
 $\pi^+$   &  2  &  600k & $\pi^o$/$\gamma$ sample \\ \hline
 %$\pi^+$ &   1 \& 2  &  10K  & vary angle ($\times$5), reco \\ \hline
 proton &  0.7, 1, 2, 3   &  10k & response, PID \\ \hline
-proton &  1   &  1M & mis-ID pdk, recombination \\ \hline
+proton &  1   &  1M & mis-ID, PD, recombination \\ \hline
 e$^+$ or e$^-$       &    0.2, 0.3, 0.4, 0.5, 1, 2, 3, 5, 7        &    10k   & e-$\gamma$ separation/EM shower     \\ \hline
 % e$^+$ or e$^-$  &  1 \& 2  &  10K  & vary angle($\times$5), reco \\ \hline
 %e$^+$ or e$^-$   (w/rad) &  3  &  20K  & tagged photons \\ \hline
@@ -223,8 +224,8 @@ $\mu^-$ or $\mu^+$ &   3, 5, 7  &  5k & $E_\mu$ MCS \\ \hline
 %$\mu^-$ or $\mu^+$  &  1 \& 2  &  5K  & vary angle ($\times$5), reco \\ \hline
 %proton &  1 \& 2 &  10K & vary angle ($\times$5), reco \\ \hline
 anti-proton &  low-energy tune  &  (100) & anti-proton stars \\ \hline
-K$^+$  & 1 & (13k)   &   response, PID, PDK  \\ \hline
-K$^+$  & 0.5, 0.7 & (5k)   &   response, PID, PDK  \\ \hline \hline
+K$^+$  & 1 & (13k)   &   response, PID, PD  \\ \hline
+K$^+$  & 0.5, 0.7 & (5k)   &   response, PID, PD  \\ \hline \hline
 $\mu$, e, proton  & 1 (vary angle $\times$5) & 10k  & reconstruction  \\ \hline
 \end{tabular}
 \caption{Requirements summary for particle types and momenta.
@@ -245,12 +246,13 @@ wide angular range needed to study angular
 dependent effects on collected charge as described in Sec.~\ref{sec_angle}.
 Electrons will be used to benchmark and tune  electron/photon separation algorithms and to calibrate 
 electromagnetic showers as discussed in Sec. \ref{sec_egam}.
-Muon (and anti-muon) samples are needed to study reconstruction and PID calibration as well as to obtain 
-Michel electron events for calibration  
+Muon (and anti-muon) samples are needed to study reconstruction and PID calibration.
+Associated samples of Michel electron events will be used to calibrate  
 algorithms for charge-sign determination (see Secs.\ref{sec_reco} and \ref{sec_other}).
 
 Charged-kaon samples will be useful to characterize kaon PID efficiency for proton decay sensitivity but
-are a somewhat lower priority requirement. The anti-proton sample
+may be hard to obtain.
+The anti-proton sample
 will be helpful for exotic physics sensitivity studies. Both of these lower priority requests are discussed
 in Sec.~\ref{sec_other}.
 
@@ -271,7 +273,10 @@ in Sec.~\ref{sec_other}.
 %The prototype detector will allow to study the detector response to charge particles from the test beam. 
 The measured energy deposition for various particles and its dependence on the direction of the particle will be used to tune
 Monte Carlo simulations and allow improvements to reconstruction of neutrino energy and interaction topologies. % with good particle identification.
-
+Measurements of the response to charged particles and
+photons with the DUNE-PT will extend and be complementary to
+measurements made with other smaller detectors, such as LArIAT \cite{LArIAT}
+and CAPTAIN~\cite{captain}.
 
 \subsubsection{Shower calibration}
 \label{sec:showers}
@@ -364,7 +369,7 @@ for interacting $\pi^+$ versus $\pi^-$ ranging from 0.2~GeV/c up to 5~GeV/c.
 \subsubsection{Cross section measurements}
 
 
-Final state pions are produced copiously in neutrino interactions in our energy range 
+Final state pions are produced copiously in neutrino interactions in the energy range 
 of interest
 and contribute substantially to total visible energy in the interaction.
 These particles can re-interact either in the nuclear medium or after emerging from the target nucleus
@@ -491,12 +496,13 @@ perform tests of PID algorithms and Bethe-Bloch calibration measurements.
 \subsubsection{Reconstruction effects}
 \label{sec_reco}
 
-Reconstruction algorithms use all three wire planes for 3D track and event reconstruction. The quality of reconstruction is affected by two main factors that can be quantified with test beam data:
+Reconstruction algorithms use all three wire planes and the drift time for 3D track and event reconstruction. The quality of reconstruction is affected by two main factors that can be quantified with test beam data:
 \begin{itemize}
-\item The complexity of the event topology, which includes the number of objects overlapping in 2D projections and the number of possible object associations between 2D projections. The topology complexity depends on the energy of incident particle. Hadronic showers collected with the test beam can provide data sample to assess the reconstruction algorithm performance and test its dependence on the incident particle energy.
+\item The complexity of the event topology, which includes the number of objects overlapping in 2D projections and the number of possible object associations between 2D projections. The topology complexity depends on the energy of the incident particle. Hadronic showers collected with the test beam can provide data sample to assess the reconstruction algorithm performance and test its dependence on the incident particle energy.
 \item Orientation of the reconstructed object w.r.t. the readout wires and electron drift direction:
 \begin{itemize}
-\item Tracks and cascades in the plane parallel or almost parallel to the wire planes have strongly limited variation of the hit drift time, required for the 3D reconstruction; various reconstruction algorithms can show different performance in real detector conditions for such inclined objects, especially in the presence of noise affecting hit time reconstruction.
+\item Tracks and cascades in the plane parallel or almost parallel to the wire planes have nearly identical hit drift time. These drift times are required for the 3D reconstruction. Under real detector conditions reconstruction algorithms can show varying performance 
+ for this class of objects, especially in the presence of noise affecting hit time reconstruction.
 \item A 2D projection of objects aligned with the wires of one of the planes is strongly shortened, which limits the amount of information available to the reconstruction algorithm; the two other wire planes can be used for spatial reconstruction.  However, the validation of the correctness of reconstruction, calculated from the 3D object projected to the third plane, is less efficient.
 The most important aspect of this issue is the use of all planes for the charge measurement. If the reconstructed object is aligned with collection wires then the calorimetric measurement has to be carried out with the signal from the induction planes. The additional shielding wire plane in the DUNE design will improve the quality of the bipolar induction plane signals.  The test beam 
 data will help with the calibration of these signals.
@@ -554,7 +560,7 @@ final state $\pi^0$'s must be identified and removed from the signal
 electron sample. 
 
 High energy photons can undergo two process: pair production and Compton scattering. 
-The dominant process for photons with energies of several hundred MeV is 
+The dominant process for photons with energies of several hundred MeV or more is 
 e$^+$ e$^-$ pair production.
 %energies. 
 %For pair production the 
@@ -624,9 +630,9 @@ The DUNE experiment will be capable of addressing other physics beyond the long-
 
 \subsubsection{Supernova and Michel electrons}
 
-Neutrinos produced in supernova explosions since the first stars formed in the universe constitute the
-diffuse relic supernova neutrino background. The DUNE Far Detector could have unique sensitivity to these
-few-to-30-MeV range $\nu_e$'s. 
+Neutrinos produced in supernova burst (SNB) explosions are calculated to be in the few-to-30-MeV range.
+The DUNE Far Detector is expected to have unique sensitivity to the $\nu_e$'s from a SNB in our galaxy.
+%
 The test beam cannot offer a sample of  such low energy electrons, but Michel electrons  produced by 
 decaying stopped muons are ideal to calibrate electron response in the appropriate 10-50~MeV energy range. 
 The requested sample of low energy muons will supply the 1400 Michel electrons required for a 1\% 
@@ -663,7 +669,7 @@ $K^+$ PID and detection efficiency.
 
 Obtaining low energy kaons will likely be difficult in this beamline.
 A sample of 13k beam kaons with 1~GeV/c momentum are requested to provide 2k stopping $K^+$ track samples for PID studies.
-(only 15\% of $K^+$ stop at 1~GeV/c).
+(Only 15\% of $K^+$ stop at 1~GeV/c.)
 
 
 %\begin{table}[h]
